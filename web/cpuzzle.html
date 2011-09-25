@@ -35,8 +35,16 @@ body {
 }
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
-  padding: 0px 82px 10px 112px;
+  padding: 40px 82px 10px 112px;
 }
+#title {
+  position: absolute; left: 121px; top: 2px;
+  background: url("blue-folder-title.png") no-repeat;
+}
+#title, #title a {
+  width: 581px; height: 38px;
+}
+#title a { display: block; }
 #label {
   font-family: 'Nothing You Could Do', cursive;
   font-weight: 400;
@@ -107,6 +115,7 @@ Game set in Norrath (9)<br/>
 Corn variant containing no amylose (4 5)
 
   </div>
+  <div id="title"><a href="index.html"></a></div>
 </div>
 </body>
 </html>
