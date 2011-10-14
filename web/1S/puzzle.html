@@ -2,11 +2,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>A Circus Line</title>
-<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+<title>Question Mark</title>
+<link href='http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <style type="text/css">
 body { padding: 0; margin: 0; height: 100%; position: relative; }
 body { background: url("paper.jpg"); }
+body { font-family: 'Alice', serif;  font-weight: 400;
+       font-size: 16px; line-height: 1.4; }
+h1 { font-family: 'Abril Fatface'; font-weight: 400;
+     font-size: 36px; }
 #top-border {
  /* general */
  position: absolute; top: 0; left: 0; width:100%;
@@ -25,7 +29,7 @@ body { background: url("paper.jpg"); }
 #show-title a { position: absolute; display: block; }
 
 /* Specific to these images */
-body { min-height: 600px; min-width: 600px; }
+body { min-height: 600px; min-width: 700px; }
 #top-border {
  /* specific to our top image */
  height: 81px; background-image: url('1S-top-border-seamless.png');
@@ -53,10 +57,10 @@ body { min-height: 600px; min-width: 600px; }
   width: 85px; height: 75px; background: url('1C-link.png');
 }
 .ptitle {
-  height: 85px;
+  position: relative; /* put in front of banner */
+  height: 87px;
   background: url('1S-divider.png') no-repeat;
-  font-size: 40px;
-  padding: 38px 0 0 58px;
+  padding: 36px 0 0 58px;
   margin: -25px 0 -20px -19px;
 }
 
