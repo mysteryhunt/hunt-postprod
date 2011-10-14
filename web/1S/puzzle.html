@@ -25,7 +25,7 @@ h1 { font-family: 'Abril Fatface'; font-weight: 400;
 #side-border .right-top, #side-border .right { right: 0; }
 
 #top-link { position: absolute; top: 2px; left: 50%; display: block; }
-#check-answer, #info {
+#check-answer, #shortcuts {
   position: fixed; top: 0px;
   display: block;
   padding: 1px 5px;
@@ -33,12 +33,23 @@ h1 { font-family: 'Abril Fatface'; font-weight: 400;
   border-bottom: 1px solid black;
   text-decoration: none;
 }
-#info {
+#shortcuts {
   left: 0px;
   border-right: 1px solid black;
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-bottomright: 4px;
   border-bottom-right-radius: 4px;
+  z-index: 99;
+  color: blue;
+}
+#shortcuts .menu { display: none; }
+#shortcuts:hover .menu { display: block; }
+#shortcuts .menu {
+  color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px 5px 10px;
+  border-top: 1px solid black;
 }
 #check-answer {
   right: 0px;
@@ -47,6 +58,7 @@ h1 { font-family: 'Abril Fatface'; font-weight: 400;
   -moz-border-radius-bottomleft: 4px;
   border-bottom-left-radius: 4px;
 }
+#check-answer:link { color: blue; }
 #show-title { position: absolute; left: 50%}
 #show-title a { position: absolute; display: block; }
 
@@ -108,7 +120,17 @@ body { min-height: 600px; min-width: 700px; }
   <a class="critic" href="../1C/"></a>
   </a>
 </div>
-<a id="info" href="#">Info...</a>
+<div id="shortcuts" href="#">Shortcuts
+<ul class="menu">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Introduction</a></li>
+  <li><a href="#">Contact HQ</a></li>
+  <li><a href="#">Events</a></li>
+  <li><a href="#">Answer Board</a></li>
+  <li><a href="#">Achievements</a></li>
+  <li><a href="#">Updates</a></li>
+</ul>
+</div>
 <a id="check-answer" href="check-answer.cgi">Call in answer</a>
 <div id="main">
 
