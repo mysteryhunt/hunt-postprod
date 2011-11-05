@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
 
 /* General formatting */
-html { height: 100%; }
+html { min-height: 100%; }
 body { padding: 0; margin: 0; height: 100%; position: relative; }
 body { background: url("paper.jpg"); }
 body { font-family: 'Alice', serif;  font-weight: 400;
