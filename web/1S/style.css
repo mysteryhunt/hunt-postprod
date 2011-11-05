@@ -8,6 +8,7 @@ body { font-family: 'Alice', serif;  font-weight: 400;
 h1,.plist { font-family: 'Abril Fatface'; font-weight: 400; }
 h1 { font-size: 36px; }
 .plist { font-size: 24px; }
+.plist a { text-decoration: none; }
 
 #top-border {
  position: absolute; top: 0; left: 0; width:100%;
@@ -58,15 +59,12 @@ h1 { font-size: 36px; }
 
 /* Show page formatting */
 #index-image {
-  margin: 10px auto 10px auto; display: block;
-  border-bottom: 2px solid #67030f;
+  margin: 10px auto 20px auto; display: block;
+  border: 2px solid #67030f;
   background: rgba(255,255,255,0.4);
-  -webkit-border-top-left-radius: 15px;
-  -webkit-border-top-right-radius: 15px;
-  -moz-border-radius-topleft: 15px;
-  -moz-border-radius-topright: 15px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   width: 600px; height: 461px;
   position: relative;
 }
@@ -75,10 +73,10 @@ h1 { font-size: 36px; }
 }
 .plist a {
 display: block;
-padding: 28px 0 0 42px;
+padding: 20px 0 0 50px;
 margin: 0 0 2px 0;
 background: url('1S-icon.png') no-repeat;
-height: 34px; /* 62px minus the padding */
+height: 42px; /* 62px minus the padding */
 }
 
 /* Puzzle page formatting */
