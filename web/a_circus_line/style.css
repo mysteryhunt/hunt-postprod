@@ -20,6 +20,7 @@ h1 { font-size: 36px; }
 }
 #side-border .left-top, #side-border .left { left: 0; }
 #side-border .right-top, #side-border .right { right: 0; }
+#bottom-border { position: absolute; left: 50%; }
 
 #top-link { position: absolute; top: 2px; left: 50%; display: block; }
 #check-answer, #shortcuts {
@@ -88,6 +89,12 @@ body { min-height: 600px; min-width: 700px; }
 #top-border {
  height: 81px; background-image: url('1S-top-border-seamless.png');
 }
+#bottom-border {
+ height: 20px; width: 600px; margin-left: -300px;
+ background-image: url('1S-bottom.png');
+ bottom: 5px;
+}
+body { padding-bottom: 20px; }
 #side-border .left-top, #side-border .right-top { height: 526px; top: 52px;}
 #side-border .left-top { width: 108px; background: url('1S-top-left.png'); }
 #side-border .right-top { width: 91px; background: url('1S-top-right.png'); }
