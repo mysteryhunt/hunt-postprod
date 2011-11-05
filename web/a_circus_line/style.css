@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
 
 /* General formatting */
+html { height: 100%; }
 body { padding: 0; margin: 0; height: 100%; position: relative; }
 body { background: url("paper.jpg"); }
 body { font-family: 'Alice', serif;  font-weight: 400;
@@ -116,6 +117,7 @@ body { padding-bottom: 20px; }
 #show-title .critic {
   left: 265px; top: 40px;
   width: 85px; height: 75px; background: url('1C-link.png');
+  z-index: 99;
 }
 .ptitle {
   position: relative; /* put in front of banner */
