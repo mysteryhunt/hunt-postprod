@@ -6,10 +6,10 @@ body { padding: 0; margin: 0; height: 100%; position: relative; }
 body { background: url("paper.jpg"); }
 body { font-family: 'Alice', serif;  font-weight: 400;
        font-size: 16px; line-height: 1.4; }
-h1,.plist { font-family: 'Abril Fatface'; font-weight: 400; }
+h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
 h1 { font-size: 36px; }
-.plist { font-size: 24px; }
-.plist a { text-decoration: none; }
+#puzzle-list { font-size: 24px; }
+#puzzle-list a { text-decoration: none; }
 
 #top-border {
  position: absolute; top: 0; left: 0; width:100%;
@@ -73,7 +73,7 @@ h1 { font-size: 36px; }
 #index-image > * {
   position: absolute; top: 0; left: 0;
 }
-.plist a {
+#puzzle-list a {
 display: block;
 padding: 20px 0 0 50px;
 margin: 0 0 2px 0;
