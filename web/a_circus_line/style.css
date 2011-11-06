@@ -121,9 +121,10 @@ body { min-heightx: 600px; min-width: 700px; }
   width: 600px; left: -300px; /* centered */
   height: 98px; background: url('1S-puzzle-banner.png');
 }
-#show-title .critic {
+#link, #link a, #link img { width: 85px; height: 75px; }
+#link {
+  position: absolute;
   left: 265px; top: 40px;
-  width: 85px; height: 75px; background: url('1C-link.png');
   z-index: 99;
 }
 .ptitle {
