@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
 
 /* General formatting */
-html { min-height: 100%; }
-body { padding: 0; margin: 0; height: 100%; position: relative; }
+html,body { padding: 0; margin: 0; position: relative; }
+html { height: 100%; /* of viewport */ }
+body { min-height: 100%; /* of viewport */ }
 body { background: url("paper.jpg"); }
 body { font-family: 'Alice', serif;  font-weight: 400;
        font-size: 16px; line-height: 1.4; }
@@ -10,6 +11,12 @@ h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
 h1 { font-size: 36px; }
 #puzzle-list { font-size: 24px; }
 #puzzle-list a { text-decoration: none; }
+#main {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+}
 
 #top-border {
  position: absolute; top: 0; left: 0; width:100%;
@@ -86,7 +93,7 @@ height: 42px; /* 62px minus the padding */
 #show-title a { position: absolute; display: block; }
 
 /* Specific size info for 1S images */
-body { min-height: 600px; min-width: 700px; }
+body { min-heightx: 600px; min-width: 700px; }
 #top-border {
  height: 81px; background-image: url('1S-top-border-seamless.png');
 }
@@ -95,7 +102,7 @@ body { min-height: 600px; min-width: 700px; }
  background-image: url('1S-bottom.png');
  bottom: 5px;
 }
-body { padding-bottom: 20px; }
+#main { padding-bottom: 20px; } /* for bottom border */
 #side-border .left-top, #side-border .right-top { height: 526px; top: 52px;}
 #side-border .left-top { width: 108px; background: url('1S-top-left.png'); }
 #side-border .right-top { width: 91px; background: url('1S-top-right.png'); }
