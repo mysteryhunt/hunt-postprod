@@ -1,0 +1,36 @@
+#check-answer, #shortcuts {
+  position: fixed; top: 0px;
+  display: block;
+  padding: 1px 5px;
+  background: rgba(255,255,255,0.8);
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  font-family: 'Alice', serif; font-weight: 400;
+  font-size: 16px; line-height: 1.4;
+}
+#shortcuts {
+  left: 0px;
+  border-right: 1px solid black;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 99;
+  color: blue;
+}
+#shortcuts .menu { display: none; }
+#shortcuts:hover .menu { display: block; }
+#shortcuts .menu {
+  color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px 5px 10px;
+  border-top: 1px solid black;
+}
+#check-answer {
+  right: 0px;
+  border-left: 1px solid black;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+#check-answer:link { color: blue; }

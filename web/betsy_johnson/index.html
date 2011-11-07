@@ -3,116 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Betsy Johnson</title>
-<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
-<style type="text/css">
-/* layout */
-body {
-  padding: 0; margin: 0; height: 100%; position: absolute;
-  background: url("back-tile.jpg") repeat;
-  min-height: 800px;
-}
-#folder {
-  position: absolute; left: 0; top: 0;
-  width: 900px; min-height: 100%;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  background: url("blue-seamless-swatch.png") repeat;
-}
-#middle {
-  position: absolute; left: 0; top: 0;
-  width: 900px; height: 100%;
-}
-#middle > div {
-  position: absolute; left: 0; bottom: 0; right: 0;
-  top: 656px; /* 706px - 50px */
-  background-image: url("middle-tile.png");
-  background-repeat: repeat-y;
-}
-#header {
-  position: absolute; left: 0; top: -50px;/* compensate for top border */
-  background: url("top-tile.png") no-repeat;
-  width: 900px; height: 765px;
-}
-#footer {
-  position: absolute; left: 0; bottom: -50px; /* compensate for bottom border*/
-  width: 950px; height: 190px;
-  background: url("bottom-tile.png") no-repeat;
-}
-#main {
-  position: relative; left: 0; top: 0; /* make positioned so it's in z order */
-  padding: 395px 95px 10px 102px;
-}
-#title {
-  position: absolute; left: 110px; top: 0px;
-  background: url("agency-title.png") no-repeat;
-}
-#title, #title a {
-  width: 600px; height: 39px;
-}
-#title a { display: block; }
-#label {
-  position: absolute; left: 771px; top: 65px;
-  font-size: 28px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  transform: rotate(90deg);
-  white-space: nowrap;
-  padding: 0 3px;
-  background: #eee;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  border: 1px solid black;
-}
-
-/* stylin' */
-#main { font-family: Coustard, Courier, serif; font-weight: 400; }
-.critic, h2, .report {
-  font-weight: 400;
-  font-size: 24px;
-  margin: 10px 0 10px 0; padding: 0;
-}
-.critic .name, .materials, #label {
-  font-family: 'Nothing You Could Do', cursive;
-  font-weight: 400;
-}
-.name {
-  text-decoration: underline;
-  white-space: pre; /* allow extra space before/after name */
-}
-/* could use \0000a0 for nbsp; */
-.name:before, .name:after { content: "  "; }
-a { text-decoration: none; }
-.show > a {
-  width: 60px; height: 60px;
-  background: url("actor-60.png");
-  display: inline-block;
-}
-.materials { width: 100%;  font-size: 24px; text-decoration: none; }
-.materials td {
-  vertical-align: middle;
-  height: 62px;
-  padding-left: 45px;
-  padding-right: 20px;
-}
-.materials td a {
-  border-bottom: 1px solid black;
-  display: block;
-  padding-left: 0.6em;
-}
-.materials td a > span { position: relative; top: 1ex; }
-.materials td.a_circus_line {
-  background: url("../a_circus_line/1S-icon.png") no-repeat;
-}
-.materials td.betsy_johnson {
-  background: url("airplane.png") no-repeat 0px 20px;
-}
-.materials tr.spacer { height: 1.5em; }
-.materials { margin-top: -10px; margin-bottom: 20px; }
-.show { margin: 10px 0; }
-</style>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="folder">
@@ -147,5 +38,6 @@ a { text-decoration: none; }
 </div>
   <div id="title"><a href="../"></a></div>
 </div>
+<script src="../shortcuts.js" type="text/javascript"></script>
 </body>
 </html>
