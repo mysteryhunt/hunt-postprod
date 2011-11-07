@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Betsy Johnson</title>
+<link href='http://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
 <style type="text/css">
@@ -41,7 +42,7 @@ body {
 }
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
-  padding: 395px 82px 10px 102px;
+  padding: 395px 95px 10px 102px;
 }
 #title {
   position: absolute; left: 121px; top: 2px;
@@ -77,7 +78,12 @@ body {
   font-family: 'Nothing You Could Do', cursive;
   font-weight: 400;
 }
-.name { text-decoration: underline; }
+.name {
+  text-decoration: underline;
+  white-space: pre; /* allow extra space before/after name */
+}
+/* could use \0000a0 for nbsp; */
+.name:before, .name:after { content: "  "; }
 a { text-decoration: none; }
 .show > a {
   width: 60px; height: 60px;
@@ -86,13 +92,24 @@ a { text-decoration: none; }
 }
 .materials { width: 100%;  font-size: 24px; text-decoration: none; }
 .materials td {
-  border-bottom: 1px solid black;
+  vertical-align: middle;
+  height: 62px;
+  padding-left: 45px;
+  padding-right: 20px;
 }
 .materials td a {
-  background: url("airplane.png") no-repeat;
-  padding-left: 60px;
-  min-height: 31px;
+  border-bottom: 1px solid black;
+  display: block;
+  padding-left: 0.6em;
 }
+.materials td a > span { position: relative; top: 1ex; }
+.materials td.a_circus_line {
+  background: url("../a_circus_line/1S-icon.png") no-repeat;
+}
+.materials td.betsy_johnson {
+  background: url("airplane.png") no-repeat 0px 20px;
+}
+.materials tr.spacer { height: 1.5em; }
 .materials { margin-top: -10px; margin-bottom: 20px; }
 .show { margin: 10px 0; }
 </style>
@@ -104,27 +121,27 @@ a { text-decoration: none; }
   <div id="header"></div>
   <div id="label">Betsy Johnson</div>
   <div id="main">
-    <div class="critic">Name: <span class="name">&nbsp;&nbsp;Betsy Johnson&nbsp;&nbsp;</span></div>
+    <div class="critic">Name: <span class="name">Betsy Johnson</span></div>
     <div class="report">
       <a href="report/">Investigator's Report</a>
     </div>
     <h2>Materials Collected:</h2>
     <table class="materials">
-      <tr><td><a class="a_circus_line" href="applejack/">Applejack</a></td>
-          <td><a class="a_circus_line" href="bow_tie/">Bow Tie</a></td>
+      <tr><td class="a_circus_line"><a href="applejack/"><span>Applejack</span></a></td>
+          <td class="a_circus_line"><a href="bow_tie/"><span>Bow Tie</span></a></td>
       </tr>
-      <tr><td><a class="a_circus_line" href="cherries_jubilee/">Cherries Jubilee</a></td>
-          <td><a class="a_circus_line" href="princess_starburst/">Princess Starburst</a></td>
+      <tr><td class="a_circus_line"><a href="cherries_jubilee/"><span>Cherries Jubilee</span></a></td>
+          <td class="a_circus_line"><a href="princess_starburst/"><span>Princess Starburst</span></a></td>
       </tr>
       <tr class="spacer"></tr>
-      <tr><td><a class="betsy_johnson" href="posey/">Posey</a></td>
-          <td><a class="betsy_johnson" href="silver_spoon/">Silver Spoon</a></td>
+      <tr><td class="betsy_johnson"><a href="posey/"><span>Posey</span></a></td>
+          <td class="betsy_johnson"><a href="silver_spoon/"><span>Silver Spoon</span></a></td>
       </tr>
-      <tr><td><a class="betsy_johnson" href="slugger/">Slugger</a></td>
-          <td><a class="betsy_johnson" href="soarin/">Soarin'</a></td>
+      <tr><td class="betsy_johnson"><a href="slugger/"><span>Slugger</span></a></td>
+          <td class="betsy_johnson"><a href="soarin/"><span>Soarin'</span></a></td>
       </tr>
-      <tr><td><a class="betsy_johnson" href="sparkleworks/">Sparkleworks</a></td>
-          <td><a class="betsy_johnson" href="storybelle/">Storybelle</a></td>
+      <tr><td class="betsy_johnson"><a href="sparkleworks/"><span>Sparkleworks</span></a></td>
+          <td class="betsy_johnson"><a href="storybelle/"><span>Storybelle</span></a></td>
       </tr>
     </table>
 </div>
