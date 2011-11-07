@@ -113,7 +113,7 @@ body { min-heightx: 600px; min-width: 700px; }
 #side-border .right { width: 34px; background: url('1S-right.png'); }
 
 #top-link {
-  width: 350px; margin-left: -175px; /* center it! */
+  width: 373px; margin-left: -187px; /* center it! */
   height: 53px; background: url('top-link-banner.png');
 }
 #show-title { top: 85px; }
