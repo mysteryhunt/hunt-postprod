@@ -1,2 +1,3 @@
-var link=document.getElementById("link");
-link.innerHTML = '<a href="../../betsy_johnson/"><img src="../../betsy_johnson/icon.png"></a>';
+---
+layout: betsy_johnson_link
+---
