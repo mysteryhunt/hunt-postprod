@@ -1,42 +1,87 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+---
+# ensure that we use the templating engine for this file
+---
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Bialystock &amp; Bloom</title>
-<link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Gravitas+One' rel='stylesheet' type='text/css'>
-<style type="text/css">
-body { background: #200; color: white; position: relative;
-       padding: 0; margin: 0; text-align: center; }
-body, body>div { height: 100%; }
-body>div { background: black; width: 800px; margin: 0px auto; }
-.main { margin-top: -5px; }
-h2 { font-size: 32px; }
-.tab, body>div>p { font-size: 24px; }
-body { font-family: 'Abril Fatface', cursive; font-weight: 400; }
-h2 { font-family: 'Gravitas One', cursive; font-weight: 400; }
-a { text-decoration:none }
-</style>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Borbonicus &amp; Bodley</title>
 </head>
 
 <body>
 <div>
 <a href="a_circus_line/"><img src="mainpage-all-black.png" border=0 class="main"/></a>
 
+{% capture index_table %}
 <table align="center" class="tab">
-  <tr><th><h2>Shows</h2></th><th><h2>Critics</h2></th></tr>
-  <tr><td><a href="a_circus_line/">A Circus Line</a></td>
-      <td><a href="betsy_johnson/">Betsy Johnson</a></td></tr>
-  <tr><td><a href="okla_holmes_a/">Okla-Holmes-a!</a></td>
-      <td><a href="charles_lutwidge_dodgson/">Charles Lutwidge Dodgson</a></td></tr>
-  <tr><td><a href="me_and_mayan_girl/">Me and Mayan Girl</a></td>
-      <td><a href="fred_astaire/">Fred Astaire</a></td></tr>
+
+<tr><th><h2>Shows</h2></th>
+{% if site.release.betsy_johnson %}
+<th><h2>Critics</h2></th>
+{% endif %}
+</tr>
+
+{% if site.release.a_circus_line or site.release.betsy_johnson %}
+<tr><td><a href="a_circus_line/">A Circus Line</a></td>
+{% if site.release.betsy_johnson %}
+<td><a href="betsy_johnson/">Betsy Johnson</a></td>
+{% endif %}
+</tr>
+{% endif %}
+
+{% if site.release.okla_holmes_a or site.release.charles_lutwidge_dodgson %}
+<tr><td><a href="okla_holmes_a/">Okla-Holmes-a!</a></td>
+{% if site.release.charles_lutwidge_dodgson %}
+<td><a href="charles_lutwidge_dodgson/">Charles Lutwidge Dodgson</a></td>
+{% endif %}
+</tr>
+{% endif %}
+
+{% if site.release.into_the_woodstock or site.release.gates_of_hell %}
+<tr><td><a href="into_the_woodstock/">Into the Woodstock</a></td>
+{% if site.release.gates_of_hell %}
+<td><a href="gates_of_hell/">Gates of Hell</a></td>
+{% endif %}
+</tr>
+{% endif %}
+
+{% if site.release.mayan_fair_lady or site.release.ben_bitdiddle %}
+<tr><td><a href="mayan_fair_lady/">Mayan Fair Lady</a></td>
+{% if site.release.ben_bitdiddle %}
+<td><a href="ben_bitdiddle/">Ben Bitdiddle</a></td>
+{% endif %}
+</tr>
+{% endif %}
+
+{% if site.release.phantom_of_the_operator or site.release.sheila_sunshine %}
+<tr><td><a href="phantom_of_the_operator/">Phantom of the Operator</a></td>
+{% if site.release.sheila_sunshine %}
+<td><a href="sheila_sunshine/">Sheila Sunshine</a></td>
+{% endif %}
+</tr>
+{% endif %}
+
+{% if site.release.ogre_of_la_mancha or site.release.watson %}
+<tr><td><a href="ogre_of_la_mancha/">Ogre of La Mancha</a></td>
+{% if site.release.watson %}
+<td><a href="watson/">Watson</a></td>
+{% endif %}
+</tr>
+{% endif %}
+
 </table>
+{% endcapture %}
+{{ index_table | strip_newlines }}
 
 <h2>Letters from Max and Leo</h2>
 <p>blah blah blah</p>
+
+{% if site.release.endgame %}
 <h2>Endgame</h2>
 <p>blah blah blah</p>
+{% endif %}
+
 </div>
   
 </body> </html>
