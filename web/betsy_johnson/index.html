@@ -17,21 +17,27 @@ body {
   width: 900px; min-height: 100%;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
+  background: url("blue-seamless-swatch.png") repeat;
 }
 #middle {
   position: absolute; left: 0; top: 0;
   width: 900px; height: 100%;
-  background: url("middle-tile.jpg") repeat-y;
+}
+#middle > div {
+  position: absolute; left: 0; bottom: 0; right: 0;
+  top: 656px; /* 706px - 50px */
+  background-image: url("middle-tile.png");
+  background-repeat: repeat-y;
 }
 #header {
   position: absolute; left: 0; top: -50px;/* compensate for top border */
   background: url("top-tile.png") no-repeat;
-  width: 900px; height: 799px;
+  width: 900px; height: 765px;
 }
 #footer {
   position: absolute; left: 0; bottom: -50px; /* compensate for bottom border*/
+  width: 950px; height: 190px;
   background: url("bottom-tile.png") no-repeat;
-  width: 900px; height: 201px;
 }
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
@@ -46,12 +52,18 @@ body {
 }
 #title a { display: block; }
 #label {
-  position: absolute; left: 775px; top: 65px;
+  position: absolute; left: 771px; top: 65px;
   font-size: 28px;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
   white-space: nowrap;
+  padding: 0 3px;
+  background: #eee;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
 /* stylin' */
@@ -87,7 +99,7 @@ a { text-decoration: none; }
 </head>
 <body>
 <div id="folder">
-  <div id="middle"></div>
+  <div id="middle"><div></div></div>
   <div id="footer"></div>
   <div id="header"></div>
   <div id="label">Betsy Johnson</div>
@@ -117,6 +129,29 @@ a { text-decoration: none; }
     <div class="report">
       <a href="cpuzzle.html">Investigator's Report</a>
     </div>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
+    <p>x</p>
 </div>
   <div id="title"><a href="index.html"></a></div>
 </div>
