@@ -6,6 +6,8 @@ body {
   padding: 0; margin: 0; height: 100%; position: absolute;
   background: url("back-tile.jpg") repeat;
   min-height: 800px;
+  font-family: 'Alice', serif; font-weight: 400;
+  font-size: 16px; line-height: 1.4;
 }
 #folder {
   position: absolute; left: 0; top: 0;
@@ -36,7 +38,10 @@ body {
 }
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
-  padding: 395px 95px 10px 102px;
+  padding: 40px 105px 10px 102px;
+}
+#main.index {
+  padding-top: 395px;
 }
 #title {
   position: absolute; left: 110px; top: 0px;
@@ -62,8 +67,16 @@ body {
 }
 
 /* stylin' */
-#main { font-family: Coustard, Courier, serif; font-weight: 400; }
-.critic, h2, .report {
+#main.index { font-family: Coustard, Courier, serif; font-weight: 400; }
+#main.puzzle h1, #main.report h1 {
+  font-size: 32px; margin: 10px 0; padding: 0;
+}
+#main.puzzle h1 {
+  background: url("airplane.png") no-repeat 0 8px;
+  padding-left: 60px;
+  min-height: 31px;
+}
+.critic, h2, .index .report {
   font-weight: 400;
   font-size: 24px;
   margin: 10px 0 10px 0; padding: 0;
