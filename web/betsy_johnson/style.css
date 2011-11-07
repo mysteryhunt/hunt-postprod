@@ -88,6 +88,12 @@ body {
   background: url("photo.png");
   width: 695px; height: 583px;
 }
+#photo .paperclip {
+  position: absolute;
+  bottom: 90px; right: 29px;
+  width: 80px; height: 86px;
+  background: url("paperclip-2.png");
+}
 
 /* stylin' */
 #main.index { font-family: Coustard, Courier, serif; font-weight: 400; }
