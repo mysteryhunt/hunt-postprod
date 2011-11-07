@@ -41,7 +41,7 @@ body {
   padding: 40px 105px 10px 102px;
 }
 #main.index {
-  padding-top: 395px;
+  padding-top: 520px;
 }
 #title {
   position: absolute; left: 110px; top: 0px;
@@ -64,6 +64,29 @@ body {
   -moz-border-radius: 15px;
   border-radius: 15px;
   border: 1px solid black;
+}
+
+#main.index .desc {
+  position: absolute;
+  top: -22px; left: 25px;
+  width: 275px;
+  background: #fefefe;
+  border: 2px solid black;
+  padding: 1.5em;
+  line-height: 1.75;
+  z-index: 99;
+}
+#main.index .desc .paperclip {
+ position: absolute;
+ background: url("paperclip.png");
+ width: 62px; height: 115px;
+ top: -21px; right: 1px;
+}
+#photo {
+  position: absolute;
+  top: -40px; left: 150px;
+  background: url("photo.png");
+  width: 695px; height: 583px;
 }
 
 /* stylin' */
@@ -116,6 +139,6 @@ a { text-decoration: none; }
 .materials td.betsy_johnson {
   background: url("airplane.png") no-repeat 0px 20px;
 }
-.materials tr.spacer { height: 1.5em; }
+.materials tr.spacer { height: 1em; }
 .materials { margin-top: -10px; margin-bottom: 20px; }
 .show { margin: 10px 0; }
