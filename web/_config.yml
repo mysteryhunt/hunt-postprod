@@ -1,7 +1,6 @@
 source: .
 destination: _site
 exclude: ['*~']
-auto: Yes
 
 release:
   a_circus_line:            Yes # 1S
