@@ -1,6 +1,12 @@
 @import "../betsy_johnson/style.css";
 #label {
-  font-size: 20px;
+  font-size: 20px; /* compress label a bit */
+}
+#main.index .desc { /* shrink notecard a bit */
+  padding: 0.5em 1.5em;
+}
+#photo .paperclip { /* move paperclip up */
+  bottom: 290px; right: 34px;
 }
 #folder {
   background-image: url("orange-seamless-swatch.png");
