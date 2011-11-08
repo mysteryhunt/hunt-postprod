@@ -13,8 +13,13 @@
   /* width, height, etc? */
 }
 .materials td.okla_holmes_a {
-  background: url("../okla_holmes_a/icon.png") no-repeat;
+  background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
 .materials td.charles_lutwidge_dodgson {
   background: url("icon.png") no-repeat;
+}
+#main.puzzle h1 {
+  background: url("icon.png") no-repeat 0 0;
+  padding-left: 45px;
+  min-height: 62px;
 }

@@ -88,12 +88,13 @@ body { min-heightx: 600px; min-width: 700px; }
   width: 600px; left: -300px; /* centered */
   height: 98px; background: url('1S-puzzle-banner.png');
 }
-#link, #link a, #link img { width: 85px; height: 75px; }
+/*#link, #link a, #link img { width: 85px; height: 75px; }*/
 #link {
   position: absolute;
   left: 265px; top: 40px;
   z-index: 99;
 }
+#link img { border: none; }
 .ptitle {
   position: relative; /* put in front of banner */
   height: 87px;
