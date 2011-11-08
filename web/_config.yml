@@ -5,9 +5,9 @@ auto: Yes
 
 release:
   a_circus_line:            Yes # 1S
-  betsy_johnson:            No  # 1C
-  okla_holmes_a:            No  # 2S
-  charles_lutwidge_dodgson: No  # 2C
+  betsy_johnson:            Yes # 1C
+  okla_holmes_a:            Yes # 2S
+  charles_lutwidge_dodgson: Yes # 2C
   into_the_woodstock:       No  # 3S
   gates_of_hell:            No  # 3C
   mayan_fair_lady:          No  # 4S

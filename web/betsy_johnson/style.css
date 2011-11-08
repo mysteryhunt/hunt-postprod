@@ -101,7 +101,7 @@ body {
   font-size: 32px; margin: 10px 0; padding: 0;
 }
 #main.puzzle h1 {
-  background: url("airplane.png") no-repeat 0 8px;
+  background: url("icon.png") no-repeat 0 8px;
   padding-left: 60px;
   min-height: 31px;
 }
@@ -140,10 +140,10 @@ a { text-decoration: none; }
 }
 .materials td a > span { position: relative; top: 1ex; }
 .materials td.a_circus_line {
-  background: url("../a_circus_line/1S-icon.png") no-repeat;
+  background: url("../a_circus_line/icon.png") no-repeat;
 }
 .materials td.betsy_johnson {
-  background: url("airplane.png") no-repeat 0px 20px;
+  background: url("icon.png") no-repeat 0px 20px;
 }
 .materials tr.spacer { height: 1em; }
 .materials { margin-top: -10px; margin-bottom: 20px; }

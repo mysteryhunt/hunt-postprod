@@ -1,26 +1,9 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Betsy Johnson</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div id="folder">
-  <div id="middle"><div></div></div>
-  <div id="footer"></div>
-  <div id="header"></div>
-  <div id="label">Betsy Johnson</div>
-  <div id="main" class="index">
-    <div class="desc">
-      <b>Betsy Johnson</b> is a theater critic by night, but by day she works the letters desk of a major newsmagazine.
-      <div class="paperclip"></div>
-    </div>
-    <div class="critic">Name: <span class="name">Betsy Johnson</span></div>
-    <div class="report">
-      <a href="report/">Investigator's Report</a>
-    </div>
-    <h2>Materials Collected:</h2>
+---
+# use template system
+---
+{% assign critic_name = 'Betsy Johnson' %}{% capture flavor %}
+<b>Betsy Johnson</b> is a theater critic by night, but by day she works the letters desk of a major newsmagazine.
+{% endcapture %}{% capture materials %}
     <table class="materials">
       <tr><td class="a_circus_line"><a href="../a_circus_line/applejack/"><span>Applejack</span></a></td>
           <td class="a_circus_line"><a href="../a_circus_line/bow_tie/"><span>Bow Tie</span></a></td>
@@ -39,10 +22,4 @@
           <td class="betsy_johnson"><a href="storybelle/"><span>Storybelle</span></a></td>
       </tr>
     </table>
-</div>
-  <div id="title"><a href="../"></a></div>
-  <div id="photo"><div class="paperclip"></div></div>
-</div>
-<script src="../shortcuts.js" type="text/javascript"></script>
-</body>
-</html>
+{% endcapture %}{% include critic_index.html %}

@@ -51,7 +51,7 @@ h1 { font-size: 36px; }
 display: block;
 padding: 20px 0 0 50px;
 margin: 0 0 2px 0;
-background: url('1S-icon.png') no-repeat;
+background: url('icon.png') no-repeat;
 height: 42px; /* 62px minus the padding */
 }
 

@@ -1,0 +1,20 @@
+@import "../betsy_johnson/style.css";
+#label {
+  font-size: 20px;
+}
+#folder {
+  background-image: url("orange-seamless-swatch.png");
+}
+#footer {
+  background-image: url("bottom-tile.png");
+}
+#photo {
+  background: url("photo.png");
+  /* width, height, etc? */
+}
+.materials td.okla_holmes_a {
+  background: url("../okla_holmes_a/icon.png") no-repeat;
+}
+.materials td.charles_lutwidge_dodgson {
+  background: url("icon.png") no-repeat;
+}
