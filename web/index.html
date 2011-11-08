@@ -10,8 +10,31 @@
 </head>
 
 <body>
-<div>
-<a href="a_circus_line/"><img src="mainpage-all-black.png" border=0 class="main"/></a>
+<div id="main">
+  <div id="art">
+<img src="mainpage.png" border=0 />
+{% capture index_art %}
+{% if site.release.a_circus_line %}
+<img src="a_circus_line/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.okla_holmes_a %}
+<img src="okla_holmes_a/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.into_the_woodstock %}
+<img src="into_the_woodstock/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.mayan_fair_lady %}
+<img src="mayan_fair_lady/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.phantom_of_the_operator %}
+<img src="phantom_of_the_operator/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.ogre_of_la_mancha %}
+<img src="ogre_of_la_mancha/mainpage-overlay.png" />
+{% endif %}
+{% endcapture %}
+{{ index_art | strip_newlines }}
+</div><!-- #art -->
 
 {% capture index_table %}
 <table align="center" class="tab">
@@ -74,8 +97,10 @@
 {% endcapture %}
 {{ index_table | strip_newlines }}
 
+{% if site.release.letters %}
 <h2>Letters from Max and Leo</h2>
 <p>blah blah blah</p>
+{% endif %}
 
 {% if site.release.endgame %}
 <h2>Endgame</h2>
@@ -83,5 +108,6 @@
 {% endif %}
 
 </div>
-  
+<script type="text/javascript">this.depth="";</script>
+<script src="../../shortcuts.js" type="text/javascript"></script>
 </body> </html>

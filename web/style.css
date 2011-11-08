@@ -1,13 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
 @import "shortcuts.css";
 
-body { background: #200; color: white; position: relative;
-       padding: 0; margin: 0; text-align: center; }
-body, body>div { height: 100%; }
-body>div { background: black; width: 800px; margin: 0px auto; }
-.main { margin-top: -5px; }
-h2 { font-size: 32px; }
+body {
+  background: black; /* was: #200; */
+  color: white; position: relative;
+  padding: 0; margin: 0; text-align: center;
+  font-family: 'Alice', serif; font-weight: 400;
+ }
+body, #main { height: 100%; }
+#main { background: black; width: 900px; margin: 0px auto; }
+#art, #art img { width: 900px; height: 679px; }
+#art { position: relative; }
+#art img { position: absolute; left: 0; top: 0; }
 .tab, body>div>p { font-size: 24px; }
-body { font-family: 'Alice', serif; font-weight: 400; }
-h2 { font-family: 'Abril Fatface', 'Alice', serif; font-weight: 400; }
+
+h2 {
+  font-family: 'Abril Fatface', 'Alice', serif; font-weight: 400;
+  font-size: 32px;
+}
 a { text-decoration:none }
