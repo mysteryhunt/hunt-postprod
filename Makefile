@@ -8,5 +8,9 @@ server:
 clean:
 	$(RM) -rf web/_site
 
+beta: # for blind solvers
+	rsync -avz --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" --exclude="solution*" web/_site/ ihtfp.us:/var/www/hunt/beta/
+
 stage:
-	rsync -avz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_site/ ihtfp.us:/var/www/hunt/beta/
+	rsync -avz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_site/ ihtfp.us:/var/www/hunt/staging/
+staging: stage
