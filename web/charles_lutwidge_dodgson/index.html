@@ -31,4 +31,4 @@ the pen name <b>Charles Dodgson</b>.
           <td class="toola_roola charles_lutwidge_dodgson"><a href="toola_roola/"><span>Toola-Roola</span></a></td>
       </tr>
     </table>
-{% endcapture %}{% include critic_index.html %}
+{% endcapture %}{% if site.release.charles_lutwidge_dodgson %}{% include critic_index.html %}{% endif %}

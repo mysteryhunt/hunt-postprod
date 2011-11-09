@@ -1,6 +1,6 @@
 source: .
 destination: _site
-exclude: ['*~']
+exclude: ['*~', 'solution*', 'orig']
 
 release:
   a_circus_line:            Yes # 1S

@@ -22,4 +22,4 @@
           <td class="betsy_johnson"><a href="storybelle/"><span>Storybelle</span></a></td>
       </tr>
     </table>
-{% endcapture %}{% include critic_index.html %}
+{% endcapture %}{% if site.release.betsy_johnson %}{% include critic_index.html %}{% endif %}
