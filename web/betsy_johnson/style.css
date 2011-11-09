@@ -44,7 +44,7 @@ body {
   padding-top: 520px;
 }
 #title {
-  position: absolute; left: 110px; top: 0px;
+  position: absolute; left: 130px; top: 0px;
   background: url("agency-title.png") no-repeat;
 }
 #title, #title a {
