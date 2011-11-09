@@ -1,0 +1,31 @@
+/* extra stylin' for puzzle. */
+
+.tt { border-collapse: collapse; }
+.tt tr { border-bottom: 12px solid transparent; }
+.row {
+  font-size: 30px;
+  vertical-align: baseline;
+  padding-top: 15px;
+}
+.t {
+  position: relative;
+  display: inline-block;
+  width: 70px; height: 83px;
+  background: url('tile.png') no-repeat;
+  text-align: center;
+  font-size: 50px;
+  margin-right: -3px; /* tighten up the spacing */
+}
+.t > span {
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  left: 0; right: 0;
+  font-family: 'Nothing You Could Do', Alice, serif;
+  font-size: 20px;
+  text-align: right;
+}
+.t > span > span {
+  /* parens are just for easy cut-and-pastability, make them invisible */
+  color: transparent;
+}
