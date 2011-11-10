@@ -10,20 +10,30 @@
 .t {
   position: relative;
   display: inline-block;
-  width: 70px; height: 83px;
+  width: 68px; height: 76px;
   background: url('tile.png') no-repeat;
   text-align: center;
   font-size: 50px;
   margin-right: -3px; /* tighten up the spacing */
+  padding-top: 7px;
+  padding-left: 2px;
 }
-.t > span {
+.t > .v, .t > .m {
   position: absolute;
   display: block;
-  bottom: 5px;
   left: 0; right: 0;
+}
+.t > .m {
+  top: 1px; left: 7px;
+  text-align: left;
   font-family: 'Nothing You Could Do', Alice, serif;
   font-size: 20px;
+  color: #005;
+}
+.t > .v {
+  bottom: 5px;
   text-align: right;
+  font-size: 20px;
 }
 .t > span > span {
   /* parens are just for easy cut-and-pastability, make them invisible */
