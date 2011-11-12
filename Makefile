@@ -22,16 +22,16 @@ server:
 	@cd web ; jekyll --server 4001 --auto
 
 clean:
-	$(RM) -rf web/_site web/_blind
+	$(RM) -rf web/_site web/_blind web/_stage
 
 update-%:
 	@echo Turning on $*
 	sed -ie 's/No  # $*/Yes # $*/' $(WCY)
-	$(RM) -rf web/_site web/_blind/$(CODENAME_$*)
-	jekyll web web/_site
-	mv web/_site web/_blind/$(CODENAME_$*)
+	$(RM) -rf web/_blind/$(CODENAME_$*)
+	jekyll web web/_blind/$(CODENAME_$*)
 
-update-all: clean
+update-all:
+	$(RM) -rf web/_blind
 	@cp $(WCY) $(WCY).bak
 	@mkdir web/_blind
 	touch web/_blind/index.html
@@ -49,8 +49,8 @@ stage:
 	@echo Turning all rounds on
 	@sed -ie 's/No[ ]*\(# [1-6][SC]\)/Yes \1/' $(WCY)
 	@echo XXX should turn solutions on as well
-	jekyll web web/_site
+	jekyll web web/_stage
 	@cp $(WCY).bak $(WCY)
-	rsync -avz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_site/ ihtfp.us:/var/www/hunt-solutions/
+	rsync -avz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
 
 staging: stage
