@@ -1,5 +1,5 @@
 WCY=web/_config.yml
-RSYNC_OPTS=-avz --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" --exclude="solution*"
+RSYNC_OPTS=-avcz --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" --exclude="solution*"
 
 CODENAME_1S=beachcomber
 CODENAME_1C=ripple
@@ -26,9 +26,9 @@ clean:
 
 update-%:
 	@echo Turning on $*
-	sed -ie 's/No  # $*/Yes # $*/' $(WCY)
-	$(RM) -rf web/_blind/$(CODENAME_$*)
-	jekyll web web/_blind/$(CODENAME_$*)
+	@sed -ie 's/No  # $*/Yes # $*/' $(WCY)
+	@$(RM) -rf web/_blind/$(CODENAME_$*)
+	@jekyll web web/_blind/$(CODENAME_$*)
 
 update-all:
 	$(RM) -rf web/_blind
@@ -38,9 +38,9 @@ update-all:
 	@echo Turning all rounds off
 	@sed -ie 's/Yes[ ]*\(# [1-6][SC]\)/No  \1/' $(WCY)
 	@for r in 1S 1C 2S 2C 3S 3C 4S 4C 5S 5C 6S 6C ; do \
-          $(MAKE) update-$$r ; \
+          $(MAKE) --no-print-directory update-$$r ; \
         done
-	find web/_blind -print0 | xargs -0 touch -t 201201131200 -c
+	find web/_blind -print0 | xargs -0 touch -t 201101131200 -c
 	@cp $(WCY).bak $(WCY)
 	rsync $(RSYNC_OPTS) web/_blind/ ihtfp.us:/var/www/hunt/
 
@@ -51,6 +51,6 @@ stage:
 	@echo XXX should turn solutions on as well
 	jekyll web web/_stage
 	@cp $(WCY).bak $(WCY)
-	rsync -avz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
+	rsync -avcz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
 
 staging: stage
