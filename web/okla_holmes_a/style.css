@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
+@import "../shortcuts.css";
+
+/* General formatting */
+html,body { padding: 0; margin: 0; position: relative; }
+html { height: 100%; /* of viewport */ }
+body { min-height: 100%; /* of viewport */ }
+body {
+  background-color: #dbdbdb;
+  background-image: url("splatter.jpg");
+}
+body { font-family: 'Alice', serif;  font-weight: 400;
+       font-size: 16px; line-height: 1.4; }
+h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
+h1 { font-size: 36px; }
+#puzzle-list { font-size: 24px; }
+#puzzle-list a { text-decoration: none; }
+#main {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+}
+#side-border div {
+  position: absolute;
+}
+#side-border .left, #side-border .right {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  top: 0px;
+  background-repeat: repeat-y;
+  background-position: 0px 120px;
+}
+#side-border .left {
+  left: 0;
+  background-image: url('border-left.png');
+}
+#side-border .right {
+  right: 0;
+  background-image: url('border-right.png');
+}
+
+#top-link { position: absolute; top: 2px; left: 50%; display: block; }
+#top-link {
+  width: 373px; margin-left: -187px; /* center it! */
+  height: 53px; background: url('../a_circus_line/top-link-banner.png');
+}
+
+#main {
+  padding: 10px 100px 10px 100px;
+}
+
+/* Show page formatting */
+body.index { 
+  min-width: 770px;
+}
+#index-image {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  margin-left: -400px;
+}
+#index-image, #index-image > img {
+  display: block;
+  width: 800px; height: 455px;
+  border: none;
+}
+#index-image > * {
+  position: absolute; top: 0; left: 0;
+}
+
+#main.index {
+  padding-top: 470px;
+}
+
+#puzzle-list td {
+  padding: 0px 30px;
+}
+#puzzle-list a {
+display: block;
+padding: 20px 0 0 60px;
+margin: 0 0 2px 0;
+background: url('icon.png') no-repeat;
+height: 42px; /* 62px minus the padding */
+}
+
+#main.puzzle, #puzzle-list {
+  background: rgba(255,255,255,.7);
+}
