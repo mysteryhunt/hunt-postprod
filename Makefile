@@ -40,6 +40,7 @@ update-all: clean
 	@for r in 1S 1C 2S 2C 3S 3C 4S 4C 5S 5C 6S 6C ; do \
           $(MAKE) update-$$r ; \
         done
+	find web/_blind -print0 | xargs -0 touch -t 201201131200 -c
 	@cp $(WCY).bak $(WCY)
 	rsync $(RSYNC_OPTS) web/_blind/ ihtfp.us:/var/www/hunt/
 
