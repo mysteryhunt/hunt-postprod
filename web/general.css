@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
+@import "shortcuts.css";
+
+/* General formatting */
+html,body { padding: 0; margin: 0; position: relative; }
+html { height: 100%; /* of viewport */ }
+body { min-height: 100%; /* of viewport */ }
+body { font-family: 'Alice', serif;  font-weight: 400;
+       font-size: 16px; line-height: 1.4; }
+
+h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
+h1 { font-size: 36px; }
+
+#puzzle-list { font-size: 24px; }
+#puzzle-list a { text-decoration: none; }
+
+#top-link { position: absolute; top: 2px; left: 50%; display: block; }
+#top-link {
+  width: 373px; margin-left: -187px; /* center it! */
+  height: 53px; background: url('top-link-banner.png');
+}
+
+#main {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+}

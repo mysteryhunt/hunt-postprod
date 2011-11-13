@@ -1,25 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
-@import "../shortcuts.css";
+@import "../general.css";
 
 /* General formatting */
-html,body { padding: 0; margin: 0; position: relative; }
-html { height: 100%; /* of viewport */ }
-body { min-height: 100%; /* of viewport */ }
 body {
   background-color: #dbdbdb;
   background: url("paper.jpg");
-}
-body { font-family: 'Alice', serif;  font-weight: 400;
-       font-size: 16px; line-height: 1.4; }
-h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
-h1 { font-size: 36px; }
-#puzzle-list { font-size: 24px; }
-#puzzle-list a { text-decoration: none; }
-#main {
-	height:auto !important; /* real browsers */
-	height:100%; /* IE6: treaded as min-height*/
-
-	min-height:100%; /* real browsers */
 }
 
 #top-border {
@@ -33,8 +17,6 @@ h1 { font-size: 36px; }
 #side-border .left-top, #side-border .left { left: 0; }
 #side-border .right-top, #side-border .right { right: 0; }
 #bottom-border { position: absolute; left: 50%; }
-
-#top-link { position: absolute; top: 2px; left: 50%; display: block; }
 
 /* Show page formatting */
 #index-image {
@@ -82,10 +64,6 @@ body { min-heightx: 600px; min-width: 700px; }
 #side-border .left { width: 39px; background: url('1S-left.png'); }
 #side-border .right { width: 34px; background: url('1S-right.png'); }
 
-#top-link {
-  width: 373px; margin-left: -187px; /* center it! */
-  height: 53px; background: url('top-link-banner.png');
-}
 #show-title { top: 85px; }
 #show-title .title {
   width: 600px; left: -300px; /* centered */
