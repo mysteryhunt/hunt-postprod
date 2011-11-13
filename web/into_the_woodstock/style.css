@@ -92,13 +92,13 @@ body.puzzle {
   padding: 0 1em;
 }
 #link {
-  left: 300px; top: 100px;
+  left: 300px; top: 110px;
 }
 .ptitle {
   position: relative; /* put in front of banner */
   z-index: 99;        /* put in front of banner */
-  height: 100px;
   background: url('divider.png') no-repeat;
-  padding: 0px 0 0 65px;
-  margin: 0 0 0px -20px;
+  height: 123px;
+  padding: 14px 0 0 78px;
+  margin: -5px 0 -14px -20px;
 }
