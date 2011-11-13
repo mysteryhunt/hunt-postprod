@@ -42,7 +42,7 @@ body {
 
 #index-image {
   position: absolute;
-  top: 35px;
+  top: 45px;
   left: 50%;
   margin-left: -400px;
 }
@@ -55,11 +55,11 @@ body {
   position: absolute; top: 0; left: 0;
 }
 #puzzle-list a {
-display: block;
-padding: 14px 15px 0 60px;
-margin: 0 0 2px 0;
-background: url('icon.png') no-repeat;
-height: 46px; /* 60px minus the padding */
+  display: block;
+  padding: 14px 15px 0 60px;
+  margin: 0 0 2px 0;
+  background: url('icon.png') no-repeat;
+  height: 46px; /* 60px minus the padding */
 }
 
 #main {
@@ -68,8 +68,34 @@ height: 46px; /* 60px minus the padding */
 }
 
 body.index {
-  min-width: 880px;
+  /*min-width: 880px;*/
+  min-width: 940px;
 }
 .index #main {
   padding-top: 550px;
+}
+
+/* puzzle page */
+body.puzzle {
+  min-width: 940px;
+}
+#show-title { top: 50px; }
+#show-title .title {
+  width: 750px; left: -375px; /* centered */
+  height: 88px;
+  background: url('banner.png') no-repeat;
+}
+.puzzle #main {
+  padding-top: 140px;
+}
+#link {
+  left: 325px; top: 155px;
+}
+.ptitle {
+  position: relative; /* put in front of banner */
+  z-index: 99;        /* put in front of banner */
+  height: 163px;
+  background: url('divider.png') no-repeat;
+  padding: 30px 0 0 95px;
+  margin: 0 0 -30px -30px;
 }
