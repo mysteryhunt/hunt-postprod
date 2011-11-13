@@ -24,9 +24,16 @@ body {
   right: 0;
   background-image: url('border-right.png');
 }
+#bottom-border {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 65px;
+  background: url("border-bottom.png") bottom center repeat-x;
+}
+
 
 #main {
-  padding: 10px 100px 10px 100px;
+  padding: 10px 100px 60px 100px;
+  position: relative; /* put #main in z-order */
 }
 
 /* Show page formatting */
@@ -61,6 +68,7 @@ padding: 20px 0 0 60px;
 margin: 0 0 2px 0;
 background: url('icon.png') no-repeat;
 height: 42px; /* 62px minus the padding */
+white-space: nowrap;
 }
 
 #main.puzzle, #puzzle-list {
