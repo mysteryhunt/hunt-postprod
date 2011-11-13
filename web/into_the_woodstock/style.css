@@ -54,6 +54,13 @@ body {
 #index-image > * {
   position: absolute; top: 0; left: 0;
 }
+#puzzle-list a {
+display: block;
+padding: 14px 15px 0 60px;
+margin: 0 0 2px 0;
+background: url('icon.png') no-repeat;
+height: 46px; /* 60px minus the padding */
+}
 
 #main {
   padding: 10px 0 60px 0;
