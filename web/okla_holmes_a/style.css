@@ -30,10 +30,12 @@ body {
   background: url("border-bottom.png") bottom center repeat-x;
 }
 
-
 #main {
   padding: 10px 100px 60px 100px;
   position: relative; /* put #main in z-order */
+}
+.index #main {
+  padding-top: 470px;
 }
 
 /* Show page formatting */
@@ -55,10 +57,6 @@ body.index {
   position: absolute; top: 0; left: 0;
 }
 
-#main.index {
-  padding-top: 470px;
-}
-
 #puzzle-list td {
   padding: 0px 30px;
 }
@@ -71,6 +69,6 @@ height: 42px; /* 62px minus the padding */
 white-space: nowrap;
 }
 
-#main.puzzle, #puzzle-list {
-  background: rgba(255,255,255,.7);
+.puzzle #content, #puzzle-list {
+  background: rgba(255,255,255,.75);
 }
