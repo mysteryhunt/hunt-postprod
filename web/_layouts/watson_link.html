@@ -1,0 +1,4 @@
+var link=document.getElementById("link");
+{% if site.release.watson %}
+link.innerHTML = '<a href="../../watson/"><img src="../../watson/icon-large.png"></a>';
+{% endif %}
