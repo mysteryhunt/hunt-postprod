@@ -73,6 +73,7 @@ body {
   border-radius: 15px;
   border: 1px solid black;
 }
+#label a { color: black; text-decoration: none; }
 
 #main.index .desc {
   position: absolute;
