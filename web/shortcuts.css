@@ -7,6 +7,7 @@
   text-decoration: none;
   font-family: 'Alice', serif; font-weight: 400;
   font-size: 16px; line-height: 1.4;
+  text-align: left;
 }
 #shortcuts {
   left: 0px;
