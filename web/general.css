@@ -15,6 +15,7 @@ h1 { font-size: 36px; }
 
 #puzzle-list { font-size: 24px; }
 #puzzle-list a { text-decoration: none; }
+#puzzle-list td { vertical-align: baseline; }
 
 #top-link { position: absolute; top: 2px; left: 50%; display: block; }
 #top-link {
