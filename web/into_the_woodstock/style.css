@@ -79,23 +79,26 @@ body.index {
 body.puzzle {
   min-width: 940px;
 }
-#show-title { top: 50px; }
+#show-title { top: 52px; }
 #show-title .title {
   width: 750px; left: -375px; /* centered */
   height: 88px;
   background: url('banner.png') no-repeat;
 }
 .puzzle #main {
-  padding-top: 140px;
+  padding-top: 152px;
+}
+#content {
+  padding: 0 1em;
 }
 #link {
-  left: 325px; top: 155px;
+  left: 300px; top: 100px;
 }
 .ptitle {
   position: relative; /* put in front of banner */
   z-index: 99;        /* put in front of banner */
-  height: 163px;
+  height: 100px;
   background: url('divider.png') no-repeat;
-  padding: 30px 0 0 95px;
-  margin: 0 0 -30px -30px;
+  padding: 0px 0 0 65px;
+  margin: 0 0 0px -20px;
 }
