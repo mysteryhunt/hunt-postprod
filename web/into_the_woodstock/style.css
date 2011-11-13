@@ -1,0 +1,68 @@
+@import "../general.css";
+
+body {
+  background-color: #ccf;
+}
+#background {
+  background-image: url("background.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+
+  position:absolute;
+  top: 0; bottom:0; left: 0; right: 0;
+}
+#side-border div {
+  position: absolute;
+}
+#side-border .left, #side-border .right {
+  position: absolute;
+  width: 120px;
+  bottom: 0px;
+  top: 0px;
+  background-repeat: repeat-y;
+}
+#side-border .left {
+  left: 0;
+  background-image: url('border-left.png');
+}
+#side-border .right {
+  right: 0;
+  background-image: url('border-right.png');
+}
+#main {
+  margin-left: 120px;
+  margin-right: 120px;
+  background: rgba(255,255,255,0.65);
+}
+#bottom-border {
+  position: absolute; left: 108px; right: 108px; bottom: 0;
+  height: 40px;
+  background: url("border-bottom.png") bottom center repeat-x;
+}
+
+#index-image {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  margin-left: -400px;
+}
+#index-image, #index-image > img {
+  display: block;
+  width: 800px; height: 502px;
+  border: none;
+}
+#index-image > * {
+  position: absolute; top: 0; left: 0;
+}
+
+#main {
+  padding: 10px 0 60px 0;
+  position: relative;
+}
+
+body.index {
+  min-width: 880px;
+}
+.index #main {
+  padding-top: 550px;
+}
