@@ -57,14 +57,16 @@ body.index {
   position: absolute; top: 0; left: 0;
 }
 
-#puzzle-list td {
-  padding: 0px 30px;
-}
+#puzzle-list td { vertical-align: baseline; }
+#puzzle-list .num { width: 85px; text-align: right; padding-right: 4px; }
 #puzzle-list a {
 display: block;
-padding: 20px 0 0 60px;
-margin: 0 0 2px 0;
+/* a little bit of space on right */
+padding-right: 3px;
+/* overlap on top of .num field and put icon there. */
+margin-left: -85px; padding-left: 85px;
 background: url('icon.png') no-repeat;
+padding-top: 20px;
 height: 42px; /* 62px minus the padding */
 white-space: nowrap;
 }
