@@ -25,6 +25,9 @@ h1 { font-size: 36px; }
 #show-title { position: absolute; left: 50%; }
 #show-title a { position: absolute; display: block; }
 
+#link, #link a, #link img { width: 85px; height: 100px; display: block; }
+#link { position: absolute; z-index: 99; }
+
 #main {
 	height:auto !important; /* real browsers */
 	height:100%; /* IE6: treaded as min-height*/
