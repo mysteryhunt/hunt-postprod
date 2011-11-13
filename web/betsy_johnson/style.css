@@ -2,13 +2,16 @@
 @import "../shortcuts.css";
 
 /* layout */
+html,body { padding: 0; margin: 0; position: relative; }
+html { height: 100%; /* of viewport */ }
+body { min-height: 100%; /* of viewport */ }
+body { font-family: 'Alice', serif;  font-weight: 400;
+       font-size: 16px; line-height: 1.4; }
+
 body {
-  padding: 0; margin: 0; height: 100%; position: absolute;
   background: url("back-tile.jpg") repeat;
-  min-height: 800px;
-  font-family: 'Alice', serif; font-weight: 400;
-  font-size: 16px; line-height: 1.4;
 }
+
 #folder {
   position: absolute; left: 0; top: 0;
   width: 900px; min-height: 100%;
@@ -36,6 +39,11 @@ body {
   width: 950px; height: 190px;
   background: url("bottom-tile.png") no-repeat;
 }
+#sidebar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+}
+
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
   padding: 40px 105px 10px 102px;
