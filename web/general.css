@@ -11,6 +11,8 @@ body { font-family: 'Alice', serif;  font-weight: 400;
 h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
 h1 { font-size: 36px; }
 
+#link img, #index-image img { border: none; }
+
 #puzzle-list { font-size: 24px; }
 #puzzle-list a { text-decoration: none; }
 
@@ -19,6 +21,9 @@ h1 { font-size: 36px; }
   width: 373px; margin-left: -187px; /* center it! */
   height: 53px; background: url('top-link-banner.png');
 }
+
+#show-title { position: absolute; left: 50%; }
+#show-title a { position: absolute; display: block; }
 
 #main {
 	height:auto !important; /* real browsers */

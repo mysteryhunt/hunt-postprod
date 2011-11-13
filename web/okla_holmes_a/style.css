@@ -74,3 +74,14 @@ white-space: nowrap;
 .puzzle #content, #puzzle-list {
   background: rgba(255,255,255,.75);
 }
+
+/* puzzle page formatting */
+#show-title { top: 0; }
+#show-title .title {
+  width: 800px; left: -400px; /* centered */
+  height: 177px;
+  background: url('banner.png') no-repeat;
+}
+.puzzle #main {
+  padding-top: 177px;
+}

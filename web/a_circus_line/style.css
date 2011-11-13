@@ -40,12 +40,8 @@ background: url('icon.png') no-repeat;
 height: 42px; /* 62px minus the padding */
 }
 
-/* Puzzle page formatting */
-#show-title { position: absolute; left: 50%}
-#show-title a { position: absolute; display: block; }
-
 /* Specific size info for 1S images */
-body { min-heightx: 600px; min-width: 700px; }
+body { min-width: 700px; }
 #top-border {
  height: 81px; background-image: url('1S-top-border-seamless.png');
 }
@@ -75,7 +71,6 @@ body { min-heightx: 600px; min-width: 700px; }
   left: 265px; top: 40px;
   z-index: 99;
 }
-#link img { border: none; }
 .ptitle {
   position: relative; /* put in front of banner */
   height: 87px;
