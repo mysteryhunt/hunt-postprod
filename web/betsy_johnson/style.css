@@ -46,7 +46,7 @@ body {
 
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
-  padding: 40px 105px 10px 102px;
+  padding: 47px 105px 10px 102px;
 }
 #main.index {
   padding-top: 520px;
@@ -76,13 +76,14 @@ body {
 #label a { color: black; text-decoration: none; }
 
 #notation {
-  position: absolute; left: 525px; top: 50px;
+  position: absolute; left: 400px; top: 45px;
   font-family: 'Coustard', 'Alice', serif;
   line-height: 1.0;
   color: #5d2727;
+  text-align: right;
+  width: 400px;
 }
-#notation p { margin: 0; padding: 0; }
-#notation p > span { display: inline-block; width: 4.5em; }
+#notation a { margin-right: 1em; }
 
 #main.index .desc {
   position: absolute;
