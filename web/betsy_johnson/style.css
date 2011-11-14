@@ -17,7 +17,7 @@ body {
   width: 900px; min-height: 100%;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
-  background: url("blue-seamless-swatch.png") repeat;
+  background: url("blue-seamless-swatch.jpg") repeat;
 }
 #middle {
   position: absolute; left: 0; top: 0;
