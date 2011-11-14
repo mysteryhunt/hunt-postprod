@@ -1,0 +1,36 @@
+---
+# use template system
+---
+{% assign critic_name = 'William S. Bergman' %}{% capture flavor %}
+<b>William S. Bergman</b> is the hippest reviewer out there.
+{% endcapture %}{% capture materials %}
+    <table class="materials">
+      <tr>
+          <td class="baby_half_note into_the_woodstock"><a href="../into_the_woodstock/baby_half_note/"><span>Baby Half-Note</span></a></td>
+	  <td class="desert_rose okla_holmes_a"><a href="../okla_holmes_a/desert_rose/"><span>Desert Rose</span></a></td>
+      </tr><tr>
+	  <td class="braeburn into_the_woodstock"><a href="../into_the_woodstock/braeburn/"><span>Braeburn</span></a></td>
+          <td class="magic_star a_circus_line"><a href="../a_circus_line/magic_star/"><span>Magic Star</span></a></td>
+      </tr><tr>
+	  <td class="bubbles into_the_woodstock"><a href="../into_the_woodstock/bubbles/"><span>Bubbles</span></a></td>
+          <td class="sundance into_the_woodstock"><a href="../into_the_woodstock/sundance/"><span>Sundance</span></a></td>
+      </tr><tr>
+	  <td class="daffidazey into_the_woodstock"><a href="../into_the_woodstock/daffidazey/"><span>Daffidazey</span></a></td>
+          <td class="sunny_daze into_the_woodstock"><a href="../into_the_woodstock/sunny_daze/"><span>Sunny Daze</span></a></td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr>
+          <td class="bright_eyes william_s_bergman"><a href="bright_eyes/"><span>Bright Eyes</span></a></td>
+	  <td class="honolu_loo william_s_bergman"><a href="honolu_loo/"><span>Honolu-Loo</span></a></td>
+      </tr><tr>
+	  <td class="cheval william_s_bergman"><a href="cheval/"><span>Cheval</span></a></td>
+          <td class="princess_serena william_s_bergman"><a href="princess_serena/"><span>Princess Serena</span></a></td>
+      </tr><tr>
+	  <td class="daisyjo william_s_bergman"><a href="daisyjo/"><span>Daisyjo</span></a></td>
+          <td class="star_catcher william_s_bergman"><a href="star_catcher/"><span>Star Catcher</span></a></td>
+      </tr><tr>
+	  <td class="gingerbread william_s_bergman"><a href="gingerbread/"><span>Gingerbread</span></a></td>
+          <td class="sweetberry william_s_bergman"><a href="sweetberry/"><span>Sweetberry</span></a></td>
+      </tr>
+    </table>
+{% endcapture %}{% if site.release.william_s_bergman %}{% include critic_index.html %}{% endif %}
