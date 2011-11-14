@@ -35,7 +35,16 @@ pl.innerHTML = ''+
 '      <a href="applejack/" class="unlocked">Applejack</a>\n'+
 '    </td>\n'+
 '    <td>\n'+
+'      <a href="magic_star/" class="unlocked">Magic Star</a>\n'+
+'    </td>\n'+
+'  </tr>\n'+
+'\n'+
+'  <tr>\n'+
+'    <td>\n'+
 '      <a href="bow_tie/" class="unlocked">Bow Tie</a>\n'+
+'    </td>\n'+
+'    <td>\n'+
+'      <a href="meadowlark_bloom/" class="unlocked">Meadowlark Bloom</a>\n'+
 '    </td>\n'+
 '  </tr>\n'+
 '\n'+
@@ -44,31 +53,22 @@ pl.innerHTML = ''+
 '      <a href="cheerilee/" class="unlocked">Cheerilee</a>\n'+
 '    </td>\n'+
 '    <td>\n'+
-'      <a href="cherries_jubilee/" class="unlocked">Cherries Jubilee</a>\n'+
-'    </td>\n'+
-'  </tr>\n'+
-'\n'+
-'  <tr>\n'+
-'    <td>\n'+
-'      <a href="locket/" class="unlocked">Locket</a>\n'+
-'    </td>\n'+
-'    <td>\n'+
-'      <a href="magic_star/" class="unlocked">Magic Star</a>\n'+
-'    </td>\n'+
-'  </tr>\n'+
-'\n'+
-'  <tr>\n'+
-'    <td>\n'+
-'      <a href="meadowlark_bloom/" class="unlocked">Meadowlark Bloom</a>\n'+
-'    </td>\n'+
-'    <td>\n'+
 '      <a href="princess_starburst/" class="unlocked">Princess Starburst</a>\n'+
 '    </td>\n'+
 '  </tr>\n'+
 '\n'+
 '  <tr>\n'+
 '    <td>\n'+
+'      <a href="cherries_jubilee/" class="unlocked">Cherries Jubilee</a>\n'+
+'    </td>\n'+
+'    <td>\n'+
 '      <a href="skydancer/" class="unlocked">Skydancer</a>\n'+
+'    </td>\n'+
+'  </tr>\n'+
+'\n'+
+'  <tr>\n'+
+'    <td>\n'+
+'      <a href="locket/" class="unlocked">Locket</a>\n'+
 '    </td>\n'+
 '    <td>\n'+
 '      <a href="truly/" class="unlocked">Truly</a>\n'+
