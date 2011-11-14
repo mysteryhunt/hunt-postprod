@@ -15,11 +15,15 @@
   <div id="footer"></div>
   <div id="header"></div>
   <div id="sidebar"></div>
+  <div id="notation">
+    <p><span>Client:</span><a href="../../">Borbonicus &amp; Bodley</a></p>
+    <p><span>Target:</span><a href="../">{{ critic_name }}</a></p>
+  </div>
   <div id="main" class="{% if page.class %}{{ page.class }}{% else %}puzzle{% endif %}">
     <h1>{{ page.title }}</h1>
     {{ content }}
   </div>
-  <div id="label"><a href="..">{{ critic_name }}</a></div>
+  <div id="label"><a href="../">{{ critic_name }}</a></div>
   <div id="title"><a href="../../"></a></div>
 </div>
 <script type="text/javascript">

@@ -75,6 +75,15 @@ body {
 }
 #label a { color: black; text-decoration: none; }
 
+#notation {
+  position: absolute; left: 525px; top: 50px;
+  font-family: 'Coustard', 'Alice', serif;
+  line-height: 1.0;
+  color: #5d2727;
+}
+#notation p { margin: 0; padding: 0; }
+#notation p > span { display: inline-block; width: 4.5em; }
+
 #main.index .desc {
   position: absolute;
   top: -22px; left: 25px;
