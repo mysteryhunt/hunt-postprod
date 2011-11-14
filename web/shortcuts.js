@@ -1,7 +1,7 @@
 this.depth=this.depth || '../';
 var shortcuts=document.createElement('div');
 shortcuts.innerHTML=(
-'<div id="shortcuts" href="#">Shortcuts'+
+'<div id="shortcuts" onclick=";"><span>Shortcuts</span>'+
 '<ul class="menu">'+
 '  <li><a href="'+this.depth+'">Home</a></li>'+
 (this.up_title ?
