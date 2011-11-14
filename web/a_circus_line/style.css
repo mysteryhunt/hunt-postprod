@@ -50,7 +50,6 @@ body { min-width: 700px; }
  background-image: url('1S-bottom.png');
  bottom: 5px;
 }
-#main { padding-bottom: 20px; } /* for bottom border */
 #side-border .left-top, #side-border .right-top { height: 526px; top: 52px;}
 #side-border .left-top { width: 108px; background: url('1S-top-left.png'); }
 #side-border .right-top { width: 91px; background: url('1S-top-right.png'); }
@@ -80,7 +79,7 @@ body { min-width: 700px; }
   padding-top: 185px;
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 #main.index {
   padding-top: 85px;
