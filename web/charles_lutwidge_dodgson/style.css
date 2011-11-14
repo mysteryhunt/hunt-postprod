@@ -37,4 +37,6 @@
   background: url("icon.png") no-repeat 0 0;
   padding-left: 45px;
   min-height: 62px;
+  padding-top: 5px;
+  margin-bottom: -15px;
 }

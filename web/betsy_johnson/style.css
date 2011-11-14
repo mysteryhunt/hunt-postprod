@@ -52,7 +52,7 @@ body {
   padding-top: 520px;
 }
 #title {
-  position: absolute; left: 130px; top: 0px;
+  position: absolute; left: 130px; top: 5px;
   background: url("agency-title.png") no-repeat;
 }
 #title, #title a {
@@ -76,11 +76,11 @@ body {
 #label a { color: black; text-decoration: none; }
 
 #notation {
-  position: absolute; left: 400px; top: 45px;
+  position: absolute; left: 45px; top: -8px;
   font-family: 'Coustard', 'Alice', serif;
   line-height: 1.0;
   color: #5d2727;
-  text-align: right;
+  text-align: left;
   width: 400px;
 }
 #notation a { margin-right: 1em; }
@@ -117,7 +117,7 @@ body {
 /* stylin' */
 #main.index { font-family: Coustard, Courier, serif; font-weight: 400; }
 #main.puzzle h1, #main.report h1 {
-  font-size: 32px; margin: 10px 0; padding: 0;
+  font-size: 32px; margin: 10px 0 0 0; padding: 0;
 }
 #main.puzzle h1 {
   background: url("icon.png") no-repeat 0 8px;
