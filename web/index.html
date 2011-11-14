@@ -13,28 +13,89 @@
 <body>
 <div id="main">
   <div id="art">
-<img src="mainpage.jpg" border=0 />
+<img src="mainpage.jpg" />
 {% capture index_art %}
 {% if site.release.a_circus_line %}
 <img src="a_circus_line/mainpage-overlay.png" />
 {% endif %}
+{% if site.release.betsy_johnson %}
+<img src="betsy_johnson/mainpage-overlay.png" />
+{% endif %}
 {% if site.release.okla_holmes_a %}
 <img src="okla_holmes_a/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.charles_lutwidge_dodgson %}
+<img src="charles_lutwidge_dodgson/mainpage-overlay.png" />
 {% endif %}
 {% if site.release.into_the_woodstock %}
 <img src="into_the_woodstock/mainpage-overlay.png" />
 {% endif %}
+{% if site.release.william_s_bergman %}
+<img src="william_s_bergman/mainpage-overlay.png" />
+{% endif %}
 {% if site.release.mayan_fair_lady %}
 <img src="mayan_fair_lady/mainpage-overlay.png" />
+{% endif %}
+{% if site.release.ben_bitdiddle %}
+<img src="ben_bitdiddle/mainpage-overlay.png" />
 {% endif %}
 {% if site.release.phantom_of_the_operator %}
 <img src="phantom_of_the_operator/mainpage-overlay.png" />
 {% endif %}
+{% if site.release.sheila_sunshine %}
+<img src="sheila_sunshine/mainpage-overlay.png" />
+{% endif %}
 {% if site.release.ogre_of_la_mancha %}
 <img src="ogre_of_la_mancha/mainpage-overlay.png" />
 {% endif %}
+{% if site.release.watson %}
+<img src="watson/mainpage-overlay.png" />
+{% endif %}
 {% endcapture %}
 {{ index_art | strip_newlines }}
+<img src="mainpage-map.png" usemap="#map" />
+{% capture index_map %}
+<map name="map">
+<area shape="poly" coords="140,49,155,97,332,58,429,54,552,59,712,93,728,45,507,1,323,3" alt="Borbonicus &amp; Bodley" />
+{% if site.release.a_circus_line %}
+<area shape="rect" coords="352,156,604,285" alt="A Circus Line" href="a_circus_line/" />
+{% endif %}
+{% if site.release.okla_holmes_a %}
+<area shape="rect" coords="57,184,336,286" alt="Okla-Holmes-a!" href="okla_holmes_a/" />
+{% endif %}
+{% if site.release.into_the_woodstock %}
+<area shape="rect" coords="597,352,853,466" alt="Into the Woodstock" href="into_the_woodstock/" />
+{% endif %}
+{% if site.release.mayan_fair_lady %}
+<area shape="rect" coords="235,90,549,159" alt="Mayan Fair Lady" href="mayan_fair_lady/" />
+{% endif %}
+{% if site.release.phantom_of_the_operator %}
+<area shape="rect" coords="59,292,262,477" alt="Phantom of the Operator" href="phanton_of_the_operator/" />
+{% endif %}
+{% if site.release.ogre_of_la_mancha %}
+<area shape="rect" coords="617,148,815,324" alt="Ogre of la Mancha" href="ogre_of_la_mancha/" />
+{% endif %}
+{% if site.release.betsy_johnson %}
+<area shape="rect" coords="572,533,681,647" alt="Betsy Johnson" title="Betsy Johnson" href="betsy_johnson/" />
+{% endif %}
+{% if site.release.charles_lutwidge_dodgson %}
+<area shape="poly" coords="300,644,322,549,382,542,380,580,376,595,411,611,413,645" alt="Charles Lutwidge Dodgson" title="Charles Lutwidge Dodgson" href="charles_lutwidge_dodgson" />
+{% endif %}
+{% if site.release.william_s_bergman %}
+<area shape="rect" coords="381,502,488,596" alt="William S. Bergman" title="William S. Bergman" href="william_s_bergman/" />
+{% endif %}
+{% if site.release.ben_bitdiddle %}
+<area shape="rect" coords="755,485,866,583" alt="Ben Bitdiddle" title="Ben Bitdiddle" href="ben_bitdiddle/" />
+{% endif %}
+{% if site.release.sheila_sunshine %}
+<area shape="poly" coords="56,655,74,559,136,559,135,613,162,626,162,656" alt="Sheila Sunshine" title="Sheila Sunshine" href="sheila_sunshine/" />
+{% endif %}
+{% if site.release.watson %}
+<area shape="rect" coords="140,498,248,604" alt="Watson" title="Watson" href="watson/" />
+{% endif %}
+</map>
+{% endcapture %}
+{{ index_map | strip_newlines }}
 </div><!-- #art -->
 
 {% capture index_table %}
