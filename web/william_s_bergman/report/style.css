@@ -1,0 +1,113 @@
+p.t {
+  white-space: nowrap;
+  margin: 0.75em 0;
+}
+p.spacer {
+  padding: 1.5em 0;
+}
+.ticket {
+  display: inline-block;
+  position: relative;
+  font: 'Alice', serif;
+  height: 135px;
+}
+.ticket.left {
+  background-color: white;
+  background: url('ticket-left.png') no-repeat;
+  width: 200px;
+  margin-right: -20px;
+}
+
+.ticket.left { z-index: 3; }
+.ticket.left + .ticket.left { z-index: 2; }
+.ticket.left + .ticket.left + .ticket.left { z-index: 1; }
+
+.ticket .name {
+  position: absolute;
+  font-size: 25px;
+  display: block;
+}
+.ticket.left .name {
+  top: 3px; bottom: 8px;
+  left: 44px; right: 24px;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 124px;
+}
+.ticket .seat {
+  position: absolute;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  padding: 2px;
+}
+.ticket.left .seat {
+  top: 7px; bottom: 3px;
+  left: 2px;  width: 44px;
+}
+.ticket .rh, .ticket .r,
+.ticket .sh, .ticket .s {
+  display: block;
+}
+.ticket .rh, .ticket .sh {
+  font-weight: bold;
+}
+.ticket .rh {
+  padding-top: 10px;
+}
+.ticket.right .rh {
+  padding-top: 15px;
+}
+.ticket.left .name {
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.ticket.left .seat {
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.ticket.right .seat {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.ticket.right {
+  background: url('ticket-right-c.png') repeat-x;
+  width: 440px;
+  margin-left: 60px;
+}
+.ticket.right .edge {
+  display: block;
+  position: absolute;
+  left: -60px; width: 60px;
+  top: 0; bottom: 0;
+  background: url('ticket-right-l.png') no-repeat;
+}
+.ticket.right .name {
+  top: 4px; bottom: 4px;
+  left: -35px; right: 40px;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 127px;
+  z-index: 99;
+}
+.ticket.right .seat {
+  right: -8px;
+  width: 44px;
+  padding-right: 3px;
+  padding-left: 18px; /* padding-left + width + padding-right =  65px */
+  background: url('ticket-right-r.png') no-repeat top right;
+  top: 0; bottom: 0;
+}
+
+/*
+.ticket .seat {
+  background: rgba(0,0,255,0.5);
+}
+.ticket .name {
+  background: rgba(255,0,0,0.5);
+}
+*/
