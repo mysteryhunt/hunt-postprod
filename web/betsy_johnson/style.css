@@ -133,12 +133,12 @@ body {
   font-family: 'Nothing You Could Do', cursive;
   font-weight: 400;
 }
-.name {
+.critic .name {
   text-decoration: underline;
   white-space: pre; /* allow extra space before/after name */
 }
 /* could use \0000a0 for nbsp; */
-.name:before, .name:after { content: "  "; }
+.critic .name:before, .critic .name:after { content: "  "; }
 a { text-decoration: none; }
 .show > a {
   width: 60px; height: 60px;
