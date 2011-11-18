@@ -1,3 +1,6 @@
+---
+# ensure that we use the templating engine for this file
+---
 this.depth=this.depth || '../';
 var shortcuts=document.createElement('div');
 shortcuts.innerHTML=(
@@ -14,7 +17,11 @@ shortcuts.innerHTML=(
 '  <li><a href="#">Updates</a></li>'+
 '</ul>'+
 '</div>'+
+{% if site.release.solutions %}
+'<a id="check-answer" href="solution/">Solution</a>'+
+{% else %}
 '<a id="check-answer" href="'+this.depth+'check-answer.cgi">Call in answer</a>'+
+{% endif %}
 '');
 var checkAnswer = shortcuts.children[1];
 shortcuts = shortcuts.children[0];

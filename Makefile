@@ -37,6 +37,7 @@ update-all:
 	touch web/_blind/index.html
 	@echo Turning all rounds off
 	@sed -ie 's/Yes[ ]*\(# [1-6][SC]\)/No  \1/' $(WCY)
+	@sed -ie 's/Yes[ ]*\(# solutions\)/No  \1/' $(WCY)
 	@for r in 1S 1C 2S 2C 3S 3C 4S 4C 5S 5C 6S 6C ; do \
           $(MAKE) --no-print-directory update-$$r ; \
         done
@@ -48,7 +49,7 @@ stage:
 	@cp $(WCY) $(WCY).bak
 	@echo Turning all rounds on
 	@sed -ie 's/No[ ]*\(# [1-6][SC]\)/Yes \1/' $(WCY)
-	@echo XXX should turn solutions on as well
+	@sed -ie 's/No[ ]*\(# solutions\)/Yes \1/' $(WCY)
 	jekyll web web/_stage
 	@cp $(WCY).bak $(WCY)
 	rsync -avcz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/

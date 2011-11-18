@@ -1,6 +1,6 @@
 source: .
 destination: _site
-exclude: ['*~', 'solution*', 'orig']
+exclude: ['*~']
 
 release:
   a_circus_line:            Yes # 1S
@@ -15,3 +15,5 @@ release:
   sheila_sunshine:          No  # 5C
   ogre_of_la_mancha:        No  # 6S
   watson:                   No  # 6C
+
+  solutions:                No  # solutions
