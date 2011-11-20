@@ -1,0 +1,38 @@
+@import "../betsy_johnson/style.css";
+#main.index .desc { /* shrink notecard a bit */
+  padding: 0.5em 1.5em;
+  width: 250px;
+}
+#main.index .desc .paperclip {
+  right: -10px /* adjust paperclip over */
+}
+#folder {
+  background-image: url("grey-seamless-swatch.jpg");
+}
+#footer {
+  background-image: url("bottom-tile.png");
+}
+#photo {
+  background: url("photo.png");
+  /* width, height, etc? */
+}
+.materials td.okla_holmes_a {
+  background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
+}
+.materials td.into_the_woodstock {
+  background: url("../into_the_woodstock/icon.png") no-repeat;
+}
+.materials td.mayan_fair_lady {
+  background: url("../mayan_fair_lady/icon.png") no-repeat 0 14px;
+}
+.materials td.ben_bitdiddle {
+  background: url("icon.png") no-repeat 0 4px;
+}
+#main.puzzle h1 {
+  background: url("icon-large.png") no-repeat;
+  padding-left: 90px;
+  min-height: 85px;
+  padding-top: 18px;
+  margin-bottom: -10px;
+  margin-left: -10px;
+}

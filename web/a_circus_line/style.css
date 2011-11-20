@@ -65,7 +65,7 @@ body { min-width: 700px; }
   height: 98px; background: url('1S-puzzle-banner.png');
 }
 #link {
-  left: 285px; top: 6px;
+  left: 290px; top: 6px;
 }
 .ptitle {
   position: relative; /* put in front of banner */
