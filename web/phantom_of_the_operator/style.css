@@ -102,9 +102,13 @@ body.puzzle {
 .ptitle {
   position: relative; /* put in front of banner */
   z-index: 99;        /* put in front of banner */
-  /*background: url('divider.png') no-repeat;*/
+  background: url('divider.png') repeat-x -22px bottom;
+  padding: 60px 0 22px 60px;
+  margin: 0px 0 0px 20px;
+}
+.ptitle .icon {
+  position: absolute;
   background: url('icon-large.png') no-repeat;
-  height: 52px; /* 89px minus padding-top */
-  padding: 37px 0 0 140px;
-  margin: 0px 0 0px -20px;
+  width: 80px; height: 77px;
+  left: -30px; bottom: 20px;
 }
