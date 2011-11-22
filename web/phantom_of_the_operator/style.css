@@ -84,14 +84,14 @@ body.index {
 body.puzzle {
   min-width: 940px;
 }
-#show-title { top: 52px; }
+#show-title { top: 43px; }
 #show-title .title {
   width: 750px; left: -375px; /* centered */
-  height: 56px;
+  height:132px;
   background: url('banner.png') no-repeat;
 }
 .puzzle #main {
-  padding-top: 120px;
+  padding-top: 150px;
 }
 #content {
   padding: 0 1em;
