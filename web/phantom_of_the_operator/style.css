@@ -36,7 +36,7 @@ body {
   background: rgba(255,255,255,0.65);
 }
 #bottom-border {
-  position: absolute; left: 107px; right: 107px; bottom: 0;
+  position: absolute; left: 108px; right: 108px; bottom: 0;
   height: 40px;
   background: url("border-bottom.png") bottom center repeat-x;
 }
@@ -61,9 +61,9 @@ display: block;
 /* a little bit of space on right */
 padding-right: 5px;
 /* overlap on top of .num field and put icon there. */
-margin-left: -93px; padding-left: 93px;
-background: url('icon.png') no-repeat; /* 33px high */
-padding-top: 0px;
+margin-left: -80px; padding-left: 80px;
+background: url('icon.png') no-repeat; /* 50px high */
+padding-top: 5px;
 height: 45px; /* subtract padding-top from height */
 white-space: nowrap;
 }
@@ -102,7 +102,8 @@ body.puzzle {
 .ptitle {
   position: relative; /* put in front of banner */
   z-index: 99;        /* put in front of banner */
-  background: url('divider.png') no-repeat;
+  /*background: url('divider.png') no-repeat;*/
+  background: url('icon-large.png') no-repeat;
   height: 52px; /* 89px minus padding-top */
   padding: 37px 0 0 140px;
   margin: 0px 0 0px -20px;
