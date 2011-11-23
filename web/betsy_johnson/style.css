@@ -158,6 +158,7 @@ a { text-decoration: none; }
   height: 62px;
   padding-left: 45px;
   padding-right: 20px;
+  width: 50%;
 }
 .materials td a {
   border-bottom: 1px solid black;

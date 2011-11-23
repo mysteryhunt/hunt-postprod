@@ -21,8 +21,9 @@
   text-align: right;
   padding-right: 10px;
   font-family: Coustard, Courier, serif;
+  font-size: 80%;
 }
-.materials .n td { padding: 0; vertical-align: bottom; }
+.materials .n td { padding: 0; vertical-align: bottom; width: auto; }
 .materials .n a {
   display: block;
   /* a little bit of space on right */
