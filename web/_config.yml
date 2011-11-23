@@ -16,4 +16,4 @@ release:
   ogre_of_la_mancha:        No  # 6S
   watson:                   No  # 6C
 
-  solutions:                No  # solutions
+  solutions:                Yes # solutions
