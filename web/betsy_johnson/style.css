@@ -167,3 +167,22 @@ a { text-decoration: none; }
 .materials tr.spacer { height: 1em; }
 .materials { margin-top: -10px; margin-bottom: 20px; }
 .show { margin: 10px 0; }
+
+@media print {
+  body { background: white; }
+  #header, #middle, #footer, #sidebar, #label, #title, #notation {
+    display: none;
+  }
+  #folder {
+    position: relative;
+    width: 100%;
+    border: none;
+    background: transparent;
+  }
+  #main {
+    padding: 0 0 0 0;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+}

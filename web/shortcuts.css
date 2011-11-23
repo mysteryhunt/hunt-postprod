@@ -36,3 +36,9 @@
   border-bottom-left-radius: 4px;
 }
 #check-answer:link { color: blue; }
+
+@media print {
+  #check-answer, #shortcuts {
+    display: none;
+  }
+}
