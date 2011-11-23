@@ -1,0 +1,181 @@
+---
+layout: charles_lutwidge_dodgson_solution
+title: Investigator&#8217;s Report
+class: report
+credits: by C. Scott Ananian
+---
+
+<p>This is a critic meta.  The answers which feed into the meta
+are:</p>
+<pre>
+       [show 1]
+       ENUMERATE
+       OCTOPOD
+
+       [show 2]
+       SOCLOSE
+       VESTIGE
+
+       [critic 2]
+       BIZARRE
+       CARMACK
+       CELLULAR
+       FOGBOUND
+       LIQUEURS
+       MAXWELL
+       PAINED
+       REYKJAVIK
+</pre>
+
+<p>The input puzzles are transformed into a draw string by first
+alphabetizing all the input answers, then reading down all the first
+letters, then down all the second letters, etc:</p>
+
+<pre>
+         BCCEFLMOPRSVIAENOIACAEOEZRLUGQXTIYCSAMLMBUWON
+         KLTRAUEOEEPEJOIRCLRUULODASGEKAANRLDVEERTDSIEK
+</pre>
+
+<p>As you take each letter in this string, there will be exactly one valid chess
+move in the list corresponding to that letter.  But!  At move &#8216;Bb4&#8217;
+(the V from VESTIGE) you will run into problems: none of the moves in the
+V row are legal! Not only that, but (if you were missing that answer)
+none of the moves in the S, T, U, W, X, Y, or Z rows are legal either!</p>
+
+<p>The first aha is that this isn&#8217;t normal chess.  It&#8217;s
+<a href="http://en.wikipedia.org/wiki/Alice_chess">Alice Chess</a>.
+That will let you play the V.  The game runs as follows:</p>
+
+<pre>
+  1. g4 e6
+  2. a4 Qh4
+  3. Ra3 Nc6
+  4. Re3+ (32) Kd8
+  5. d4 d6
+  6. Nf3 Bb4
+  7. a5 (130) Qf6
+  8. Ne5 Bd7
+  9. Nd3 Bc5
+ 10. Rc3 Nb8 (146)
+ 11. Rc8 Qh4
+ 12. Rxg8+ Rf8 (171)
+ 13. Rxf8 Bxf8
+ 14. Bf4 Kc8
+ 15. Bg2 d5 (187)
+ 16. 0-0 Bc6
+ 17. Nb4 Bd6 (254)
+ 18. Nxc6 Qh1
+ 19. Bg3 Bxg3
+ 20. Rf6 gxf6
+ 21. Qxh1 (328) Nd7
+ 22. Qh8+ Nf8
+ 23. Qxf8 Kd7
+ 24. Qxf6 Rd8 (342)
+ 25. Qxf7+ Kd6
+ 26. Nd2 Rf8 (357)
+ 27. Nd8 Rxd8
+ 28. Qf1 (387) e5
+ 29. Qc1 Ke7 (402)
+ 30. Qc8 Kf7
+ 31. Qxb7 Rd7
+ 32. Qf3+ (426) Kg8
+ 33. Ne4 dxe4
+ 34. Qe3 (455) Rd2
+ 35. Qxd2 Bb8
+ 36. Bxe4 h5 (481)
+ 37. Qc1 c6
+ 38. gxh5 Bc7
+ 39. Qd1 (520) Bd8
+ 40. Qxd8+ Kg7
+ 41. Qc7+ Kh6 (621)
+ 42. Qxa7 Kg5
+ 43. Qc5 Kh4
+ 44. Qb6 Kg4
+ 45. Qa7 (641) Kf4 (653) (657)
+ 46. Bb7 Ke4
+ 47. Ba6 Kd5
+ 48. Qf7+ Kxd4
+ 49. Qc4#
+</pre>
+
+<p>The numbers in parentheses show the scrabble score at that point in
+the concurrent scrabble game.  Note that the last few plays in the
+game are padding; if you backsolve you&#8217;ll find that the missing input
+string suffix would be HERRING generating the unused tiles BENOISY.</p>
+
+<p>You take the tiles corresponding to each chess move, so that the tiles
+dealt out are in this order:</p>
+
+<pre>
+         WHLAFIERJUOSBTEVSTRXYACEOTANOSWPDRUGTBRAONIRE
+         LCLYEYEAGWLTDFCUUEPNHMSHLTYTHHTIUOTHGEHSGHNED
+</pre>
+
+<p>Then you play scrabble solitaire with this tile set.
+Only the words appearing in Through The Looking Glass are considered
+valid words (as is confirmed when you figure out what the first word
+played is!).  Each play must be the highest scoring play possible with
+the given tiles.  The solution has been computer-checked to be unique.</p>
+
+<p>The first letters of the words played, in order played, spell out a
+clue phrase.</p>
+
+<p>The completed grid looks like:</p>
+
+<pre>
+. . . . A F T E R . . . . . . 
+P U N C H . . . E . . . . . . 
+. . . . . . E B A R G T U O . 
+. . . . . . X . D . . . . N . 
+. . . . R . A L I C E . . L . 
+. . F . A . C . L . . . . Y . 
+. . R . T . T . Y . E . . . . 
+. . A W H I L E . . D . . . T 
+. . B . S . Y . . . G . . . H 
+. . J . . . . . . H E . . N O 
+. T O V E S . . H U S H . . U 
+. . U . . . . G . M . . . . G 
+. . S N O W D R O P . . . . H 
+. . . . . . . E . T . . . . T 
+. . . . . . . W . Y H T I L S 
+</pre>
+
+<p>The words played, in order, are:</p>
+<pre>
+ AWHILE       32 points
+ FRABJOUS    130 points
+ TOVES       146 points
+ EXACTLY     171 points
+ RATHS       187 points
+ SNOWDROP    254 points
+ EBARGTUO    328 points
+ ALICE       342 points
+ ONLY        357 points
+ GREW        387 points
+ READILY     402 points
+ AFTER       426 points
+ PUNCH       455 points
+ HUMPTY      481 points
+ YHTILS      520 points
+ THOUGHTS    621 points
+ HUSH        641 points
+ EDGES       653 points
+ NO          657 points
+</pre>
+
+<p>The clue phrase (reading down the first letters of the words
+played) is</p>
+<pre>
+    AFTER SEAOGRAPHY THEN
+</pre>
+<p>A quick google will turn up this passage from Alice in Wonderland:</p>
+
+<blockquote>
+  &#8216;Well, there was Mystery,&#8217; the Mock Turtle replied, counting off the
+  subjects on his flappers, &#8216;&mdash;Mystery, ancient and modern, with
+  Seaography: then Drawling&mdash;the Drawling-master was an old conger-eel,
+  that used to come once a week: HE taught us Drawling, Stretching, and
+  Fainting in Coils.&#8217;
+</blockquote>
+
+<p>which indicates that <b>DRAWLING</b> is the perfect way to annoy this critic.</p>
