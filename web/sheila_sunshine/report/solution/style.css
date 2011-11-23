@@ -5,5 +5,3 @@
 .npb { page-break-before: avoid; }
 .npa { page-break-after: avoid; }
 .npi, img { page-break-inside: avoid; }
-.u { line-height: 1; }
-.u img {  }
