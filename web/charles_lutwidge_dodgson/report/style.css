@@ -40,3 +40,11 @@
   /* parens are just for easy cut-and-pastability, make them invisible */
   color: transparent;
 }
+
+@media print {
+  .t {
+    background: transparent;
+    border: 1px solid black;
+    margin-right: 2px;
+  }
+}

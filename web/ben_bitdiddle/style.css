@@ -1,9 +1,9 @@
 @import "../betsy_johnson/style.css";
-#main.index .desc { /* shrink notecard a bit */
+.index #main .desc { /* shrink notecard a bit */
   padding: 0.5em 1.5em;
   width: 250px;
 }
-#main.index .desc .paperclip {
+.index #main .desc .paperclip {
   right: -10px /* adjust paperclip over */
 }
 #folder {
@@ -28,11 +28,19 @@
 .materials td.ben_bitdiddle {
   background: url("icon.png") no-repeat 0 4px;
 }
-#main.puzzle h1 {
+.puzzle #main h1 {
   background: url("icon-large.png") no-repeat;
   padding-left: 90px;
   min-height: 85px;
   padding-top: 18px;
   margin-bottom: -10px;
   margin-left: -10px;
+}
+@media print {
+  .puzzle #main h1 {
+    background: transparent;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    min-height: 0;
+  }
 }

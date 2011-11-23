@@ -2,7 +2,7 @@
 #label {
   font-size: 25px; /* compress label a bit */
 }
-#main.index .desc { /* shrink notecard a bit */
+.index #main .desc { /* shrink notecard a bit */
   padding: 0.5em 1.5em;
   width: 310px;
 }
@@ -52,7 +52,7 @@
 .materials .sheila_sunshine {
   background: url("icon.png") no-repeat 0 4px;
 }
-#main.puzzle h1 {
+.puzzle #main h1 {
   background: url("icon-large.png") no-repeat;
   padding-left: 90px;
   min-height: 85px;

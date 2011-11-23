@@ -9,13 +9,13 @@
 {% endif %}
 <title>{% if is_solution %}Solution: {% endif %}{{ page.title }}</title>
 </head>
-<body>
+<body class="{% if page.class %}{{ page.class }}{% else %}puzzle{% endif %}">
 <div id="folder">
   <div id="middle"><div></div></div>
   <div id="footer"></div>
   <div id="header"></div>
   <div id="sidebar"></div>
-  <div id="main" class="{% if page.class %}{{ page.class }}{% else %}puzzle{% endif %}">
+  <div id="main">
     <h1>{{ page.title }}{% if is_solution %} (solution){% endif %}</h1>
     {{ content }}
   </div>
