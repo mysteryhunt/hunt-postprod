@@ -3,8 +3,8 @@
   font-size: 25px; /* compress label a bit */
 }
 .index #main .desc { /* shrink notecard a bit */
-  padding: 0.5em 1.5em;
-  width: 310px;
+  padding: 0.5em 0.5em;
+  width: 380px;
 }
 #folder {
   background-image: url("multicolor-seamless-swatch.jpg");
@@ -14,7 +14,14 @@
 }
 #photo {
   background: url("photo.png");
-  /* width, height, etc? */
+  top: -20px; /* move the photo down 20px */
+}
+.index #main { 
+  padding-top: 540px; /* move the main body down 20px */
+  padding-bottom: 150px; /* make bottom template line up a bit better */
+}
+#photo .paperclip {
+  bottom: 90px; right: 10px; /* move paperclip out a bit */
 }
 .materials .n .num {
   width: 85px;
@@ -54,10 +61,9 @@
   background: url("icon.png") no-repeat 0 18px;
 }
 .puzzle #main h1 {
-  background: url("icon-large.png") no-repeat;
-  padding-left: 90px;
-  min-height: 85px;
-  padding-top: 18px;
-  margin-bottom: -10px;
-  margin-left: -10px;
+  background: url("icon-large.png") no-repeat 0 -25px;
+  padding-left: 80px;
+  min-height: 42px;
+  padding-top: 8px;
+  margin-left: -20px;
 }
