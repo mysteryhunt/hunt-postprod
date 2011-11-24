@@ -104,7 +104,10 @@ body {
 #photo {
   position: absolute;
   top: -40px; left: 150px;
-  background: url("photo.png");
+  width: 695px; height: 583px;
+}
+#photo img {
+  position: absolute; top: 0; left: 0;
   width: 695px; height: 583px;
 }
 #photo .paperclip {
@@ -197,13 +200,22 @@ a { text-decoration: none; }
     padding-top: 0;
   }
   .index #main .desc {
-    position: relative;
+    position: absolute;
     left: 0; top: 0;
   }
-  .index #main .paperclip {
+  .index .paperclip {
     display: none;
   }
   .index #photo {
-    display: none; /* XXX make photo printable? XXX */
+    position: absolute; left: 0;
+    top: 80px; /* make room for notecard */
+    page-break-inside: avoid;
+  }
+  .index #main .critic {
+    /* make room for photo: should be photo top position + 583px */
+    padding-top: 663px;
+  }
+  .index #main .materials {
+    page-break-inside: avoid;
   }
 }
