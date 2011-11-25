@@ -1,7 +1,9 @@
-.center { text-align: center; }
-.ten { width: 100%; }
-.ten td { vertical-align: top; padding: 0 1em; }
-.pb { page-break-before: always; }
-.npb { page-break-before: avoid; }
-.npa { page-break-after: avoid; }
-.npi, img { page-break-inside: avoid; }
+@import "../style.css";
+
+.row {
+  padding-top: 33px;
+  height: 196px; /* height + 34px padding = 229px */
+}
+.row img {
+  margin-top: -33px;
+}

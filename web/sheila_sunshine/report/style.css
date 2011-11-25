@@ -1,9 +1,18 @@
 .center { text-align: center; }
-.ten { width: 100%; }
-.ten td { vertical-align: top; padding: 0 1em; }
 .pb { page-break-before: always; }
 .npb { page-break-before: avoid; }
 .npa { page-break-after: avoid; }
 .npi, img { page-break-inside: avoid; }
 .u { line-height: 1; }
 .u img {  }
+
+.row {
+  height: 178px; padding-top: 14px; /* height + padding = 192px */
+  text-align: center; white-space: nowrap;
+  page-break-inside: avoid;
+}
+.row img { vertical-align: top; margin-top: -14px; /* = padding-top of row */}
+.row .num, .row .space, .row .d { display: inline-block; }
+.row .num { width: 1em; text-align: right; }
+.row .space { width: 2em; }
+.row .d { width: 280px; text-align: left; margin-left: -15px; }
