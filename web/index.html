@@ -48,8 +48,8 @@
 {% if site.release.ogre_of_la_mancha %}
 <img src="ogre_of_la_mancha/mainpage-overlay.png" />
 {% endif %}
-{% if site.release.watson %}
-<img src="watson/mainpage-overlay.png" />
+{% if site.release.watson_2_0 %}
+<img src="watson_2_0/mainpage-overlay.png" />
 {% endif %}
 {% endcapture %}
 {{ index_art | strip_newlines }}
@@ -90,8 +90,8 @@
 {% if site.release.sheila_sunshine %}
 <area shape="poly" coords="56,655,74,559,136,559,135,613,162,626,162,656" alt="Sheila Sunshine" title="Sheila Sunshine" href="sheila_sunshine/" />
 {% endif %}
-{% if site.release.watson %}
-<area shape="rect" coords="140,498,248,604" alt="Watson" title="Watson" href="watson/" />
+{% if site.release.watson_2_0 %}
+<area shape="rect" coords="140,498,248,604" alt="Watson 2.0" title="Watson 2.0" href="watson_2_0/" />
 {% endif %}
 </map>
 {% endcapture %}
@@ -147,10 +147,10 @@
 </tr>
 {% endif %}
 
-{% if site.release.ogre_of_la_mancha or site.release.watson %}
+{% if site.release.ogre_of_la_mancha or site.release.watson_2_0 %}
 <tr><td><a href="ogre_of_la_mancha/">Ogre of La Mancha</a></td>
-{% if site.release.watson %}
-<td><a href="watson/">Watson</a></td>
+{% if site.release.watson_2_0 %}
+<td><a href="watson_2_0/">Watson 2.0</a></td>
 {% endif %}
 </tr>
 {% endif %}
