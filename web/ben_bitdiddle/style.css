@@ -1,9 +1,9 @@
 @import "../betsy_johnson/style.css";
-.index #main .desc { /* shrink notecard a bit */
+body.index #main .desc { /* shrink notecard a bit */
   padding: 0.5em 1.5em;
   width: 250px;
 }
-.index #main .desc .paperclip {
+body.index #main .desc .paperclip {
   right: -10px /* adjust paperclip over */
 }
 #folder {
@@ -12,23 +12,19 @@
 #footer {
   background-image: url("bottom-tile.png");
 }
-#photo {
-  background: url("photo.png");
-  /* width, height, etc? */
-}
-.materials td.okla_holmes_a {
+body.index .materials td.okla_holmes_a {
   background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
-.materials td.into_the_woodstock {
+body.index .materials td.into_the_woodstock {
   background: url("../into_the_woodstock/icon.png") no-repeat;
 }
-.materials td.mayan_fair_lady {
+body.index .materials td.mayan_fair_lady {
   background: url("../mayan_fair_lady/icon.png") no-repeat 0 14px;
 }
-.materials td.ben_bitdiddle {
+body.index .materials td.ben_bitdiddle {
   background: url("icon.png") no-repeat 0 4px;
 }
-.puzzle #main h1 {
+body.puzzle #main h1 {
   background: url("icon-large.png") no-repeat;
   padding-left: 90px;
   min-height: 85px;
@@ -37,7 +33,7 @@
   margin-left: -10px;
 }
 @media print {
-  .puzzle #main h1 {
+  body.puzzle #main h1 {
     background: transparent;
     padding: 0 0 0 0;
     margin: 0 0 0 0;

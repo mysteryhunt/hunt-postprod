@@ -8,20 +8,16 @@
 #footer {
   background-image: url("bottom-tile.png");
 }
-#photo {
-  background: url("photo.png");
-  /* width, height, etc? */
-}
-.materials td.okla_holmes_a {
+body.index .materials td.okla_holmes_a {
   background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
-.materials td.into_the_woodstock {
+body.index .materials td.into_the_woodstock {
   background: url("../into_the_woodstock/icon.png") no-repeat;
 }
-.materials td.william_s_bergman {
+body.index .materials td.william_s_bergman {
   background: url("icon.png") no-repeat;
 }
-.puzzle #main h1 {
+body.puzzle #main h1 {
   background: url("icon-large.png") no-repeat 0 -20px;
   padding-left: 95px;
   min-height: 50px;
@@ -29,7 +25,7 @@
   margin-bottom: -15px;
 }
 @media print {
-  .puzzle #main h1 {
+  body.puzzle #main h1 {
     background: transparent;
     padding-left: 0;
     padding-top: 0;

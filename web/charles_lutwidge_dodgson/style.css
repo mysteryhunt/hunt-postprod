@@ -2,10 +2,10 @@
 #label {
   font-size: 20px; /* compress label a bit */
 }
-.index #main .desc { /* shrink notecard a bit */
+body.index #main .desc { /* shrink notecard a bit */
   padding: 0.5em 1.5em;
 }
-#photo .paperclip { /* move paperclip up */
+body.index #photo .paperclip { /* move paperclip up */
   bottom: 290px; right: 34px;
 }
 #folder {
@@ -13,10 +13,6 @@
 }
 #footer {
   background-image: url("bottom-tile.png");
-}
-#photo {
-  background: url("photo.png");
-  /* width, height, etc? */
 }
 #sidebar {
   /* add nice left side border */
@@ -27,13 +23,13 @@
   /* make space for left side border */
   padding-left: 120px;
 }
-.materials td.okla_holmes_a {
+body.index .materials td.okla_holmes_a {
   background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
-.materials td.charles_lutwidge_dodgson {
+body.index .materials td.charles_lutwidge_dodgson {
   background: url("icon.png") no-repeat;
 }
-.puzzle #main h1 {
+body.puzzle #main h1 {
   background: url("icon.png") no-repeat 0 0;
   padding-left: 45px;
   min-height: 62px;
@@ -43,7 +39,7 @@
 @media print {
   #sidebar { display: none; }
   #main { padding-left: 0; }
-  .puzzle #main h1 {
+  body.puzzle #main h1 {
     background: transparent;
     padding-left: 0;
     padding-top: 0;

@@ -2,7 +2,7 @@
 @import "../shortcuts.css";
 
 /* layout */
-html,body { padding: 0; margin: 0; position: relative; }
+html, body { padding: 0; margin: 0; position: relative; }
 html { height: 100%; /* of viewport */ }
 body { min-height: 100%; /* of viewport */ }
 body { font-family: 'Alice', serif;  font-weight: 400;
@@ -48,9 +48,6 @@ body {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
   padding: 47px 105px 10px 102px;
 }
-.index #main {
-  padding-top: 520px;
-}
 #title {
   position: absolute; left: 130px; top: 5px;
   background: url("agency-title.png") no-repeat;
@@ -85,7 +82,10 @@ body {
 }
 #notation a { margin-right: 1em; }
 
-.index #main .desc {
+body.index #main {
+  padding-top: 520px;
+}
+body.index #main .desc {
   position: absolute;
   top: -22px; left: 25px;
   width: 275px;
@@ -95,91 +95,101 @@ body {
   line-height: 1.75;
   z-index: 99;
 }
-.index #main .desc .paperclip {
+body.index #main .desc .paperclip {
  position: absolute;
  background: url("paperclip.png");
  width: 62px; height: 115px;
  top: -21px; right: 1px;
 }
-#photo {
+body.index #photo {
   position: absolute;
   top: -40px; left: 150px;
   width: 695px; height: 583px;
 }
-#photo img {
+body.index #photo img {
   position: absolute; top: 0; left: 0;
   width: 695px; height: 583px;
 }
-#photo .paperclip {
+body.index #photo .paperclip {
   position: absolute;
   bottom: 90px; right: 29px;
   width: 80px; height: 86px;
   background: url("paperclip-2.png");
 }
 
-.index #check-answer { display: none !important; }
+body.index #check-answer, body.solution #check-answer {
+  display: none !important;
+}
 
 /* stylin' */
-.index #main { font-family: Coustard, Courier, serif; font-weight: 400; }
-.puzzle #main h1, .report #main h1 {
+body.index #main { font-family: Coustard, Courier, serif; font-weight: 400; }
+body.puzzle #main h1, body.report #main h1 {
   font-size: 32px; margin: 10px 0 0 0; padding: 0;
 }
-.puzzle #main h1 {
+body.puzzle #main h1 {
   background: url("icon.png") no-repeat 0 8px;
   padding-left: 60px;
   min-height: 31px;
 }
 @media print {
-  .puzzle #main h1 {
+  body.puzzle #main h1 {
     /* would be nice to make this printable */
     background: transparent;
     padding-left: 0;
   }
 }
-.critic, h2, .index .report {
+body.index .critic, body.index h2, body.index .report {
   font-weight: 400;
   font-size: 24px;
   margin: 10px 0 10px 0; padding: 0;
 }
-.critic .name, .materials, #label {
+body.solution h2 {
+  font-size: 24px;
+  padding: 0; margin: 0;
+}
+body.index .critic .name, body.index .materials, #label {
   font-family: 'Nothing You Could Do', cursive;
   font-weight: 400;
 }
-.critic .name {
+body.index .critic .name {
   text-decoration: underline;
   white-space: pre; /* allow extra space before/after name */
 }
 /* could use \0000a0 for nbsp; */
-.critic .name:before, .critic .name:after { content: "  "; }
-a { text-decoration: none; }
-.show > a {
-  width: 60px; height: 60px;
-  background: url("actor-60.png");
-  display: inline-block;
+body.index .critic .name:before,
+body.index .critic .name:after {
+  content: "  ";
 }
-.materials { width: 100%;  font-size: 24px; text-decoration: none; }
-.materials td {
+body.index a {
+  text-decoration: none;
+}
+body.index .materials {
+  width: 100%;
+  font-size: 24px;
+  text-decoration: none;
+}
+body.index .materials td {
   vertical-align: middle;
   height: 62px;
   padding-left: 45px;
   padding-right: 20px;
   width: 50%;
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
-.materials td a {
+body.index .materials td a {
   border-bottom: 1px solid black;
   display: block;
   padding-left: 0.6em;
 }
-.materials td a > span { position: relative; top: 1ex; }
-.materials td.a_circus_line {
+body.index .materials td a > span { position: relative; top: 1ex; }
+body.index .materials td.a_circus_line {
   background: url("../a_circus_line/icon.png") no-repeat;
 }
-.materials td.betsy_johnson {
+body.index .materials td.betsy_johnson {
   background: url("icon.png") no-repeat 0px 20px;
 }
-.materials tr.spacer { height: 1em; }
-.materials { margin-top: -10px; margin-bottom: 20px; }
-.show { margin: 10px 0; }
+body.index .materials tr.spacer { height: 1em; }
 
 @media print {
   body { background: white; }
@@ -198,26 +208,26 @@ a { text-decoration: none; }
   img {
     page-break-inside: avoid;
   }
-  .index #main {
+  body.index #main {
     padding-top: 0;
   }
-  .index #main .desc {
+  body.index #main .desc {
     position: absolute;
     left: 0; top: 0;
   }
-  .index .paperclip {
+  body.index .paperclip {
     display: none;
   }
-  .index #photo {
+  body.index #photo {
     position: absolute; left: 0;
     top: 80px; /* make room for notecard */
     page-break-inside: avoid;
   }
-  .index #main .critic {
+  body.index #main .critic {
     /* make room for photo: should be photo top position + 583px */
     padding-top: 663px;
   }
-  .index #main .materials {
+  body.index #main .materials {
     page-break-inside: avoid;
   }
 }

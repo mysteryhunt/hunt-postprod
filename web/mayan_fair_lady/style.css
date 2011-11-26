@@ -40,31 +40,33 @@ body {
   background: url("border-bottom.png") bottom center repeat-x;
 }
 
-#index-image {
+body.index #index-image {
   position: absolute;
   top: 31px;
   left: 50%;
   margin-left: -400px;
 }
-#index-image, #index-image > img {
+body.index #index-image, body.index #index-image > img {
   display: block;
   width: 800px; height: 535px;
   border: none;
 }
-#index-image > * {
+body.index #index-image > * {
   position: absolute; top: 0; left: 0;
 }
-#puzzle-list .num { width: 85px; text-align: right; padding-right: 4px; }
-#puzzle-list a {
-display: block;
-/* a little bit of space on right */
-padding-right: 5px;
-/* overlap on top of .num field and put icon there. */
-margin-left: -93px; padding-left: 93px;
-background: url('icon.png') no-repeat; /* 33px high */
-padding-top: 0px;
-height: 45px; /* subtract padding-top from height */
-white-space: nowrap;
+body.index #puzzle-list .num {
+  width: 85px; text-align: right; padding-right: 4px;
+}
+body.index #puzzle-list a {
+  display: block;
+  /* a little bit of space on right */
+  padding-right: 5px;
+  /* overlap on top of .num field and put icon there. */
+  margin-left: -93px; padding-left: 93px;
+  background: url('icon.png') no-repeat; /* 33px high */
+  padding-top: 0px;
+  height: 45px; /* subtract padding-top from height */
+  white-space: nowrap;
 }
 
 #main {
@@ -76,7 +78,7 @@ body.index {
   /*min-width: 880px;*/
   min-width: 940px;
 }
-.index #main {
+body.index #main {
   padding-top: 580px;
 }
 
@@ -90,7 +92,7 @@ body.puzzle {
   height: 56px;
   background: url('banner.png') no-repeat;
 }
-.puzzle #main {
+body.puzzle #main {
   padding-top: 120px;
 }
 #content {

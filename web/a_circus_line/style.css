@@ -19,7 +19,7 @@ body {
 #bottom-border { position: absolute; left: 50%; }
 
 /* Show page formatting */
-#index-image {
+body.index #index-image {
   margin: 10px auto 20px auto; display: block;
   border: 2px solid #67030f;
   background: rgba(255,255,255,0.4);
@@ -29,10 +29,10 @@ body {
   width: 600px; height: 461px;
   position: relative;
 }
-#index-image > * {
+body.index #index-image > * {
   position: absolute; top: 0; left: 0;
 }
-#puzzle-list a {
+body.index #puzzle-list a {
 display: block;
 padding: 20px 0 0 50px;
 margin: 0 0 2px 0;
@@ -81,6 +81,6 @@ body { min-width: 700px; }
   padding-right: 100px;
   padding-bottom: 35px;
 }
-#main.index {
+body.index #main {
   padding-top: 85px;
 }

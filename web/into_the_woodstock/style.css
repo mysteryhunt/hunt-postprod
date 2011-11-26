@@ -40,21 +40,22 @@ body {
   background: url("border-bottom.png") bottom center repeat-x;
 }
 
-#index-image {
+body.index #index-image {
   position: absolute;
   top: 45px;
   left: 50%;
   margin-left: -400px;
 }
-#index-image, #index-image > img {
+body.index #index-image,
+body.index #index-image > img {
   display: block;
   width: 800px; height: 502px;
   border: none;
 }
-#index-image > * {
+body.index #index-image > * {
   position: absolute; top: 0; left: 0;
 }
-#puzzle-list a {
+body.index #puzzle-list a {
   display: block;
   padding: 14px 15px 0 60px;
   margin: 0 0 2px 0;
@@ -71,7 +72,7 @@ body.index {
   /*min-width: 880px;*/
   min-width: 940px;
 }
-.index #main {
+body.index #main {
   padding-top: 550px;
 }
 
@@ -85,7 +86,7 @@ body.puzzle {
   height: 88px;
   background: url('banner.png') no-repeat;
 }
-.puzzle #main {
+body.puzzle #main {
   padding-top: 152px;
 }
 #content {

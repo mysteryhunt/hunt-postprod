@@ -165,11 +165,12 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
         sol_body = extract_body(sol)
         options = { 'layout': canon(round_name)+"_solution",
                     'title': title,
-                    'credits': authors }
+                    'credits': authors,
+                    'class': 'puzzle solution' }
         if 'solution/style.css' in files:
             options['style'] = 'style.css'
         if re.match(r'Investigator.s Report', title):
-            options['class'] = 'report'
+            options['class'] = 'report solution'
         sol_index_html = mktempl(sol_body, **options)
 
     # ok, extract all files into the target directory

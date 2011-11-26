@@ -2,20 +2,22 @@
 @import "shortcuts.css";
 
 /* General formatting */
-html,body { padding: 0; margin: 0; position: relative; }
+html, body { padding: 0; margin: 0; position: relative; }
 html { height: 100%; /* of viewport */ }
 body { min-height: 100%; /* of viewport */ }
 body { font-family: 'Alice', serif;  font-weight: 400;
        font-size: 16px; line-height: 1.4; }
 
-h1,#puzzle-list { font-family: 'Abril Fatface'; font-weight: 400; }
+h1, body.index #puzzle-list {
+  font-family: 'Abril Fatface'; font-weight: 400;
+}
 h1 { font-size: 36px; }
 
-#link img, #index-image img { border: none; }
+#link img, body.index #index-image img { border: none; }
 
-#puzzle-list { font-size: 24px; }
-#puzzle-list a { text-decoration: none; }
-#puzzle-list td { vertical-align: baseline; }
+body.index #puzzle-list { font-size: 24px; }
+body.index #puzzle-list a { text-decoration: none; }
+body.index #puzzle-list td { vertical-align: baseline; }
 
 #top-link { position: absolute; top: 2px; left: 50%; display: block; }
 #top-link {
