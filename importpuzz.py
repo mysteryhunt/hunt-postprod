@@ -1,12 +1,13 @@
 #!/usr/bin/python2.7
 from __future__ import with_statement
 """Import a puzzle file.
-Requires 'python2.7', 'python-tidylib', and 'python-yaml'.
+Requires 'python2.7', 'python-html5lib', and 'python-yaml'.
 
 Command line:
 
 ./import.py [zip file] [root dir] [round] [authors]
 """
+import html5lib
 import os, os.path
 import re
 import shutil
@@ -16,6 +17,7 @@ import xml.dom.minidom as minidom
 import yaml
 from cStringIO import StringIO
 from contextlib import contextmanager
+from htmlentitydefs import name2codepoint
 from subprocess import Popen, PIPE
 from tidylib import tidy_document
 from zipfile import ZipFile
@@ -27,8 +29,11 @@ def rmdir_after(d):
     finally:
         shutil.rmtree(d)
 
+global LOG_CONTEXT1, LOG_CONTEXT2
+LOG_CONTEXT1='<unknown>'
+LOG_CONTEXT2=''
 def log_error(s):
-    print s # XXX
+    print LOG_CONTEXT1, LOG_CONTEXT2, s # XXX
 def log_fatal(s):
     log_error(s)
     raise "FATAL"
@@ -42,16 +47,21 @@ def smart_quotes(s):
 
 def extract_title(html):
     # "correct way"
-    dom = minidom.parseString(html)
+    parser = html5lib.HTMLParser(tree=html5lib.treebuilders.getTreeBuilder("dom"))
+    dom = parser.parse(html)
     titleE = dom.getElementsByTagName("title")
     assert len(titleE)==1, \
-           "Wrong number of <title> elements found: "+len(titleE)
+           "Wrong number of <title> elements found: "+str(len(titleE))
     titleC = titleE[0].childNodes
-    assert len(titleC)==1, \
-           "Wrong number of <title> children found: "+len(titleC)
-    assert titleC[0].nodeType == titleC[0].TEXT_NODE, \
-           "<title> contains something other than text"
-    return titleC[0].data.strip()
+    assert len(titleC)>=1, \
+           "Wrong number of <title> children found: "+str(len(titleC))
+    value = ''
+    for c in titleC:
+        assert c.nodeType == c.TEXT_NODE, \
+               "<title> contains something other than text"
+        value += c.data
+    return value.strip()
+
 def extract_body(html):
     # "Hack" way (try not to munge HTML!)
     m = re.search(r'<body(?:\s+([^>]*))?>(.*?)</body\s*>', html,
@@ -67,12 +77,18 @@ def canon(s):
     s = re.sub(u"['\u2019]([st])\\b", r'\1', s) # possessives
     return re.sub(r'[^a-z0-9]+', '_', s.lower().strip())
 
+SORT_ORDER=['layout','title','class','style','credits']
+
 def mktempl(body, **options):
+    def order(k):
+        return (SORT_ORDER.index(k) if k in SORT_ORDER else 99, k)
+
     s = u'---\n'
-    for k,v in options.iteritems():
-        s += u'%s: %s\n' % (k, v)
+    for k in sorted(options.keys(), key=order):
+        s += u'%s: %s\n' % (k, options[k])
     s += u'---\n'
-    s += body
+    s += body.strip()
+    s = s.strip() + '\n'
     return s
 
 HTMLTIDY_OPTS = {
@@ -93,6 +109,8 @@ def is_reserved_filename(fname):
     return fname.startswith('-') or fname.startswith('_')
 
 def do_import_of_zf(zf, root_dir, round_name, authors):
+    global LOG_CONTEXT2
+    LOG_CONTEXT2 = ''
     files = zf.namelist()
     # sanity-check files
     bad_files = [f for f in files if
@@ -105,17 +123,27 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
         log_fatal("Puzzle not found (expected index.html)")
 
     def tidy_with_log(s):
-        out,msgs = tidy_document(s, options=HTMLTIDY_OPTS)
-        # log warnings
-        for m in msgs.splitlines():
-            pos, mm = m.split(' - ')
-            if mm in ['Warning: missing <!DOCTYPE> declaration',
-                      'Warning: <table> lacks "summary" attribute',
-                      'Warning: <img> lacks "alt" attribute']:
-                continue # suppress this warning
-            log_error(m)
-        return smart_quotes(out).decode('utf8')
+        if not s.startswith("<!DOCTYPE"):
+            s = "<!DOCTYPE HTML>\n" + s
+        parser = html5lib.HTMLParser(
+            tree=html5lib.treebuilders.getTreeBuilder("dom"))
+        doc = parser.parse(s)
+        for (line,char), msg, details in parser.errors:
+            # work around weird error for void elements
+            if msg == 'non-void-element-with-trailing-solidus' and \
+               details['name'] in html5lib.constants.voidElements:
+                continue
+            log_error("line %d pos %d - %s" %
+                      (line, char, html5lib.constants.E[msg] % details))
+        clean = html5lib.serializer.serialize(doc, tree='dom',
+                                              format='xhtml', encode='utf8',
+                                              omit_optional_tags=False)
+        # For some reason, html5lib is chomping on &nbsp; -- put them back
+        clean = clean.replace(unichr(name2codepoint['nbsp']), u'&nbsp;')
+        cleaner = smart_quotes(clean.encode('utf8')).decode('utf8')
+        return cleaner
 
+    LOG_CONTEXT2 = 'index.html'
     puz = tidy_with_log(zf.read('index.html'))
     # extract title, body, stylesheet
     title = extract_title(puz)
@@ -129,6 +157,7 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
     index_html = mktempl(body, **options)
     
     # process the solution (if present)
+    LOG_CONTEXT2 = 'solution/index.html'
     sol_index_html = ''
     if 'solution/index.html' not in files:
         log_error('Solution not found (expected solution/index.html)')
@@ -143,6 +172,7 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
         sol_index_html = mktempl(sol_body, **options)
 
     # ok, extract all files into the target directory
+    LOG_CONTEXT2 = ''
     target_dir = os.path.join(root_dir,
                               canon(round_name).encode('utf8'),
                               canon(title).encode('utf8'))
@@ -221,6 +251,7 @@ def do_export(zip_file, puzzle_dir):
 
 if __name__ == '__main__':
     _, zip_file, root_dir, round_name, authors = sys.argv
+    LOG_CONTEXT1=zip_file
     if round_name=='export':
         do_export(zip_file, root_dir) # HACK HACK HACK
     else:
