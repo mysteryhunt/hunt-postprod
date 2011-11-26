@@ -117,6 +117,8 @@ body {
   background: url("paperclip-2.png");
 }
 
+.index #check-answer { display: none !important; }
+
 /* stylin' */
 .index #main { font-family: Coustard, Courier, serif; font-weight: 400; }
 .puzzle #main h1, .report #main h1 {
