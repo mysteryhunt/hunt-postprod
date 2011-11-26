@@ -33,11 +33,11 @@ body.index #index-image > * {
   position: absolute; top: 0; left: 0;
 }
 body.index #puzzle-list a {
-display: block;
-padding: 20px 0 0 50px;
-margin: 0 0 2px 0;
-background: url('icon.png') no-repeat;
-height: 42px; /* 62px minus the padding */
+  display: block;
+  padding: 20px 0 0 50px;
+  margin: 0 0 2px 0;
+  background: url('icon.png') no-repeat;
+  height: 42px; /* 62px minus the padding */
 }
 
 /* Specific size info for 1S images */
