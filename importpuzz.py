@@ -136,11 +136,10 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
             log_error("line %d pos %d - %s" %
                       (line, char, html5lib.constants.E[msg] % details))
         clean = html5lib.serializer.serialize(doc, tree='dom',
-                                              format='xhtml', encode='utf8',
+                                              format='xhtml',
+                                              encoding='ascii',
                                               omit_optional_tags=False)
-        # For some reason, html5lib is chomping on &nbsp; -- put them back
-        clean = clean.replace(unichr(name2codepoint['nbsp']), u'&nbsp;')
-        cleaner = smart_quotes(clean.encode('utf8')).decode('utf8')
+        cleaner = smart_quotes(clean)
         return cleaner
 
     LOG_CONTEXT2 = 'index.html'
