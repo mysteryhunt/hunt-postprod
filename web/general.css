@@ -37,3 +37,28 @@ body.index #puzzle-list td { vertical-align: baseline; }
 
 	min-height:100%; /* real browsers */
 }
+
+@media print {
+  body { background: white; }
+  #background, #side-border, #top-border, #bottom-border,
+  #show-title, #top-link {
+    display: none;
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  #main, #content {
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+  }
+  body.puzzle #main,
+  body.index #main {
+    padding-top: 0px;
+  }
+  .ptitle {
+    background: transparent;
+    padding: 0 0 0 0 !important;
+    margin: 0 0 0 0 !important;
+    height: auto !important;
+  }
+}
