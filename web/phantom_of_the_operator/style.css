@@ -113,7 +113,13 @@ body.puzzle #main {
 }
 .ptitle .icon {
   position: absolute;
+  display: block;
   background: url('icon-large.png') no-repeat;
   width: 80px; height: 77px;
   left: -30px; bottom: 20px;
+}
+@media print {
+  .ptitle .icon {
+    display: none;
+  }
 }

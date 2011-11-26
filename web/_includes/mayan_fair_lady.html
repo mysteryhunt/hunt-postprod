@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+{% if site.release.mayan_fair_lady %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="{% if is_solution %}../{% endif %}../../favicon.ico" />
+<link href='{% if is_solution %}../{% endif %}../style.css' rel='stylesheet' type='text/css'>
+{% if page.style %}
+<link href="{{ page.style }}" rel="stylesheet" type="text/css">
+{% endif %}
+{% if is_solution %}
+<style type="text/css">
+#check-answer { display: none !important; }
+</style>
+{% endif %}
+<title>{% if is_solution %}Solution: {% endif %}{{ page.title }}</title>
+</head>
+
+<body class="{% if page.class %}{{ page.class }}{% else %}puzzle{% endif %}">
+<div id="background"></div>
+<div id="side-border">
+  <div class="left"></div>
+  <div class="right"></div>
+</div>
+
+<div id="top-border"></div>
+
+<div id="main">
+<div id="content">
+<h1 class="ptitle">{{ page.title }}{% if is_solution %} (solution){% endif %}</h1>
+{% if is_solution %}<h2>{{page.credits}}</h2>{% endif %}
+
+{{ content }}
+</div>
+
+</div>
+<div id="show-title">
+  <a class="title" href="{% if is_solution %}../{% endif %}../"></a>
+  <div id="link"></div>
+</div>
+<a id="top-link" href="{% if is_solution %}../{% endif %}../../"></a>
+<div id="bottom-border"></div>
+{% unless is_solution %}
+<script src="-link.js" type="text/javascript"></script>
+{% endunless %}
+<script type="text/javascript">
+this.depth="{% if is_solution %}../{% endif %}../../";
+this.up_title="{% if is_solution %}{{ page.title }}{% else %}Mayan Fair Lady{% endif %}";
+</script>
+<script src="{% if is_solution %}../{% endif %}../../shortcuts.js" type="text/javascript"></script>
+</body>
+{% endif %}
+</html>
