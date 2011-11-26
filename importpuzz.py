@@ -1,23 +1,24 @@
 #!/usr/bin/python2.7
 from __future__ import with_statement
 """Import a puzzle file.
-Requires 'python2.7' and 'python-tidylib'.
+Requires 'python2.7', 'python-tidylib', and 'python-yaml'.
 
 Command line:
 
 ./import.py [zip file] [root dir] [round] [authors]
 """
+import os, os.path
+import re
 import shutil
 import sys
 import tempfile
-from zipfile import ZipFile
-from contextlib import contextmanager
-from tidylib import tidy_document
 import xml.dom.minidom as minidom
-import re
-from subprocess import Popen, PIPE
+import yaml
 from cStringIO import StringIO
-import os.path
+from contextlib import contextmanager
+from subprocess import Popen, PIPE
+from tidylib import tidy_document
+from zipfile import ZipFile
 
 @contextmanager
 def rmdir_after(d):
@@ -62,6 +63,8 @@ def extract_body(html):
     return m.group(2).strip()
 
 def canon(s):
+    # suppress 's
+    s = re.sub(u"['\u2019]([st])\\b", r'\1', s) # possessives
     return re.sub(r'[^a-z0-9]+', '_', s.lower().strip())
 
 def mktempl(body, **options):
@@ -73,7 +76,7 @@ def mktempl(body, **options):
     return s
 
 HTMLTIDY_OPTS = {
-    'new-blocklevel-tags': 'canvas',
+    'new-blocklevel-tags': 'canvas,colset',
     'char-encoding': 'utf8',
     'gnu-emacs': 'yes',
     'join-classes': 'yes',
@@ -81,15 +84,20 @@ HTMLTIDY_OPTS = {
     'enclose-text': 'no',
     'enclose-block-text': 'no',
     'indent': 'no',
-    'wrap': '0'
+    'wrap': '0',
+    'merge-divs': 'no',
+    'merge-spans': 'no'
 }
+
+def is_reserved_filename(fname):
+    return fname.startswith('-') or fname.startswith('_')
 
 def do_import_of_zf(zf, root_dir, round_name, authors):
     files = zf.namelist()
     # sanity-check files
     bad_files = [f for f in files if
                  f.startswith('../') or f.startswith('./') or
-                 f.startswith('/') or f.startswith('-') or f.startswith('_')]
+                 f.startswith('/') or is_reserved_filename(f)]
     if bad_files:
         log_fatal("Illegal file names in archive: "+(' '.join(bad_files)))
     # find the title of the puzzle
@@ -100,10 +108,13 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
         out,msgs = tidy_document(s, options=HTMLTIDY_OPTS)
         # log warnings
         for m in msgs.splitlines():
-            if m == 'line 1 column 1 - Warning: missing <!DOCTYPE> declaration':
+            pos, mm = m.split(' - ')
+            if mm in ['Warning: missing <!DOCTYPE> declaration',
+                      'Warning: <table> lacks "summary" attribute',
+                      'Warning: <img> lacks "alt" attribute']:
                 continue # suppress this warning
             log_error(m)
-        return smart_quotes(out)
+        return smart_quotes(out).decode('utf8')
 
     puz = tidy_with_log(zf.read('index.html'))
     # extract title, body, stylesheet
@@ -112,6 +123,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
     options = { 'layout': canon(round_name), 'title': title }
     if 'style.css' in files:
         options['style'] = 'style.css'
+    if re.match(r'Investigator.s Report', title):
+        options['class'] = 'report'
     # replace index.html with template version
     index_html = mktempl(body, **options)
     
@@ -130,25 +143,86 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
         sol_index_html = mktempl(sol_body, **options)
 
     # ok, extract all files into the target directory
-    target_dir = os.path.join(root_dir, canon(round_name), canon(title))
-    print target_dir
+    target_dir = os.path.join(root_dir,
+                              canon(round_name).encode('utf8'),
+                              canon(title).encode('utf8'))
+    solution_dir = os.path.join(target_dir, 'solution')
+    if not os.path.isdir(solution_dir):
+        os.makedirs(solution_dir)
     # XXX clean target?
     for f in files:
         full_path = os.path.join(target_dir, f)
         if f == 'index.html':
             with open(full_path, 'w') as fd:
-                fd.write(index_html)
+                fd.write(index_html.encode('utf8'))
         elif f == 'solution/index.html':
             with open(full_path, 'w') as fd:
-                fd.write(sol_index_html)
+                fd.write(sol_index_html.encode('utf8'))
         else:
             zf.extract(f, target_dir)
+
+def listdir_rec(d):
+    for dirpath, dirnames, filenames in os.walk(d, followlinks=True):
+        for f in filenames:
+            fullname = os.path.join(dirpath, f)
+            # strip off top
+            assert fullname.startswith(d)
+            yield os.path.relpath(fullname, d)
+
+def parse_header(contents):
+    assert contents.startswith('---'), "Not a template!"
+    m = re.match(r'\A^---\s*$(.*?)^---\s*$(.*)\Z', contents,
+                 flags=(re.DOTALL|re.MULTILINE))
+    assert m is not None
+    options = yaml.load(m.group(1))
+    return options, m.group(2)
+
+def wrap_body(body, options, is_solution=False):
+    style = ''
+    if 'style' in options:
+        style = "<link href='style.css' rel='stylesheet' type='text/css'>"
+    return u"""<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+%s
+<title>%s</title>
+</head>
+<body>
+%s
+</body>
+</html>
+""" % (style, options['title'], body)
+
+def do_export_to_zf(zf, puzzle_dir):
+    # look at every file in puzzle_dir
+    for f in listdir_rec(puzzle_dir):
+        fullname = os.path.join(puzzle_dir, f)
+        if is_reserved_filename(f): continue # skip this one
+        if f.endswith('~'): continue # skip emacs backup files
+        if f == 'index.html' or f == 'solution/index.html':
+            with open(fullname, 'r') as fd:
+                contents = fd.read().decode('utf8')
+            options, body = parse_header(contents)
+            wrapped = wrap_body(body, options,
+                                is_solution=(f.startswith('solution')))
+            zf.writestr(f, wrapped.encode('utf8'))
+        else:
+            zf.write(fullname, f)
 
 def do_import(zip_file, root_dir, round_name, authors):
     #with rmdir_after(tempfile.mkdtemp(suffix='.puzzle')) as d:
     with ZipFile(zip_file, 'r') as zf:
         do_import_of_zf(zf, root_dir, round_name, authors)
 
+def do_export(zip_file, puzzle_dir):
+    with ZipFile(zip_file, 'w') as zf:
+        do_export_to_zf(zf, puzzle_dir)
+
 if __name__ == '__main__':
     _, zip_file, root_dir, round_name, authors = sys.argv
-    do_import(zip_file, root_dir, round_name, authors)
+    if round_name=='export':
+        do_export(zip_file, root_dir) # HACK HACK HACK
+    else:
+        do_import(zip_file, root_dir,
+                  round_name.decode('utf8'), authors.decode('utf8'))
