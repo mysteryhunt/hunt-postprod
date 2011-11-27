@@ -16,8 +16,7 @@ soldering exercise.</p>
 
 <p>When you turn the device on, it immediately starts flashing morse code
 at you:</p>
-<pre>
-  ENTER MORSE NO SPACES
+<pre>  ENTER MORSE NO SPACES
 </pre>
 
 <p>You feed in the show puzzle answers into the device, by using the
@@ -25,53 +24,53 @@ switch to tap them in morse code.  The device repeats the answer back
 to you &mdash; strangely omitting the proper long inter-letter/inter-word
 spacing &mdash; and then flashes a pair of letters, as follows:</p>
 
-<pre>
-15 JAIHO       .--- .- .. .... ---              -> MI
-16 CARSEAT     -.-. .- .-. ... . .- -           -> CH
-17 BYLINE      -... -.-- .-.. .. -. .           -> AE
-18 LOVEETC     .-.. --- ...- . . - -.-.         -> LO
-19 CARPAL      -.-. .- .-. .--. .- .-..         -> FM
-20 THESOUTH    - .... . ... --- ..- - ....      -> ON
-21 GODUTCH     --. --- -.. ..- - -.-. ....      -> TY
-22 SUBSTITUTE  ... ..- -... ... - .. - ..- - .  -> PY
-23 CASHCOW     -.-. .- ... .... -.-. --- .--    -> TH
-24 MARSROVER   -- .- .-. ... .-. --- ...- . .-. -> ON
+<pre>15 JAIHO       .--- .- .. .... ---              -&gt; MI
+16 CARSEAT     -.-. .- .-. ... . .- -           -&gt; CH
+17 BYLINE      -... -.-- .-.. .. -. .           -&gt; AE
+18 LOVEETC     .-.. --- ...- . . - -.-.         -&gt; LO
+19 CARPAL      -.-. .- .-. .--. .- .-..         -&gt; FM
+20 THESOUTH    - .... . ... --- ..- - ....      -&gt; ON
+21 GODUTCH     --. --- -.. ..- - -.-. ....      -&gt; TY
+22 SUBSTITUTE  ... ..- -... ... - .. - ..- - .  -&gt; PY
+23 CASHCOW     -.-. .- ... .... -.-. --- .--    -&gt; TH
+24 MARSROVER   -- .- .-. ... .-. --- ...- . .-. -&gt; ON
 </pre>
 
 <p>Note that answers are ordered by the length, counted in morse code
-dots and dashes.   The phrase reads, "MICHAEL OF MONTY PYTHON" cluing
-"PALIN".</p>
+dots and dashes.   The phrase reads, &#8220;MICHAEL OF MONTY PYTHON&#8221; cluing
+&#8220;PALIN&#8221;.</p>
 
 <p>Now you need the next aha.  When you assembled the device, everything
 was rotationally symmetric <b>except for one piece</b>.  Analysis of the
 circuit will also show some strange components (a resistor across the
 LED, for instance, and a optoisolator used as a bridge rectifier).
-The schematic of the device is:<p>
-<p style="text-align:center;"><a href="board5.pdf"><img src="board5.png"></a></p>
-<p>Here's the key:  most components in this circuit can be rotated or
-inserted on the 'wrong' side of the board, <i>without changing the
+The schematic of the device is:</p>
+
+<p style="text-align:center;"><a href="board5.pdf"><img src="board5.png" /></a></p>
+
+<p>Here&#8217;s the key:  most components in this circuit can be rotated or
+inserted on the &#8216;wrong&#8217; side of the board, <i>without changing the
 behavior of the circuit</i>.  But <i>one</i> of the components (the
 IC) can be inserted in two different ways, <b>and will give different
-behavior depending on which way it's inserted</b>.
+behavior depending on which way it&#8217;s inserted</b>.
 Extracting it from its socket and rotating
 the IC (made easier if you have a small flat head screwdriver, as we
 recommended in the pre-hunt instructions) gives a different set of
 letter pairs from the same answers:</p>
 
-<pre>
-15 JAIHO       .--- .- .. .... ---              -> JO
-16 CARSEAT     -.-. .- .-. ... . .- -           -> HN
-17 BYLINE      -... -.-- .-.. .. -. .           -> MA
-18 LOVEETC     .-.. --- ...- . . - -.-.         -> RT
-19 CARPAL      -.-. .- .-. .--. .- .-..         -> IN
-20 THESOUTH    - .... . ... --- ..- - ....      -> LE
-21 GODUTCH     --. --- -.. ..- - -.-. ....      -> AH
-22 SUBSTITUTE  ... ..- -... ... - .. - ..- - .  -> YN
-23 CASHCOW     -.-. .- ... .... -.-. --- .--    -> OV
-24 MARSROVER   -- .- .-. ... .-. --- ...- . .-. -> EL
+<pre>15 JAIHO       .--- .- .. .... ---              -&gt; JO
+16 CARSEAT     -.-. .- .-. ... . .- -           -&gt; HN
+17 BYLINE      -... -.-- .-.. .. -. .           -&gt; MA
+18 LOVEETC     .-.. --- ...- . . - -.-.         -&gt; RT
+19 CARPAL      -.-. .- .-. .--. .- .-..         -&gt; IN
+20 THESOUTH    - .... . ... --- ..- - ....      -&gt; LE
+21 GODUTCH     --. --- -.. ..- - -.-. ....      -&gt; AH
+22 SUBSTITUTE  ... ..- -... ... - .. - ..- - .  -&gt; YN
+23 CASHCOW     -.-. .- ... .... -.-. --- .--    -&gt; OV
+24 MARSROVER   -- .- .-. ... .-. --- ...- . .-. -&gt; EL
 </pre>
 
-<p>Which gives, "JOHN MARTIN LEAHY NOVEL" cluing DROME.</p>
+<p>Which gives, &#8220;JOHN MARTIN LEAHY NOVEL&#8221; cluing DROME.</p>
 
 <p>Putting the two parts together gives PALINDROME.</p>
 
@@ -80,21 +79,20 @@ letter pairs from the same answers:</p>
 <p>Entering the critic answers into the device gives a number, rather
 than a letter pair.  The output is independent of component rotation:</p>
 
-<pre>
-FOOT       ..-. --- --- -                    ->  10
-TASTE      - .- ... - .                      ->  11
-PARTY      .--. .- .-. - -.--                ->  12
-DONKEY     -.. --- -. -.- . -.--             ->  13
-SANDWICH   ... .- -. -.. .-- .. -.-. ....    ->  14
-FABRIC     ..-. .- -... .-. .. -.-.          ->  15
-MECHANICS  -- . -.-. .... .- -. .. -.-. ...  ->  16
-HAIRSTYLE  .... .- .. .-. ... - -.-- .-.. .  ->  17
-SEASON     ... . .- ... --- -.               ->  18
+<pre>FOOT       ..-. --- --- -                    -&gt;  10
+TASTE      - .- ... - .                      -&gt;  11
+PARTY      .--. .- .-. - -.--                -&gt;  12
+DONKEY     -.. --- -. -.- . -.--             -&gt;  13
+SANDWICH   ... .- -. -.. .-- .. -.-. ....    -&gt;  14
+FABRIC     ..-. .- -... .-. .. -.-.          -&gt;  15
+MECHANICS  -- . -.-. .... .- -. .. -.-. ...  -&gt;  16
+HAIRSTYLE  .... .- .. .-. ... - -.-- .-.. .  -&gt;  17
+SEASON     ... . .- ... --- -.               -&gt;  18
 </pre>
 
-<p>Now here's the second aha.  You are looking for a PALINDROME which is
+<p>Now here&#8217;s the second aha.  You are looking for a PALINDROME which is
 a specific instance of the category given by the critic answer.  But
-it's not a normal palindrome, it's a <i>morse code</i> palindrome, where
+it&#8217;s not a normal palindrome, it&#8217;s a <i>morse code</i> palindrome, where
 inter-letter spaces are ignored.  (This is hinted by the fact that
 the device ignored your inter-letter and inter-word spaces when you
 keyed in the show answers.)  Further, the palindrome should be of the
@@ -102,8 +100,7 @@ length given by the output above.  When you key in the correct
 <b>palindrome</b>, you get letter pairs (different for each orientation of
 the IC) as above.</p>
 
-<pre>
-Critic answer:  Length:  Palindrome:                      Letter pairs:
+<pre>Critic answer:  Length:  Palindrome:                      Letter pairs:
 FOOT            10       IAMB       ...----...            IN    AT
 TASTE           11       UMAMI      ..---.---..           MA    LO
 PARTY           12       WHIG       .--......--.          RC    NG
@@ -116,8 +113,7 @@ SEASON          18       WINTERTIME .--..-.-..-.-..--.    EN    AY
 </pre>
 
 <p>This gives the two part clue:</p>
-<pre>
-  IN MARCH NINETY SEVEN
+<pre>  IN MARCH NINETY SEVEN
   AT LONGHORN SPEEDWAY
 </pre>
 
@@ -137,11 +133,9 @@ you want to make your own.)</p>
 <p>There is also an easter egg included, used in the final runaround.
  Final content subject to change, but at the moment, if you key
  in:</p>
-<pre>
-   OUT OF CASH     --- ..- -   --- ..-.   -.-. .- ... ....
+<pre>   OUT OF CASH     --- ..- -   --- ..-.   -.-. .- ... ....
 </pre>
 <p>the device will respond</p>
-<pre>
-   PROCEED TO 5-234
+<pre>   PROCEED TO 5-234
 </pre>
 </div>
