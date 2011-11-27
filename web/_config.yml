@@ -13,7 +13,7 @@ release:
   ben_bitdiddle:            Yes # 4C
   phantom_of_the_operator:  Yes # 5S
   sheila_sunshine:          Yes # 5C
-  ogre_of_la_mancha:        No  # 6S
-  watson_2_0:               No  # 6C
+  ogre_of_la_mancha:        Yes # 6S
+  watson_2_0:               Yes # 6C
 
   solutions:                Yes # solutions

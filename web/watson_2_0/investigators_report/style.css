@@ -1,0 +1,48 @@
+.left, .right {
+ width: 49%;
+ float: left;
+}
+.right { float: right; }
+.bottom { clear: both; }
+table.t {
+  width: 100%; font-size: 16px;
+  padding-bottom: 15px;
+  page-break-inside: avoid;
+}
+table.t td,
+table.t th {
+  border: 1px solid black;
+  text-align: left;
+  position: relative;
+  vertical-align: top;
+  page-break-inside: avoid;
+}
+table.t th {
+  padding-left: 25px;
+  height: 50px;
+}
+table.t th > span {
+  position: absolute;
+  left: 0; top: 0; width: 20px;
+  text-align: right;
+  padding-top: 1px;
+}
+table.t tr.b {
+  background: green;
+}
+table.t .b > td,
+table.t .c > td,
+table.t .d > td,
+table.t .e > td {
+  text-align: left;
+  width: 80%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+table.t .b > td + td,
+table.t .c > td + td,
+table.t .d > td + td,
+table.t .e > td + td{
+  text-align: right;
+  width: 20%;
+}

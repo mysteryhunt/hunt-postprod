@@ -1,27 +1,25 @@
 ---
-layout: watson_2_0
+layout: watson_2_0_solution
 title: Investigator’s Report
-class: report
+class: report solution
 style: style.css
 ---
-<p><i>
-Fresh off their triumph on </i>Jeopardy!<i>, the team at IBM realized
-it was time to implement their long-secret primary goal for Watson:
-reviewing Broadway plays. With a little new code, Watson 2.0 could now
-identify the perfect recipe for a smash hit.  However, the programmers
-knew that if Watson's hidden algorithms were discovered, they would be
-humiliated and Watson would be dismantled for good&hellip;
-</i><p>
+
+<p>Each clue hints at a way of converting a string to a number, which
+is confirmed by the reused answers.  Apply this rule to the new answer
+and convert the result to letters in ASCII to obtain the answer,
+<b>ALT F FOUR</b>.</p>
 
 <div class="left">
 <table class="t">
   <tr class="a">
   <th colspan="2"><span>1. </span>This best-selling book flew off the
-    rack.
+  rack.
+  (Scrabble value.)
   </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>HARRY POTTER AND THE ORDER OF THE PHOENIX</td><td>65%</td>
   </tr>
   <tr class="c">
     <td>1</td><td>20%</td>
@@ -38,10 +36,11 @@ humiliated and Watson would be dismantled for good&hellip;
   <tr class="a">
   <th colspan="2"><span>2. </span>This word might appear in a letter
   to a valued friend.
+  (Convert letters to numbers via A=1 B=2 etc; sum.)
   </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>ESTEEMED</td><td>70%</td>
   </tr>
   <tr class="c">
     <td>4</td><td>48%</td>
@@ -58,10 +57,12 @@ humiliated and Watson would be dismantled for good&hellip;
   <tr class="a">
   <th colspan="2"><span>3. </span>This food often fails to meet
   international standards.
+  (Each word is a Unicode character; take the last byte of the code
+  point in decimal.)
   </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>HAMBURGER</td><td>85%</td>
   </tr>
   <tr class="c">
     <td>7</td><td>63%</td>
@@ -78,10 +79,11 @@ humiliated and Watson would be dismantled for good&hellip;
   <tr class="a">
   <th colspan="2"><span>4. </span>This is part of a lengthy and
   miserable experience.
+  (Multiply the length by 5.)
   </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>I DREAMED A DREAM</td><td>70%</td>
   </tr>
   <tr class="c">
     <td>10</td><td>35%</td>
@@ -100,10 +102,11 @@ humiliated and Watson would be dismantled for good&hellip;
   <tr class="a">
     <th colspan="2"><span>5. </span>Even the ancient Romans may have
     had to pay this burden.
+    (Extract Roman numerals and sum.)
     </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>LUXURY TAX</td><td>70%</td>
   </tr>
   <tr class="c">
     <td>13</td><td>56%</td>
@@ -120,10 +123,11 @@ humiliated and Watson would be dismantled for good&hellip;
   <tr class="a">
     <th colspan="2"><span>6. </span>You might use the phrase "robbed
     blind" while talking about this.
+    (Write in Braille and count dots.)
     </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>BUTCH CASSIDY AND THE SUNDANCE KID</td><td>79%</td>
   </tr>
   <tr class="c">
     <td>16</td><td>34%</td>
@@ -139,10 +143,11 @@ humiliated and Watson would be dismantled for good&hellip;
 <table class="t r">
   <tr class="a">
     <th colspan="2"><span>7. </span>This man was born to run.
+    (Each answer is a person; take the last two digits of the year of birth.)
     </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>ADRIAN PETERSON</td><td>85%</td>
   </tr>
   <tr class="c">
     <td>19</td><td>53%</td>
@@ -159,10 +164,11 @@ humiliated and Watson would be dismantled for good&hellip;
   <tr class="a">
     <th colspan="2"><span>8. </span>Even a two-bit company must follow
     these rules.
+    (Extract I and O and read binary number as if they were 1 and 0.)
     </th>
   </tr>
   <tr class="b">
-    <td>&nbsp;</td><td>&nbsp;</td>
+    <td>ARTICLES OF INCORPORATION</td><td>82%</td>
   </tr>
   <tr class="c">
     <td>22</td><td>5%</td>

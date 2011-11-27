@@ -1,0 +1,4 @@
+@import "../style.css";
+
+table.t th { height: 90px; }
+table.t tr.b { height: 50px; }
