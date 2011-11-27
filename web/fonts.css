@@ -1,0 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Alice&subset=latin,latin-ext);
+
+body { font-family: 'Alice', serif;  font-weight: 400; }
+tt,code,kbd,samp { font-family: monospace; } /* XXX */

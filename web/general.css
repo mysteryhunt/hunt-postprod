@@ -1,12 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
+@import "fonts.css";
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
 @import "shortcuts.css";
 
 /* General formatting */
 html, body { padding: 0; margin: 0; position: relative; }
 html { height: 100%; /* of viewport */ }
 body { min-height: 100%; /* of viewport */ }
-body { font-family: 'Alice', serif;  font-weight: 400;
-       font-size: 16px; line-height: 1.4; }
+body { font-size: 16px; line-height: 1.4; }
 
 h1, body.index #puzzle-list {
   font-family: 'Abril Fatface'; font-weight: 400;
