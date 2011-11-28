@@ -1,3 +1,5 @@
 web/_site
 web/_blind
 web/_stage
+*.pyc
+*.pyo
