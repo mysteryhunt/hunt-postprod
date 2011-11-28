@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Alice&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Alice|Inconsolata&subset=latin,latin-ext);
 
+/* standardize text and monospace fonts. */
 body { font-family: 'Alice', serif;  font-weight: 400; }
-tt,code,kbd,samp { font-family: monospace; } /* XXX */
+tt,code,kbd,samp,pre { font-family: 'Inconsolata', monospace; }
