@@ -18,17 +18,50 @@ body {
   position: absolute;
   width: 120px;
   bottom: 0px;
-  top: 0px;
-  background-repeat: repeat-y;
-  background-position-y: 30px;
+  top: 25px;
 }
-#side-border .left {
+#side-border .left,
+#side-border .left .top,
+#side-border .left .middle,
+#side-border .left .bottom,
+#side-border .right .side {
   left: 0;
-  background-image: url('border-left.png');
 }
-#side-border .right {
+#side-border .right,
+#side-border .right .top,
+#side-border .right .middle,
+#side-border .right .bottom,
+#side-border .left .side {
   right: 0;
-  background-image: url('border-right.png');
+}
+#side-border .top, #side-border .middle, #side-border .bottom {
+  position: absolute;
+  width: 100px;
+}
+#side-border .side {
+  position: absolute;
+  top: -25px; bottom: 0px;
+  width: 20px;
+  background-repeat: repeat-y;
+}
+#side-border .left .side {
+  background: url('border-left.png') repeat-y bottom right;
+}
+#side-border .right .side {
+  background: url('border-right.png') repeat-y bottom left;
+}
+#side-border .top {
+  top: 0px; height: 163px;
+  background: url('border-middle-top.png') no-repeat;
+}
+#side-border .middle {
+  top: 163px;
+  bottom: 116px; /* 136px - 20px overlap */
+  background: url('border-middle.png') repeat-y;
+}
+#side-border .bottom {
+  bottom: 0px; height: 136px;
+  background: url('border-middle-bottom.png') no-repeat;
 }
 #main {
   margin-left: 120px;
