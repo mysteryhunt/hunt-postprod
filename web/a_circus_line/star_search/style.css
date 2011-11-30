@@ -1,0 +1,6 @@
+.ptable1 { border: none;  font-size: 24px; }
+.ptable1 td { width: 1em; text-align: center; }
+.ptable1 { margin-bottom: 2em; }
+
+.ptable2 { font-size: 24px; }
+.ptable2 td, .ptable2 th { text-align: left; }
