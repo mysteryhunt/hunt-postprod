@@ -27,6 +27,11 @@ def db_select_one(db, select, *args):
         c.execute(select, tuple(args))
         return c.fetchone()
 
+def db_select_all(db, select, *args):
+    with closing(db.cursor()) as c:
+        c.execute(select, tuple(args))
+        return c.fetchall()
+
 def getTitle(db, pid):
     # throws an exception if no title/no pid
     return db_select_one(db,
@@ -63,6 +68,21 @@ ORDER BY date DESC LIMIT 1;""", pid)
     if not finfo: return None
     return finfo[0]
 
+def getPuzzlesWithPostProd(db):
+    pids = db_select_all(db, """
+SELECT DISTINCT pid FROM uploaded_files
+WHERE filename LIKE '%%.zip' AND type = "postprod"
+ORDER BY pid ASC;""")
+    return [ p for (p,) in pids ]
+
+def fetch_all(db):
+    for pid in getPuzzlesWithPostProd(db):
+        print "Processing puzzle", pid
+        try:
+            fetch_puzzle(db, pid)
+        except:
+            print "** SKIPPING", pid, "DUE TO ERRORS **"
+
 def fetch_puzzle(db, pid):
     # fetch info about the puzzle
     title = getTitle(db, pid)
@@ -93,4 +113,7 @@ def fetch_puzzle(db, pid):
 
 if __name__ == '__main__':
     _, pid = sys.argv
-    with_db(fetch_puzzle, int(pid))
+    if pid == 'all':
+        with_db(fetch_all)
+    else:
+        with_db(fetch_puzzle, int(pid))
