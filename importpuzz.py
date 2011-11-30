@@ -237,7 +237,7 @@ def do_import(zip_file, root_dir, round_name, authors, **kwargs):
         do_import_of_zf(zf, root_dir, round_name, authors, **kwargs)
 
 def do_export(zip_file, puzzle_dir):
-    with ZipFile(zip_file, 'w') as zf:
+    with closing(ZipFile(zip_file, 'w')) as zf:
         do_export_to_zf(zf, puzzle_dir)
 
 if __name__ == '__main__':
