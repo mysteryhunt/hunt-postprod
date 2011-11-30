@@ -47,12 +47,11 @@ body.index #puzzle-list td { vertical-align: baseline; }
   img {
     page-break-inside: avoid;
   }
-  #main, #content {
+  .puzzle #main, #content {
     padding: 0 0 0 0 !important;
     margin: 0 0 0 0 !important;
   }
-  body.puzzle #main,
-  body.index #main {
+  body.puzzle #main {
     padding-top: 0px;
   }
   .ptitle {
