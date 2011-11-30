@@ -1,7 +1,7 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python2.6
 from __future__ import with_statement
 """Import a puzzle file.
-Requires 'python2.7', 'python-html5lib', and 'python-yaml'.
+Requires 'python2.6', 'python-html5lib', and 'python-yaml'.
 
 Command line:
 
@@ -16,10 +16,9 @@ import tempfile
 import xml.dom.minidom as minidom
 import yaml
 from cStringIO import StringIO
-from contextlib import contextmanager
+from contextlib import contextmanager, closing
 from htmlentitydefs import name2codepoint
 from subprocess import Popen, PIPE
-from tidylib import tidy_document
 from zipfile import ZipFile
 
 @contextmanager
@@ -90,20 +89,6 @@ def mktempl(body, **options):
     s += body.strip()
     s = s.strip() + '\n'
     return s
-
-HTMLTIDY_OPTS = {
-    'new-blocklevel-tags': 'canvas,colset',
-    'char-encoding': 'utf8',
-    'gnu-emacs': 'yes',
-    'join-classes': 'yes',
-    'drop-empty-paras': 'no',
-    'enclose-text': 'no',
-    'enclose-block-text': 'no',
-    'indent': 'no',
-    'wrap': '0',
-    'merge-divs': 'no',
-    'merge-spans': 'no'
-}
 
 def is_reserved_filename(fname):
     return fname.startswith('-') or fname.startswith('_')
@@ -244,7 +229,7 @@ def do_export_to_zf(zf, puzzle_dir):
 
 def do_import(zip_file, root_dir, round_name, authors):
     #with rmdir_after(tempfile.mkdtemp(suffix='.puzzle')) as d:
-    with ZipFile(zip_file, 'r') as zf:
+    with closing(ZipFile(zip_file, 'r')) as zf:
         do_import_of_zf(zf, root_dir, round_name, authors)
 
 def do_export(zip_file, puzzle_dir):
