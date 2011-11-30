@@ -107,10 +107,11 @@ def fetch_puzzle(db, pid):
         raise "No post-prod found for puzzle %d" % pid
     ppfile = path.join('/var/www/codex/editing', ppfile)
     # make a directory path
-    outpath = path.join('web', canon(roundName), canon(title))
+    outpath = path.dirname(__file__) # start with directory this script is in
+    outpath = path.join(outpath, 'web')
 
     # do the import!
-    do_import(ppfile, 'web', roundName, credits, title=title)
+    do_import(ppfile, outpath, roundName, credits, title=title)
 
 if __name__ == '__main__':
     _, pid = sys.argv
