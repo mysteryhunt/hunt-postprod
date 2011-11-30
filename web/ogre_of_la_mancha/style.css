@@ -115,12 +115,12 @@ body.puzzle {
 }
 #show-title { top: 43px; }
 #show-title .title {
-  width: 750px; left: -375px; /* centered */
-  height:132px;
+  width: 775px; left: -377px;
+  height:118px;
   background: url('banner.png') no-repeat;
 }
 body.puzzle #main {
-  padding-top: 150px;
+  padding-top: 200px;
 }
 #content {
   padding: 0 1em;
@@ -132,15 +132,15 @@ body.puzzle #main {
   position: relative; /* put in front of banner */
   z-index: 99;        /* put in front of banner */
   background: url('divider.png') repeat-x -22px bottom;
-  padding: 60px 0 22px 60px;
+  padding: 0px 0 5px 45px;
   margin: 0px 0 0px 20px;
 }
 .ptitle .icon {
   position: absolute;
   display: block;
   background: url('icon-large.png') no-repeat;
-  width: 80px; height: 77px;
-  left: -30px; bottom: 20px;
+  width: 66px; height: 100px;
+  left: -30px; bottom: 0px;
 }
 @media print {
   .ptitle .icon {
