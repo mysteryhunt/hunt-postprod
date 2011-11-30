@@ -1,0 +1,15 @@
+table.t {
+  border: none; border-spacing: 0; border-collapse: collapse;
+  margin-left: -42px; /* squeeze the images in */
+}
+table.t td {
+  text-align: center;
+  border: 1px solid black;
+  margin: 0;
+  padding: 5px;
+}
+table.t td img {
+  vertical-align: top;
+}
+
+.grid { margin-top: 2em; }
