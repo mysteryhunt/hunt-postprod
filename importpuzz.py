@@ -93,7 +93,7 @@ def mktempl(body, **options):
 def is_reserved_filename(fname):
     return fname.startswith('-') or fname.startswith('_')
 
-def do_import_of_zf(zf, root_dir, round_name, authors):
+def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
     global LOG_CONTEXT2
     LOG_CONTEXT2 = ''
     files = zf.namelist()
@@ -130,7 +130,11 @@ def do_import_of_zf(zf, root_dir, round_name, authors):
     LOG_CONTEXT2 = 'index.html'
     puz = tidy_with_log(zf.read('index.html'))
     # extract title, body, stylesheet
-    title = extract_title(puz)
+    ntitle = extract_title(puz)
+    if title is not None and canon(title) != canon(ntitle):
+        log_error("Title in index.html doesn't match database title")
+    else:
+        title = ntitle
     body = extract_body(puz)
     options = { 'layout': canon(round_name), 'title': title }
     if 'style.css' in files:
@@ -227,10 +231,10 @@ def do_export_to_zf(zf, puzzle_dir):
         else:
             zf.write(fullname, f)
 
-def do_import(zip_file, root_dir, round_name, authors):
+def do_import(zip_file, root_dir, round_name, authors, **kwargs):
     #with rmdir_after(tempfile.mkdtemp(suffix='.puzzle')) as d:
     with closing(ZipFile(zip_file, 'r')) as zf:
-        do_import_of_zf(zf, root_dir, round_name, authors)
+        do_import_of_zf(zf, root_dir, round_name, authors, **kwargs)
 
 def do_export(zip_file, puzzle_dir):
     with ZipFile(zip_file, 'w') as zf:

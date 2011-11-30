@@ -3,3 +3,4 @@ web/_blind
 web/_stage
 *.pyc
 *.pyo
+secrets.py
