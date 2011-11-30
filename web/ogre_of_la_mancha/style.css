@@ -116,7 +116,7 @@ body.index #main {
 
 /* puzzle page */
 body.puzzle {
-  min-width: 940px;
+  min-width: 883px;
 }
 #show-title { top: 43px; }
 #show-title .title {
@@ -136,16 +136,16 @@ body.puzzle #main {
 .ptitle {
   position: relative; /* put in front of banner */
   z-index: 99;        /* put in front of banner */
-  background: url('divider.png') repeat-x -22px bottom;
-  padding: 0px 0 5px 45px;
-  margin: 0px 0 0px 20px;
+  background: url('divider.png') repeat-x left bottom;
+  padding: 0px 0 6px 65px;
+  margin: 0px 0 0px 0px;
 }
 .ptitle .icon {
   position: absolute;
   display: block;
   background: url('icon-large.png') no-repeat;
   width: 66px; height: 100px;
-  left: -30px; bottom: 0px;
+  left: -10px; bottom: 0px;
 }
 @media print {
   .ptitle .icon {
