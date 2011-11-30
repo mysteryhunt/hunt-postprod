@@ -37,9 +37,12 @@ def log_fatal(s):
     log_error(s)
     raise "FATAL"
 
+# use the 'quoter' binary in the same directory as us
+QUOTER = os.path.join(os.path.dirname(__file__), 'quoter')
+
 def smart_quotes(s):
     # pipe it through the external 'quoter' program
-    p = Popen(['quoter'], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+    p = Popen([QUOTER], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     out,err = p.communicate(s)
     assert err == '', "quoter error: "+err
     return out

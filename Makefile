@@ -14,6 +14,10 @@ CODENAME_5C=tiddlywink
 CODENAME_6S=tralala
 CODENAME_6C=zipzee
 
+quoter: quoter-1.10/quoter.l
+	$(MAKE) -C quoter-1.10
+	cp quoter-1.10/quoter .
+
 build:
 	jekyll web web/_site
 
