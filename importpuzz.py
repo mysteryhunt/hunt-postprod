@@ -189,6 +189,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
             with open(full_path, 'w') as fd:
                 fd.write(sol_index_html.encode('utf8'))
         else:
+            if f.endswith("~") or f.endswith(".bak"):
+                log_error("Suspicious filename: %s" % f)
             zf.extract(f, target_dir)
 
 def listdir_rec(d):
