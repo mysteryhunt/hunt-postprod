@@ -17,15 +17,19 @@ table.t th {
   vertical-align: top;
   page-break-inside: avoid;
 }
-table.t th {
+/* We put a DIV inside the TH to work around Firefox bug:
+   https://bugzilla.mozilla.org/show_bug.cgi?id=217002
+   (or something like that bug, anyway). */
+table.t th > div {
   padding-left: 25px;
   height: 50px;
+  vertical-align: top;
+  position: relative; /* FF work around */
 }
-table.t th > span {
+table.t th > div > span {
   position: absolute;
   left: 0; top: 0; width: 20px;
   text-align: right;
-  padding-top: 1px;
 }
 table.t tr.b {
   background: green;
