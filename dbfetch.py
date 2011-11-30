@@ -81,6 +81,7 @@ def fetch_all(db):
         try:
             fetch_puzzle(db, pid)
         except:
+            print sys.exc_info()[1]
             print "** SKIPPING", pid, "DUE TO ERRORS **"
 
 def fetch_puzzle(db, pid):

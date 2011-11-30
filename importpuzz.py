@@ -49,6 +49,9 @@ def extract_title(html):
     parser = html5lib.HTMLParser(tree=html5lib.treebuilders.getTreeBuilder("dom"))
     dom = parser.parse(html)
     titleE = dom.getElementsByTagName("title")
+    if len(titleE) == 0:
+        log_error("No <title> element found")
+        return None
     assert len(titleE)==1, \
            "Wrong number of <title> elements found: "+str(len(titleE))
     titleC = titleE[0].childNodes
@@ -56,8 +59,9 @@ def extract_title(html):
            "Wrong number of <title> children found: "+str(len(titleC))
     value = ''
     for c in titleC:
-        assert c.nodeType == c.TEXT_NODE, \
-               "<title> contains something other than text"
+        if c.nodeType != c.TEXT_NODE:
+            log_error("<title> contains something other than text");
+            continue
         value += c.data
     return value.strip()
 
@@ -131,7 +135,9 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
     puz = tidy_with_log(zf.read('index.html'))
     # extract title, body, stylesheet
     ntitle = extract_title(puz)
-    if title is not None and canon(title) != canon(ntitle):
+    if ntitle is None and title is not None:
+        pass # use title from database; we've already complained about this
+    elif title is not None and canon(title) != canon(ntitle):
         log_error("Title in index.html doesn't match database title")
     else:
         title = ntitle
