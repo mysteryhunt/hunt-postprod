@@ -3,7 +3,20 @@
 /* General formatting */
 body {
   background-color: #dbdbdb;
-  background-image: url("splatter.jpg");
+}
+#background {
+  background-image: url("background.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+
+  position:absolute;
+  top: 0; bottom:0; left: 0; right: 0;
+}
+#background .screen {
+  position: absolute;
+  left: 120px; right: 120px;
+  top: 0; bottom: 0;
+  background: rgba(255,255,255,0.65);
 }
 #side-border div {
   position: absolute;
@@ -68,10 +81,6 @@ background: url('icon.png') no-repeat;
 padding-top: 20px;
 height: 42px; /* 62px minus the padding */
 white-space: nowrap;
-}
-
-.puzzle #content, #puzzle-list {
-  background: rgba(255,255,255,.75);
 }
 
 /* puzzle page formatting */

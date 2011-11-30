@@ -11,6 +11,12 @@ body {
   position:absolute;
   top: 0; bottom:0; left: 0; right: 0;
 }
+#background .screen {
+  position: absolute;
+  left: 120px; right: 120px;
+  top: 0; bottom: 0;
+  background: rgba(255,255,255,0.40);
+}
 #side-border div {
   position: absolute;
 }
@@ -66,7 +72,6 @@ body {
 #main {
   margin-left: 120px;
   margin-right: 120px;
-  background: rgba(255,255,255,0.40);
 }
 #bottom-border {
   position: absolute; left: 108px; right: 108px; bottom: 0;
