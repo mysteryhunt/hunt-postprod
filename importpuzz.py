@@ -115,8 +115,10 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
         log_fatal("Puzzle not found (expected index.html)")
 
     def tidy_with_log(s):
+        lineoffset = 0
         if not s.startswith("<!DOCTYPE"):
             s = "<!DOCTYPE HTML>\n" + s
+            lineoffset = 1
         parser = html5lib.HTMLParser(
             tree=html5lib.treebuilders.getTreeBuilder("dom"))
         doc = parser.parse(s)
@@ -126,7 +128,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
                details['name'] in html5lib.constants.voidElements:
                 continue
             log_error("line %d pos %d - %s" %
-                      (line, char, html5lib.constants.E[msg] % details))
+                      (line-lineoffset, char,
+                       html5lib.constants.E[msg] % details))
         clean = html5lib.serializer.serialize(doc, tree='dom',
                                               format='xhtml',
                                               encoding='ascii',
