@@ -1,52 +1,102 @@
-.left, .right {
- width: 49%;
- float: left;
-}
-.right { float: right; }
-.bottom { clear: both; }
-table.t {
-  width: 100%; font-size: 16px;
-  padding-bottom: 15px;
+.item {
+  margin: 2em 0;
   page-break-inside: avoid;
 }
-table.t td,
-table.t th {
-  border: 1px solid black;
-  text-align: left;
+.item img {
+  page-break-inside: avoid;
+}
+.item .h {
+  font-size: 120%;
+}
+.item .i {
   position: relative;
-  vertical-align: top;
   page-break-inside: avoid;
 }
-/* We put a DIV inside the TH to work around Firefox bug:
-   https://bugzilla.mozilla.org/show_bug.cgi?id=217002
-   (or something like that bug, anyway). */
-table.t th > div {
-  padding-left: 25px;
-  height: 50px;
-  vertical-align: top;
-  position: relative; /* FF work around */
+.item .i,
+.item .i .full {
+  width: 650px; height: 152px;
+  page-break-inside: avoid;
 }
-table.t th > div > span {
+.item .i .full {
+  position: absolute; left: 0; top: 0;
+  page-break-inside: avoid;
+}
+.item .bar {
   position: absolute;
-  left: 0; top: 0; width: 20px;
+}
+.item .bar.i0 {
+  left: 333px; top: 10px;
+  width: 253px; height: 27px;
+}
+.item .bar.i1 {
+  left: 332px; top: 42px;
+  width: 256px; height: 26px;
+}
+.item .bar.i2 {
+  left: 332px; top: 67px;
+  width: 258px; height: 30px;
+}
+.item .bar.i3 {
+  left: 331px; top: 99px;
+  width: 259px; height: 28px;
+}
+.item .bar > div {
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.item .num,
+.item .pct {
+  display: block;
+  position: absolute;
+  height: 30px;
+  font-size: 20px;
+}
+.item .num {
+  left: 158px; right: 347px;
+}
+.item .num > span {
+  display: block;
+  position: absolute; top: 0; bottom: 0; right: 0;
+  width: 115px;
   text-align: right;
 }
-table.t tr.b {
-  background: green;
+.item .num > .blank {
+  height: 21px;
+  border-bottom: 1px solid black;
+  margin-right: 4px;
 }
-table.t .b > td,
-table.t .c > td,
-table.t .d > td,
-table.t .e > td {
-  text-align: left;
-  width: 80%;
-  padding-left: 5px;
-  padding-right: 5px;
+.item .i0 .num > .blank {
+  width: 140px; height: 23px;
 }
-table.t .b > td + td,
-table.t .c > td + td,
-table.t .d > td + td,
-table.t .e > td + td{
-  text-align: right;
-  width: 20%;
+.item .i0 .num {
+  top: 7px;
+  left: 140px;
+}
+.item .i1 .num {
+  top: 37px;
+}
+.item .i2 .num {
+  top: 66px;
+}
+.item .i3 .num {
+  top: 96px;
+}
+.item .pct {
+  left: 592px; width: 37px;
+  text-align: center;
+  font-size: 18px;
+}
+.item .i0 .pct {
+  top: 12px;
+}
+.item .i1 .pct {
+  top: 43px;
+}
+.item .i2 .pct {
+  top: 74px;
+}
+.item .i3 .pct {
+  top: 104px;
 }

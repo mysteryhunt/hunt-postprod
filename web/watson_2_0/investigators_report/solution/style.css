@@ -1,4 +1,24 @@
 @import "../style.css";
 
-table.t th { height: 90px; }
-table.t tr.b { height: 50px; }
+.item .ans {
+  margin-left: 1em;
+}
+.item .i0 .num > span {
+  width: 100%;
+}
+.item .i0 .pct { font-weight: bold; font-size: 140%; }
+
+.ans1 .i0 .num > span,
+.ans6 .i0 .num > span,
+.ans8 .i0 .num > span { font-size: 12px; }
+.ans1 .i1 .num > span { width: 100%; }
+.ans4 .i0 .num > span,
+.ans6 .i1 .num > span,
+.ans6 .i2 .num > span,
+.ans7 .i2 .num > span,
+.ans7 .i3 .num > span,
+.ans8 .i1 .num > span { font-size: 16px; width: 100%; padding-top: 4px; }
+.ans5 .i1 .num > span,
+.ans5 .i2 .num > span { font-size: 11px; width: 100%; padding-top: 8px; }
+.ans7 .i1 .num > span { font-size: 12px; width: 100%; padding-top: 8px; }
+.ans7 .i0 .num > span { font-size: 18px; padding-top: 3px; }
