@@ -1,4 +1,12 @@
 @import "../betsy_johnson/style.css";
+body.index #main .desc { /* tweak notecard */
+  padding: 0.5em 1em;
+  width: 230px;
+}
+body.index #main .desc .paperclip {
+  right: -6px /* adjust paperclip over */
+}
+
 #label { /* tweak position of label */
   padding: 0 10px;
   left: 787px;

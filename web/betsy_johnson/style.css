@@ -92,17 +92,19 @@ body.index #main .desc {
   position: absolute;
   top: -22px; left: 25px;
   width: 275px;
-  background: #fefefe;
+  backgroundx: #fefefe;
   border: 2px solid black;
   padding: 1.5em;
-  line-height: 1.75;
+  padding-top: 15px !important;
+  line-height: 1.6;
   z-index: 99;
+  background: #fefefe url("index-card.jpg") repeat;
 }
 body.index #main .desc .paperclip {
  position: absolute;
  background: url("paperclip.png");
  width: 62px; height: 115px;
- top: -21px; right: 1px;
+ top: -21px; right: -1px;
 }
 body.index #photo {
   position: absolute;

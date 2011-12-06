@@ -1,4 +1,11 @@
 @import "../betsy_johnson/style.css";
+body.index #main .desc {
+  width: 200px;
+  padding-right: 2em;
+}
+body.index #main .desc .paperclip {
+  right: -5px;
+}
 #label {
   font-size: 20px; /* compress label a bit */
 }

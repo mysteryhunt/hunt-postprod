@@ -6,6 +6,9 @@ body.index #main .desc { /* shrink notecard a bit */
   padding: 0.5em 0.5em;
   width: 380px;
 }
+body.index #main .desc .paperclip {
+  right: 3px;
+}
 #folder {
   background-image: url("multicolor-seamless-swatch.jpg");
 }
