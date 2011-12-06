@@ -22,3 +22,5 @@
 .ans5 .i2 .num > span { font-size: 11px; width: 100%; padding-top: 8px; }
 .ans7 .i1 .num > span { font-size: 12px; width: 100%; padding-top: 8px; }
 .ans7 .i0 .num > span { font-size: 18px; padding-top: 3px; }
+
+.ans3, .ans6 { page-break-before: always; }
