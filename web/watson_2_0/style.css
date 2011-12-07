@@ -17,6 +17,9 @@ body.index #main .desc .paperclip {
 #footer {
   background-image: url("bottom-tile.png");
 }
+body.index .materials {
+  margin-bottom: 2em;
+}
 body.index .materials .n .num {
   width: 85px;
   text-align: right;
