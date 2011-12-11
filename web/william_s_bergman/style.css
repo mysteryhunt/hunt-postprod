@@ -23,6 +23,9 @@ body.index .materials td.into_the_woodstock {
 }
 body.index .materials td.william_s_bergman {
   background: url("icon.png") no-repeat;
+  vertical-align: top;
+  padding-top: 5px;
+  height: 57px;
 }
 body.puzzle #main h1 {
   background: url("icon-large.png") no-repeat 0 -20px;
