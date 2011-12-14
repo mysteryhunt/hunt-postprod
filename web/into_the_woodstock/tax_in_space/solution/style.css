@@ -1,0 +1,8 @@
+@import "../style.css";
+
+.upsidedown {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+  padding-top: 7px; /* align upside-down w/ right-side up */
+}
