@@ -109,6 +109,11 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
     global LOG_CONTEXT2
     LOG_CONTEXT2 = ''
     files = zf.namelist()
+    # filter out mac cruft
+    mac_cruft = [f for f in files if f.startswith('__MACOSX/')]
+    if mac_cruft:
+        log_error("__MACOSX directory found in .zip file, ignoring.")
+        files = [f for f in files if f not in mac_cruft ]
     # sanity-check files
     bad_files = [f for f in files if
                  f.startswith('../') or f.startswith('./') or
