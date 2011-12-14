@@ -21,6 +21,11 @@ from htmlentitydefs import name2codepoint
 from subprocess import Popen, PIPE
 from zipfile import ZipFile
 
+# WORK AROUND BUG IN HTML5LIB
+html5lib.constants.E.setdefault(
+    "unexpected-character-in-unquoted-attribute-value",
+    u"Unexpected character in unquoted attribute value")
+
 @contextmanager
 def rmdir_after(d):
     try:
