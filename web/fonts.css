@@ -2,4 +2,4 @@
 
 /* standardize text and monospace fonts. */
 body { font-family: 'Alice', serif;  font-weight: 400; }
-tt,code,kbd,samp,pre { font-family: 'Inconsolata', monospace; }
+tt,code,kbd,samp,pre,.monospace { font-family: 'Inconsolata', monospace; }
