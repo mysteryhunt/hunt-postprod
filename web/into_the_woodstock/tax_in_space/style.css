@@ -1,0 +1,52 @@
+table {
+    font-family:monospace;
+}
+
+table.first td
+{
+    padding: 10pt;
+    margin: 10pt;
+    border-left: solid medium;
+    border-right: solid medium;
+    text-align: center;
+}
+
+table.first
+{
+border-collapse:collapse;
+}
+body {
+    counter-reset: list1;
+}
+ol.letters li { 
+    list-style: none;
+}
+ol.letters li::before { 
+    counter-increment:list1;
+    content: "(" counter(list1, lower-alpha) ")"; 
+    counter-reset: list2;
+}
+
+ol.numbers li {
+    list-style: none;
+}
+
+ol.numbers li::before {
+    counter-increment:list2;
+    content: "(" counter(list2, decimal) ")"; 
+    counter-reset: list3;
+}
+
+ol.innerletters li { 
+    list-style: none;
+}
+
+ol.innerletters li::before { 
+    counter-increment: list3;
+    content: "(" counter(list3, lower-alpha) ")"; 
+    counter-reset: list4;
+}
+
+table.second
+{
+}
