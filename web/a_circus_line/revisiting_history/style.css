@@ -6,4 +6,8 @@ td
     border-width: medium;
     text-align: center;
     background-color: #CCCCCC;
+    vertical-align: top;
+    page-break-inside: avoid;
 }
+td img { page-break-inside: avoid; }
+.pb { page-break-before: always; }
