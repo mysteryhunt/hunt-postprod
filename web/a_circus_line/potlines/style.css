@@ -1,0 +1,14 @@
+  body {
+    background-color: #FFF;
+    font-family: arial, sans-serif;
+  }
+  .potline-div {
+    padding-top: 30px;
+  }
+  .potline-num {
+    font-weight: bold;
+  }
+  .potline-note {
+    font-size: small;
+    font-style: italic;
+  }

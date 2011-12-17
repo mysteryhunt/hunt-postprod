@@ -1,0 +1,121 @@
+---
+layout: a_circus_line_solution
+title: Potlines
+class: puzzle solution
+credits: by Kai Huang
+---
+<p>First, you need to figure out what domain this puzzle is from. The main clue here is the title &#8220;Potlines&#8221;,
+which is obviously a parody of &#8220;<a href="http://web.mit.edu/puzzle/www/11/puzzles/katamari_damacy/plotlines/">Plotlines</a>&#8221; from MIT Mystery Hunt 2011.
+The word &#8220;pot&#8221; has a few different meanings, but sooner or later you should figure out that these might be diagrams of cooking recipes.
+</p>
+
+<p>Following the instructions in the puzzle, you should be able to verify that indeed these are referring to recipes. 
+Looking up cooking sites on Google, the top ranked site is <a href="http://allrecipes.com">allrecipes.com</a>, which is &#8220;all&#8221; the reference you&#8217;ll need,  
+at least so it claims. Furthermore, the site has recipes categorized into &#8220;collections&#8221;. You should be able to correspond 
+the given collection codes to the &#8220;Courses&#8221; collections on the site: AS = Appetizers and Snacks, B = Bread, BB = Breakfast 
+and Brunch, D = Desserts (not Drinks in this case), MD = Main Dish, S = Salad, SD = Side Dish, and SSC = Soups, Stews and Chili. 
+This provides verification that you&#8217;re on the right track.
+</p>
+
+<p>The instructions say to only consider the &#8220;top score&#8221; from each collection, which is slightly tricky. 
+Each collection of recipes has a &#8220;Top 20&#8221; list, and you have to realize that this is what the instructions are talking about. 
+(The word &#8220;score&#8221; means 20 in this case, e.g. as in &#8220;Four score and seven years ago&#8221;.)
+</p>
+
+<p>There are 8 potlines and 8 collections represented, so a reasonable guess is that each potline maps to one collection, 
+and in this case that is what happens. Within each Top 20 list, you should be able to find one recipe that corresponds to one 
+of the given potlines. The exceptions are the collections &#8220;Bread&#8221; and &#8220;Breakfast and Brunch&#8221;, which have such high overlap that 
+the two recipes used in the puzzle both appear in both collections. Thus, we have notes in the puzzle to disambiguate the collection 
+mappings for these two recipes.
+</p>
+
+<p>Here are some rules for interpreting the potlines:
+</p><li>The x-axis is time.</li>
+<li>The lines are the ingredients (separated at the start, and later combined).</li>
+<li>Colored rectangles are things that the ingredients are put into. They&#8217;re all marked with the initial(s) of their names.</li>
+<li>The color of the rectangle denotes whether the item is designed for heating (red), cooling (blue), or neither specifically (green).</li>
+<p></p>
+
+<p>The potlines are listed alphabetical order by recipe name. The hope is that you would conjecture this ordering after identifying a 
+couple of them, and thus have an easier time finding the remaining recipes.
+</p>
+
+<p>To extract the final answer, you need to reorder the recipes alphabetically by collection name (or equivalently, by the order of 
+the list of collection codes given in the puzzle) and then use the number given with each potline to index into the letters of the 
+recipe name. This produces one letter per recipe.
+</p>
+
+<p>The following table lists the correct recipes as well as the extracted letters, in alphabetical order by collection name/code.
+</p>
+
+<p>
+</p><table border="1">
+
+<tbody><tr>
+<td>Plotline</td>
+<td>Recipe Name</td>
+<td>Collection</td>
+<td>Given Index</td>
+<td>Letter</td>
+</tr>
+<tr>
+<td>8th</td>
+<td><a href="http://allrecipes.com/recipe/sugar-coated-pecans/detail.aspx">Sugar Coated Pecans</a></td>
+<td>Appetizers and Snacks (AS)</td>
+<td>10</td>
+<td>E</td>
+</tr>
+<tr>
+<td>5th</td>
+<td><a href="http://allrecipes.com/recipe/fluffy-pancakes-2/detail.aspx">Fluffy Pancakes</a></td>
+<td>Bread (B)</td>
+<td>9</td>
+<td>N</td>
+</tr>
+<tr>
+<td>4th</td>
+<td><a href="http://allrecipes.com/recipe/downeast-maine-pumpkin-bread/detail.aspx">Downeast Maine Pumpkin Bread</a></td>
+<td>Breakfast and Brunch (BB)</td>
+<td>8</td>
+<td>T</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td><a href="http://allrecipes.com/recipe/double-layer-pumpkin-cheesecake-2/detail.aspx">Double Layer Pumpkin Cheesecake</a></td>
+<td>Desserts (D)</td>
+<td>17</td>
+<td>I</td>
+</tr>
+<tr>
+<td>2nd</td>
+<td><a href="http://allrecipes.com/recipe/baby-back-ribs/detail.aspx">Baby Back Ribs</a></td>
+<td>Main Dish (MD)</td>
+<td>7</td>
+<td>C</td>
+</tr>
+<tr>
+<td>7th</td>
+<td><a href="http://allrecipes.com/recipe/strawberry-spinach-salad-i/detail.aspx">Strawberry Spinach Salad I</a></td>
+<td>Salad (S)</td>
+<td>13</td>
+<td>I</td>
+</tr>
+<tr>
+<td>1st</td>
+<td><a href="http://allrecipes.com/recipe/awesome-sausage-apple-and-cranberry-stuffing/detail.aspx">Awesome Sausage, Apple and Cranberry Stuffing</a></td>
+<td>Side Dish (SD)</td>
+<td>21</td>
+<td>N</td>
+</tr>
+<tr>
+<td>6th</td>
+<td><a href="http://allrecipes.com/recipe/italian-sausage-soup/detail.aspx">Italian Sausage Soup</a></td>
+<td>Soups, Stews and Chili (SSC)</td>
+<td>13</td>
+<td>G</td>
+</tr>
+</tbody></table>
+<p></p>
+
+<p>The final answer is <b>ENTICING</b>.
+</p>
