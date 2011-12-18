@@ -101,6 +101,7 @@ def fetch_puzzle(db, pid):
             title = "Investigator's Report"
         else:
             title = "Show meta"
+            is_show_meta = True
         
     # now find last post prod file
     ppfile = getPostProdFile(db, pid)
