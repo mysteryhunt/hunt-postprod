@@ -27,7 +27,7 @@ html5lib.constants.E.setdefault(
     u"Unexpected character in unquoted attribute value")
 html5lib.constants.E.setdefault(
     "invalid-codepoint",
-    u"Invalid codepoint")
+    u"Invalid codepoint (ignore line number given)")
 
 @contextmanager
 def rmdir_after(d):
