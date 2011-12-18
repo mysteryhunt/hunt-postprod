@@ -81,9 +81,17 @@ SELECT pstatus.id, pstatus.name FROM puzzle_idea, pstatus
 WHERE puzzle_idea.id=%s and pstatus.id = puzzle_idea.pstatus;""", pid)
     return sinfo
 
+def getPonyName(db, pid):
+    pinfo = db_select_one(db, """
+SELECT ponies.name FROM ponies, answers
+WHERE ponies.aid = answers.aid AND answers.pid = %s;""", pid)
+    return None if pinfo is None else pinfo[0]
+
 def fetch_all(db):
     for pid in getPuzzlesWithPostProd(db):
-        print "Processing puzzle %3d:" % pid, getPuzzleStatus(db, pid)[1]
+        print "Processing puzzle %3d: %22s  " % \
+            (pid, getPuzzleStatus(db, pid)[1]),\
+            '(', getPonyName(db, pid), ')'
         try:
             fetch_puzzle(db, pid)
         except:
