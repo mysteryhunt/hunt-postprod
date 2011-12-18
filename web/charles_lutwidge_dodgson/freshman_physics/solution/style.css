@@ -6,4 +6,9 @@
 #data th { text-align: center; }
 #data td:first-child,
 #data th:first-child { text-align: left; }
+
+#data td:first-child + td + td + td,
+#data th:first-child + th + th + th {
+  text-align: left; padding-left: 4px;
+}
 #data tr:first-child { vertical-align: bottom; }
