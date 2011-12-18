@@ -38,6 +38,10 @@ body.index #puzzle-list td { vertical-align: baseline; }
 	min-height:100%; /* real browsers */
 }
 
+#credits {
+  margin: 0;
+}
+
 @media print {
   body { background: white; }
   #background, #side-border, #top-border, #bottom-border,

@@ -17,7 +17,7 @@
   <div id="sidebar"></div>
   <div id="main">
     <h1>{{ page.title }}{% if is_solution %} (solution){% endif %}</h1>
-    {% if is_solution %}<h2>{{page.credits}}</h2>{% endif %}
+    {% if is_solution %}<h2 id="credits">{{page.credits}}</h2>{% endif %}
     {{ content }}
   </div>
   <div id="label"><a href="{% if is_solution %}../{% endif %}../">{{ critic_name }}</a></div>
