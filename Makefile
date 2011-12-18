@@ -49,6 +49,9 @@ update-all:
 	@cp $(WCY).bak $(WCY)
 	rsync $(RSYNC_OPTS) web/_blind/ ihtfp.us:/var/www/hunt/
 
+ponies.sql: ponies.py fake-puzzle-names.csv
+	./ponies.py > $@
+
 stage:
 	@cp $(WCY) $(WCY).bak
 	@echo Turning all rounds on

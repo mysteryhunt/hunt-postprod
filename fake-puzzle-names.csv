@@ -1,0 +1,108 @@
+Round,Answer,Reused in,Puzzle Title,Order
+1 S,COCOON,1,Applejack,,Applejack: COCOON
+1 S,BOOKWORM,1,Bow Tie,,Bow Tie: BOOKWORM
+1 S,OCTOPOD,2,Cheerilee,,Cheerilee: OCTOPOD
+1 S,MEDLEY,1,Cherries Jubilee,,Cherries Jubilee: MEDLEY
+1 S,TORCHWOOD,5,Locket,,Locket: TORCHWOOD
+1 S,PINHEAD,3,Magic Star,,Magic Star: PINHEAD
+1 S,SUBSTITUTE,4,Meadowlark Bloom,,Meadowlark Bloom: SUBSTITUTE
+1 S,ENTICING,1,Princess Starburst,,Princess Starburst: ENTICING
+1 S,ENUMERATE,2,Skydancer,,Skydancer: ENUMERATE
+1 S,COSPONSORS,5,Truly,,Truly: COSPONSORS
+1C,HELL,,Posey,,Posey: HELL
+1C,ATTACHED,,Silver Spoon,,Silver Spoon: ATTACHED
+1C,POISE,,Slugger,,Slugger: POISE
+1C,JOY,,Soarin',,Soarin': JOY
+1C,LEADER,,Sparkleworks,,Sparkleworks: LEADER
+1C,PROTECTORS,,Storybelle,,Storybelle: PROTECTORS
+2 S,CARPAL,4,Fluttershy,1,Fluttershy: CARPAL
+2 S,THE SOUTH,4,Granny Smith,2,Granny Smith: THE SOUTH
+2 S,STERNO,5,Starsong,3,Starsong: STERNO
+2 S,BYLINE,4,Coconut Cream,4,Coconut Cream: BYLINE
+2 S,SO CLOSE,2,Melody,5,Melody: SO CLOSE
+2 S,BUFFOON,3,Desert Rose,6,Desert Rose: BUFFOON
+2 S,VESTIGE,2,Baby Sniffles,7,Baby Sniffles: VESTIGE
+2C,CARMACK,,Baby Quackers,,Baby Quackers: CARMACK
+2C,REYKJAVIK,,Firefly,,Firefly: REYKJAVIK
+2C,PAINED,,Fizzy Pop,,Fizzy Pop: PAINED
+2C,FOGBOUND,,Medley,,Medley: FOGBOUND
+2C,BIZARRE,,Sapphire Shores,,Sapphire Shores: BIZARRE
+2C,LIQUEURS,,Shady,,Shady: LIQUEURS
+2C,CELLULAR,,Tex,,Tex: CELLULAR
+2C,MAXWELL,,Toola-Roola,,Toola-Roola: MAXWELL
+3 S,CAPITOL HILL ,6,Baby Fifi,,Baby Fifi: CAPITOL HILL 
+3 S,JOSH SCHWARTZ ,3,Baby Half-Note,,Baby Half-Note: JOSH SCHWARTZ 
+3 S,JAI HO ,4,Baby Milkweed,,Baby Milkweed: JAI HO 
+3 S,GO DUTCH ,4,Baby Snookums,,Baby Snookums: GO DUTCH 
+3 S,KINGS HIGHWAY BRIDGE ,3,Braeburn,,Braeburn: KINGS HIGHWAY BRIDGE 
+3 S,CHRIST CHURCH REGATTA ,3,Bubbles,,Bubbles: CHRIST CHURCH REGATTA 
+3 S,JERRY WEXLER ,6,Clover Bloom,,Clover Bloom: JERRY WEXLER 
+3 S,ARIGATO GOZAIMASU ,3,Daffidazey,,Daffidazey: ARIGATO GOZAIMASU 
+3 S,JOHN ADAMS ,6,Paradise,,Paradise: JOHN ADAMS 
+3 S,RUSH HOUR ,5,Pipsqueak,,Pipsqueak: RUSH HOUR 
+3 S,REST STOP ,5,Puzzlemint,,Puzzlemint: REST STOP 
+3 S,BAKING SODA ,5,Quarterback,,Quarterback: BAKING SODA 
+3 S,CARDINAL JULES MAZARIN ,3,Sundance,,Sundance: CARDINAL JULES MAZARIN 
+3 S,JACK CARDIFF ,3,Sunny Daze,,Sunny Daze: JACK CARDIFF 
+3 S,TERRY GENE BOLLEA ,6,Thistle Whistle,,Thistle Whistle: TERRY GENE BOLLEA 
+3C,ZAPHOD BEEBLEBROX,,Bright Eyes,,Bright Eyes: ZAPHOD BEEBLEBROX
+3C,CRUSHED VELVET TUX,,Cheval,,Cheval: CRUSHED VELVET TUX
+3C,NEVER REMOVED FROM BOX,,Daisyjo,,Daisyjo: NEVER REMOVED FROM BOX
+3C,VIDKUN QUISLING,,Gingerbread,,Gingerbread: VIDKUN QUISLING
+3C,INFLEXIBLE WILL,,Honolu-Loo,,Honolu-Loo: INFLEXIBLE WILL
+3C,DUCKBILL PLATYPUS,,Princess Serena,,Princess Serena: DUCKBILL PLATYPUS
+3C,COSMO SEX QUIZ,,Star Catcher,,Star Catcher: COSMO SEX QUIZ
+3C,EXHAUST VALVES,,Sweetberry,,Sweetberry: EXHAUST VALVES
+4 S,BATED BREATH ,6,Lofty,1,Lofty: BATED BREATH 
+4 S,DRUNK TANK ,5,4-Speed,2,4-Speed: DRUNK TANK 
+4 S,BUSINESS TRAVELERS ,6,Scootaloo,3,Scootaloo: BUSINESS TRAVELERS 
+4 S,LOVE ETC ,4,Sweetheart,4,Sweetheart: LOVE ETC 
+4 S,START OVER ,5,Twinkle Twirl,5,Twinkle Twirl: START OVER 
+4 S,VELVET ELVIS ,6,Spitfire,6,Spitfire: VELVET ELVIS 
+4 S,CAR SEAT ,4,Ember,7,Ember: CAR SEAT 
+4 S,CASH COW ,4,Salty,8,Salty: CASH COW 
+4 S,MARS ROVER ,4,Apple Bloom,9,Apple Bloom: MARS ROVER 
+4 S,FORGET PARIS ,6,Derpy Hooves,10,Derpy Hooves: FORGET PARIS 
+4 S,SOUTHWEST AIRLINES ,6,Princess Primrose,11,Princess Primrose: SOUTHWEST AIRLINES 
+4C,FOOT,,Ace,,Ace: FOOT
+4C,HAIRSTYLE,,Big McIntosh,,Big McIntosh: HAIRSTYLE
+4C,FABRIC,,Heart Throd,,Heart Throd: FABRIC
+4C,DONKEY,,Hoity-Toity,,Hoity-Toity: DONKEY
+4C,SANDWICH,,Kimono,,Kimono: SANDWICH
+4C,MECHANICS,,Knight Shade,,Knight Shade: MECHANICS
+4C,PARTY,,Lancer,,Lancer: PARTY
+4C,SEASON,,Miss Hackney,,Miss Hackney: SEASON
+4C,TASTE,,Rainbow Dash,,Rainbow Dash: TASTE
+5 S,FIRESTONE ,6,Baby Tic-Tac-Toe,1,Baby Tic-Tac-Toe: FIRESTONE 
+5 S,CLINTON ,6,Skywishes,2,Skywishes: CLINTON 
+5 S,UNION ,6,Patch,3,Patch: UNION 
+5 S,MERCURY ,6,Brightglow,4,Brightglow: MERCURY 
+5 S,PERSHING ,5,Princess Royal Blue,5,Princess Royal Blue: PERSHING 
+5 S,CHERRY ,6,Scoops,6,Scoops: CHERRY 
+5 S,VALLEY ,6,Masquerade,7,Masquerade: VALLEY 
+5 S,VIKING ,5,Flitter Flutter,8,Flitter Flutter: VIKING 
+5 S,TERMINAL ,6,Tink-a-Think-a-Too,9,Tink-a-Think-a-Too: TERMINAL 
+5C,CONSPIRATOR,,Baby Tumbleweed,,Baby Tumbleweed: CONSPIRATOR
+5C,STOCKBROKER,,Fiesta Flair,,Fiesta Flair: STOCKBROKER
+5C,OVERWROUGHT,,Lickety-Split,,Lickety-Split: OVERWROUGHT
+5C,PREARRANGED,,Mayor of Ponyville,,Mayor of Ponyville: PREARRANGED
+5C,CHOREOGRAPH,,North Star,,North Star: CHOREOGRAPH
+5C,ENGINEERING,,"Pinkamena Diane ""Pinkie"" Pie",,"Pinkamena Diane ""Pinkie"" Pie: ENGINEERING"
+5C,EARTHENWARE,,Razzaroo,,Razzaroo: EARTHENWARE
+5C,SCHRODINGER,,Twist,,Twist: SCHRODINGER
+6 S,DEPOT ,6,Apple Spice,,Apple Spice: DEPOT 
+6 S,COLON ,6,Baby Cuddles,,Baby Cuddles: COLON 
+6 S,RACED ,6,Cupcake,,Cupcake: RACED 
+6 S,YOKEL ,6,Princess Tiffany,,Princess Tiffany: YOKEL 
+6 S,OKAPI ,6,Starlight,,Starlight: OKAPI 
+6 S,SLITS ,6,Steamer,,Steamer: SLITS 
+6 S,ADOBO ,6,Surprise,,Surprise: ADOBO 
+6 S,EBOOK ,6,Wysteria,,Wysteria: EBOOK 
+6C,I DREAMED A DREAM,,Baby Bouncy,,Baby Bouncy: I DREAMED A DREAM
+6C,HAMBURGER,,Bon Bon,,Bon Bon: HAMBURGER
+6C,BUTCH CASSIDY AND THE SUNDANCE KID,,Cotton Candy,,Cotton Candy: BUTCH CASSIDY AND THE SUNDANCE KID
+6C,LUXURY TAX,,Diamond Tiara,,Diamond Tiara: LUXURY TAX
+6C,ARTICLES OF INCORPORATION,,Minty,,Minty: ARTICLES OF INCORPORATION
+6C,ESTEEMED,,Photo Finish,,Photo Finish: ESTEEMED
+6C,ADRIAN PETERSON,,Sweet Stuff,,Sweet Stuff: ADRIAN PETERSON
+6C,HARRY POTTER AND THE ORDER OF THE PHOENIX,,Teddy,,Teddy: HARRY POTTER AND THE ORDER OF THE PHOENIX

@@ -4,5 +4,6 @@ web/_stage
 *.pyc
 *.pyo
 secrets.py
+ponies.sql
 quoter
 quoter-1.10/quoter
