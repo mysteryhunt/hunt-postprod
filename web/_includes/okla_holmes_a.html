@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 {% if site.release.okla_holmes_a %}
+{% if is_solution and is_show_meta != true %}{% assign top = "../" %}{% endif %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="shortcut icon" href="{% if is_solution %}../{% endif %}../../favicon.ico" />
-<link href='{% if is_solution %}../{% endif %}../style.css' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="{{top}}../../favicon.ico" />
+<link href='{{top}}../style.css' rel='stylesheet' type='text/css'>
 {% if page.style %}
 <link href="{{ page.style }}" rel="stylesheet" type="text/css">
 {% endif %}
@@ -36,18 +37,18 @@
 
 </div>
 <div id="show-title">
-  <a class="title" href="{% if is_solution %}../{% endif %}../"></a>
+  <a class="title" href="{{top}}../"></a>
   <div id="link"></div>
 </div>
-<a id="top-link" href="{% if is_solution %}../{% endif %}../../"></a>
+<a id="top-link" href="{{top}}../../"></a>
 {% unless is_solution %}
 <script src="-link.js" type="text/javascript"></script>
 {% endunless %}
 <script type="text/javascript">
-this.depth="{% if is_solution %}../{% endif %}../../";
-this.up_title="{% if is_solution %}{{ page.title }}{% else %}Okla-Holmes-a!{% endif %}";
+this.depth="{{top}}../../";
+this.up_title="{% if is_solution and is_show_meta != true %}{{ page.title }}{% else %}Okla-Holmes-a!{% endif %}";
 </script>
-<script src="{% if is_solution %}../{% endif %}../../shortcuts.js" type="text/javascript"></script>
+<script src="{{top}}../../shortcuts.js" type="text/javascript"></script>
 </body>
 {% endif %}
 </html>
