@@ -56,6 +56,6 @@ stage:
 	@sed -ie 's/No[ ]*\(# solutions\)/Yes \1/' $(WCY)
 	jekyll web web/_stage
 	@cp $(WCY).bak $(WCY)
-	rsync -avcz --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
+	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
 
 staging: stage
