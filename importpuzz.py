@@ -86,7 +86,7 @@ def extract_body(html):
 def canon(s):
     # suppress 's
     s = re.sub(u"['\u2019]([st])\\b", r'\1', s) # possessives
-    return re.sub(r'[^a-z0-9]+', '_', s.lower().strip())
+    return re.sub(r'[^a-z0-9]+', '_', s.lower().strip()).strip('_')
 
 SORT_ORDER=['layout','title','class','style','credits']
 
