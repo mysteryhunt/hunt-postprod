@@ -1,0 +1,42 @@
+@import "../style.css";
+
+.nooverlap {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  padding-top: 46px;
+  padding-left: 10px;
+  font-size: 22px;
+}
+.nooverlap > span {
+  display: inline-block;
+  width: 155px;
+}
+.t.close {
+  margin-top: 0;
+  margin-bottom: -42px;
+}
+.t.both {
+  margin-top: 0;
+  margin-bottom: -38px;
+}
+.t.close.last, .t.both.last {
+  margin-bottom: 0;
+}
+
+.t.both .ticket.left {
+  -webkit-transform: rotate(3deg);
+  z-index: 0;
+}
+.t.both .ticket.right {
+  margin-left: 45px;
+}
+.t.both .ticket.left .seat { display: none; }
+
+.t.both .ticket.right .ans {
+  position: absolute;
+  font-size: 22px;
+  display: block;
+  right: 59px;
+  bottom: 27px;
+}
