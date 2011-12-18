@@ -75,9 +75,15 @@ WHERE filename LIKE '%%.zip' AND type = "postprod"
 ORDER BY pid ASC;""")
     return [ p for (p,) in pids ]
 
+def getPuzzleStatus(db, pid):
+    sinfo = db_select_one(db, """
+SELECT pstatus.id, pstatus.name FROM puzzle_idea, pstatus
+WHERE puzzle_idea.id=%s and pstatus.id = puzzle_idea.pstatus;""", pid)
+    return sinfo
+
 def fetch_all(db):
     for pid in getPuzzlesWithPostProd(db):
-        print "Processing puzzle", pid
+        print "Processing puzzle %3d:" % pid, getPuzzleStatus(db, pid)[1]
         try:
             fetch_puzzle(db, pid)
         except:
