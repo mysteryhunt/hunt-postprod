@@ -53,6 +53,11 @@ def smart_quotes(s):
     p = Popen([QUOTER], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     out,err = p.communicate(s)
     assert err == '', "quoter error: "+err
+    # use symbolic names
+    for sym in [ 'rsquo', 'rdquo', 'lsquo', 'ldquo' ]:
+        code = name2codepoint[sym]
+        out = re.sub(unichr(code)+(u"|&#(%d|x%x|x%X);" % (code,code,code)),
+                     u"&%s;" % sym, out)
     return out
 
 def extract_title(html):
