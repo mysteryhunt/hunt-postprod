@@ -107,3 +107,7 @@ body.puzzle {
   padding: 36px 0 0 95px;
   margin: -20px 0 -20px -50px;
 }
+
+#credits {
+  margin-bottom: 1em;
+}
