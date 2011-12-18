@@ -239,12 +239,13 @@ def wrap_body(body, options, is_solution=False):
 </html>
 """ % (style, options['title'], body)
 
-def do_export_to_zf(zf, puzzle_dir):
+def do_export_to_zf(zf, puzzle_dir, is_show_meta):
     # look at every file in puzzle_dir
     for f in listdir_rec(puzzle_dir):
         fullname = os.path.join(puzzle_dir, f)
         if is_reserved_filename(f): continue # skip this one
         if f.endswith('~'): continue # skip emacs backup files
+        if is_show_meta and not f.startswith('solution/'): continue
         if f == 'index.html' or f == 'solution/index.html':
             with open(fullname, 'r') as fd:
                 contents = fd.read().decode('utf8')
@@ -260,15 +261,16 @@ def do_import(zip_file, root_dir, round_name, authors, **kwargs):
     with closing(ZipFile(zip_file, 'r')) as zf:
         do_import_of_zf(zf, root_dir, round_name, authors, **kwargs)
 
-def do_export(zip_file, puzzle_dir):
+def do_export(zip_file, puzzle_dir, is_show_meta=False):
     with closing(ZipFile(zip_file, 'w')) as zf:
-        do_export_to_zf(zf, puzzle_dir)
+        do_export_to_zf(zf, puzzle_dir, is_show_meta)
 
 if __name__ == '__main__':
     _, zip_file, root_dir, round_name, authors = sys.argv
     LOG_CONTEXT1=zip_file
     if round_name=='export':
-        do_export(zip_file, root_dir) # HACK HACK HACK
+         # HACK HACK HACK
+        do_export(zip_file, root_dir, is_show_meta=(authors=='showmeta'))
     else:
         do_import(zip_file, root_dir,
                   round_name.decode('utf8'), authors.decode('utf8'))
