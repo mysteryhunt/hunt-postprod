@@ -1,0 +1,212 @@
+---
+layout: into_the_woodstock_solution
+title: Keeping Records
+class: puzzle solution
+credits: by Kai Huang
+---
+<p>
+For ease of reading, throughout this solution write-up, we&rsquo;ve broken up the message strings into two equal-length parts.
+</p>
+<p>
+<b>Step 1:</b></p><p>
+
+Upon studying the given message (or string of letters, rather), you may notice there are some meaningful blocks of words hidden within: OCEANENG, OLDCOURSE, and NUMBER. These are highlighted below:</p>
+<pre>JHBXRJQDPKYGJBSHBGIGCHUMGOWHDHUMGIBJHLORKPCGWXORGJGURDHVPXUPSYTUVHDGJHXAZBTPVFXXCQGMMNLICOJJO
+KSIXZMCBBHB<span style="background-color: #FFFF00">OCEANENG</span>NGCIGOYPTE<span style="background-color: #FFFF00">OLDCOURSE</span>LPQDFZEOEBJASKFIBHIELDTIUG<span style="background-color: #FFFF00">NUMBER</span>TNDHIZWAWKEJHZQIAJZFXFU
+</pre>
+
+<p>The lengths of these blocks match the numbers in the first group of codes: &ldquo;8mc 9mce 6sc&rdquo;, giving confirmation that you&rsquo;ve found the right blocks. Other substrings that may look meaningful do not match the given codes, and thus are mere coincidences. Furthermore, each code contains &ldquo;m&rdquo; or &ldquo;s&rdquo;, meaning that the associated block should have multiple words or a single word, respectively.
+</p><p>
+The clue OCEAN ENG OLD COURSE NUMBER clues the number 13, which in turn clues the fact that the Rot13 cipher was used to create this message. So decrypt the message using Rot13.</p>
+
+<pre>Cipher: JHBXRJQDPKYGJBSHBGIGCHUMGOWHDHUMGIBJHLORKPCGWXORGJGURDHVPXUPSYTUVHDGJHXAZBTPVFXXCQGMMNLICOJJO
+        KSIXZMCBBHBOCEANENGNGCIGOYPTEOLDCOURSELPQDFZEOEBJASKFIBHIELDTIUGNUMBERTNDHIZWAWKEJHZQIAJZFXFU
+Plain:  WUOKEWDQCXLTWOFUOTVTPUHZTBJUQUHZTVOWUYBEXCPTJKBETWTHEQUICKHCFLGHIUQTWUKNMOGCISKKPDTZZAYVPBWWB
+        XFVKMZPOOUOBPRNARATATPVTBLCGRBYQPBHEFRYCDQSMRBROWNFXSVOUVRYQGVHTAHZOREGAQUVMJNJXRWUMDVNWMSKSH
+</pre>
+<p>
+Note: Many <a href="http://rumkin.com/tools/cipher/rot13.php">online tools</a> are available to do ROT13 conversion.
+</p>
+
+<p>
+<b>Step 2:</b></p><p>
+
+In the new message, there is once again a clue hidden within, where the lengths of the message blocks match the numbers given in the next group of codes provided: 8mk 7mke. These are highlighted below:</p>
+
+<pre>WUOKEWDQCXLTWOFUOTVTPUHZTBJUQUHZTVOWUYBEXCPTJKBETW<span style="background-color: #FFFF00">THEQUICK</span>HCFLGHIUQTWUKNMOGCISKKPDTZZAYVPBWWB
+XFVKMZPOOUOBPRNARATATPVTBLCGRBYQPBHEFRYCDQSMR<span style="background-color: #FFFF00">BROWNFX</span>SVOUVRYQGVHTAHZOREGAQUVMJNJXRWUMDVNWMSKSH
+</pre>
+<p>
+In this step, the codes contain a &ldquo;k&rdquo; for key as opposed to a &ldquo;c&rdquo; for cipher as in the previous step. This is because in the previous step, the clue was cluing the name of the cipher used (Rot13), whereas in this step, the clue is cluing the encryption key. Note there is no explicit clue for what cipher is used in this step. You need to deduce the cipher from the format of the key.
+</p><p>
+The clue THE QUICK BROWN FX clues the sentence &ldquo;The quick brown fox jumps over the lazy dog.&rdquo;, which is the most well-known English pangram (sentence containing all 26 letters of the alphabet). Notice that &ldquo;FX&rdquo; is missing the &ldquo;O&rdquo; from the word FOX, hinting that the pangram should be used to provide a permutation of the 26 letters, only recording each letter the first time it appears in the pangram. The completed permutation is THEQUICKBROWNFXJMPSVLAZYDG. This permutation defines the cipher. Decrypt the message.</p>
+
+<pre>Cipher alphabet: THEQUICKBROWNFXJMPSVLAZYDG
+Cipher: WUOKEWDQCXLTWOFUOTVTPUHZTBJUQUHZTVOWUYBEXCPTJKBETWTHEQUICKHCFLGHIUQTWUKNMOGCISKKPDTZZAYVPBWWB
+        XFVKMZPOOUOBPRNARATATPVTBLCGRBYQPBHEFRYCDQSMRBROWNFXSVOUVRYQGVHTAHZOREGAQUVMJNJXRWUMDVNWMSKSH
+Plain:  LEKHCLYDGOUALKNEKATAREBWAIPEDEBWATKLEXICOGRAPHICALABCDEFGHBGNUZBFEDALEHMQKZGFSHHRYAWWVXTRILLI
+        ONTHQWRKKEKIRJMVJVAVARTAIUGZJIXDRIBCNJXGYDSQJIJKLMNOSTKETJXDZTBAVBWKJCZVDETQPMPOJLEQYTMLQSHSB
+</pre>
+<p>
+Note: An <a href="http://ruffnekk.stormloader.com/monosubst_tool.html">online tool</a>is available.
+</p>
+
+<p>
+<b>Step 3:</b>
+</p><p>
+Once again, find the message blocks matching the next given group of codes: 15sk 10ske. (Ignore the &ldquo;e&rdquo; in some codes for now, since it&rsquo;s for extraction of the final answer at the end of the puzzle.)</p>
+<pre>LEKHCLYDGOUALKNEKATAREBWAIPEDEBWATK<span style="background-color: #FFFF00">LEXICOGRAPHICAL</span>ABCDEFGHBGNUZBFEDALEHMQKZGFSHHRYAWWVX<span style="background-color: #FFFF00">TRILLI
+ON</span>THQWRKKEKIRJMVJVAVARTAIUGZJIXDRIBCNJXGYDSQJIJKLMNOSTKETJXDZTBAVBWKJCZVDETQPMPOJLEQYTMLQSHSB
+</pre>
+<p>
+The clue LEXICOGRAPHICAL TRILLIONTH clues that this message was encrypted with another permutation of the alphabet. This time, it is the trillionth permutation in the lexicographical ordering of the permutations.
+</p><p>
+In order to find the trillionth permutation, we need to consider how many full iterations of each letter position have already happened in the previous 999,999,999,999 permutations.
+</p><p>
+First note that 999,999,999,999 is greater than 14! but less than 15!, which means the trillionth permutation doesn&rsquo;t yet get through a full cycling of the last 15 letters (yes, we could have used the septillionth permutation instead, but we&rsquo;re not that mean). So the first 11 letters of the alphabet are still the same. The 12th letter (i.e. the first one of the last 15 letters) is the first letter that changes.
+</p>
+<pre>First 11 letters (unchanged): ABCDEFGHIJK
+Last 15 letters (reordered):  LMNOPQRSTUVWXYZ
+</pre>
+<p>
+Since 999,999,999,999 = 14! * 11.4707456, we know that the last 14 letters have gone through 11 full cycles, which means we&rsquo;re currently in the 12th cycling of the last 14 letters. This means the 12th letter (i.e. the first one of the last 15 letters) is currently on its 12th possible value in the lexicographical ordering of the last 15 letters. The 12th possible value in the last 15 letters is the letter W. Thus we&rsquo;ve deduced the first portion of the trillionth permutation up to the 12th letter.
+</p>
+<pre>First portion of trillionth permutation: ABCDEFGHIJKW...
+</pre>
+<p>
+We can continue in this manner to deduce the full trillionth permutation. Specifically, the number 999,999,999,999 is broken down as follows:
+</p>
+<pre>11 * 14! + 6 * 13! + 7 * 12! + 8 * 11! + 1 * 10! + 1 * 9! + 8 * 8! + 2 * 7! + 2 * 6! + 5 * 5! + 1 * 4! + 2 * 3! + 1 * 2! + 1 * 1!
+</pre>
+<p>
+So we want the 12th possible value of the 12th letter, followed by the 7th possible value (out of the remaining letters) of the 13th letter, and so forth. The full trillionth permutation is then
+</p>
+<pre>Trillionth permutation: ABCDEFGHIJKWRTVMNZPQYOUSXL
+</pre>
+<p>
+Decrypt the message using this permutation.
+</p>
+<pre>Cipher alphabet: ABCDEFGHIJKWRTVMNZPQYOUSXL
+Cipher: LEKHCLYDGOUALKNEKATAREBWAIPEDEBWATKLEXICOGRAPHICALABCDEFGHBGNUZBFEDALEHMQKZGFSHHRYAWWVXTRILLI
+        ONTHQWRKKEKIRJMVJVAVARTAIUGZJIXDRIBCNJXGYDSQJIJKLMNOSTKETJXDZTBAVBWKJCZVDETQPMPOJLEQYTMLQSHSB
+Plain:  ZEKHCZUDGVWAZKQEKANAMEBLAISEDEBLANKZEYICVGMASHICAZABCDEFGHBGQWRBFEDAZEHPTKRGFXHHMUALLOYNMIZZI
+        VQNHTLMKKEKIMJPOJOAOAMNAIWGRJIYDMIBCQJYGUDXTJIJKZPQVXNKENJYDRNBAOBLKJCRODENTSPSVJZETUNPZTXHXB
+</pre>
+<p>
+Note: An <a href="http://ruffnekk.stormloader.com/monosubst_tool.html">online tool</a> is available.
+</p>
+<p>
+<b>Step 4:</b>
+</p><p>
+Find the message blocks matching the next given group: 17mce 5sk 6ske.</p>
+<pre>ZEKHCZUDGVWAZKQEKA<span style="background-color: #FFFF00">NAMEBLAISEDEBLAN</span>KZEYICVGMASHICAZABCDEFGHBGQWRBFEDAZEHPTKRGFXHHMU<span style="background-color: #FFFF00">ALLOY</span>NMIZZI
+VQNHTLMKKEKIMJPOJOAOAMNAIWGRJIYDMIBCQJYGUDXTJIJKZPQVXNKENJYDRNBAOBLKJC<span style="background-color: #FFFF00">RODENTS</span>PSVJZETUNPZTXHXB
+</pre>
+<p>Notice that in this step, for the first time, there are clues for both the cipher (code &ldquo;c&rdquo;) and the key (code &ldquo;k&rdquo;). The clue for the cipher is NAME BLAISE DE BLANK, which clues that this message was encrypted using the Vigenere cipher. The clue for the key is ALLOY RODENT, which clues the key BRASS RAT (the name of the MIT class rings). Decrypt the message.
+</p>
+<pre>Cipher key: BRASSRAT
+Cipher: ZEKHCZUDGVWAZKQEKANAMEBLAISEDEBLANKZEYICVGMASHICAZABCDEFGHBGQWRBFEDAZEHPTKRGFXHHMUALLOYNMIZZI
+        VQNHTLMKKEKIMJPOJOAOAMNAIWGRJIYDMIBCQJYGUDXTJIJKZPQVXNKENJYDRNBAOBLKJCRODENTSPSVJZETUNPZTXHXB
+Plain:  YNKPKIUKFEWIHTQLJJNIUNBSZRSMLNBSZWKHMHIJUPMIAQIJZIAJKMEMFQBOYFRIENDIHNHWSTRONGHOLDATTXYULRZHQ
+        EQUGCLUSTERHVJXWSOHNJMVIRWNQSIGLVIIBZJGODDESSIRSIPXUGNSMWJFCANJIXBSJSCZWMEUSBPADSZLSDNXHCXOWK
+</pre>
+<p>
+Note: An <a href="http://rumkin.com/tools/cipher/vigenere.php.">online tool</a> is available.
+</p>
+
+<p>
+<b>Step 5:</b>
+</p><p>
+Find the message blocks matching the next given group: 9sce 10sce 7ske 7ske.</p>
+<pre>YNKPKIUKFEWIHTQLJJNIUNBSZRSMLNBSZWKHMHIJUPMIAQIJZIAJKMEMFQ<span style="background-color: #FFFF00">BOYFRIEND</span>IHNHW<span style="background-color: #FFFF00">STRONGHOLD</span>ATTXYULRZHQ
+EQUGCLUSTERHVJXWSOHNJMVIRWNQSIGLVIIBZJ<span style="background-color: #FFFF00">GODDESS</span>IRSIPXUGNSMWJFCANJIXBSJSCZWMEUSBPADSZLSDNXHCXOWK
+</pre>
+<p>
+The clue BOYFRIEND STRONGHOLD clues that this message was encrypted using the Beaufort cipher (beau=boyfriend, fort=stronghold). The clue CLUSTER GODDESS clues the key ATHENA (the MIT computing environment). Decrypt the message.
+</p>
+<pre>Cipher key: ATHENA
+Cipher: YNKPKIUKFEWIHTQLJJNIUNBSZRSMLNBSZWKHMHIJUPMIAQIJZIAJKMEMFQBOYFRIENDIHNHWSTRONGHOLDATTXYULRZHQ
+        EQUGCLUSTERHVJXWSOHNJMVIRWNQSIGLVIIBZJGODDESSIRSIPXUGNSMWJFCANJIXBSJSCZWMEUSBPADSZLSDNXHCXOWK
+Plain:  CGXPDSGJCARSTARTERNLNRMIBCPSCNZBIIDTOMZVTLOLHOFRBLHVDOWHCOMMCOQWJNXLARGEIAQQAUTFWBNHHWJKCJBMR
+        AXGURWKVHWCAJEDEBTXAROYZNRNKBZYCFSLGFEUMQEAVISCPWYDGNUMBEROFEARSWGMEIYULSJGISSEKIBIPBADTRKQRQ
+</pre>
+<p>
+Note: An <a href="http://ruffnekk.stormloader.com/beaufort_tool.html">online tool</a> is available.
+</p>
+<p>
+<b>Step 6:</b></p><p>
+
+Find the message blocks matching the next given group: 10mc 5ske 12mk.
+</p>
+
+<pre>CGXPDSGJ<span style="background-color: #FFFF00">CARSTARTER</span>NLNRMIBCPSCNZBIIDTOMZVTLOLHOFRBLHVDOWHCOMMCOQWJNX<span style="background-color: #FFFF00">LARGE</span>IAQQAUTFWBNHHWJKCJBMR
+AXGURWKVHWCAJEDEBTXAROYZNRNKBZYCFSLGFEUMQEAVISCPWYDG<span style="background-color: #FFFF00">NUMBEROFEARS</span>WGMEIYULSJGISSEKIBIPBADTRKQRQ
+</pre>
+<p>
+The clue CAR STARTER clues that this message was encrypted using the Autokey cipher. The clue LARGE NUMBER OF EARS clues the key SMOOT (the unit used to measure the length of the Harvard Bridge). Decrypt the message.
+</p>
+<pre>Cipher key: SMOOT
+Cipher: CGXPDSGJCARSTARTERNLNRMIBCPSCNZBIIDTOMZVTLOLHOFRBLHVDOWHCOMMCOQWJNXLARGEIAQQAUTFWBNHHWJKCJBMR
+        AXGURWKVHWCAJEDEBTXAROYZNRNKBZYCFSLGFEUMQEAVISCPWYDGNUMBEROFEARSWGMEIYULSJGISSEKIBIPBADTRKQRQ
+Plain:  KUJBKIMABQJGTZBKYYOKDTOURZWEIWAFEAHTJIZOACGMTODLPSTSSZEOKWNIOEUJBZTRRQHLRJAJPDKFNMKXCJXAFHSPR
+        VQOFABUHCWBGCCHDVRVTOTHEUDUDXFVICVGLXCZGFHYWCNVRAWQLWUQLTVUPTHWYHNFIKRHGKZPBMIFVHPAKGTOTHEXDX
+</pre>
+<p>
+Note: An <a href="http://rumkin.com/tools/cipher/vigenere-autokey.php">online tool</a> is available.
+</p>
+<p>
+<b>Step 7:</b>
+</p><p>
+Find the message blocks matching the next given group: 10mk 8mke.
+</p>
+<pre>KUJBKIMABQJGTZBKYYOKDTOURZWEIWAFEAHTJIZOACGMTODLPSTSSZEOKWNIOEUJBZTRRQHLRJAJPDKFNMKXCJXAFHSPR
+VQOFABUHCWBGCCHDVRV<span style="background-color: #FFFF00">TOTHEUDUDX</span>FVICVGLXCZGFHYWCNVRAWQLWUQLTVUPTHWYHNFIKRHGKZPBMIFVHPAKG<span style="background-color: #FFFF00">TOTHEXDX</span>
+</pre>
+<p>
+The message blocks, parsed correctly, are TO THE U DU DX and TO THE X DX, which come from a common MIT cheer and clues the number e. The message was encrypted using the digits of e as a running key (also known as the Gronsfeld cipher). Decrypt the message.
+</p>
+<pre>Cipher: KUJBKIMABQJGTZBKYYOKDTOURZWEIWAFEAHTJIZOACGMTODLPSTSSZEOKWNIOEUJBZTRRQHLRJAJPDKFNMKXCJXAFHSPR
+        VQOFABUHCWBGCCHDVRVTOTHEUDUDXFVICVGLXCZGFHYWCNVRAWQLWUQLTVUPTHWYHNFIKRHGKZPBMIFVHPAKGTOTHEXDX
+Key:    271828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852
+        516642742746639193200305992181741359662904357290033429526059563073813232862794349076323382988
+Plain:  INITIALSZIFBKZXFWVJHXTMMKVPDFRYZYYDKCBUHYYZMKLXCGJOJNSAFEQECHYSCUXPRKKBIRGVGKZDAEIFQBGPYEAKKP
+        QPIZWZNDAPXAWZYCMOTTOQHZLUSCPEOEBSBCRWXXFDVRVLMRATNHULLJNVPGOBTYAKXHHPEECTNUDECRYPTEDRLQZCOVP
+</pre>
+<p>
+Note: An <a href="http://rumkin.com/tools/cipher/gronsfeld.php">online tool</a> is available.
+</p>
+<p>
+<b>Final step:</b></p><p>
+Find the final message blocks: 8s 9s.
+</p>
+<pre><span style="background-color: #FFFF00">INITIALS</span>ZIFBKZXFWVJHXTMMKVPDFRYZYYDKCBUHYYZMKLXCGJOJNSAFEQECHYSCUXPRKKBIRGVGKZDAEIFQBGPYEAKKP
+QPIZWZNDAPXAWZYCMOTTOQHZLUSCPEOEBSBCRWXXFDVRVLMRATNHULLJNVPGOBTYAKXHHPEECTNU<span style="background-color: #FFFF00">DECRYPTED</span>RLQZCOVP
+</pre>
+<p>
+The final clue is INITIALS DECRYPTED. We also haven&rsquo;t used the code &ldquo;e&rdquo; given in the puzzle, associated with some of the message blocks. Putting these two together, the answer extraction method is to read the initials of the message blocks that are marked with code &ldquo;e&rdquo;. However, we shouldn&rsquo;t read the initials from those message blocks directly, but rather, read the corresponding fully decrypted letters in the final plaintext message.
+</p><p>
+This is illustrated below. The messages from all the steps are listed below, marked with their step number (the final plaintext message is marked &ldquo;F&rdquo;). The message blocks that have associated code &ldquo;e&rdquo; are highlighted in light blue instead of yellow. Then, the letters in the final plaintext message corresponding to the initials of the light-blue message blocks are highlighted in green.
+</p>
+<pre>First half of message:
+1: JHBXRJQDPKYGJBSHBGIGCHUMGOWHDHUMGIBJHLORKPCGWXORGJGURDHVPXUPSYTUVHDGJHXAZBTPVFXXCQGMMNLICOJJO
+2: WUOKEWDQCXLTWOFUOTVTPUHZTBJUQUHZTVOWUYBEXCPTJKBETW<span style="background-color: #FFFF00">THEQUICK</span>HCFLGHIUQTWUKNMOGCISKKPDTZZAYVPBWWB
+3: LEKHCLYDGOUALKNEKATAREBWAIPEDEBWATK<span style="background-color: #FFFF00">LEXICOGRAPHICAL</span>ABCDEFGHBGNUZBFEDALEHMQKZGFSHHRYAWWVX<span style="background-color: #00FFFF">TRILLI</span>
+4: ZEKHCZUDGVWAZKQEKA<span style="background-color: #00FFFF">NAMEBLAISEDEBLANK</span>ZEYICVGMASHICAZABCDEFGHBGQWRBFEDAZEHPTKRGFXHHMU<span style="background-color: #FFFF00">ALLOY</span>NMIZZI
+5: YNKPKIUKFEWIHTQLJJNIUNBSZRSMLNBSZWKHMHIJUPMIAQIJZIAJKMEMFQ<span style="background-color: #00FFFF">BOYFRIEND</span>IHNHW<span style="background-color: #00FFFF">STRONGHOLD</span>ATTXYULRZHQ
+6: CGXPDSGJ<span style="background-color: #FFFF00">CARSTARTER</span>NLNRMIBCPSCNZBIIDTOMZVTLOLHOFRBLHVDOWHCOMMCOQWJNX<span style="background-color: #00FFFF">LARGE</span>IAQQAUTFWBNHHWJKCJBMR
+7: KUJBKIMABQJGTZBKYYOKDTOURZWEIWAFEAHTJIZOACGMTODLPSTSSZEOKWNIOEUJBZTRRQHLRJAJPDKFNMKXCJXAFHSPR
+F: <span style="background-color: #FFFF00">INITIALS</span>ZIFBKZXFWV<span style="background-color: #00FF00">J</span>HXTMMKVPDFRYZYYDKCBUHYYZMKLXCGJOJNSAFEQ<span style="background-color: #00FF00">E</span>CHYSCUXP<span style="background-color: #00FF00">R</span>KKBI<span style="background-color: #00FF00">R</span>GVGKZDAEIFQBGP<span style="background-color: #00FF00">Y</span>EAKKP
+</pre>
+<pre>Second half of message:
+1: KSIXZMCBBHB<span style="background-color: #FFFF00">OCEANENG</span>NGCIGOYPTE<span style="background-color: #00FFFF">OLDCOURSE</span>LPQDFZEOEBJASKFIBHIELDTIUG<span style="background-color: #FFFF00">NUMBER</span>TNDHIZWAWKEJHZQIAJZFXFU
+2: XFVKMZPOOUOBPRNARATATPVTBLCGRBYQPBHEFRYCDQSMR<span style="background-color: #00FFFF">BROWNFX</span>SVOUVRYQGVHTAHZOREGAQUVMJNJXRWUMDVNWMSKSH
+3: <span style="background-color: #00FFFF">ONTH</span>QWRKKEKIRJMVJVAVARTAIUGZJIXDRIBCNJXGYDSQJIJKLMNOSTKETJXDZTBAVBWKJCZVDETQPMPOJLEQYTMLQSHSB
+4: VQNHTLMKKEKIMJPOJOAOAMNAIWGRJIYDMIBCQJYGUDXTJIJKZPQVXNKENJYDRNBAOBLKJC<span style="background-color: #00FFFF">RODENT</span>SPSVJZETUNPZTXHXB
+5: EQUG<span style="background-color: #00FFFF">CLUSTER</span>HVJXWSOHNJMVIRWNQSIGLVIIBZJ<span style="background-color: #00FFFF">GODDESS</span>IRSIPXUGNSMWJFCANJIXBSJSCZWMEUSBPADSZLSDNXHCXOWK
+6: AXGURWKVHWCAJEDEBTXAROYZNRNKBZYCFSLGFEUMQEAVISCPWYDG<span style="background-color: #FFFF00">NUMBEROFEARS</span>WGMEIYULSJGISSEKIBIPBADTRKQRQ
+7: VQOFABUHCWBGCCHDVRV<span style="background-color: #FFFF00">TOTHEUDUDX</span>FVICVGLXCZGFHYWCNVRAWQLWUQLTVUPTHWYHNFIKRHGKZPBMIFVHPAKG<span style="background-color: #00FFFF">TOTHEXDX</span>
+F: QPIZ<span style="background-color: #00FF00">W</span>ZNDAPXAWZYCMOTTOQHZLUSCP<span style="background-color: #00FF00">E</span>OEBSBCRW<span style="background-color: #00FF00">X</span>XFDVRV<span style="background-color: #00FF00">L</span>MRATNHULLJNVPGOBTYAKXHHP<span style="background-color: #00FF00">E</span>ECTNU<span style="background-color: #FFFF00">DECRYPTED</span><span style="background-color: #00FF00">R</span>LQZCOVP
+</pre>
+<p>
+Reading the green plaintext letters gives the final answer <b>JERRY WEXLER</b>.
+</p>
