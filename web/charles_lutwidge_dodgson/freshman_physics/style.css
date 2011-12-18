@@ -2,5 +2,5 @@
   font-size: 15px;
   padding-top: 1em;
 }
-.b > p { white-space: nowrap; clear: both; }
-.b > p .r { float: right; padding-right: 1em; }
+.b > p { white-space: nowrap; position: relative; }
+.b > p .r { padding-right: 1em; position: absolute; right: 0; }

@@ -1,0 +1,9 @@
+#data { font-size: 14px; cell-spacing: 0; border-collapse: collapse; }
+#data td + td,
+#data th + th { border-left: 1px solid black; }
+#data tr { vertical-align: top; border-bottom: 1px solid black; }
+#data td,
+#data th { text-align: center; }
+#data td:first-child,
+#data th:first-child { text-align: left; }
+#data tr:first-child { vertical-align: bottom; }
