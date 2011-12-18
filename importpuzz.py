@@ -25,6 +25,9 @@ from zipfile import ZipFile
 html5lib.constants.E.setdefault(
     "unexpected-character-in-unquoted-attribute-value",
     u"Unexpected character in unquoted attribute value")
+html5lib.constants.E.setdefault(
+    "invalid-codepoint",
+    u"Invalid codepoint")
 
 @contextmanager
 def rmdir_after(d):
@@ -138,9 +141,12 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
             if msg == 'non-void-element-with-trailing-solidus' and \
                details['name'] in html5lib.constants.voidElements:
                 continue
+            pretty = msg +": "+str(details)
+            if msg in html5lib.constants.E:
+                # (not all errors are in html5lib's list of error messages)
+                pretty = html5lib.constants.E[msg] % details
             log_error("line %d pos %d - %s" %
-                      (line-lineoffset, char,
-                       html5lib.constants.E[msg] % details))
+                      (line-lineoffset, char, pretty))
         clean = html5lib.serializer.serialize(doc, tree='dom',
                                               format='xhtml',
                                               encoding='ascii',
