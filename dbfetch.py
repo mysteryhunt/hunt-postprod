@@ -90,6 +90,7 @@ def fetch_puzzle(db, pid):
     roundName = getRoundName(db, pid)
     credits = getCredits(db, pid)
     # SPECIAL CASE for metas
+    is_show_meta = False
     m = re.match(r'\s*\(([CS])-META\)\s*(.*)$', title)
     if m or roundName == 'Metas':
         assert m and roundName == 'Metas'
@@ -99,7 +100,7 @@ def fetch_puzzle(db, pid):
         if mtype == 'C':
             title = "Investigator's Report"
         else:
-            title = "Meta" # hack? haven't really figured out show metas yet
+            title = "Show meta"
         
     # now find last post prod file
     ppfile = getPostProdFile(db, pid)
@@ -111,7 +112,8 @@ def fetch_puzzle(db, pid):
     outpath = path.join(outpath, 'web')
 
     # do the import!
-    do_import(ppfile, outpath, roundName, credits, title=title)
+    do_import(ppfile, outpath, roundName, credits, title=title,
+              is_show_meta=is_show_meta)
 
 if __name__ == '__main__':
     _, pid = sys.argv

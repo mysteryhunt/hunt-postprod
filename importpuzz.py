@@ -105,7 +105,8 @@ def mktempl(body, **options):
 def is_reserved_filename(fname):
     return fname.startswith('-') or fname.startswith('_')
 
-def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
+def do_import_of_zf(zf, root_dir, round_name, authors,
+                    title=None, is_show_meta=False):
     global LOG_CONTEXT2
     LOG_CONTEXT2 = ''
     files = zf.namelist()
@@ -121,7 +122,7 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
     if bad_files:
         log_fatal("Illegal file names in archive: "+(' '.join(bad_files)))
     # find the title of the puzzle
-    if 'index.html' not in files:
+    if 'index.html' not in files and not is_show_meta:
         log_fatal("Puzzle not found (expected index.html)")
 
     def tidy_with_log(s):
@@ -147,24 +148,27 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
         cleaner = smart_quotes(clean)
         return cleaner
 
-    LOG_CONTEXT2 = 'index.html'
-    puz = tidy_with_log(zf.read('index.html'))
-    # extract title, body, stylesheet
-    ntitle = extract_title(puz)
-    if ntitle is None and title is not None:
-        pass # use title from database; we've already complained about this
-    elif title is not None and canon(title) != canon(ntitle):
-        log_error("Title in index.html doesn't match database title")
+    if is_show_meta:
+        index_html=''
     else:
-        title = ntitle
-    body = extract_body(puz)
-    options = { 'layout': canon(round_name), 'title': title }
-    if 'style.css' in files:
-        options['style'] = 'style.css'
-    if re.match(r'Investigator.s Report', title):
-        options['class'] = 'report'
-    # replace index.html with template version
-    index_html = mktempl(body, **options)
+        LOG_CONTEXT2 = 'index.html'
+        puz = tidy_with_log(zf.read('index.html'))
+        # extract title, body, stylesheet
+        ntitle = extract_title(puz)
+        if ntitle is None and title is not None:
+            pass # use title from database; we've already complained about this
+        elif title is not None and canon(title) != canon(ntitle):
+            log_error("Title in index.html doesn't match database title")
+        else:
+            title = ntitle
+        body = extract_body(puz)
+        options = { 'layout': canon(round_name), 'title': title }
+        if 'style.css' in files:
+            options['style'] = 'style.css'
+        if re.match(r'Investigator.s Report', title):
+            options['class'] = 'report'
+        # replace index.html with template version
+        index_html = mktempl(body, **options)
     
     # process the solution (if present)
     LOG_CONTEXT2 = 'solution/index.html'
@@ -174,7 +178,9 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
     else:
         sol = tidy_with_log(zf.read('solution/index.html'))
         sol_body = extract_body(sol)
-        options = { 'layout': canon(round_name)+"_solution",
+        solution_suffix = '_solution'
+        if is_show_meta: solution_suffix = '_show_solution'
+        options = { 'layout': canon(round_name)+solution_suffix,
                     'title': title,
                     'credits': authors,
                     'class': 'puzzle solution' }
@@ -187,12 +193,14 @@ def do_import_of_zf(zf, root_dir, round_name, authors, title=None):
     # ok, extract all files into the target directory
     LOG_CONTEXT2 = ''
     target_dir = os.path.join(root_dir,
-                              canon(round_name).encode('utf8'),
-                              canon(title).encode('utf8'))
+                              canon(round_name).encode('utf8'))
+    if not is_show_meta:
+        target_dir = os.path.join(target_dir,
+                                  canon(title).encode('utf8'))
     solution_dir = os.path.join(target_dir, 'solution')
     if not os.path.isdir(solution_dir):
         os.makedirs(solution_dir)
-    # XXX clean target?
+    # XXX clean target? (if not show_meta)
     for f in files:
         full_path = os.path.join(target_dir, f)
         if f == 'index.html':
@@ -273,4 +281,6 @@ if __name__ == '__main__':
         do_export(zip_file, root_dir, is_show_meta=(authors=='showmeta'))
     else:
         do_import(zip_file, root_dir,
-                  round_name.decode('utf8'), authors.decode('utf8'))
+                  round_name.decode('utf8'), authors.decode('utf8')
+                  #,title='Show meta', is_show_meta=True
+                  )
