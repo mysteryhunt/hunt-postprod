@@ -1,0 +1,18 @@
+  body {
+  }
+  .padded-top {
+    padding-top: 20px;
+  }
+  .grid-div {
+    padding: 30px 0 0 20px;
+  }
+  .grid-table {
+    border-collapse: collapse;
+  }
+  .grid-table td {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #888;
+  }

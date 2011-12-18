@@ -1,0 +1,72 @@
+---
+layout: into_the_woodstock_solution
+title: Fulfilling Puzzle
+class: puzzle solution
+credits: by Kai Huang
+---
+<p>
+The first step is to encode each string of letters using a common puzzle encoding such that it fits into a grid of one of the given sizes. You&#8217;ll have to do a little bit of experimentation to see which combinations produce sensible grids, since all the strings are length 12. However, it should be pretty clear after getting a couple of correct grids that the results are supposed to draw letters (or parts of letters).
+</p>
+<p>
+The string PBKEJUJWRUCE is encoded into the 10 x 6 grid using binary.<br />
+</p>
+<pre>    P<font color="blue">B</font>    10000<font color="blue">00010</font>
+    <font color="blue">K</font>E    <font color="blue">01011</font>00101
+    J<font color="blue">U</font>    01010<font color="blue">10101</font>
+    <font color="blue">J</font>W    <font color="blue">01010</font>10111
+    R<font color="blue">U</font>    10010<font color="blue">10101</font>
+    <font color="blue">C</font>E    <font color="blue">00011</font>00101
+</pre>
+
+
+<p>
+The string PCAPASVXLXLE is encoded into the 12 x 6 grid using Braille.<br />
+</p>
+<pre>              **<font color="blue">**</font>*'<font color="blue">**</font>*'<font color="blue">'*</font>
+    P<font color="blue">C</font>A<font color="blue">P</font>A<font color="blue">S</font>    *'<font color="blue">''</font>''<font color="blue">*'</font>''<font color="blue">*'</font>
+              *'<font color="blue">''</font>''<font color="blue">*'</font>''<font color="blue">*'</font>
+              <font color="blue">*'</font>**<font color="blue">*'</font>**<font color="blue">*'</font>*'
+    <font color="blue">V</font>X<font color="blue">L</font>X<font color="blue">L</font>E    <font color="blue">*'</font>''<font color="blue">*'</font>''<font color="blue">*'</font>'*
+              <font color="blue">**</font>**<font color="blue">*'</font>**<font color="blue">*'</font>''
+</pre>
+
+
+
+<p>
+The string RRTZXZXVTVRR is encoded into the 14 x 6 grid using ASCII.<br />
+</p>
+<pre>    
+    R<font color="blue">R</font>    1010010<font color="blue">1010010</font>
+    <font color="blue">T</font>Z    <font color="blue">1010100</font>1011010
+    X<font color="blue">Z</font>    1011000<font color="blue">1011010</font>
+    <font color="blue">X</font>V    <font color="blue">1011000</font>1010110
+    T<font color="blue">V</font>    1010100<font color="blue">1010110</font>
+    <font color="blue">R</font>R    <font color="blue">1010010</font>1010010
+</pre>
+
+
+<p>The string VGRQUQRBRYVW is encoded into the 7 x 6 grid using Morse code.<br />
+</p>
+
+<pre>    V<font color="blue">G</font>    ***-<font color="blue">--*</font>
+    <font color="blue">R</font>Q    <font color="blue">*-*</font>--*-
+    U<font color="blue">Q</font>    **-<font color="blue">--*-</font>
+    <font color="blue">R</font>B    <font color="blue">*-*</font>-***
+    R<font color="blue">Y</font>    *-*<font color="blue">-*--</font>
+    <font color="blue">V</font>W    <font color="blue">***-</font>*--
+</pre>
+
+
+<p>
+After encoding, the 4 resulting grids should be arranged side by side into a readable message. There are only 24 arrangements, and only one arrangement causes all the 1&#8217;s and dots to draw letters, separated by single columns without 1&#8217;s and dots. The correct arrangement is shown below (0&#8217;s and dashes have been omitted for ease of reading).<br />
+</p>
+<pre>    ***   *1 1  1 1 1  1 ***** ***  *1       1
+    * *  * 1 1 1  1 11 1 *     *   *  1 11  1 1
+    **   * 1 11   1 11 1 *     *   *  1 1 1 1 1
+    * * ***1 11   1 1 11 * *** *** *  1 1 1 111
+    * * *  1 1 1  1 1 11 *   *   *  *1  1 1 1 1
+    *** *  1 1  1 1 1  1 ***** ***      11  1 1
+    </pre>
+<p>   
+The answer <b>BAKING SODA</b> can be read off the image.
+</p>
