@@ -5,6 +5,7 @@ from __future__ import division
 import dbfetch
 from importpuzz import canon, smart_quotes
 from mkimagemap import mkimagemap
+from ponymap import ROUNDS, PONY_INFO
 import json
 import os, os.path
 import shutil
@@ -51,19 +52,29 @@ def unordered_titles(round_info):
                            key=lambda s: s.lower())
     return puzzle_titles
 
-PONY_ORDER = {
-    'Okla-Holmes-a!': ['Fluttershy', 'Granny Smith', 'Starsong',
-                       'Coconut Cream', 'Melody', 'Desert Rose',
-                       'Baby Sniffles'],
-    'Mayan Fair Lady': ['Lofty', '4-Speed', 'Scootaloo', 'Sweetheart',
-                        'Twinkle Twirl', 'Spitfire', 'Ember',
-                        'Salty', 'Apple Bloom', 'Derpy Hooves',
-                        'Princess Primrose'],
-    'Phantom of the Operator': ['Baby Tic-Tac-Toe', 'Skywishes', 'Patch',
-                                'Brightglow', 'Princess Royal Blue',
-                                'Scoops', 'Masquerade', 'Flitter Flutter',
-                                'Tink-a-Think-a-Too'],
-}
+def make_pony_order(round_name):
+    ponies = [(info['order'], pony) for pony,info in PONY_INFO.iteritems()
+              if info['round'] == round_name]
+    assert all((order is not None) for order,pony in ponies)
+    ponies.sort() # by order!
+    return [pony for order,pony in ponies]
+
+PONY_ORDER = dict((round_name, make_pony_order(round_name)) for
+                  round_name in ['Okla-Holmes-a!', 'Mayan Fair Lady',
+                                 'Phantom of the Operator'])
+PONY_ORDER['Sheila Sunshine'] = ['Starsong', 'Flitter Flutter', 'Pipsqueak',
+                                 'Princess Royal Blue', 'Puzzlemint',
+                                 '4-Speed', 'Twinkle Twirl', 'Locket',
+                                 'Truly', 'Quarterback']
+PONY_ORDER['Watson 2.0'] = ['Spitfire', 'Masquerade', 'Tink-a-Think-a-Too',
+                            'Wysteria', 'Surprise', 'Cupcake', 'Brightglow',
+                            'Baby Cuddles', 'Patch', 'Skywishes', 'Scoops',
+                            'Apple Spice', 'Scootaloo', 'Princess Primrose',
+                            'Starlight', 'Derpy Hooves', 'Lofty',
+                            'Princess Tiffany', 'Thistle Whistle',
+                            'Paradise', 'Clover Bloom', 'Baby Fifi',
+                            'Baby Tic-Tac-Toe', 'Steamer']
+
 def ordered_titles(round_info, pony_order):
     result = []
     for pony in pony_order:
