@@ -1,0 +1,271 @@
+---
+layout: phantom_of_the_operator_solution
+title: Functions
+class: puzzle solution
+style: style.css
+credits: by Kai Huang
+---
+<p>The solver needs to figure out what each function does, and then evaluate the final long expression to get the answer.</p>
+
+<p>The functions always take English words as inputs and always output English words as well. Non-words are never allowed during the computations. Sometimes, a function has more than one valid output based on its definition, in which case the solver must choose the appropriate output based on the surrounding context. The functions are as follows:</p>
+
+<table class="ftable">
+  <tbody><tr>
+<th>Function</th>
+<th>Summary name</th>
+<th>Description</th>
+  </tr>
+
+<tr><td class="functions">
+  <span class="func">a</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">shiftWrap</span>
+</td><td>
+Positionally shifts the letters of <span class="ffunc">x</span> by some amount to make a different word (letters shifted off one side are wrapped around to the other side).
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">b</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">takeEveryOther</span>
+</td><td>
+Takes either the odd- or even-position letters of <span class="ffunc">x</span> to form a word.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">c</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">getNext</span>
+</td><td>
+Gets the next item after <span class="ffunc">x</span> in some common sequence.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">d</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">reverse</span>
+</td><td>
+Reverses the letters of <span class="ffunc">x</span> to form a word.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">e</span>(<span class="func">x</span>, <span class="func">y</span>)
+</td><td class="functions">
+<span class="func">concatenate</span>
+</td><td>
+Concatenates <span class="ffunc">x</span> and <span class="ffunc">y</span> into a word <span class="ffunc">xy</span>.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">f</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">getHomophone</span>
+</td><td>
+Gets a homophone of <span class="ffunc">x</span>.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">g</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">changeGender</span>
+</td><td>
+Gets an opposite-gender version of <span class="ffunc">x</span>.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">h</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">rotate</span>
+</td><td>
+Visually rotates <span class="ffunc">x</span> 180 degrees to form a word.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">i</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">shiftCaesar</span>
+</td><td>
+Caesar-shifts <span class="ffunc">x</span> into a different word.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">j</span>(<span class="func">x</span>, <span class="func">y</span>)
+</td><td class="functions">
+<span class="func">getLinkWord</span>
+</td><td>
+Gets a word <span class="ffunc">w</span> such that &ldquo;<span class="ffunc">x</span> <span class="ffunc">w</span>&rdquo; and &ldquo;<span class="ffunc">w</span> <span class="ffunc">y</span>&rdquo; are both common terms.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">k</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">getPartner</span>
+</td><td>
+Gets a word <span class="ffunc">w</span> that is commonly associated with <span class="ffunc">x</span> in a phrase using &ldquo;and&rdquo;, such as &ldquo;<span class="ffunc">w</span> and <span class="ffunc">x</span>&rdquo;, &ldquo;the <span class="ffunc">w</span> and the <span class="ffunc">x</span>&rdquo;, or &ldquo;an <span class="ffunc">x</span> and a <span class="ffunc">w</span>&rdquo;.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">l</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">getBritish</span>
+</td><td>
+Gets a British equivalent of the American word <span class="ffunc">x</span>.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">m</span>(<span class="func">x</span>, <span class="func">y</span>)
+</td><td class="functions">
+<span class="func">insert</span>
+</td><td>
+Inserts <span class="ffunc">x</span> into <span class="ffunc">y</span> somewhere such that the resulting string is a word.
+</td></tr>
+
+<tr><td class="functions">
+<span class="func">n</span>(<span class="func">x</span>)
+</td><td class="functions">
+<span class="func">getAntonym</span>
+</td><td>
+Gets an antonym of <span class="ffunc">x</span>.
+</td></tr>
+</tbody></table>
+  
+<p>Here are the computations for the clue equations.</p>
+
+<table class="functions computations">
+<tbody><tr><td>
+<span class="word">ATE</span></td><td>= <span class="func">a</span>(<span class="func">b</span>(<span class="func">c</span>(<span class="func">d</span>(<span class="word">ATE</span>))))<p>
+        = <span class="func">shiftWrap</span>(<span class="func">takeEveryOther</span>(<span class="func">getNext</span>(<span class="func">reverse</span>(<span class="word">ATE</span>))))</p><p>
+        = <span class="func">shiftWrap</span>(<span class="func">takeEveryOther</span>(<span class="func">getNext</span>(<span class="word">ETA</span>)))</p><p>
+        = <span class="func">shiftWrap</span>(<span class="func">takeEveryOther</span>(<span class="word">THETA</span>))</p><p>
+        = <span class="func">shiftWrap</span>(<span class="word">TEA</span>)</p><p>
+        = <span class="word">ATE</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">BOREDOM</span></td><td> = <span class="func">e</span>(<span class="func">f</span>(<span class="func">g</span>(<span class="func">h</span>(<span class="word">MOS</span>))), <span class="func">i</span>(<span class="word">PAY</span>))<p>
+        = <span class="func">concatenate</span>(<span class="func">getHomophone</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="word">MOS</span>))), <span class="func">shiftCaesar</span>(<span class="word">PAY</span>))</p><p>
+        = <span class="func">concatenate</span>(<span class="func">getHomophone</span>(<span class="func">changeGender</span>(<span class="word">SOW</span>)), <span class="word">DOM</span>)</p><p>
+        = <span class="func">concatenate</span>(<span class="func">getHomophone</span>(<span class="word">BOAR</span>), <span class="word">DOM</span>)</p><p>
+        = <span class="func">concatenate</span>(<span class="word">BORE</span>, <span class="word">DOM</span>)</p><p>
+        = <span class="word">BOREDOM</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">BOWL</span></td><td> = <span class="func">j</span>(<span class="func">k</span>(<span class="func">l</span>(<span class="word">FRIES</span>)), <span class="func">a</span>(<span class="word">MEGA</span>))<p>
+        = <span class="func">getLinkWord</span>(<span class="func">getPartner</span>(<span class="func">getBritish</span>(<span class="word">FRIES</span>)), <span class="func">shiftWrap</span>(<span class="word">MEGA</span>))</p><p>
+        = <span class="func">getLinkWord</span>(<span class="func">getPartner</span>(<span class="word">CHIPS</span>), <span class="word">GAME</span>)</p><p>
+        = <span class="func">getLinkWord</span>(<span class="word">FISH</span>, <span class="word">GAME</span>)</p><p>
+        = <span class="word">BOWL</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">ITEM</span></td><td> = <span class="func">a</span>(<span class="func">m</span>(<span class="func">b</span>(<span class="func">l</span>(<span class="word">ELEVATOR</span>)), <span class="func">j</span>(<span class="word">BEATS</span>, <span class="word">TOO</span>)))<p>
+        = <span class="func">shiftWrap</span>(<span class="func">insert</span>(<span class="func">takeEveryOther</span>(<span class="func">getBritish</span>(<span class="word">ELEVATOR</span>)), <span class="func">getLinkWord</span>(<span class="word">BEATS</span>, <span class="word">TOO</span>)))</p><p>
+        = <span class="func">shiftWrap</span>(<span class="func">insert</span>(<span class="func">takeEveryOther</span>(<span class="word">LIFT</span>), <span class="word">ME</span>))</p><p>
+        = <span class="func">shiftWrap</span>(<span class="func">insert</span>(<span class="word">IT</span>, <span class="word">ME</span>))</p><p>
+        = <span class="func">shiftWrap</span>(<span class="word">MITE</span>)</p><p>
+        = <span class="word">ITEM</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">LOSE</span></td><td> = <span class="func">n</span>(<span class="func">h</span>(<span class="func">d</span>(<span class="func">i</span>(<span class="word">SOT</span>))))<p>
+        = <span class="func">getAntonym</span>(<span class="func">rotate</span>(<span class="func">reverse</span>(<span class="func">shiftCaesar</span>(<span class="word">SOT</span>))))</p><p>
+        = <span class="func">getAntonym</span>(<span class="func">rotate</span>(<span class="func">reverse</span>(<span class="word">MIN</span>)))</p><p>
+        = <span class="func">getAntonym</span>(<span class="func">rotate</span>(<span class="word">NIM</span>))</p><p>
+        = <span class="func">getAntonym</span>(<span class="word">WIN</span>)</p><p>
+        = <span class="word">LOSE</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">NOM</span></td><td> = <span class="func">h</span>(<span class="func">f</span>(<span class="func">c</span>(<span class="func">j</span>(<span class="word">GROUND</span>, <span class="func">m</span>(<span class="word">IT</span>, <span class="word">GRAVY</span>)))))<p>
+        = <span class="func">rotate</span>(<span class="func">getHomophone</span>(<span class="func">getNext</span>(<span class="func">getLinkWord</span>(<span class="word">GROUND</span>, <span class="func">insert</span>(<span class="word">IT</span>, <span class="word">GRAVY</span>)))))</p><p>
+        = <span class="func">rotate</span>(<span class="func">getHomophone</span>(<span class="func">getNext</span>(<span class="func">getLinkWord</span>(<span class="word">GROUND</span>, <span class="word">GRAVITY</span>))))</p><p>
+        = <span class="func">rotate</span>(<span class="func">getHomophone</span>(<span class="func">getNext</span>(<span class="word">ZERO</span>)))</p><p>
+        = <span class="func">rotate</span>(<span class="func">getHomophone</span>(<span class="word">ONE</span>))</p><p>
+        = <span class="func">rotate</span>(<span class="word">WON</span>)</p><p>
+        = <span class="word">NOM</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">PETROL</span></td><td> = <span class="func">l</span>(<span class="func">b</span>(<span class="func">e</span>(<span class="word">GO</span>, <span class="func">i</span>(<span class="func">n</span>(<span class="word">BREAK</span>)))))<p>
+        = <span class="func">getBritish</span>(<span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="word">GO</span>, <span class="func">shiftCaesar</span>(<span class="func">getAntonym</span>(<span class="word">BREAK</span>)))))</p><p>
+        = <span class="func">getBritish</span>(<span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="word">GO</span>, <span class="func">shiftCaesar</span>(<span class="word">FIX</span>))))</p><p>
+        = <span class="func">getBritish</span>(<span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="word">GO</span>, <span class="word">ADS</span>)))</p><p>
+        = <span class="func">getBritish</span>(<span class="func">takeEveryOther</span>(<span class="word">GOADS</span>))</p><p>
+        = <span class="func">getBritish</span>(<span class="word">GAS</span>)</p><p>
+        = <span class="word">PETROL</span>
+</p></td></tr>
+
+<tr><td>
+<span class="word">PICKS</span></td><td> = <span class="func">f</span>(<span class="func">b</span>(<span class="func">g</span>(<span class="func">k</span>(<span class="word">PAUPER</span>))))<p>
+        = <span class="func">getHomophone</span>(<span class="func">takeEveryOther</span>(<span class="func">changeGender</span>(<span class="func">getPartner</span>(<span class="word">PAUPER</span>))))</p><p>
+        = <span class="func">getHomophone</span>(<span class="func">takeEveryOther</span>(<span class="func">changeGender</span>(<span class="word">PRINCE</span>)))</p><p>
+        = <span class="func">getHomophone</span>(<span class="func">takeEveryOther</span>(<span class="word">PRINCESS</span>))</p><p>
+        = <span class="func">getHomophone</span>(<span class="word">PICS</span>)</p><p>
+        = <span class="word">PICKS</span>
+</p></td></tr>
+</tbody></table>
+
+<p>Finally, here&rsquo;s the computation for the answer expression, broken into multiple parts for easier reading.</p>
+
+<table class="functions computations">
+<tbody><tr><td>
+&lt;part1&gt;</td><td> = <span class="func">i</span>(<span class="func">l</span>(<span class="func">c</span>(<span class="func">f</span>(<span class="func">i</span>(<span class="func">d</span>(<span class="func">b</span>(<span class="func">m</span>(<span class="func">b</span>(<span class="func">k</span>(<span class="word">NAVY</span>)), <span class="word">PREP</span>))))))))<p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="func">shiftCaesar</span>(<span class="func">reverse</span>(<span class="func">takeEveryOther</span>(<wbr></wbr><span class="func">insert</span>(<span class="func">takeEveryOther</span>(<span class="func">getPartner</span>(<span class="word">NAVY</span>)), <span class="word">PREP</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="func">shiftCaesar</span>(<span class="func">reverse</span>(<span class="func">takeEveryOther</span>(<wbr></wbr><span class="func">insert</span>(<span class="func">takeEveryOther</span>(<span class="word">ARMY</span>), <span class="word">PREP</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="func">shiftCaesar</span>(<span class="func">reverse</span>(<span class="func">takeEveryOther</span>(<wbr></wbr><span class="func">insert</span>(<span class="word">AM</span>,&nbsp;<span class="word">PREP</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="func">shiftCaesar</span>(<span class="func">reverse</span>(<span class="func">takeEveryOther</span>(<span class="word">PREAMP</span>)))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="func">shiftCaesar</span>(<span class="func">reverse</span>(<span class="word">RAP</span>))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="func">shiftCaesar</span>(<span class="word">PAR</span>)))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="func">getHomophone</span>(<span class="word">WHY</span>))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="func">getNext</span>(<span class="word">WYE</span>)))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">getBritish</span>(<span class="word">ZEE</span>))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="word">ZED</span>)</p><p>
+        = <span class="word">PUT</span>
+</p></td></tr>
+
+<tr><td>
+&lt;part2&gt;</td><td> = <span class="func">n</span>(<span class="func">a</span>(<span class="func">d</span>(<span class="func">g</span>(<span class="word">OGRESS</span>))))<p>
+        = <span class="func">getAntonym</span>(<span class="func">shiftWrap</span>(<span class="func">reverse</span>(<span class="func">changeGender</span>(<span class="word">OGRESS</span>))))</p><p>
+        = <span class="func">getAntonym</span>(<span class="func">shiftWrap</span>(<span class="func">reverse</span>(<span class="word">OGRE</span>)))</p><p>
+        = <span class="func">getAntonym</span>(<span class="func">shiftWrap</span>(<span class="word">ERGO</span>))</p><p>
+        = <span class="func">getAntonym</span>(<span class="word">GOER</span>)</p><p>
+        = <span class="word">COMER</span>
+</p></td></tr>
+
+<tr><td>
+&lt;part3&gt;</td><td> = <span class="func">i</span>(<span class="func">a</span>(<span class="func">g</span>(<span class="func">h</span>(<span class="func">i</span>(<span class="func">g</span>(<span class="func">b</span>(<span class="func">e</span>(<span class="func">c</span>(<span class="func">b</span>(<span class="func">d</span>(<span class="word">MOOD</span>))), <span class="func">k</span>(<span class="word">LEG</span>)))))))))<p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<wbr></wbr><span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="func">getNext</span>(<span class="func">takeEveryOther</span>(<span class="func">reverse</span>(<span class="word">MOOD</span>))), <span class="func">getPartner</span>(<span class="word">LEG</span>)))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<wbr></wbr><span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="func">getNext</span>(<span class="func">takeEveryOther</span>(<span class="word">DOOM</span>)), <span class="word">ARM</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<wbr></wbr><span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="func">getNext</span>(<span class="func">takeEveryOther</span>(<span class="word">DOOM</span>)), <span class="word">ARM</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<wbr></wbr><span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="func">getNext</span>(<span class="word">DO</span>), <span class="word">ARM</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<wbr></wbr><span class="func">takeEveryOther</span>(<span class="func">concatenate</span>(<span class="word">RE</span>, <span class="word">ARM</span>))))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<wbr></wbr><span class="func">takeEveryOther</span>(<span class="word">REARM</span>)))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="func">changeGender</span>(<span class="word">RAM</span>))))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="func">shiftCaesar</span>(<span class="word">EWE</span>)))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="func">rotate</span>(<span class="word">WOW</span>))))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="func">changeGender</span>(<span class="word">MOM</span>)))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="func">shiftWrap</span>(<span class="word">DAD</span>))</p><p>
+        = <span class="func">shiftCaesar</span>(<span class="word">ADD</span>)</p><p>
+        = <span class="word">ILL</span>
+</p></td></tr>
+
+<tr><td>
+&lt;part4&gt;</td><td> = <span class="func">b</span>(<span class="func">m</span>(<span class="func">n</span>(<span class="func">f</span>(<span class="word">PROS</span>)), <span class="func">a</span>(<span class="word">SIN</span>)))<p>
+        = <span class="func">takeEveryOther</span>(<span class="func">insert</span>(<span class="func">getAntonym</span>(<span class="func">getHomophone</span>(<span class="word">PROS</span>)), <span class="func">shiftWrap</span>(<span class="word">SIN</span>)))</p><p>
+        = <span class="func">takeEveryOther</span>(<span class="func">insert</span>(<span class="func">getAntonym</span>(<span class="word">PROSE</span>), <span class="word">INS</span>))</p><p>
+        = <span class="func">takeEveryOther</span>(<span class="func">insert</span>(<span class="word">VERSE</span>, <span class="word">INS</span>))</p><p>
+        = <span class="func">takeEveryOther</span>(<span class="word">INVERSES</span>)</p><p>
+        = <span class="word">NESS</span>
+</p></td></tr>
+
+<tr><td>
+&lt;answer&gt;</td><td> = <span class="func">j</span>(<span class="func">m</span>(&lt;part1&gt;, &lt;part2&gt;), <span class="func">e</span>(&lt;part3&gt;, &lt;part4&gt;))<p>
+        = <span class="func">getLinkWord</span>(<span class="func">insert</span>(&lt;part1&gt;, &lt;part2&gt;), <span class="func">concatenate</span>(&lt;part3&gt;, &lt;part4&gt;))</p><p>
+        = <span class="func">getLinkWord</span>(<span class="func">insert</span>(<span class="word">PUT</span>, <span class="word">COMER</span>), <span class="func">concatenate</span>(<span class="word">ILL</span>, <span class="word">NESS</span>))</p><p>
+        = <span class="func">getLinkWord</span>(<span class="word">COMPUTER</span>, <span class="word">ILLNESS</span>)</p><p>
+        = <span class="word">TERMINAL</span>
+</p></td></tr>
+</tbody></table>
+
+<p>The answer is <b>TERMINAL</b>.</p>
