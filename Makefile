@@ -50,7 +50,9 @@ update-all:
 	rsync $(RSYNC_OPTS) web/_blind/ ihtfp.us:/var/www/hunt/
 
 ponies.sql: ponies.py fake-puzzle-names.csv
-	./ponies.py > $@
+	./ponies.py sql > $@
+ponymap.py: ponies.py fake-puzzle-names.csv
+	./ponies.py python > $@
 
 stage:
 	@cp $(WCY) $(WCY).bak
