@@ -79,7 +79,7 @@ def area_elem(points, url, alt_text):
     return """<area shape="rect" coords="%d,%d,%d,%d" alt="%s" title="%s" href="%s" />"""\
           % (minx,miny,maxx,maxy,alt_text,alt_text,url)
 
-def mkimagemap(filename, url, alt_text):
+def mkimagemap(filename, url, alt_text, split_diagonals=SPLIT_DIAGONALS):
     maxx,minx,maxy,miny = [None] * 4
     with open(filename, 'rb') as f:
         width, height, pixels, metadata = png.Reader(file=f).asRGBA8()
@@ -117,14 +117,18 @@ def mkimagemap(filename, url, alt_text):
             if len(b) > 10:
                 inp.append(b)
     # sort pieces
-    if SPLIT_DIAGONALS > 0 and len(outp) > 0:
-        for i in xrange(SPLIT_DIAGONALS):
-            outp.sort(key=lambda p: len(p))
-            outp = split(outp[0]) + outp[1:]
+    if split_diagonals > 0 and len(outp) > 0:
+        for i in xrange(split_diagonals):
+            outp.sort(key=lambda p: -len(p))
+            if len(outp[0]):
+                outp = split(outp[0]) + outp[1:]
     # emit <area> tags
+    r = []
     for p in outp:
-        print area_elem(p, url, alt_text)
+        if len(p):
+            r.append(area_elem(p, url, alt_text))
+    return '\n'.join(r)
 
 if __name__ == '__main__':
     filename, puzzlename = sys.argv[1:]
-    mkimagemap(filename, puzztools.canon(puzzlename)+'/', puzzlename)
+    print mkimagemap(filename, puzztools.canon(puzzlename)+'/', puzzlename)

@@ -4,9 +4,12 @@ from __future__ import division
 """Query the database for completed puzzles and generate indexes."""
 import dbfetch
 from importpuzz import canon, smart_quotes
+from mkimagemap import mkimagemap
 import json
 import os, os.path
 import shutil
+
+ALL_PONIES=False # for testing; pretend no puzzles are in postprod
 
 def getRoundPuzzlesWithPostProd(db):
     rinfo = dbfetch.db_select_all(db, """
@@ -42,7 +45,7 @@ AND rounds.rid = answers_rounds.rid AND ponies.aid = answers.aid;""", pid)
 # unordered rounds
 def unordered_titles(round_info):
     # case-insensitive alphabetic
-    puzzle_titles = sorted([pony if title is None else title
+    puzzle_titles = sorted([pony if title is None or ALL_PONIES else title
                             for (batch,pony), title in round_info.iteritems()],
                            key=lambda s: s.lower())
     return puzzle_titles
@@ -60,6 +63,15 @@ def jsEscape(s):
 
 def build1S(round_name, round_info):
     BASEDIR=os.path.join('web', canon(round_name))
+    SPLIT=4
+    # copy '-' files from ponies to non-ponies
+    for (batch,pony),title in round_info.iteritems():
+        if title is None: continue
+        for filename in os.listdir(os.path.join(BASEDIR, canon(pony))):
+            if filename.startswith('-'):
+                shutil.copyfile(os.path.join(BASEDIR, canon(pony), filename),
+                                os.path.join(BASEDIR, canon(title), filename))
+    # build release.js file
     lines = []
     def add(s): lines.append(s)
     def addesc(s): add(jsEscape(s)+'+')
@@ -73,13 +85,22 @@ def build1S(round_name, round_info):
         addesc('<img src="%s/-' % canon(pt))
         add('(puzzle_solved.%s?"solved":"unsolved")+' % canon(pt))
         addesc('.png" />')
-    addesc('<img src="../1px.png" usemap="#map" />')
+    addesc('<img src="../1px.png" usemap="#map" style="z-index:99" />')
 
     addesc('<map name="map">')
     for pt in puzzle_titles:
-        sqpt = smart_quotes(pt)
-        addesc('<area %s href="%s/" alt="%s" title="%s" />' %
-               ('FILL ME IN', canon(pt), sqpt, sqpt))
+        # cached?
+        cache_file = os.path.join(BASEDIR, canon(pt), '-map')
+        if os.path.exists(cache_file):
+            area = open(cache_file).read()
+        else:
+            print "Making image map for", pt
+            sqpt = smart_quotes(pt)
+            area = mkimagemap(os.path.join(BASEDIR, canon(pt), '-unsolved.png'),
+                              canon(pt)+'/', sqpt, SPLIT)
+            with open(cache_file, 'w') as f:
+                f.write(area)
+        addesc(area)
     addesc('</map>')
     add("'';")
     add("}")
@@ -109,13 +130,6 @@ def build1S(round_name, round_info):
 
     # write this as release.js
     open(os.path.join(BASEDIR, 'release.js'), 'w').write('\n'.join(lines))
-    # copy '-' files from ponies to non-ponies
-    for (batch,pony),title in round_info.iteritems():
-        if title is None: continue
-        for filename in os.listdir(os.path.join(BASEDIR, canon(pony))):
-            if filename.startswith('-'):
-                shutil.copyfile(os.path.join(BASEDIR, canon(pony), filename),
-                                os.path.join(BASEDIR, canon(title), filename))
 
 def build1C(round_name, round_info):
     puzzle_titles = unordered_titles(round_info)
