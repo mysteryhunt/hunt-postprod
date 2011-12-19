@@ -18,7 +18,8 @@ from os import path
 def with_db(func, *args, **kwargs):
     with closing(MySQLdb.connect(host=secrets.DB_SERVER, user=secrets.DB_USER,
                                  passwd=secrets.DB_PASS, db=secrets.DB_NAME,
-                                 port=(secrets.DB_PORT or 3306))
+                                 port=(secrets.DB_PORT if
+                                       hasattr(secrets, 'DB_PORT') else 3306))
                  ) as db:
         return func(db, *args, **kwargs)
 
