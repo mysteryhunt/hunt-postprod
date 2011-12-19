@@ -5,9 +5,11 @@
 <link rel="shortcut icon" href="../favicon.ico" />
 <link href='style.css' rel='stylesheet' type='text/css' />
 <title>Into The Woodstock</title>
+<script src="../solved.js" type="text/javascript"></script>
+<script src="release.js" type='text/javascript'></script>
 </head>
 
-<body class="index">
+<body class="index" onload="onLoad()">
 <div id="background"><div class="screen"></div></div>
 <div id="side-border">
   <div class="left"></div>
@@ -15,69 +17,9 @@
 </div>
 
 <div id="main">
-<div id="index-image">
-  <img src="key.png" />
-  <img src="baby_fifi/-solved.png" />
-  <img src="baby_half_note/-solved.png" />
-  <img src="baby_milkweed/-solved.png" />
-  <img src="baby_snookums/-solved.png" />
-  <img src="braeburn/-solved.png" />
-  <img src="bubbles/-solved.png" />
-  <img src="clover_bloom/-solved.png" />
-  <img src="daffidazey/-solved.png" />
-  <img src="paradise/-solved.png" />
-  <img src="pipsqueak/-solved.png" />
-  <img src="puzzlemint/-solved.png" />
-  <img src="quarterback/-solved.png" />
-  <img src="sundance/-solved.png" />
-  <img src="sunny_daze/-solved.png" />
-  <img src="thistle_whistle/-solved.png" />
-  <img src="../1px.png" usemap="#map" />
-  <map name="map">
-  <area shape="rect" coords="18,166,86,297" alt="Baby Fifi" title="Baby Fifi" href="baby_fifi/" />
-  <area shape="rect" coords="10,352,92,449" alt="Baby Half-Note" title="Baby Half-Note" href="baby_half_note/" />
-  <area shape="rect" coords="123,416,207,471" alt="Baby Milkweed" title="Baby Milkweed" href="baby_milkweed/" />
-  <area shape="rect" coords="112,276,181,363" alt="Baby Snookums" title="Baby Snookums" href="baby_snookums/" />
-  <area shape="rect" coords="163,238,262,356" alt="Braeburn" title="Braeburn" href="braeburn/" />
-  <area shape="rect" coords="198,372,301,477" alt="Bubbles" title="Bubbles" href="bubbles/" />
-  <area shape="rect" coords="294,377,424,476" alt="Clover Bloom" title="Clover Bloom" href="clover_bloom/" />
-  <area shape="rect" coords="265,231,368,352" alt="Daffidazey" title="Daffidazey" href="daffidazey/" />
-  <area shape="rect" coords="299,148,381,239" alt="Paradise" title="Paradise" href="paradise/" />
-  <area shape="rect" coords="364,303,472,432" alt="Pipsqueak" title="Pipsqueak" href="pipsqueak/" />
-  <area shape="rect" coords="387,162,506,257" alt="Puzzlemint" title="Puzzlemint" href="puzzlemint/" />
-  <area shape="rect" coords="471,275,571,420" alt="Quarterback" title="Quarterback" href="quarterback/" />
-  <area shape="rect" coords="613,340,722,480" alt="Sundance" title="Sundance" href="sundance/" />
-  <area shape="rect" coords="576,68,699,168" alt="Sunny daze" title="Sunny daze" href="sunny_daze/" />
-  <area shape="rect" coords="636,166,751,307" alt="Thistle Whistle" title="Thistle Whistle" href="thistle_whistle/" />
-  </map>
-</div>
+<div id="index-image"></div>
 
-<table align="center" id="puzzle-list">
-<tr>
-  <td><a href="baby_fifi/" class="unlocked">Baby Fifi</a></td>
-  <td><a href="paradise/" class="unlocked">Paradise</a></td>
-</tr><tr>
-  <td><a href="baby_half_note/" class="unlocked">Baby Half-Note</a></td>
-  <td><a href="pipsqueak/" class="unlocked">Pipsqueak</a></td>
-</tr><tr>
-  <td><a href="baby_milkweed/" class="unlocked">Baby Milkweed</a></td>
-  <td><a href="puzzlemint/" class="unlocked">Puzzlemint</a></td>
-</tr><tr>
-  <td><a href="baby_snookums/" class="unlocked">Baby Snookums</a></td>
-  <td><a href="quarterback/" class="unlocked">Quarterback</a></td>
-</tr><tr>
-  <td><a href="braeburn/" class="unlocked">Braeburn</a></td>
-  <td><a href="sundance/" class="unlocked">Sundance</a></td>
-</tr><tr>
-  <td><a href="bubbles/" class="unlocked">Bubbles</a></td>
-  <td><a href="sunny_daze/" class="unlocked">Sunny Daze</a></td>
-</tr><tr>
-  <td><a href="clover_bloom/" class="unlocked">Clover Bloom</a></td>
-  <td><a href="thistle_whistle/" class="unlocked">Thistle Whistle</a></td>
-</tr><tr>
-  <td><a href="daffidazey/" class="unlocked">Daffidazey</a></td>
-</tr>
-</table>
+<table align="center" id="puzzle-list"></table>
 
 </div><!-- main -->
 <div id="bottom-border"></div>

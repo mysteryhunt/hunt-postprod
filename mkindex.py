@@ -10,6 +10,7 @@ import os, os.path
 import shutil
 
 ALL_PONIES=False # for testing; pretend no puzzles are in postprod
+WEBDIR='web'
 
 def getRoundPuzzlesWithPostProd(db):
     rinfo = dbfetch.db_select_all(db, """
@@ -50,6 +51,28 @@ def unordered_titles(round_info):
                            key=lambda s: s.lower())
     return puzzle_titles
 
+PONY_ORDER = {
+    'Okla-Holmes-a!': ['Fluttershy', 'Granny Smith', 'Starsong',
+                       'Coconut Cream', 'Melody', 'Desert Rose',
+                       'Baby Sniffles'],
+    'Mayan Fair Lady': ['Lofty', '4-Speed', 'Scootaloo', 'Sweetheart',
+                        'Twinkle Twirl', 'Spitfire', 'Ember',
+                        'Salty', 'Apple Bloom', 'Derpy Hooves',
+                        'Princess Primrose'],
+    'Phantom of the Operator': ['Baby Tic-Tac-Toe', 'Skywishes', 'Patch',
+                                'Brightglow', 'Princess Royal Blue',
+                                'Scoops', 'Masquerade', 'Flitter Flutter',
+                                'Tink-a-Think-a-Too'],
+}
+def ordered_titles(round_info, pony_order):
+    result = []
+    for pony in pony_order:
+        t = [title for (batch,p), title in round_info.iteritems()
+             if p == pony]
+        assert len(t) == 1
+        result.append(pony if t[0] is None or ALL_PONIES else t[0])
+    return result
+
 # split into two columns
 def two_columns(puzzle_titles):
     l = len(puzzle_titles)
@@ -61,9 +84,8 @@ def two_columns(puzzle_titles):
 def jsEscape(s):
     return json.dumps(s)
 
-def build1S(round_name, round_info):
-    BASEDIR=os.path.join('web', canon(round_name))
-    SPLIT=4
+def copy_dash_files(round_name, round_info):
+    BASEDIR=os.path.join(WEBDIR, canon(round_name))
     # copy '-' files from ponies to non-ponies
     for (batch,pony),title in round_info.iteritems():
         if title is None: continue
@@ -71,12 +93,21 @@ def build1S(round_name, round_info):
             if filename.startswith('-'):
                 shutil.copyfile(os.path.join(BASEDIR, canon(pony), filename),
                                 os.path.join(BASEDIR, canon(title), filename))
+
+def buildShow(round_name, round_info, split=4, ordered=False):
+    BASEDIR=os.path.join(WEBDIR, canon(round_name))
+    copy_dash_files(round_name, round_info)
     # build release.js file
     lines = []
     def add(s): lines.append(s)
     def addesc(s): add(jsEscape(s)+'+')
 
-    puzzle_titles = unordered_titles(round_info)
+    if ordered:
+        assert round_name in PONY_ORDER
+        puzzle_titles = ordered_titles(round_info, PONY_ORDER[round_name])
+    else:
+        puzzle_titles = unordered_titles(round_info)
+
     # generate imagemap
     add("function imagemap() {")
     add("  return ''+")
@@ -97,7 +128,7 @@ def build1S(round_name, round_info):
             print "Making image map for", pt
             sqpt = smart_quotes(pt)
             area = mkimagemap(os.path.join(BASEDIR, canon(pt), '-unsolved.png'),
-                              canon(pt)+'/', sqpt, SPLIT)
+                              canon(pt)+'/', sqpt, split)
             with open(cache_file, 'w') as f:
                 f.write(area)
         addesc(area)
@@ -135,21 +166,22 @@ def build1S(round_name, round_info):
             for (batch,pony),title in round_info.iteritems()
             if title is not None]
 
-def build1C(round_name, round_info):
-    puzzle_titles = unordered_titles(round_info)
-    #print puzzle_titles
-    return []
-
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
     # build some indexes
     builders = {
-        'A Circus Line': build1S,
-        'Betsy Johnson': build1C
+        'A Circus Line': (buildShow, {'ordered': False}),
+        'Okla-Holmes-a!': (buildShow, {'ordered': True}),
+        'Into the Woodstock': (buildShow, {'ordered': False}),
+        'Mayan Fair Lady': (buildShow, {'ordered': True}),
+        #'Phantom of the Operator': (buildShow, {'ordered': True}),
+        'Ogre of La Mancha': (buildShow, {'ordered': False}),
     }
     ignorable = []
     for round_name, round_info in rounds.iteritems():
         if round_name in builders:
-            ig = builders[round_name](round_name, round_info)
+            build, kwargs = builders[round_name]
+            ig = build(round_name, round_info, **kwargs)
             ignorable += ig
+        else: print "SKIPPING", jsEscape(round_name)
     print ignorable
