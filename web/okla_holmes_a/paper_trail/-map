@@ -1,5 +1,5 @@
-<area shape="rect" coords="341,347,372,426" alt="Coconut Cream" title="Coconut Cream" href="coconut_cream/" />
-<area shape="rect" coords="347,427,360,430" alt="Coconut Cream" title="Coconut Cream" href="coconut_cream/" />
-<area shape="rect" coords="342,292,376,346" alt="Coconut Cream" title="Coconut Cream" href="coconut_cream/" />
-<area shape="rect" coords="344,260,378,291" alt="Coconut Cream" title="Coconut Cream" href="coconut_cream/" />
-<area shape="rect" coords="338,373,340,426" alt="Coconut Cream" title="Coconut Cream" href="coconut_cream/" />
+<area shape="rect" coords="341,347,372,426" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="347,427,360,430" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="342,292,376,346" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="344,260,378,291" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="338,373,340,426" alt="{1}" title="{1}" href="{0}/" />

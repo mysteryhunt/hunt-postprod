@@ -1,5 +1,5 @@
-<area shape="rect" coords="188,348,209,414" alt="Fluttershy" title="Fluttershy" href="fluttershy/" />
-<area shape="rect" coords="188,415,205,430" alt="Fluttershy" title="Fluttershy" href="fluttershy/" />
-<area shape="rect" coords="193,298,211,347" alt="Fluttershy" title="Fluttershy" href="fluttershy/" />
-<area shape="rect" coords="182,395,187,423" alt="Fluttershy" title="Fluttershy" href="fluttershy/" />
-<area shape="rect" coords="210,402,211,411" alt="Fluttershy" title="Fluttershy" href="fluttershy/" />
+<area shape="rect" coords="188,348,209,414" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="188,415,205,430" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="193,298,211,347" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="182,395,187,423" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="210,402,211,411" alt="{1}" title="{1}" href="{0}/" />

@@ -1,6 +1,6 @@
-<area shape="rect" coords="324,49,348,60" alt="Applejack" title="Applejack" href="applejack/" />
-<area shape="rect" coords="324,61,371,76" alt="Applejack" title="Applejack" href="applejack/" />
-<area shape="rect" coords="336,77,369,99" alt="Applejack" title="Applejack" href="applejack/" />
-<area shape="rect" coords="340,105,352,118" alt="Applejack" title="Applejack" href="applejack/" />
-<area shape="rect" coords="338,100,362,104" alt="Applejack" title="Applejack" href="applejack/" />
-<area shape="rect" coords="374,67,378,72" alt="Applejack" title="Applejack" href="applejack/" />
+<area shape="rect" coords="324,49,348,60" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="324,61,371,76" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="336,77,369,99" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="340,105,352,118" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="338,100,362,104" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="374,67,378,72" alt="{1}" title="{1}" href="{0}/" />

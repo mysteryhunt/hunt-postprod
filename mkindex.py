@@ -120,18 +120,18 @@ def buildShow(round_name, round_info, split=4, ordered=False):
 
     addesc('<map name="map">')
     for pt in puzzle_titles:
+        sqpt = smart_quotes(pt)
         # cached?
         cache_file = os.path.join(BASEDIR, canon(pt), '-map')
         if os.path.exists(cache_file):
             area = open(cache_file).read()
         else:
             print "Making image map for", pt
-            sqpt = smart_quotes(pt)
             area = mkimagemap(os.path.join(BASEDIR, canon(pt), '-unsolved.png'),
-                              canon(pt)+'/', sqpt, split)
+                              "{0}/", "{1}", split)
             with open(cache_file, 'w') as f:
                 f.write(area)
-        addesc(area)
+        addesc(area.format(canon(pt), sqpt))
     addesc('</map>')
     add("'';")
     add("}")

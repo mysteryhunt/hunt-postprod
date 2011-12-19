@@ -1,5 +1,5 @@
-<area shape="rect" coords="575,215,602,240" alt="Bow Tie" title="Bow Tie" href="bow_tie/" />
-<area shape="rect" coords="618,222,639,240" alt="Bow Tie" title="Bow Tie" href="bow_tie/" />
-<area shape="rect" coords="569,241,632,258" alt="Bow Tie" title="Bow Tie" href="bow_tie/" />
-<area shape="rect" coords="584,272,609,300" alt="Bow Tie" title="Bow Tie" href="bow_tie/" />
-<area shape="rect" coords="566,259,623,271" alt="Bow Tie" title="Bow Tie" href="bow_tie/" />
+<area shape="rect" coords="575,215,602,240" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="618,222,639,240" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="569,241,632,258" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="584,272,609,300" alt="{1}" title="{1}" href="{0}/" />
+<area shape="rect" coords="566,259,623,271" alt="{1}" title="{1}" href="{0}/" />
