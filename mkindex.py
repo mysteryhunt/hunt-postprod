@@ -141,10 +141,12 @@ def buildShow(round_name, round_info, split=4, ordered=False):
     first, second = two_columns(puzzle_titles)
     for i in xrange(len(first)):
         addesc('<tr>')
-        for pt in [ first[i], second[i] if i<len(second) else None ]:
+        for pt,num in [ (first[i],i),
+                        (second[i] if i<len(second) else None, i+len(first)) ]:
             if pt is None:
                 continue
-            # "unlocked" should be looked up in javascript from master file
+            if ordered:
+                addesc('<td class="num">%d.</td>' % (num+1))
             addesc('<td><a href="%s/" class="' % canon(pt))
             add('(puzzle_solved.%s?"solved":"unsolved")+' % canon(pt))
             addesc('">%s</a></td>' % smart_quotes(pt))

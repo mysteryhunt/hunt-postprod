@@ -82,6 +82,9 @@ padding-top: 20px;
 height: 42px; /* 62px minus the padding */
 white-space: nowrap;
 }
+#puzzle-list a.unsolved {
+background-image: url('icon-unsolved.png');
+}
 
 /* puzzle page formatting */
 body.puzzle {
