@@ -67,6 +67,9 @@ body.index #puzzle-list a {
   background: url('icon.png') no-repeat;
   height: 46px; /* 60px minus the padding */
 }
+body.index #puzzle-list a.unsolved {
+  background-image: url('icon-unsolved.png');
+}
 
 #main {
   padding: 10px 0 60px 0;

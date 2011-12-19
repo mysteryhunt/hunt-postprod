@@ -40,6 +40,9 @@ body.index #puzzle-list a {
   background: url('icon.png') no-repeat;
   height: 42px; /* 62px minus the padding */
 }
+body.index #puzzle-list a.unsolved {
+  background-image: url('icon-unsolved.png');
+}
 
 /* Specific size info for 1S images */
 body { min-width: 700px; }
