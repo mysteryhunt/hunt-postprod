@@ -175,7 +175,7 @@ if __name__ == '__main__':
         'Okla-Holmes-a!': (buildShow, {'ordered': True}),
         'Into the Woodstock': (buildShow, {'ordered': False}),
         'Mayan Fair Lady': (buildShow, {'ordered': True}),
-        #'Phantom of the Operator': (buildShow, {'ordered': True}),
+        'Phantom of the Operator': (buildShow, {'ordered': True}),
         'Ogre of La Mancha': (buildShow, {'ordered': False}),
     }
     ignorable = []

@@ -5,9 +5,11 @@
 <link rel="shortcut icon" href="../favicon.ico" />
 <link href='style.css' rel='stylesheet' type='text/css' />
 <title>Phantom of the Operator</title>
+<script src="../solved.js" type="text/javascript"></script>
+<script src="release.js" type="text/javascript"></script>
 </head>
 
-<body class="index">
+<body class="index" onload="onLoad()">
 <div id="background"><div class="screen"></div></div>
 <div id="side-border">
   <div class="left"></div>
@@ -15,47 +17,9 @@
 </div>
 
 <div id="main">
-<div id="index-image">
-  <img src="key.png" />
-  <!--
-  <img src="baby_tic_tac_toe/-solved.png" />
-  <img src="skywishes/-solved.png" />
-  <img src="patch/-solved.png" />
-  <img src="brightglow/-solved.png" />
-  <img src="princess_royal_blue/-solved.png" />
-  <img src="scoops/-solved.png" />
-  <img src="masquerade/-solved.png" />
-  <img src="flitter_flutter/-solved.png" />
-  <img src="tink_a_think_a_too/-solved.png" />
-  -->
-</div>
+<div id="index-image"></div>
 
-<table align="center" id="puzzle-list">
-<tr>
-  <td class="num">1.</td>
-  <td><a href="baby_tic_tac_toe/" class="unlocked">Baby Tic-Tac-Toe</a></td>
-  <td class="num">6.</td>
-  <td><a href="scoops/" class="unlocked">Scoops</a></td>
-</tr><tr>
-  <td class="num">2.</td>
-  <td><a href="skywishes/" class="unlocked">Skywishes</a></td>
-  <td class="num">7.</td>
-  <td><a href="masquerade/" class="unlocked">Masquerade</a></td>
-</tr><tr>
-  <td class="num">3.</td>
-  <td><a href="patch/" class="unlocked">Patch</a></td>
-  <td class="num">8.</td>
-  <td><a href="flitter_flutter/" class="unlocked">Flitter Flutter</a></td>
-</tr><tr>
-  <td class="num">4.</td>
-  <td><a href="brightglow/" class="unlocked">Brightglow</a></td>
-  <td class="num">9.</td>
-  <td><a href="tink_a_think_a_too/" class="unlocked">Tink-a-Think-a-Too</a></td>
-</tr><tr>
-  <td class="num">5.</td>
-  <td><a href="princess_royal_blue/" class="unlocked">Princess Royal Blue</a></td>
-</tr>
-</table>
+<table align="center" id="puzzle-list"></table>
 
 </div><!-- main -->
 <div id="bottom-border"></div>
