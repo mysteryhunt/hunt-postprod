@@ -185,4 +185,13 @@ if __name__ == '__main__':
             ig = build(round_name, round_info, **kwargs)
             ignorable += ig
         else: print "SKIPPING", jsEscape(round_name)
+    # write a solved.js file indicating which puzzles are written
+    h = {}
+    for round_name, round_info in rounds.iteritems():
+        for (batch, pony), title in round_info.iteritems():
+            if title is not None and not ALL_PONIES:
+                h[canon(title)] = 1
+    with open(os.path.join(WEBDIR, 'solved.js'), 'w') as f:
+        print >> f, "// This file is written by the hunt-running software"
+        print >> f, "var puzzle_solved =", jsEscape(h),";"
     print ignorable
