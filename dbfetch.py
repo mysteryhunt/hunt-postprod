@@ -7,7 +7,6 @@ Command line:
 
 ./dbfetch [puzzle number]
 """
-from __future__ import with_statement
 import MySQLdb
 import re
 import secrets
@@ -18,7 +17,8 @@ from os import path
 
 def with_db(func, *args, **kwargs):
     with closing(MySQLdb.connect(host=secrets.DB_SERVER, user=secrets.DB_USER,
-                                 passwd=secrets.DB_PASS, db=secrets.DB_NAME)
+                                 passwd=secrets.DB_PASS, db=secrets.DB_NAME,
+                                 port=(secrets.DB_PORT or 3306))
                  ) as db:
         return func(db, *args, **kwargs)
 
