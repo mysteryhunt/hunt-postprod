@@ -89,6 +89,8 @@ def copy_dash_files(round_name, round_info):
     # copy '-' files from ponies to non-ponies
     for (batch,pony),title in round_info.iteritems():
         if title is None: continue
+        if not os.path.isdir(os.path.join(BASEDIR, canon(title))):
+            os.makedirs(os.path.join(BASEDIR, canon(title)))
         for filename in os.listdir(os.path.join(BASEDIR, canon(pony))):
             if filename.startswith('-'):
                 shutil.copyfile(os.path.join(BASEDIR, canon(pony), filename),
