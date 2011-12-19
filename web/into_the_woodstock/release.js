@@ -2,49 +2,49 @@ function imagemap() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"braeburn/-"+
-(puzzle_solved.braeburn?"solved":"unsolved")+
+(puzzle_solved["braeburn"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"bubbles/-"+
-(puzzle_solved.bubbles?"solved":"unsolved")+
+(puzzle_solved["bubbles"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"critical_thinking/-"+
-(puzzle_solved.critical_thinking?"solved":"unsolved")+
+(puzzle_solved["critical_thinking"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"daffidazey/-"+
-(puzzle_solved.daffidazey?"solved":"unsolved")+
+(puzzle_solved["daffidazey"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"dawn_of_a_new_era/-"+
-(puzzle_solved.dawn_of_a_new_era?"solved":"unsolved")+
+(puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"fulfilling_puzzle/-"+
-(puzzle_solved.fulfilling_puzzle?"solved":"unsolved")+
+(puzzle_solved["fulfilling_puzzle"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"keeping_records/-"+
-(puzzle_solved.keeping_records?"solved":"unsolved")+
+(puzzle_solved["keeping_records"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"of_course/-"+
-(puzzle_solved.of_course?"solved":"unsolved")+
+(puzzle_solved["of_course"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"paradise/-"+
-(puzzle_solved.paradise?"solved":"unsolved")+
+(puzzle_solved["paradise"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"pipsqueak/-"+
-(puzzle_solved.pipsqueak?"solved":"unsolved")+
+(puzzle_solved["pipsqueak"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"puzzlemint/-"+
-(puzzle_solved.puzzlemint?"solved":"unsolved")+
+(puzzle_solved["puzzlemint"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"strip_mind/-"+
-(puzzle_solved.strip_mind?"solved":"unsolved")+
+(puzzle_solved["strip_mind"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"tax_in_space/-"+
-(puzzle_solved.tax_in_space?"solved":"unsolved")+
+(puzzle_solved["tax_in_space"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"thistle_whistle/-"+
-(puzzle_solved.thistle_whistle?"solved":"unsolved")+
+(puzzle_solved["thistle_whistle"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"towers/-"+
-(puzzle_solved.towers?"solved":"unsolved")+
+(puzzle_solved["towers"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
@@ -70,63 +70,63 @@ function puzzlelist() {
   return ""+
 "<tr>"+
 "<td><a href=\"braeburn/\" class=\""+
-(puzzle_solved.braeburn?"solved":"unsolved")+
+(puzzle_solved["braeburn"]?"solved":"unsolved")+
 "\">Braeburn</a></td>"+
 "<td><a href=\"paradise/\" class=\""+
-(puzzle_solved.paradise?"solved":"unsolved")+
+(puzzle_solved["paradise"]?"solved":"unsolved")+
 "\">Paradise</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"bubbles/\" class=\""+
-(puzzle_solved.bubbles?"solved":"unsolved")+
+(puzzle_solved["bubbles"]?"solved":"unsolved")+
 "\">Bubbles</a></td>"+
 "<td><a href=\"pipsqueak/\" class=\""+
-(puzzle_solved.pipsqueak?"solved":"unsolved")+
+(puzzle_solved["pipsqueak"]?"solved":"unsolved")+
 "\">Pipsqueak</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"critical_thinking/\" class=\""+
-(puzzle_solved.critical_thinking?"solved":"unsolved")+
+(puzzle_solved["critical_thinking"]?"solved":"unsolved")+
 "\">Critical Thinking</a></td>"+
 "<td><a href=\"puzzlemint/\" class=\""+
-(puzzle_solved.puzzlemint?"solved":"unsolved")+
+(puzzle_solved["puzzlemint"]?"solved":"unsolved")+
 "\">Puzzlemint</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"daffidazey/\" class=\""+
-(puzzle_solved.daffidazey?"solved":"unsolved")+
+(puzzle_solved["daffidazey"]?"solved":"unsolved")+
 "\">Daffidazey</a></td>"+
 "<td><a href=\"strip_mind/\" class=\""+
-(puzzle_solved.strip_mind?"solved":"unsolved")+
+(puzzle_solved["strip_mind"]?"solved":"unsolved")+
 "\">Strip Mind</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"dawn_of_a_new_era/\" class=\""+
-(puzzle_solved.dawn_of_a_new_era?"solved":"unsolved")+
+(puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
 "\">Dawn of a New Era</a></td>"+
 "<td><a href=\"tax_in_space/\" class=\""+
-(puzzle_solved.tax_in_space?"solved":"unsolved")+
+(puzzle_solved["tax_in_space"]?"solved":"unsolved")+
 "\">Tax ... In ... Space</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"fulfilling_puzzle/\" class=\""+
-(puzzle_solved.fulfilling_puzzle?"solved":"unsolved")+
+(puzzle_solved["fulfilling_puzzle"]?"solved":"unsolved")+
 "\">Fulfilling Puzzle</a></td>"+
 "<td><a href=\"thistle_whistle/\" class=\""+
-(puzzle_solved.thistle_whistle?"solved":"unsolved")+
+(puzzle_solved["thistle_whistle"]?"solved":"unsolved")+
 "\">Thistle Whistle</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"keeping_records/\" class=\""+
-(puzzle_solved.keeping_records?"solved":"unsolved")+
+(puzzle_solved["keeping_records"]?"solved":"unsolved")+
 "\">Keeping Records</a></td>"+
 "<td><a href=\"towers/\" class=\""+
-(puzzle_solved.towers?"solved":"unsolved")+
+(puzzle_solved["towers"]?"solved":"unsolved")+
 "\">Towers</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"of_course/\" class=\""+
-(puzzle_solved.of_course?"solved":"unsolved")+
+(puzzle_solved["of_course"]?"solved":"unsolved")+
 "\">Of Course!</a></td>"+
 "</tr>"+
 '';

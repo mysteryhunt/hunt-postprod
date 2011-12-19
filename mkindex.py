@@ -114,7 +114,7 @@ def buildShow(round_name, round_info, split=4, ordered=False):
     addesc('<img src="key.png" />')
     for pt in puzzle_titles:
         addesc('<img src="%s/-' % canon(pt))
-        add('(puzzle_solved.%s?"solved":"unsolved")+' % canon(pt))
+        add('(puzzle_solved[%s]?"solved":"unsolved")+' % jsEscape(canon(pt)))
         addesc('.png" />')
     addesc('<img src="../1px.png" usemap="#map" style="z-index:99" />')
 
@@ -148,7 +148,7 @@ def buildShow(round_name, round_info, split=4, ordered=False):
             if ordered:
                 addesc('<td class="num">%d.</td>' % (num+1))
             addesc('<td><a href="%s/" class="' % canon(pt))
-            add('(puzzle_solved.%s?"solved":"unsolved")+' % canon(pt))
+            add('(puzzle_solved[%s]?"solved":"unsolved")+'% jsEscape(canon(pt)))
             addesc('">%s</a></td>' % smart_quotes(pt))
         addesc('</tr>')
     add("'';")

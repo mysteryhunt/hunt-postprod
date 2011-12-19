@@ -2,28 +2,28 @@ function imagemap() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"apple_spice/-"+
-(puzzle_solved.apple_spice?"solved":"unsolved")+
+(puzzle_solved["apple_spice"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"argh/-"+
-(puzzle_solved.argh?"solved":"unsolved")+
+(puzzle_solved["argh"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"cupcake/-"+
-(puzzle_solved.cupcake?"solved":"unsolved")+
+(puzzle_solved["cupcake"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"jfk_shags_a_sad_slim_lass/-"+
-(puzzle_solved.jfk_shags_a_sad_slim_lass?"solved":"unsolved")+
+(puzzle_solved["jfk_shags_a_sad_slim_lass"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"starlight/-"+
-(puzzle_solved.starlight?"solved":"unsolved")+
+(puzzle_solved["starlight"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"steamer/-"+
-(puzzle_solved.steamer?"solved":"unsolved")+
+(puzzle_solved["steamer"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"surprise/-"+
-(puzzle_solved.surprise?"solved":"unsolved")+
+(puzzle_solved["surprise"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"wysteria/-"+
-(puzzle_solved.wysteria?"solved":"unsolved")+
+(puzzle_solved["wysteria"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
@@ -42,34 +42,34 @@ function puzzlelist() {
   return ""+
 "<tr>"+
 "<td><a href=\"apple_spice/\" class=\""+
-(puzzle_solved.apple_spice?"solved":"unsolved")+
+(puzzle_solved["apple_spice"]?"solved":"unsolved")+
 "\">Apple Spice</a></td>"+
 "<td><a href=\"starlight/\" class=\""+
-(puzzle_solved.starlight?"solved":"unsolved")+
+(puzzle_solved["starlight"]?"solved":"unsolved")+
 "\">Starlight</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"argh/\" class=\""+
-(puzzle_solved.argh?"solved":"unsolved")+
+(puzzle_solved["argh"]?"solved":"unsolved")+
 "\">Argh</a></td>"+
 "<td><a href=\"steamer/\" class=\""+
-(puzzle_solved.steamer?"solved":"unsolved")+
+(puzzle_solved["steamer"]?"solved":"unsolved")+
 "\">Steamer</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"cupcake/\" class=\""+
-(puzzle_solved.cupcake?"solved":"unsolved")+
+(puzzle_solved["cupcake"]?"solved":"unsolved")+
 "\">Cupcake</a></td>"+
 "<td><a href=\"surprise/\" class=\""+
-(puzzle_solved.surprise?"solved":"unsolved")+
+(puzzle_solved["surprise"]?"solved":"unsolved")+
 "\">Surprise</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td><a href=\"jfk_shags_a_sad_slim_lass/\" class=\""+
-(puzzle_solved.jfk_shags_a_sad_slim_lass?"solved":"unsolved")+
+(puzzle_solved["jfk_shags_a_sad_slim_lass"]?"solved":"unsolved")+
 "\">JFK SHAGS A SAD SLIM LASS</a></td>"+
 "<td><a href=\"wysteria/\" class=\""+
-(puzzle_solved.wysteria?"solved":"unsolved")+
+(puzzle_solved["wysteria"]?"solved":"unsolved")+
 "\">Wysteria</a></td>"+
 "</tr>"+
 '';

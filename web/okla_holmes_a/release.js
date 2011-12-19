@@ -2,25 +2,25 @@ function imagemap() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"playing_a_part/-"+
-(puzzle_solved.playing_a_part?"solved":"unsolved")+
+(puzzle_solved["playing_a_part"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"granny_smith/-"+
-(puzzle_solved.granny_smith?"solved":"unsolved")+
+(puzzle_solved["granny_smith"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"starsong/-"+
-(puzzle_solved.starsong?"solved":"unsolved")+
+(puzzle_solved["starsong"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"paper_trail/-"+
-(puzzle_solved.paper_trail?"solved":"unsolved")+
+(puzzle_solved["paper_trail"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"melody/-"+
-(puzzle_solved.melody?"solved":"unsolved")+
+(puzzle_solved["melody"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"desert_rose/-"+
-(puzzle_solved.desert_rose?"solved":"unsolved")+
+(puzzle_solved["desert_rose"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"baby_sniffles/-"+
-(puzzle_solved.baby_sniffles?"solved":"unsolved")+
+(puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
@@ -39,37 +39,37 @@ function puzzlelist() {
 "<tr>"+
 "<td class=\"num\">1.</td>"+
 "<td><a href=\"playing_a_part/\" class=\""+
-(puzzle_solved.playing_a_part?"solved":"unsolved")+
+(puzzle_solved["playing_a_part"]?"solved":"unsolved")+
 "\">Playing a Part</a></td>"+
 "<td class=\"num\">5.</td>"+
 "<td><a href=\"melody/\" class=\""+
-(puzzle_solved.melody?"solved":"unsolved")+
+(puzzle_solved["melody"]?"solved":"unsolved")+
 "\">Melody</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">2.</td>"+
 "<td><a href=\"granny_smith/\" class=\""+
-(puzzle_solved.granny_smith?"solved":"unsolved")+
+(puzzle_solved["granny_smith"]?"solved":"unsolved")+
 "\">Granny Smith</a></td>"+
 "<td class=\"num\">6.</td>"+
 "<td><a href=\"desert_rose/\" class=\""+
-(puzzle_solved.desert_rose?"solved":"unsolved")+
+(puzzle_solved["desert_rose"]?"solved":"unsolved")+
 "\">Desert Rose</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">3.</td>"+
 "<td><a href=\"starsong/\" class=\""+
-(puzzle_solved.starsong?"solved":"unsolved")+
+(puzzle_solved["starsong"]?"solved":"unsolved")+
 "\">Starsong</a></td>"+
 "<td class=\"num\">7.</td>"+
 "<td><a href=\"baby_sniffles/\" class=\""+
-(puzzle_solved.baby_sniffles?"solved":"unsolved")+
+(puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
 "\">Baby Sniffles</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">4.</td>"+
 "<td><a href=\"paper_trail/\" class=\""+
-(puzzle_solved.paper_trail?"solved":"unsolved")+
+(puzzle_solved["paper_trail"]?"solved":"unsolved")+
 "\">Paper Trail</a></td>"+
 "</tr>"+
 '';
