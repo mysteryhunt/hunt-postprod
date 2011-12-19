@@ -128,7 +128,6 @@ function puzzlelist() {
 "<td><a href=\"of_course/\" class=\""+
 (puzzle_solved.of_course?"solved":"unsolved")+
 "\">Of Course!</a></td>"+
-"<td></td>"+
 "</tr>"+
 '';
 }

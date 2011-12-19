@@ -143,7 +143,6 @@ def buildShow(round_name, round_info, split=4, ordered=False):
         addesc('<tr>')
         for pt in [ first[i], second[i] if i<len(second) else None ]:
             if pt is None:
-                addesc('<td></td>')
                 continue
             # "unlocked" should be looked up in javascript from master file
             addesc('<td><a href="%s/" class="' % canon(pt))
