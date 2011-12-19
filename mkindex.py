@@ -130,10 +130,15 @@ def build1S(round_name, round_info):
 
     # write this as release.js
     open(os.path.join(BASEDIR, 'release.js'), 'w').write('\n'.join(lines))
+    # return ignorable ponies
+    return [os.path.join(canon(round_name), canon(pony))
+            for (batch,pony),title in round_info.iteritems()
+            if title is not None]
 
 def build1C(round_name, round_info):
     puzzle_titles = unordered_titles(round_info)
     #print puzzle_titles
+    return []
 
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
@@ -142,6 +147,9 @@ if __name__ == '__main__':
         'A Circus Line': build1S,
         'Betsy Johnson': build1C
     }
+    ignorable = []
     for round_name, round_info in rounds.iteritems():
         if round_name in builders:
-            builders[round_name](round_name, round_info)
+            ig = builders[round_name](round_name, round_info)
+            ignorable += ig
+    print ignorable
