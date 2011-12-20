@@ -36,10 +36,18 @@ body.index .materials .n a {
   padding-right: 5px;
   /* overlap on top of .num field and put icon there. */
   margin-left: -90px; padding-left: 90px;
-  background-repeat: no-repeat;
   padding-top: 34px;
-  height: 28px; /* subtract padding-top from 62px height */
-  white-space: nowrap;
+  min-height: 28px; /* subtract padding-top from 62px height */
+  position: relative;
+  margin-bottom: -4px;
+  border: none;
+}
+body.index .materials .n a > span {
+  display: block;
+  position: absolute;
+  height: 64px; bottom: 4px; top: auto; left: 0; right: 0;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid black;
 }
 body.index .materials .a_circus_line {
   background: url("../a_circus_line/icon.png") no-repeat;

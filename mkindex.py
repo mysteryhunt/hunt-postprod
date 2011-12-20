@@ -202,21 +202,23 @@ def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
             else:
                 addesc('<tr>')
             for (pt,round,_),num in [ (first[i],i),
-                            (second[i] if i<len(second) else None,
+                            (second[i] if i<len(second) else (None,None,None),
                              i+len(first)) ]:
                 if pt is None: continue
                 if ordered and first_table:
                     addesc('<td class="num">%d.</td>' % (num+1))
                 url = canon(pt) if round==round_name else \
                       '../%s/%s' % (canon(round), canon(pt))
+                def ps():
+                    add('(puzzle_solved[%s]?"solved":"unsolved")+' %
+                        jsEscape(canon(pt)))
                 if ordered and first_table:
-                    addesc('<td><a href="%s/" class="%s ' % (url,canon(round)))
+                    addesc('<td><a href="%s/"><span class="%s ' % (url,canon(round)))
+                    ps()
+                    addesc('"></span>%s</a></td>' % smart_quotes(htmlEscape(pt)))
                 else:
                     addesc('<td class="%s ' % canon(round))
-                add('(puzzle_solved[%s]?"solved":"unsolved")+'% jsEscape(canon(pt)))
-                if ordered and first_table:
-                    addesc('">%s</a></td>' % htmlEscape(smart_quotes(pt)))
-                else:
+                    ps()
                     addesc('"><a href="%s/"><span>%s</span></a></td>' %
                            (url, smart_quotes(htmlEscape(pt))))
 
@@ -321,8 +323,8 @@ if __name__ == '__main__':
         #'Charles Lutwidge Dodgson': (buildCritic, {'unified':True}),
         'William S. Bergman': (buildCritic, {}),
         #'Ben Bitdiddle': (buildCritic, {}),
-        #'Sheila Sunshine': (buildCritic, {'ordered':True}),
-        #'Watson 2.0': (buildCritic, {'ordered': True}),
+        'Sheila Sunshine': (buildCritic, {'ordered':True}),
+        'Watson 2.0': (buildCritic, {'ordered': True}),
     }
     ignorable = []
     for round_name, round_info in rounds.iteritems():
