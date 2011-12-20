@@ -83,24 +83,25 @@ def mkimagemap(filename, url, alt_text, split_diagonals=SPLIT_DIAGONALS):
     maxx,minx,maxy,miny = [None] * 4
     with open(filename, 'rb') as f:
         width, height, pixels, metadata = png.Reader(file=f).asRGBA8()
-    # flatten row
-    def row(y, row):
-        x = 0
-        try:
-            while True:
-                r = row.next()
-                g = row.next()
-                b = row.next()
-                a = row.next()
-                yield (x,y,(r,g,b,a))
-                x += 1
-        except StopIteration:
-            return
-    # flatten pixels
-    p = itertools.chain.from_iterable(row(y,iter(r)) for y,r in
-                                      itertools.izip(itertools.count(0),
-                                                     pixels))
-    opaque = list((x,y) for x,y,(r,g,b,a) in p if a > 10)
+        # flatten row
+        def row(y, row):
+            x = 0
+            try:
+                while True:
+                    r = row.next()
+                    g = row.next()
+                    b = row.next()
+                    a = row.next()
+                    yield (x,y,(r,g,b,a))
+                    x += 1
+            except StopIteration:
+                return
+        # flatten pixels
+        p = itertools.chain.from_iterable(row(y,iter(r)) for y,r in
+                                          itertools.izip(itertools.count(0),
+                                                         pixels))
+        # need to turn pixels iter into a list before closing the file
+        opaque = list((x,y) for x,y,(r,g,b,a) in p if a > 10)
     # now divide up the connected components
     # (simplified algorithm, divides up along horiz/vert lines)
     inp = [opaque]
