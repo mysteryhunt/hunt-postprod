@@ -28,20 +28,37 @@ server:
 clean:
 	$(RM) -rf web/_site web/_blind web/_stage
 
-update-%:
+turn-on-%:
 	@echo Turning on $*
 	@sed -ie 's/No  # $*/Yes # $*/' $(WCY)
+update-%: turn-on-%
 	@$(RM) -rf web/_blind/$(CODENAME_$*)
 	@jekyll web web/_blind/$(CODENAME_$*)
+
+update-zipzee:
+	$(RM) -rf web/_blind/zipzee
+	@cp $(WCY) $(WCY).bak
+	@mkdir -p web/_blind/zipzee
+	$(MAKE) --no-print-directory turn-off-all
+	@for r in 1S 1C 2S 2C 3S 3C 4S 4C 5S 5C 6S 6C ; do \
+          $(MAKE) --no-print-directory turn-on-$$r ; \
+        done
+	$(MAKE) --no-print-directory update-6C
+	find web/_blind -print0 | xargs -0 touch -t 201101131200 -c
+	@cp $(WCY).bak $(WCY)
+	rsync $(RSYNC_OPTS) -y --copy-dest=../../hunt-solutions/ web/_blind/zipzee/ ihtfp.us:/var/www/hunt/zipzee/
+
+turn-off-all:
+	@echo Turning all rounds off
+	@sed -ie 's/Yes[ ]*\(# [1-6][SC]\)/No  \1/' $(WCY)
+	@sed -ie 's/Yes[ ]*\(# solutions\)/No  \1/' $(WCY)
 
 update-all:
 	$(RM) -rf web/_blind
 	@cp $(WCY) $(WCY).bak
 	@mkdir web/_blind
 	touch web/_blind/index.html
-	@echo Turning all rounds off
-	@sed -ie 's/Yes[ ]*\(# [1-6][SC]\)/No  \1/' $(WCY)
-	@sed -ie 's/Yes[ ]*\(# solutions\)/No  \1/' $(WCY)
+	$(MAKE) --no-print-directory turn-off-all
 	@for r in 1S 1C 2S 2C 3S 3C 4S 4C 5S 5C 6S 6C ; do \
           $(MAKE) --no-print-directory update-$$r ; \
         done
