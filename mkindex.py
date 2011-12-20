@@ -22,7 +22,8 @@ WHERE answers_rounds.aid = answers.aid AND rounds.rid = answers_rounds.rid
     for round_name, pony_name in rinfo:
         batch = 1 # XXX fetch from db
         rounds.setdefault(round_name, {})\
-              .setdefault((batch, pony_name), None)
+              .setdefault(pony_name,
+                          { 'batch': batch, 'title': None })
         
     for pid in dbfetch.getPuzzlesWithPostProd(db):
         pinfo = dbfetch.db_select_one(db, """
@@ -33,8 +34,7 @@ AND answers_rounds.aid = answers.aid
 AND rounds.rid = answers_rounds.rid AND ponies.aid = answers.aid;""", pid)
         if pinfo is None: continue # hrm
         round_name, puzzle_title, pony_name = pinfo
-        batch = 1 # XXX fetch from db
-        rounds[round_name][(batch, pony_name)] = puzzle_title
+        rounds[round_name][pony_name]['title'] = puzzle_title
 
     # delete rounds which are not real
     for round_name in rounds.keys():
@@ -47,8 +47,9 @@ AND rounds.rid = answers_rounds.rid AND ponies.aid = answers.aid;""", pid)
 # unordered rounds
 def unordered_titles(round_info):
     # case-insensitive alphabetic
-    puzzle_titles = sorted([pony if title is None or ALL_PONIES else title
-                            for (batch,pony), title in round_info.iteritems()],
+    puzzle_titles = sorted([pony if info['title'] is None or ALL_PONIES
+                                 else info['title']
+                            for pony, info in round_info.iteritems()],
                            key=lambda s: s.lower())
     return puzzle_titles
 
@@ -78,10 +79,8 @@ PONY_ORDER['Watson 2.0'] = ['Spitfire', 'Masquerade', 'Tink-a-Think-a-Too',
 def ordered_titles(round_info, pony_order):
     result = []
     for pony in pony_order:
-        t = [title for (batch,p), title in round_info.iteritems()
-             if p == pony]
-        assert len(t) == 1
-        result.append(pony if t[0] is None or ALL_PONIES else t[0])
+        title = round_info[pony]['title']
+        result.append(pony if title is None or ALL_PONIES else title)
     return result
 
 # split into two columns
@@ -94,11 +93,14 @@ def two_columns(puzzle_titles):
 
 def jsEscape(s):
     return json.dumps(s)
+def htmlEscape(s):
+    return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 def copy_dash_files(round_name, round_info):
     BASEDIR=os.path.join(WEBDIR, canon(round_name))
     # copy '-' files from ponies to non-ponies
-    for (batch,pony),title in round_info.iteritems():
+    for pony,info in round_info.iteritems():
+        title = info['title']
         if title is None: continue
         if not os.path.isdir(os.path.join(BASEDIR, canon(title))):
             os.makedirs(os.path.join(BASEDIR, canon(title)))
@@ -107,8 +109,142 @@ def copy_dash_files(round_name, round_info):
                 shutil.copyfile(os.path.join(BASEDIR, canon(pony), filename),
                                 os.path.join(BASEDIR, canon(title), filename))
 
-def buildShow(round_name, round_info, split=4, ordered=False):
+def ignorable_ponies(round_name, round_info):
+    return [os.path.join(canon(round_name), canon(pony))
+            for pony,info in round_info.iteritems()
+            if info['title'] is not None]
+
+def imagemap(filename, title, split):
+    # cached?
+    cache_file = filename + ".map"
+    if os.path.exists(cache_file):
+        area = open(cache_file).read()
+    else:
+        print "Making image map for", title
+        area = mkimagemap(filename, "{0}/", "{1}", split)
+        with open(cache_file, 'w') as f:
+            f.write(area)
+    return area
+
+def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
     BASEDIR=os.path.join(WEBDIR, canon(round_name))
+    round_info = rinfo[round_name]
+    copy_dash_files(round_name, round_info)
+    # build release.js file
+    lines = []
+    def add(s): lines.append(s)
+    def addesc(s): add(jsEscape(s)+'+')
+    # two parts for critic index
+    critic_puzzles = unordered_titles(round_info)
+    critic_puzzles = [(title,round_name,None) for title in critic_puzzles]
+    show_puzzles = [(info['round'], pony) for pony,info
+                    in PONY_INFO.iteritems() if info['reused']==round_name]
+    if ordered:
+        show_puzzles.sort(key=lambda (_,pony): PONY_ORDER[round_name].index(pony))
+    show_puzzles = [(pony,round,rinfo[round][pony]['title'])
+                    for round,pony in show_puzzles]
+    show_puzzles = [(pony if title is None or ALL_PONIES else title,
+                     round, pony)
+                    for pony,round,title in show_puzzles]
+    if not ordered:
+        show_puzzles.sort(key=lambda (s,_,__): s.lower())
+    all_puzzles = show_puzzles + critic_puzzles
+    if unified:
+        assert not ordered
+        all_puzzles.sort(key=lambda (s,_,__): s.lower())
+
+    # ok, now we've got one or two lists to lay out.
+    # generate imagemap
+    add("function imagemap() {")
+    add("  return ''+")
+    addesc('<img src="photo.png" />')
+    i=1
+    for pt,round,_ in all_puzzles:
+        is_critic = (round == round_name)
+        if is_critic:
+            addesc('<img src="%s/-' % canon(pt))
+        else:
+            addesc('<img src="%d-' % i)
+            i += 1
+        add('(puzzle_solved[%s]?"solved":"unsolved")+' % jsEscape(canon(pt)))
+        addesc('.png" />')
+    addesc('<div class="paperclip"></div>')
+    addesc('<img src="../1px.png" usemap="#map" style="z-index:99" />')
+
+    addesc('<map name="map">')
+    i=1
+    for pt,round,_ in all_puzzles:
+        is_critic = (round == round_name)
+        sqpt = smart_quotes(pt)
+        if is_critic:
+            filename = os.path.join(BASEDIR, canon(pt), '-unsolved.png')
+            url = canon(pt)
+        else:
+            filename = os.path.join(BASEDIR, '%d-unsolved.png' % i)
+            i+=1
+            url = '../%s/%s' % (canon(round), canon(pt))
+        area = imagemap(filename, pt, split)
+        addesc(area.format(url, htmlEscape(sqpt)))
+    addesc('</map>')
+    add("'';")
+    add("}")
+
+    add('function puzzlelist() {');
+    add('  return ""+');
+    first_table=True
+    addesc('<table class="materials">')
+    for plist in ([ all_puzzles ] if unified else
+                  [ show_puzzles, critic_puzzles ]):
+        first, second = two_columns(plist)
+        for i in xrange(len(first)):
+            if ordered and first_table:
+                addesc('<tr class="n">')
+            else:
+                addesc('<tr>')
+            for (pt,round,_),num in [ (first[i],i),
+                            (second[i] if i<len(second) else None,
+                             i+len(first)) ]:
+                if pt is None: continue
+                if ordered and first_table:
+                    addesc('<td class="num">%d.</td>' % (num+1))
+                url = canon(pt) if round==round_name else \
+                      '../%s/%s' % (canon(round), canon(pt))
+                if ordered and first_table:
+                    addesc('<td><a href="%s/" class="%s ' % (url,canon(round)))
+                else:
+                    addesc('<td class="%s ' % canon(round))
+                add('(puzzle_solved[%s]?"solved":"unsolved")+'% jsEscape(canon(pt)))
+                if ordered and first_table:
+                    addesc('">%s</a></td>' % htmlEscape(smart_quotes(pt)))
+                else:
+                    addesc('"><a href="%s/"><span>%s</span></a></td>' %
+                           (url, htmlEscape(smart_quotes(pt))))
+
+            addesc('</tr>')
+        if first_table and not unified:
+            if ordered:
+                addesc('</table><table class="materials">')
+            addesc('<tr class="spacer"></tr>')
+        first_table = False
+    addesc('</table>')
+    add("'';")
+    add("}")
+
+    # invoke
+    add("function onLoad() {");
+    add("document.getElementById('photo').innerHTML = imagemap();")
+    add("document.getElementById('materials').innerHTML = puzzlelist();")
+    add("}")
+
+    # write this as release.js
+    open(os.path.join(BASEDIR, 'release.js'), 'w').write('\n'.join(lines))
+    # return ignorable ponies
+    return ignorable_ponies(round_name, round_info)
+
+
+def buildShow(round_name, rinfo, split=4, ordered=False):
+    BASEDIR=os.path.join(WEBDIR, canon(round_name))
+    round_info = rinfo[round_name]
     copy_dash_files(round_name, round_info)
     # build release.js file
     lines = []
@@ -134,17 +270,9 @@ def buildShow(round_name, round_info, split=4, ordered=False):
     addesc('<map name="map">')
     for pt in puzzle_titles:
         sqpt = smart_quotes(pt)
-        # cached?
-        cache_file = os.path.join(BASEDIR, canon(pt), '-map')
-        if os.path.exists(cache_file):
-            area = open(cache_file).read()
-        else:
-            print "Making image map for", pt
-            area = mkimagemap(os.path.join(BASEDIR, canon(pt), '-unsolved.png'),
-                              "{0}/", "{1}", split)
-            with open(cache_file, 'w') as f:
-                f.write(area)
-        addesc(area.format(canon(pt), sqpt))
+        area = imagemap(os.path.join(BASEDIR, canon(pt), '-unsolved.png'),
+                        pt, split)
+        addesc(area.format(canon(pt), htmlEscape(sqpt)))
     addesc('</map>')
     add("'';")
     add("}")
@@ -162,7 +290,7 @@ def buildShow(round_name, round_info, split=4, ordered=False):
                 addesc('<td class="num">%d.</td>' % (num+1))
             addesc('<td><a href="%s/" class="' % canon(pt))
             add('(puzzle_solved[%s]?"solved":"unsolved")+'% jsEscape(canon(pt)))
-            addesc('">%s</a></td>' % smart_quotes(pt))
+            addesc('">%s</a></td>' % htmlEscape(smart_quotes(pt)))
         addesc('</tr>')
     add("'';")
     add("}")
@@ -176,9 +304,7 @@ def buildShow(round_name, round_info, split=4, ordered=False):
     # write this as release.js
     open(os.path.join(BASEDIR, 'release.js'), 'w').write('\n'.join(lines))
     # return ignorable ponies
-    return [os.path.join(canon(round_name), canon(pony))
-            for (batch,pony),title in round_info.iteritems()
-            if title is not None]
+    return ignorable_ponies(round_name, round_info)
 
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
@@ -190,20 +316,27 @@ if __name__ == '__main__':
         'Mayan Fair Lady': (buildShow, {'ordered': True}),
         'Phantom of the Operator': (buildShow, {'ordered': True}),
         'Ogre of La Mancha': (buildShow, {'ordered': False}),
+
+        #'Betsy Johnson': (buildCritic, {'unified':True}),
+        #'Charles Lutwidge Dodgson': (buildCritic, {'unified':True}),
+        #'William S. Bergman': (buildCritic, {}),
+        #'Ben Bitdiddle': (buildCritic, {}),
+        #'Sheila Sunshine': (buildCritic, {'ordered':True}),
+        #'Watson 2.0': (buildCritic, {'ordered': True}),
     }
     ignorable = []
     for round_name, round_info in rounds.iteritems():
         if round_name in builders:
             build, kwargs = builders[round_name]
-            ig = build(round_name, round_info, **kwargs)
+            ig = build(round_name, rounds, **kwargs)
             ignorable += ig
         else: print "SKIPPING", jsEscape(round_name)
     # write a solved.js file indicating which puzzles are written
     h = {}
     for round_name, round_info in rounds.iteritems():
-        for (batch, pony), title in round_info.iteritems():
-            if title is not None and not ALL_PONIES:
-                h[canon(title)] = 1
+        for pony, info in round_info.iteritems():
+            if info['title'] is not None and not ALL_PONIES:
+                h[canon(info['title'])] = 1
     with open(os.path.join(WEBDIR, 'solved.js'), 'w') as f:
         print >> f, "// This file is written by the hunt-running software"
         print >> f, "var puzzle_solved =", jsEscape(h),";"

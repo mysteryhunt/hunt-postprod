@@ -1,6 +1,6 @@
 source: .
 destination: _site
-exclude: ['*~', '_blind', '_site', '_stage']
+exclude: ['*~', '*.png.map', '_blind', '_site', '_stage']
 
 release:
   a_circus_line:            Yes # 1S
