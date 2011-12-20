@@ -129,7 +129,6 @@ def imagemap(filename, title, split):
 def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
     BASEDIR=os.path.join(WEBDIR, canon(round_name))
     round_info = rinfo[round_name]
-    copy_dash_files(round_name, round_info)
     # build release.js file
     lines = []
     def add(s): lines.append(s)
@@ -240,14 +239,11 @@ def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
 
     # write this as release.js
     open(os.path.join(BASEDIR, 'release.js'), 'w').write('\n'.join(lines))
-    # return ignorable ponies
-    return ignorable_ponies(round_name, round_info)
 
 
 def buildShow(round_name, rinfo, split=4, ordered=False):
     BASEDIR=os.path.join(WEBDIR, canon(round_name))
     round_info = rinfo[round_name]
-    copy_dash_files(round_name, round_info)
     # build release.js file
     lines = []
     def add(s): lines.append(s)
@@ -305,8 +301,6 @@ def buildShow(round_name, rinfo, split=4, ordered=False):
 
     # write this as release.js
     open(os.path.join(BASEDIR, 'release.js'), 'w').write('\n'.join(lines))
-    # return ignorable ponies
-    return ignorable_ponies(round_name, round_info)
 
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
@@ -328,11 +322,12 @@ if __name__ == '__main__':
     }
     ignorable = []
     for round_name, round_info in rounds.iteritems():
+        copy_dash_files(round_name, round_info)
         if round_name in builders:
             build, kwargs = builders[round_name]
-            ig = build(round_name, rounds, **kwargs)
-            ignorable += ig
+            build(round_name, rounds, **kwargs)
         else: print "SKIPPING", jsEscape(round_name)
+        ignorable += ignorable_ponies(round_name, round_info)
     # write a solved.js file indicating which puzzles are written
     h = {}
     for round_name, round_info in rounds.iteritems():
