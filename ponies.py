@@ -46,6 +46,9 @@ CREATE TABLE ponies ( aid INT, name VARCHAR(%d) );
         print """
 INSERT INTO ponies (aid, name) SELECT answers.aid, "%s" FROM answers WHERE answers.answer = "%s";""" % (escape_string(pony), escape_string(info['answer']))
 
+    print "CREATE INDEX pony_index ON ponies(aid);"
+    print "CREATE INDEX pony_name_index ON ponies(name);"
+
 def emit_python():
     print """
 #!/usr/bin/python
