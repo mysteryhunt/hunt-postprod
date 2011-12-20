@@ -12,17 +12,29 @@ body.index #main .desc .paperclip {
 #footer {
   background-image: url("bottom-tile.png");
 }
-body.index .materials td.okla_holmes_a {
+body.index .materials .okla_holmes_a {
   background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
-body.index .materials td.into_the_woodstock {
+body.index .materials .okla_holmes_a.unsolved {
+  background-image: url("../okla_holmes_a/icon-unsolved.png");
+}
+body.index .materials .into_the_woodstock {
   background: url("../into_the_woodstock/icon.png") no-repeat;
 }
-body.index .materials td.mayan_fair_lady {
+body.index .materials .into_the_woodstock.unsolved {
+  background-image: url("../into_the_woodstock/icon-unsolved.png");
+}
+body.index .materials .mayan_fair_lady {
   background: url("../mayan_fair_lady/icon.png") no-repeat 0 14px;
 }
-body.index .materials td.ben_bitdiddle {
+body.index .materials .mayan_fair_lady.unsolved {
+  background-image: url("../mayan_fair_lady/icon-unsolved.png");
+}
+body.index .materials .ben_bitdiddle {
   background: url("icon.png") no-repeat 0 4px;
+}
+body.index .materials .ben_bitdiddle.unsolved {
+  background-image: url("icon-unsolved.png");
 }
 body.puzzle #main h1 {
   background: url("icon-large.png") no-repeat;

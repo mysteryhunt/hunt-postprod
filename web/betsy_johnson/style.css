@@ -188,16 +188,16 @@ body.index .materials td a {
   padding-left: 0.6em;
 }
 body.index .materials td a > span { position: relative; top: 1ex; }
-body.index .materials td.a_circus_line {
+body.index .materials .a_circus_line {
   background: url("../a_circus_line/icon.png") no-repeat;
 }
-body.index .materials td.a_circus_line.unsolved {
+body.index .materials .a_circus_line.unsolved {
   background-image: url("../a_circus_line/icon-unsolved.png");
 }
-body.index .materials td.betsy_johnson {
+body.index .materials .betsy_johnson {
   background: url("icon.png") no-repeat 0px 20px;
 }
-body.index .materials td.betsy_johnson.unsolved {
+body.index .materials .betsy_johnson.unsolved {
   background-image: url("icon-unsolved.png");
 }
 body.index .materials tr.spacer { height: 1em; }

@@ -23,11 +23,17 @@ body.index #photo .paperclip { /* move paperclip up */
   /* make space for left side border */
   padding-left: 120px;
 }
-body.index .materials td.okla_holmes_a {
+body.index .materials .okla_holmes_a {
   background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
-body.index .materials td.charles_lutwidge_dodgson {
+body.index .materials .okla_holmes_a.unsolved {
+  background-image: url("../okla_holmes_a/icon-unsolved.png");
+}
+body.index .materials .charles_lutwidge_dodgson {
   background: url("icon.png") no-repeat;
+}
+body.index .materials .charles_lutwidge_dodgson.unsolved {
+  background-image: url("icon-unsolved.png");
 }
 body.puzzle #main h1 {
   background: url("icon.png") no-repeat 0 0;
