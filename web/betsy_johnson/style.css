@@ -191,8 +191,14 @@ body.index .materials td a > span { position: relative; top: 1ex; }
 body.index .materials td.a_circus_line {
   background: url("../a_circus_line/icon.png") no-repeat;
 }
+body.index .materials td.a_circus_line.unsolved {
+  background-image: url("../a_circus_line/icon-unsolved.png");
+}
 body.index .materials td.betsy_johnson {
   background: url("icon.png") no-repeat 0px 20px;
+}
+body.index .materials td.betsy_johnson.unsolved {
+  background-image: url("icon-unsolved.png");
 }
 body.index .materials tr.spacer { height: 1em; }
 

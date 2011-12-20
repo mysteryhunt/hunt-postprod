@@ -319,7 +319,7 @@ if __name__ == '__main__':
 
         #'Betsy Johnson': (buildCritic, {'unified':True}),
         #'Charles Lutwidge Dodgson': (buildCritic, {'unified':True}),
-        #'William S. Bergman': (buildCritic, {}),
+        'William S. Bergman': (buildCritic, {}),
         #'Ben Bitdiddle': (buildCritic, {}),
         #'Sheila Sunshine': (buildCritic, {'ordered':True}),
         #'Watson 2.0': (buildCritic, {'ordered': True}),

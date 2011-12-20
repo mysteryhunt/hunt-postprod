@@ -18,8 +18,14 @@ body.index #main .desc .paperclip {
 body.index .materials td.okla_holmes_a {
   background: url("../okla_holmes_a/icon.png") no-repeat 0 6px;
 }
+body.index .materials td.okla_holmes_a.unsolved {
+  background-image: url("../okla_holmes_a/icon-unsolved.png");
+}
 body.index .materials td.into_the_woodstock {
   background: url("../into_the_woodstock/icon.png") no-repeat;
+}
+body.index .materials td.into_the_woodstock.unsolved {
+  background-image: url("../into_the_woodstock/icon-unsolved.png");
 }
 body.index .materials td.william_s_bergman {
   background: url("icon.png") no-repeat;
@@ -27,6 +33,10 @@ body.index .materials td.william_s_bergman {
   padding-top: 5px;
   height: 57px;
 }
+body.index .materials td.william_s_bergman.unsolved {
+  background-image: url('icon-unsolved.png');
+}
+
 body.puzzle #main h1 {
   background: url("icon-large.png") no-repeat 0 -20px;
   padding-left: 95px;
