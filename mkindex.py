@@ -175,7 +175,7 @@ def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
     i=1
     for pt,round,_ in all_puzzles:
         is_critic = (round == round_name)
-        sqpt = smart_quotes(pt)
+        sqpt = smart_quotes(htmlEscape(pt))
         if is_critic:
             filename = os.path.join(BASEDIR, canon(pt), '-unsolved.png')
             url = canon(pt)
@@ -184,7 +184,7 @@ def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
             i+=1
             url = '../%s/%s' % (canon(round), canon(pt))
         area = imagemap(filename, pt, split)
-        addesc(area.format(url, htmlEscape(sqpt)))
+        addesc(area.format(url, sqpt))
     addesc('</map>')
     add("'';")
     add("}")
@@ -218,7 +218,7 @@ def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
                     addesc('">%s</a></td>' % htmlEscape(smart_quotes(pt)))
                 else:
                     addesc('"><a href="%s/"><span>%s</span></a></td>' %
-                           (url, htmlEscape(smart_quotes(pt))))
+                           (url, smart_quotes(htmlEscape(pt))))
 
             addesc('</tr>')
         if first_table and not unified:
@@ -269,10 +269,10 @@ def buildShow(round_name, rinfo, split=4, ordered=False):
 
     addesc('<map name="map">')
     for pt in puzzle_titles:
-        sqpt = smart_quotes(pt)
+        sqpt = smart_quotes(htmlEscape(pt))
         area = imagemap(os.path.join(BASEDIR, canon(pt), '-unsolved.png'),
                         pt, split)
-        addesc(area.format(canon(pt), htmlEscape(sqpt)))
+        addesc(area.format(canon(pt), sqpt))
     addesc('</map>')
     add("'';")
     add("}")
@@ -290,7 +290,7 @@ def buildShow(round_name, rinfo, split=4, ordered=False):
                 addesc('<td class="num">%d.</td>' % (num+1))
             addesc('<td><a href="%s/" class="' % canon(pt))
             add('(puzzle_solved[%s]?"solved":"unsolved")+'% jsEscape(canon(pt)))
-            addesc('">%s</a></td>' % htmlEscape(smart_quotes(pt)))
+            addesc('">%s</a></td>' % smart_quotes(htmlEscape(pt)))
         addesc('</tr>')
     add("'';")
     add("}")
