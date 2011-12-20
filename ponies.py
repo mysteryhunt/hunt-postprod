@@ -36,6 +36,7 @@ for row in ponyReader:
 longest = max(len(p) for p in ponyMap.iterkeys())
 
 def emit_sql():
+    from MySQLdb import escape_string
     print """
 DROP TABLE IF EXISTS ponies;
 CREATE TABLE ponies ( aid INT, name VARCHAR(%d) );
@@ -43,7 +44,7 @@ CREATE TABLE ponies ( aid INT, name VARCHAR(%d) );
 
     for pony, info in ponyMap.iteritems():
         print """
-INSERT INTO ponies (aid, name) SELECT answers.aid, "%s" FROM answers WHERE answers.answer = "%s";""" % (pony, info['answer'])
+INSERT INTO ponies (aid, name) SELECT answers.aid, "%s" FROM answers WHERE answers.answer = "%s";""" % (escape_string(pony), escape_string(info['answer']))
 
 def emit_python():
     print """
