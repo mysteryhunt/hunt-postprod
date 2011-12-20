@@ -313,7 +313,7 @@ if __name__ == '__main__':
         'Phantom of the Operator': (buildShow, {'ordered': True}),
         'Ogre of La Mancha': (buildShow, {'ordered': False}),
 
-        #'Betsy Johnson': (buildCritic, {'unified':True}),
+        'Betsy Johnson': (buildCritic, {'unified':True}),
         #'Charles Lutwidge Dodgson': (buildCritic, {'unified':True}),
         'William S. Bergman': (buildCritic, {}),
         #'Ben Bitdiddle': (buildCritic, {}),

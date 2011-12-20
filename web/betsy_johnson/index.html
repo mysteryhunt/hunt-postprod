@@ -4,26 +4,5 @@
 {% assign critic_name = 'Betsy Johnson' %}{% capture flavor %}
 <b>Betsy Johnson</b> is a theater critic by night, but by day she works the letters desk of a major newsmagazine.
 {% endcapture %}{% capture materials %}
-    <table class="materials">
-      <tr>
-          <td class="applejack a_circus_line"><a href="../a_circus_line/applejack/"><span>Applejack</span></a></td>
-          <td class="silver_spoon betsy_johnson"><a href="silver_spoon/"><span>Silver Spoon</span></a></td>
-      </tr>
-      <tr>
-          <td class="bow_tie a_circus_line"><a href="../a_circus_line/bow_tie/"><span>Bow Tie</span></a></td>
-	  <td class="slugger betsy_johnson"><a href="slugger/"><span>Slugger</span></a></td>
-      </tr>
-      <tr>
-          <td class="cherries_jubilee a_circus_line"><a href="../a_circus_line/cherries_jubilee/"><span>Cherries Jubilee</span></a></td>
-          <td class="soarin betsy_johnson"><a href="soarin/"><span>Soarin'</span></a></td>
-      </tr>
-      <tr>
-          <td class="posey betsy_johnson"><a href="posey/"><span>Posey</span></a></td>
-          <td class="sparkleworks betsy_johnson"><a href="sparkleworks/"><span>Sparkleworks</span></a></td>
-      </tr>
-      <tr>
-          <td class="princess_starburst a_circus_line"><a href="../a_circus_line/princess_starburst/"><span>Princess Starburst</span></a></td>
-          <td class="storybelle betsy_johnson"><a href="storybelle/"><span>Storybelle</span></a></td>
-      </tr>
-    </table>
+    <div id="materials"></div>
 {% endcapture %}{% if site.release.betsy_johnson %}{% include critic_index.html %}{% endif %}
