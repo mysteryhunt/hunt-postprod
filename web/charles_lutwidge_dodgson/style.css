@@ -6,7 +6,7 @@ body.index #main .desc { /* shrink notecard a bit */
   padding: 0.5em 1.5em;
 }
 body.index #photo .paperclip { /* move paperclip up */
-  bottom: 290px; right: 34px;
+  bottom: 290px; right: 36px;
 }
 #folder {
   background-image: url("orange-seamless-swatch.jpg");
