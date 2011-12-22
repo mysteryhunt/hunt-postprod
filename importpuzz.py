@@ -7,7 +7,6 @@ Command line:
 
 ./import.py [zip file] [root dir] [round] [authors]
 """
-import html5lib
 import os, os.path
 import re
 import shutil
@@ -20,6 +19,9 @@ from contextlib import contextmanager, closing
 from htmlentitydefs import name2codepoint
 from subprocess import Popen, PIPE
 from zipfile import ZipFile
+# import local copy of html5lib
+sys.path.insert(0, os.path.dirname(__file__))
+import html5lib
 
 # WORK AROUND BUG IN HTML5LIB
 html5lib.constants.E.setdefault(
@@ -49,6 +51,8 @@ def log_fatal(s):
 QUOTER = os.path.join(os.path.dirname(__file__), 'quoter')
 
 def smart_quotes(s):
+    # clean up some brokenness in html5lib
+    s = re.sub(r'&rsquor;', '&rsquo;', s)
     # pipe it through the external 'quoter' program
     p = Popen([QUOTER], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     out,err = p.communicate(s)
