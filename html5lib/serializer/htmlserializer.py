@@ -16,6 +16,7 @@ spaceCharacters = u"".join(spaceCharacters)
 
 try:
     from codecs import register_error, xmlcharrefreplace_errors
+    from htmlentitydefs import codepoint2name as py_cp2name
 except ImportError:
     unicode_encode_errors = "strict"
 else:
@@ -23,7 +24,7 @@ else:
 
     from html5lib.constants import entities
 
-    encode_entity_map = {}
+    encode_entity_map = dict((cp,n+';') for cp,n in py_cp2name.iteritems())
     is_ucs4 = len(u"\U0010FFFF") == 1
     for k, v in entities.items():
         #skip multi-character entities
@@ -39,8 +40,7 @@ else:
                 except:
                     print v
                     raise
-            if not v in encode_entity_map or k.islower():
-                # prefer &lt; over &LT; and similarly for &amp;, &gt;, etc.
+            if not v in encode_entity_map:
                 encode_entity_map[v] = k
 
     def htmlentityreplace_errors(exc):

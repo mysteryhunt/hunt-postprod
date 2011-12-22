@@ -51,8 +51,6 @@ def log_fatal(s):
 QUOTER = os.path.join(os.path.dirname(__file__), 'quoter')
 
 def smart_quotes(s):
-    # clean up some brokenness in html5lib
-    s = re.sub(r'&rsquor;', '&rsquo;', s)
     # pipe it through the external 'quoter' program
     p = Popen([QUOTER], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     out,err = p.communicate(s)
