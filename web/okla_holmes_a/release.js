@@ -13,8 +13,8 @@ function imagemap() {
 "<img src=\"paper_trail/-"+
 (puzzle_solved["paper_trail"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"melody/-"+
-(puzzle_solved["melody"]?"solved":"unsolved")+
+"<img src=\"winning_conditions/-"+
+(puzzle_solved["winning_conditions"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"desert_rose/-"+
 (puzzle_solved["desert_rose"]?"solved":"unsolved")+
@@ -28,7 +28,7 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"231,288,253,307\" alt=\"Granny Smith\" title=\"Granny Smith\" href=\"granny_smith/\" />\n<area shape=\"rect\" coords=\"229,308,253,336\" alt=\"Granny Smith\" title=\"Granny Smith\" href=\"granny_smith/\" />\n<area shape=\"rect\" coords=\"221,387,249,431\" alt=\"Granny Smith\" title=\"Granny Smith\" href=\"granny_smith/\" />\n<area shape=\"rect\" coords=\"226,350,250,386\" alt=\"Granny Smith\" title=\"Granny Smith\" href=\"granny_smith/\" />\n<area shape=\"rect\" coords=\"227,337,251,349\" alt=\"Granny Smith\" title=\"Granny Smith\" href=\"granny_smith/\" />"+
 "<area shape=\"rect\" coords=\"274,331,299,346\" alt=\"Starsong\" title=\"Starsong\" href=\"starsong/\" />\n<area shape=\"rect\" coords=\"272,347,299,414\" alt=\"Starsong\" title=\"Starsong\" href=\"starsong/\" />\n<area shape=\"rect\" coords=\"276,276,303,330\" alt=\"Starsong\" title=\"Starsong\" href=\"starsong/\" />\n<area shape=\"rect\" coords=\"272,415,296,430\" alt=\"Starsong\" title=\"Starsong\" href=\"starsong/\" />\n<area shape=\"rect\" coords=\"269,371,271,426\" alt=\"Starsong\" title=\"Starsong\" href=\"starsong/\" />"+
 "<area shape=\"rect\" coords=\"341,347,372,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"347,427,360,430\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"342,292,376,346\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"344,260,378,291\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"338,373,340,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />"+
-"<area shape=\"rect\" coords=\"429,244,474,282\" alt=\"Melody\" title=\"Melody\" href=\"melody/\" />\n<area shape=\"rect\" coords=\"425,283,473,324\" alt=\"Melody\" title=\"Melody\" href=\"melody/\" />\n<area shape=\"rect\" coords=\"423,325,472,388\" alt=\"Melody\" title=\"Melody\" href=\"melody/\" />\n<area shape=\"rect\" coords=\"423,389,471,430\" alt=\"Melody\" title=\"Melody\" href=\"melody/\" />\n<area shape=\"rect\" coords=\"422,372,422,401\" alt=\"Melody\" title=\"Melody\" href=\"melody/\" />"+
+"<area shape=\"rect\" coords=\"429,244,474,282\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"425,283,473,324\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,325,472,388\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,389,471,430\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"422,372,422,401\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />"+
 "<area shape=\"rect\" coords=\"520,234,583,293\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"518,294,582,317\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"515,343,578,428\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"516,318,580,342\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"542,429,554,430\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />"+
 "<area shape=\"rect\" coords=\"635,363,636,427\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"637,331,709,429\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"638,266,715,330\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"642,223,718,265\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"660,430,708,432\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />"+
 "</map>"+
@@ -42,9 +42,9 @@ function puzzlelist() {
 (puzzle_solved["playing_a_part"]?"solved":"unsolved")+
 "\">Playing a Part</a></td>"+
 "<td class=\"num\">5.</td>"+
-"<td><a href=\"melody/\" class=\""+
-(puzzle_solved["melody"]?"solved":"unsolved")+
-"\">Melody</a></td>"+
+"<td><a href=\"winning_conditions/\" class=\""+
+(puzzle_solved["winning_conditions"]?"solved":"unsolved")+
+"\">Winning Conditions</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">2.</td>"+

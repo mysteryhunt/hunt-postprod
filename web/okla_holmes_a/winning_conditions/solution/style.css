@@ -1,0 +1,16 @@
+#guesstable {
+  cell-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+#guesstable tr:first-child {
+  vertical-align: bottom;
+  border-bottom: 1px solid black;
+}
+#guesstable th, #guesstable td { text-align: center; }
+#guesstable th:first-child + th + th + th,
+#guesstable td:first-child + td + td + td,
+#guesstable th:first-child + th + th + th + th + th + th,
+#guesstable td:first-child + td + td + td + td + td + td {
+  border-left: 1px solid black;
+}

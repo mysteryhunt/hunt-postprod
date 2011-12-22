@@ -1,0 +1,154 @@
+---
+layout: okla_holmes_a_solution
+title: Winning Conditions
+class: puzzle solution
+style: style.css
+credits: by unknown Codexian heroes
+---
+<p>The idea is that by playing around with the app, you should
+discover more and more about how the game works. The most obvious
+thing is to figure out the 10 rules. They are:</p>
+
+<ul>
+<li>Rule 1/10: Your guess must not be a repeat of a previous guess.
+</li><li>Rule 2/10: Your guess must be a valid word in the SOWPODS list.
+</li><li>Rule 3/10: Your guess must be at least 5 letters in length.
+</li><li>Rule 4/10: Your guess must have at least 3 different letters.
+</li><li>Rule 5/10: Your guess must not have any anagrams in the SOWPODS list.
+</li><li>Rule 6/10: Your guess must only contain letters found in the word &ldquo;ANSWER&rdquo;.
+</li><li>Rule 7/10: Your guess must only contain letters found in the word &ldquo;WORDPLAY&rdquo;.
+</li><li>Rule 8/10: Your guess must produce an anagram of itself (not necessarily a valid word) when rot13 is applied.
+</li><li>Rule 9/10: Your guess must have the property that moving its first letter to the end creates a valid word in the SOWPODS list.
+</li><li>Rule 10/10: Your guess must contain a letter that appears 4 times consecutively.
+</li></ul>
+  
+<p>It&rsquo;s clear that not all of these rules can be satisfied by one
+guess. For example, no word in the SOWPODS list contains a letter that
+appears 4 times consecutively. The next thing to realize is that not
+all rules are in effect for each guess. By experimentation, you&rsquo;ll may
+discover that the same subset of rules are always in effect for each
+guess number. Furthermore, after figuring out the rules in effect for
+the first few guess numbers (say guess numbers 1-6), you may be able
+to conjecture some patterns. The rule enforcement patterns are as
+follows:</p>
+
+<ul>
+<li>Rules 1 and 2 are always in effect.
+</li><li>Rules 3 and 4 are in effect for even and non-even (odd) numbers, respectively.
+</li><li>Rules 5 and 6 are in effect for prime and non-prime numbers, respectively.
+</li><li>Rules 7 and 8 are in effect for square and non-square numbers, respectively.
+</li><li>Rules 9 and 10 are in effect for fibonacci and non-fibonacci numbers, respectively.
+</li></ul>
+
+<p>Given the either-or nature of the paired rules, only one
+combination of rules is satisfiable. Specifically, all the rules in
+effect are satisfiable only when the guess number is odd, non-prime,
+non-square, and fibonacci. The first such guess number is 21. The one
+word that can satisfy all of the rules 1, 2, 4, 6, 8, and 9 is
+NEAR.</p>
+
+<p>And it&rsquo;s a good thing that guess number 21 is satisfiable. Due to
+the fact that there are only 10 rules and you can only break each rule
+twice, by the time you get to guess number 21, you&rsquo;ve exhausted all
+your wrong guesses. Either you win the game on guess number 21, or you
+lose due to breaking some rule for the third time.</p>
+
+<p>Thus, in order to win the game on guess number 21, you must plan
+out the game such that you break each rule exactly twice in the first
+20 guesses. There are many ways to do this. Here&rsquo;s one example.</p>
+
+<table id="guesstable">
+  <tbody><tr>
+    <th>Guess number</th>
+    <th>Guess</th>
+    <th>Rule broken</th>
+    <th>Guess number</th>
+    <th>Guess</th>
+    <th>Rule broken</th>
+    <th>Guess number</th>
+    <th>Guess</th>
+    <th>Rule broken</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ANSWER</td>
+    <td>7</td>
+    <td>8</td>
+    <td>ANSWERER</td>
+    <td>8</td>
+    <td>15</td>
+    <td>OF</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>REGRET</td>
+    <td>9</td>
+    <td>9</td>
+    <td>ZAP</td>
+    <td>6</td>
+    <td>16</td>
+    <td>AAA</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>FANS</td>
+    <td>9</td>
+    <td>10</td>
+    <td>ZAPPED</td>
+    <td>6</td>
+    <td>17</td>
+    <td>OFF</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>ANSWERS</td>
+    <td>7</td>
+    <td>11</td>
+    <td>BAT</td>
+    <td>5</td>
+    <td>18</td>
+    <td>BBB</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>ZIP</td>
+    <td>8</td>
+    <td>12</td>
+    <td>FOOD</td>
+    <td>3</td>
+    <td>19</td>
+    <td>AAA</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>EARNER</td>
+    <td>10</td>
+    <td>13</td>
+    <td>BUT</td>
+    <td>5</td>
+    <td>20</td>
+    <td>AAA</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>THUG</td>
+    <td>10</td>
+    <td>14</td>
+    <td>CAR</td>
+    <td>3</td>
+    <td>21</td>
+    <td>NEAR</td>
+    <td>None!</td>
+  </tr>
+</tbody></table>
+
+<p>If you get to guess number 21 and submit the correct word NEAR,
+you&rsquo;ll win the game and receive the message:</p>
+<pre>  NEAR is correct. Another way of saying 'NEAR' is 'SO CLOSE'.</pre>
+<p>The answer to call in is <b>SO CLOSE</b>.</p>
