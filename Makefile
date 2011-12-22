@@ -34,6 +34,7 @@ turn-on-%:
 update-%: turn-on-%
 	@$(RM) -rf web/_blind/$(CODENAME_$*)
 	@jekyll web web/_blind/$(CODENAME_$*)
+	cp team-data.js web/_blind/$(CODENAME_$*)
 
 update-zipzee:
 	$(RM) -rf web/_blind/zipzee
@@ -78,6 +79,7 @@ stage:
 	@sed -ie 's/No[ ]*\(# solutions\)/Yes \1/' $(WCY)
 	jekyll web web/_stage
 	@cp $(WCY).bak $(WCY)
+	cp team-data.js web/_stage
 	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
 
 staging: stage

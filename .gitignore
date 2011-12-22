@@ -1,6 +1,7 @@
 web/_site
 web/_blind
 web/_stage
+web/team-data.js
 *.pyc
 *.pyo
 secrets.py
