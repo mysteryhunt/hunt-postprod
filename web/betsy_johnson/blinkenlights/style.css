@@ -1,6 +1,6 @@
-.off, .on { width: 34px; height: 50px; display: inline-block; }
-.off { background-image: url("off.png"); }
-.on  { background-image: url("on.png"); }
+.off, .on { width: 17px; height: 25px; display: inline-block; }
+.off { background-image: url("off-small.png"); }
+.on  { background-image: url("on-small.png"); }
 .c .off { background-image: url("off-small.png"); }
 .c .on  { background-image: url("on-small.png"); }
 .c .off, .c .on { width: 17px; height: 25px; }
@@ -17,7 +17,7 @@ a.on { cursor: pointer; cursor: hand;}
   height: 25px;
   text-align: center;
 }
-.c .off, .c .on { margin: 0 28px; }
+.c .off, .c .on { margin: 0 11px; }
 
 .level8, .off, .on { position: relative; }
 .level8 .m {
@@ -27,5 +27,6 @@ a.on { cursor: pointer; cursor: hand;}
 .seen { color: #000; }
 .unseen { color: #aaa; }
 
+#wrapper { width: 700px; }
 #wrapper span { display: inline-block; }
 #message { text-align: center; padding: 1em; }

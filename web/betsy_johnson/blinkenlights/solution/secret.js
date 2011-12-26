@@ -144,6 +144,7 @@ function expandReset(bitsize, group) {
 function letters(state) {
     // for every 8 bits, return one letter of clue phrase
     var answer = "Answer:PluralizedLastWordOfTitle";
+    //            0123456789abcdef0123456789abcdef
     var i,j;
     var result="";
     for (i=0, j=0; i+8 <= state.b.length; i+=8, j+=1) {
@@ -212,7 +213,7 @@ FakeServer.prototype.query = function(args, callback) {
 	result.a += (this.state.b[i] ? '1' : '0');
     }
     for (var i=0; i<this.state.c.length; i++) {
-	var s = this.state.c[i].toString(2);
+	var s = (this.state.c[i] % 256).toString(2);
 	while (s.length < 8) { s = '0' + s; }
 	// NOW REVERSE
 	var ss='';
