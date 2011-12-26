@@ -21,7 +21,7 @@ function process_guess(data) {
     results.append("<tr class='spacer'><td colspan='2'>&nbsp;</td></tr>");
 
     if (data.rule) {
-        $("#num").html("Guess " + (data.attempts + 1));
+        $("#num").html("Guess " + (data.attempts + 1) + ":");
         results.append('<tr class="error"><td class="guess">Guess ' + data.attempts + ': <b>' + data.guess + '</b></td><td>Failed due to Rule ' + data.rule + '/10: ' + data.message + '</td></tr>');
 
         if (data.violations == 2) {
@@ -49,7 +49,7 @@ function submit_guess() {
 function start_over() {
     server.clear();
     $("#results").html("");
-    $("#num").html("Guess 1");
+    $("#num").html("Guess 1:");
     $(".during_game").removeAttr("disabled");
     $("#guess").focus();
 }
