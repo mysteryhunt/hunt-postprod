@@ -125,7 +125,7 @@ function ruleF(guess) {
     // Your guess must only contain letters found in the word "answer".
     for (var i=0; i<guess.length; i++) {
 	if ("ANSWER".indexOf(guess[i]) < 0) {
-	    throw new BadGuess('F', 'Your guess must only contain letters found in the word ANSWER.');
+	    throw new BadGuess('F', 'Your guess must only contain letters found in the word "ANSWER".');
 	}
     }
 }
@@ -133,7 +133,7 @@ function ruleG(guess) {
     // Your guess must only contain letters found in the word "wordplay".
     for (var i=0; i<guess.length; i++) {
 	if ("WORDPLAY".indexOf(guess[i]) < 0) {
-	    throw new BadGuess('G', 'Your guess must only contain letters found in the word WORDPLAY.');
+	    throw new BadGuess('G', 'Your guess must only contain letters found in the word "WORDPLAY".');
 	}
     }
 }
@@ -142,7 +142,7 @@ function ruleH(guess) {
     var word1 = sorted_letters(guess);
     var word2 = sorted_letters(rot13(guess));
     if (word1 != word2) {
-	throw new BadGuess('H', 'Your guess must produce the same letters when rot13 is applied.');
+	throw new BadGuess('H', 'Your guess must produce an anagram of itself (not necessarily a valid word) when rot13 is applied.');
     }
 }
 function ruleI(guess) {
