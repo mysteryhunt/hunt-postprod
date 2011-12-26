@@ -1,0 +1,198 @@
+---
+layout: betsy_johnson_solution
+title: Blinkenlights
+class: puzzle solution
+style: style.css
+credits: by unknown Codexian heroes
+---
+<p>This is a recursively-constructed <a href="http://www.cs.gettysburg.edu/~tneller/mazes/oskar4bit/index.html">4-bit
+maze</a>.  The goal is to turn off all the big lightbulbs.  Each group
+of four bits has the following state diagram:</p>
+<p><img src="maze.png" /></p>
+
+<p>We can also look at the minimum number of steps required to reach
+0000 from every step, and the number of transitions from each bit
+which are required in this shortest path:</p>
+<table class="state">
+  <tbody><tr><th>State</th><th>Transitions</th><th>Min. Path Length</th></tr>
+<tr><td>0000</td><td>0/0/0/0</td><td>0</td></tr>
+<tr><td>0010</td><td>0/0/1/0</td><td>1</td></tr>
+<tr><td>0110</td><td>0/1/1/0</td><td>2</td></tr>
+<tr><td>1110</td><td>1/1/1/0</td><td>3</td></tr>
+<tr><td>1011</td><td>1/1/1/1</td><td>4</td></tr>
+<tr><td>1001</td><td>1/1/1/1</td><td>4</td></tr>
+<tr><td>0111</td><td>1/1/1/1</td><td>4</td></tr>
+<tr><td>1111</td><td>1/1/1/1</td><td>4</td></tr>
+<tr><td>1101</td><td>1/2/1/1</td><td>5</td></tr>
+<tr><td>1100</td><td>1/2/1/1</td><td>5</td></tr>
+<tr><td>1010</td><td>1/1/2/1</td><td>5</td></tr>
+<tr><td>0011</td><td>1/1/2/2</td><td>6</td></tr>
+<tr><td>1000</td><td>2/1/2/2</td><td>7</td></tr>
+<tr><td>0001</td><td>2/1/2/3</td><td>8</td></tr>
+<tr><td>0101</td><td>2/2/2/3</td><td>9</td></tr>
+<tr><td>0100</td><td>2/2/2/3</td><td>9</td></tr>
+</tbody></table>
+
+<p>In addition, every group of 4 of these 4-bit mazes acts as a larger
+instance of the same maze:  If any light in the group of four is
+on, then that bit in the &ldquo;meta-maze&rdquo; is set.  When a bit in the
+&ldquo;meta-maze&rdquo; turns on, then the four lights it corresponds to reset to
+a specific starting state.</p>
+
+<p>Why end there?  Each group of 4 &ldquo;meta-mazes&rdquo; is a meta-meta-maze,
+and each group of four &ldquo;meta-meta-mazes&rdquo; forms a &ldquo;meta-meta-meta-maze&rdquo;.
+All told, there are 256 lightbulbs, forming 4 &ldquo;64-bit mazes&rdquo;, each of
+which is composed of 4 &ldquo;16-bit mazes&rdquo;, each composed of 4 4-bit
+mazes.  For future reference, we are going to call these &ldquo;M4&rdquo;, &ldquo;M16&rdquo;,
+&ldquo;M64&rdquo;, and &ldquo;M256&rdquo; mazes, with each &ldquo;bit&rdquo; in an M16 maze comprising a
+group of four lightbulbs, etc.
+</p>
+
+<p>In addition, there are a series of small lamps beneath each group of
+16 lightbulbs, which simply count up the number of &ldquo;steps&rdquo; taken in
+that group of 16.  There is also a message displayed at the top
+of the maze, which reveals new letters whenever at least one light is
+illuminated in a group of 8.</p>
+
+<p>Once the solver has clicked around enough to figure out the
+construction, they can get down to solving in earnest.
+Extinguishing all the lights in the maze would take 952 steps, but
+we can shortcut the process analytically.  Given the reset state of
+each M4/M16/M64/M256 puzzle we can deduce the end state; however, not all
+of the reset states are initially visible!  So some
+clicking around will be necessary to get each meta-bit, meta-meta-bit,
+and meta-meta-meta bit to turn on at least once so that we can
+determine their reset state.</p>
+
+<p>To begin, we recognize the initial state of the M256 puzzle is
+1100.  In order to get the final two meta-meta-meta bits to
+illuminate (to determine their reset state), we need to make the 1100
+-&gt; 1011 transition in the M256 puzzle.  In order to do this, we
+need to solve the M64 puzzle corresponding to the second
+meta-meta-meta-bit of the M256 puzzle.  This M64 puzzle is also
+initially in the 1100 state, so we need to make the 1100 -&gt; 1011
+transition by solving an M16 puzzle.  The M16 puzzle is *also* in the
+1100 state, as is the M4 puzzle corresponding to its second meta-bit.
+So we begin by toggling the following lights to solve the M4
+puzzle: AA, A8, AB, AA, A9.</p>
+
+<p>Now the M16 puzzle is in the 1011 state, so we need to toggle its
+final bit to make the 1011 -&gt; 1110 transition.  This M4 puzzle is
+initially in the 1110 state, and we solve it by clicking on:
+A3,
+A2,
+A1.
+</p>
+
+<p>We continue in this fashion, recursively exploring the maze.
+We will eventually discover the following construction:</p>
+
+<table class="data">
+  <tbody><tr><th colspan="4">Maze level</th>
+      <th>Lightbulbs</th>
+      <th>Starting<br />state</th>
+      <th>Solve<br />Transitions</th>
+      <th colspan="4"># Solve Steps</th>
+      <th>Times Maze<br /> Solved</th>
+      <th>Final Step Counter Value</th>
+  </tr>
+
+  <!-- automatically generated table contents -->
+<tr><td class="l">M256</td><td class="r" colspan="3"></td><td class="l c r">00 - FF</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l">951</td><td class="r" colspan="3"></td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="1"></td><td>M64</td><td class="r" colspan="2"></td><td class="l c r">C0 - FF</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="1"></td><td>298</td><td class="r" colspan="2"></td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">F0 - FF</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>40</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 80 = <b>P</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">FC - FF</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">F8 - FB</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">F4 - F7</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">F0 - F3</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">E0 - EF</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="2"></td><td>65</td><td class="r" colspan="1"></td><td class="l r c">* 1</td><td class="l r">= 65 = <b>A</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">EC - EF</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">E8 - EB</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">E4 - E7</td><td class="l c r">1110</td><td class="l c r">1/1/1/0</td><td class="l" colspan="3"></td><td class="r">3</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">E0 - E3</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 3</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">D0 - DF</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>42</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 84 = <b>T</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">DC - DF</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">D8 - DB</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">D4 - D7</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">D0 - D3</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">C0 - CF</td><td class="l c r">1111</td><td class="l c r">1/1/1/1</td><td class="l" colspan="2"></td><td>23</td><td class="r" colspan="1"></td><td class="l r c">* 3</td><td class="l r">= 69 = <b>E</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">CC - CF</td><td class="l c r">1011</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 3</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">C8 - CB</td><td class="l c r">1101</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 3</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">C4 - C7</td><td class="l c r">0011</td><td class="l c r">1/1/2/2</td><td class="l" colspan="3"></td><td class="r">6</td><td class="l r c">* 3</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">C0 - C3</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 3</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="1"></td><td>M64</td><td class="r" colspan="2"></td><td class="l c r">80 - BF</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="1"></td><td>122</td><td class="r" colspan="2"></td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">B0 - BF</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>39</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 78 = <b>N</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">BC - BF</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">B8 - BB</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">B4 - B7</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">B0 - B3</td><td class="l c r">1110</td><td class="l c r">1/1/1/0</td><td class="l" colspan="3"></td><td class="r">3</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">A0 - AF</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>21</td><td class="r" colspan="1"></td><td class="l r c">* 4</td><td class="l r">= 84 = <b>T</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">AC - AF</td><td class="l c r">1001</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">A8 - AB</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 8</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">A4 - A7</td><td class="l c r">0111</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">A0 - A3</td><td class="l c r">1110</td><td class="l c r">1/1/1/0</td><td class="l" colspan="3"></td><td class="r">3</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">90 - 9F</td><td class="l c r">1111</td><td class="l c r">1/1/1/1</td><td class="l" colspan="2"></td><td>16</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 32 = <b> </b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">9C - 9F</td><td class="l c r">1111</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">98 - 9B</td><td class="l c r">1011</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">94 - 97</td><td class="l c r">1001</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">90 - 93</td><td class="l c r">0111</td><td class="l c r">1/1/1/1</td><td class="l" colspan="3"></td><td class="r">4</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">80 - 8F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>25</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 50 = <b>2</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">8C - 8F</td><td class="l c r">1010</td><td class="l c r">1/1/2/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">88 - 8B</td><td class="l c r">1101</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">84 - 87</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">80 - 83</td><td class="l c r">1010</td><td class="l c r">1/1/2/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="1"></td><td>M64</td><td class="r" colspan="2"></td><td class="l c r">40 - 7F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="1"></td><td>200</td><td class="r" colspan="2"></td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">70 - 7F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>44</td><td class="r" colspan="1"></td><td class="l r c">* 1</td><td class="l r">= 44 = <b>,</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">7C - 7F</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">78 - 7B</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">74 - 77</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">70 - 73</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">60 - 6F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>26</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 52 = <b>4</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">6C - 6F</td><td class="l c r">1101</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">68 - 6B</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">64 - 67</td><td class="l c r">1010</td><td class="l c r">1/1/2/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">60 - 63</td><td class="l c r">0011</td><td class="l c r">1/1/2/2</td><td class="l" colspan="3"></td><td class="r">6</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">50 - 5F</td><td class="l c r">0011</td><td class="l c r">1/1/2/2</td><td class="l" colspan="2"></td><td>49</td><td class="r" colspan="1"></td><td class="l r c">* 1</td><td class="l r">= 49 = <b>1</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">5C - 5F</td><td class="l c r">0011</td><td class="l c r">1/1/2/2</td><td class="l" colspan="3"></td><td class="r">6</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">58 - 5B</td><td class="l c r">1000</td><td class="l c r">2/1/2/2</td><td class="l" colspan="3"></td><td class="r">7</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">54 - 57</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">50 - 53</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">40 - 4F</td><td class="l c r">1000</td><td class="l c r">2/1/2/2</td><td class="l" colspan="2"></td><td>55</td><td class="r" colspan="1"></td><td class="l r c">* 1</td><td class="l r">= 55 = <b>7</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">4C - 4F</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">48 - 4B</td><td class="l c r">0010</td><td class="l c r">0/0/1/0</td><td class="l" colspan="3"></td><td class="r">1</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">44 - 47</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">40 - 43</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="1"></td><td>M64</td><td class="r" colspan="2"></td><td class="l c r">00 - 3F</td><td class="l c r">1000</td><td class="l c r">2/1/2/2</td><td class="l" colspan="1"></td><td>209</td><td class="r" colspan="2"></td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">30 - 3F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>22</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 44 = <b>,</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">3C - 3F</td><td class="l c r">1101</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">38 - 3B</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">34 - 37</td><td class="l c r">1010</td><td class="l c r">1/1/2/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">30 - 33</td><td class="l c r">0110</td><td class="l c r">0/1/1/0</td><td class="l" colspan="3"></td><td class="r">2</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">20 - 2F</td><td class="l c r">1000</td><td class="l c r">2/1/2/2</td><td class="l" colspan="2"></td><td>55</td><td class="r" colspan="1"></td><td class="l r c">* 1</td><td class="l r">= 55 = <b>7</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">2C - 2F</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">28 - 2B</td><td class="l c r">0010</td><td class="l c r">0/0/1/0</td><td class="l" colspan="3"></td><td class="r">1</td><td class="l r c">* 1</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">24 - 27</td><td class="l c r">0101</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">20 - 23</td><td class="l c r">0100</td><td class="l c r">2/2/2/3</td><td class="l" colspan="3"></td><td class="r">9</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">10 - 1F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>28</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 56 = <b>8</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">1C - 1F</td><td class="l c r">1101</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">18 - 1B</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">14 - 17</td><td class="l c r">1010</td><td class="l c r">1/1/2/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">10 - 13</td><td class="l c r">0001</td><td class="l c r">2/1/2/3</td><td class="l" colspan="3"></td><td class="r">8</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="2"></td><td>M16</td><td class="r" colspan="1"></td><td class="l c r">00 - 0F</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="2"></td><td>27</td><td class="r" colspan="1"></td><td class="l r c">* 2</td><td class="l r">= 54 = <b>6</b></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">0C - 0F</td><td class="l c r">1101</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">08 - 0B</td><td class="l c r">1100</td><td class="l c r">1/2/1/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 4</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">04 - 07</td><td class="l c r">1010</td><td class="l c r">1/1/2/1</td><td class="l" colspan="3"></td><td class="r">5</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+<tr><td class="l" colspan="3"></td><td class="r">M4</td><td class="l c r">00 - 03</td><td class="l c r">1000</td><td class="l c r">2/1/2/2</td><td class="l" colspan="3"></td><td class="r">7</td><td class="l r c">* 2</td><td class="l r"></td></tr>
+
+</tbody></table>
+
+<p>At the final end state, when all the lights are extinguished, the
+small lightbulbs which count the number of steps for each M16 puzzle
+spell out &ldquo;<b>PATENT 2,417,786</b>&rdquo; in ASCII.  The message at the top
+of the page, which is gradually revealed as light bulbs are turned on
+in groups of 8, says, &ldquo;<b>Answer:PluralizedLastWordOfTitle</b>&rdquo;.</p>
+
+<p><a href="http://www.google.com/patents/US2417786">Patent 2,417,786</a>
+is the U.S. Patent for &ldquo;Pocket Shield or Protector&rdquo;, one of the first
+pocket protector patents.  The pluralized last word of its title, and
+the answer to this puzzle, is therefore: <b>PROTECTORS</b>.</p>

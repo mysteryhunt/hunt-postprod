@@ -1,0 +1,13 @@
+.data, .state {
+  border: 1px solid black; border-collapse: collapse; border-spacing: 0;
+}
+.state td, .state th { text-align: center; }
+.state td, .state th { border: 1px solid black; }
+
+.data td { border-top: 1px solid black; }
+.data td { border-bottom: 1px solid black; }
+.data th, .state th { border-bottom: 3px solid black; }
+.data td.l, .data th { border-left: 1px solid black; }
+.data td.r, .data th { border-right: 1px solid black; }
+.data td.c, .data th { text-align: center; }
+

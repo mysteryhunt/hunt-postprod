@@ -1,0 +1,31 @@
+.off, .on { width: 34px; height: 50px; display: inline-block; }
+.off { background-image: url("off.png"); }
+.on  { background-image: url("on.png"); }
+.c .off { background-image: url("off-small.png"); }
+.c .on  { background-image: url("on-small.png"); }
+.c .off, .c .on { width: 17px; height: 25px; }
+a.on { cursor: pointer; cursor: hand;}
+
+.level4  { margin: 5px; }
+.level16 { margin: 5px; }
+.level64 { margin-top: 1em; }
+.level128 { margin-top: 1em; }
+
+.level16 { position: relative; padding-bottom: 20px; }
+.level16 .c {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 25px;
+  text-align: center;
+}
+.c .off, .c .on { margin: 0 28px; }
+
+.level8, .off, .on { position: relative; }
+.level8 .m {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  text-align: center; font-size: 20px;
+}
+.seen { color: #000; }
+.unseen { color: #aaa; }
+
+#wrapper span { display: inline-block; }
+#message { text-align: center; padding: 1em; }
