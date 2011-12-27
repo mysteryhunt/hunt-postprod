@@ -87,10 +87,12 @@ def extract_body(html):
     # "Hack" way (try not to munge HTML!)
     m = re.search(r'<body(?:\s+([^>]*))?>(.*?)</body\s*>', html,
                   flags=re.DOTALL|re.IGNORECASE)
-    assert m is not None, "<body> element not found"
+    if m is None:
+        log_fatal("<body> element not found")
+        return ""
     body_cruft = m.group(1)
-    assert body_cruft is None or body_cruft.strip()=='', \
-           "<body> contains unsupported attributes"
+    if body_cruft is not None and body_cruft.strip()!='':
+        log_error("<body> contains unsupported attributes")
     return m.group(2).strip()
 
 def canon(s):
