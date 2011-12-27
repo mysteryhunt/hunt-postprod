@@ -11,16 +11,16 @@ function imagemap() {
 (puzzle_solved["critical_thinking"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"4-"+
-(puzzle_solved["daffidazey"]?"solved":"unsolved")+
-".png\" />"+
-"<img src=\"5-"+
 (puzzle_solved["desert_rose"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"6-"+
+"<img src=\"5-"+
 (puzzle_solved["magic_star"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"7-"+
+"<img src=\"6-"+
 (puzzle_solved["of_course"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"7-"+
+(puzzle_solved["sounds_good_to_me"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"8-"+
 (puzzle_solved["strip_mind"]?"solved":"unsolved")+
@@ -55,10 +55,10 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"420,250,431,268\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"432,235,511,305\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"432,326,518,372\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"438,306,530,325\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"451,373,522,400\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />"+
 "<area shape=\"rect\" coords=\"532,100,540,213\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"541,85,578,227\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"579,83,611,219\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"498,105,531,185\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"612,126,622,163\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />"+
 "<area shape=\"rect\" coords=\"173,288,199,310\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"200,280,230,316\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"214,361,239,415\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"209,317,229,360\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"231,275,244,300\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />"+
-"<area shape=\"rect\" coords=\"448,122,455,123\" alt=\"Daffidazey\" title=\"Daffidazey\" href=\"../into_the_woodstock/daffidazey/\" />\n<area shape=\"rect\" coords=\"447,124,477,153\" alt=\"Daffidazey\" title=\"Daffidazey\" href=\"../into_the_woodstock/daffidazey/\" />\n<area shape=\"rect\" coords=\"429,124,446,160\" alt=\"Daffidazey\" title=\"Daffidazey\" href=\"../into_the_woodstock/daffidazey/\" />\n<area shape=\"rect\" coords=\"405,137,428,172\" alt=\"Daffidazey\" title=\"Daffidazey\" href=\"../into_the_woodstock/daffidazey/\" />\n<area shape=\"rect\" coords=\"478,125,485,140\" alt=\"Daffidazey\" title=\"Daffidazey\" href=\"../into_the_woodstock/daffidazey/\" />"+
-"<area shape=\"rect\" coords=\"110,278,140,305\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"125,306,137,313\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"98,257,142,272\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"143,259,159,275\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"110,273,142,277\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />"+
-"<area shape=\"rect\" coords=\"432,78,450,86\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"423,87,448,100\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"402,89,422,107\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"381,93,401,111\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"364,99,380,115\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />"+
-"<area shape=\"rect\" coords=\"270,435,303,470\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"304,452,311,469\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"206,449,241,481\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"242,442,269,494\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"204,482,228,490\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />"+
+"<area shape=\"rect\" coords=\"448,122,455,123\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"447,124,477,153\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"429,124,446,160\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"405,137,428,172\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />\n<area shape=\"rect\" coords=\"478,125,485,140\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"../okla_holmes_a/desert_rose/\" />"+
+"<area shape=\"rect\" coords=\"110,278,140,305\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"125,306,137,313\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"98,257,142,272\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"143,259,159,275\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />\n<area shape=\"rect\" coords=\"110,273,142,277\" alt=\"Magic Star\" title=\"Magic Star\" href=\"../a_circus_line/magic_star/\" />"+
+"<area shape=\"rect\" coords=\"432,78,450,86\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"423,87,448,100\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"402,89,422,107\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"381,93,401,111\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"364,99,380,115\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />"+
+"<area shape=\"rect\" coords=\"270,435,303,470\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"304,452,311,469\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"206,449,241,481\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"242,442,269,494\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"204,482,228,490\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />"+
 "<area shape=\"rect\" coords=\"175,194,253,234\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"183,235,194,248\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"168,161,238,193\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"157,131,232,160\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"217,115,233,130\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />"+
 "<area shape=\"rect\" coords=\"255,350,305,352\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"242,353,305,361\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"259,337,315,349\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"243,362,289,370\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"280,371,286,374\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />"+
 "<area shape=\"rect\" coords=\"590,266,630,269\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"575,270,630,306\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"576,307,640,371\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"564,275,574,298\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"617,262,629,265\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />"+
@@ -78,30 +78,30 @@ function puzzlelist() {
 "<td class=\"into_the_woodstock "+
 (puzzle_solved["braeburn"]?"solved":"unsolved")+
 "\"><a href=\"../into_the_woodstock/braeburn/\"><span>Braeburn</span></a></td>"+
-"<td class=\"okla_holmes_a "+
-(puzzle_solved["desert_rose"]?"solved":"unsolved")+
-"\"><a href=\"../okla_holmes_a/desert_rose/\"><span>Desert Rose</span></a></td>"+
-"</tr>"+
-"<tr>"+
-"<td class=\"into_the_woodstock "+
-(puzzle_solved["bubbles"]?"solved":"unsolved")+
-"\"><a href=\"../into_the_woodstock/bubbles/\"><span>Bubbles</span></a></td>"+
 "<td class=\"a_circus_line "+
 (puzzle_solved["magic_star"]?"solved":"unsolved")+
 "\"><a href=\"../a_circus_line/magic_star/\"><span>Magic Star</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"into_the_woodstock "+
-(puzzle_solved["critical_thinking"]?"solved":"unsolved")+
-"\"><a href=\"../into_the_woodstock/critical_thinking/\"><span>Critical Thinking</span></a></td>"+
+(puzzle_solved["bubbles"]?"solved":"unsolved")+
+"\"><a href=\"../into_the_woodstock/bubbles/\"><span>Bubbles</span></a></td>"+
 "<td class=\"into_the_woodstock "+
 (puzzle_solved["of_course"]?"solved":"unsolved")+
 "\"><a href=\"../into_the_woodstock/of_course/\"><span>Of Course!</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"into_the_woodstock "+
-(puzzle_solved["daffidazey"]?"solved":"unsolved")+
-"\"><a href=\"../into_the_woodstock/daffidazey/\"><span>Daffidazey</span></a></td>"+
+(puzzle_solved["critical_thinking"]?"solved":"unsolved")+
+"\"><a href=\"../into_the_woodstock/critical_thinking/\"><span>Critical Thinking</span></a></td>"+
+"<td class=\"into_the_woodstock "+
+(puzzle_solved["sounds_good_to_me"]?"solved":"unsolved")+
+"\"><a href=\"../into_the_woodstock/sounds_good_to_me/\"><span>Sounds Good to Me</span></a></td>"+
+"</tr>"+
+"<tr>"+
+"<td class=\"okla_holmes_a "+
+(puzzle_solved["desert_rose"]?"solved":"unsolved")+
+"\"><a href=\"../okla_holmes_a/desert_rose/\"><span>Desert Rose</span></a></td>"+
 "<td class=\"into_the_woodstock "+
 (puzzle_solved["strip_mind"]?"solved":"unsolved")+
 "\"><a href=\"../into_the_woodstock/strip_mind/\"><span>Strip Mind</span></a></td>"+
