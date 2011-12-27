@@ -16,6 +16,7 @@ a.on { cursor: pointer; cursor: hand;}
   position: absolute; bottom: 0; left: 0; right: 0;
   height: 25px;
   text-align: center;
+  white-space: nowrap; /* work around IE bug */
 }
 .c .off, .c .on { margin: 0 11px; }
 
