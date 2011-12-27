@@ -39,6 +39,7 @@ body.index #puzzle-list td { vertical-align: baseline; }
 }
 
 #credits {
+  font-size: 18px;
   margin: 0;
 }
 

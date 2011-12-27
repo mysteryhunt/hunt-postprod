@@ -149,7 +149,7 @@ body.index .critic, body.index h2, body.index .report {
   margin: 10px 0 10px 0; padding: 0;
 }
 body.solution h2 {
-  font-size: 24px;
+  font-size: 18px;
   padding: 0; margin: 0;
 }
 body.index .critic .name, body.index .materials, #label {
