@@ -1,5 +1,5 @@
 @import "../fonts.css";
-@import url(http://fonts.googleapis.com/css?family=Coustard|Nothing+You+Could+Do);
+@import url(http://fonts.googleapis.com/css?family=Coustard|Nothing+You+Could+Do|Buenard:700);
 @import "../shortcuts.css";
 
 /* layout */
@@ -131,6 +131,10 @@ body.index #main { font-family: Coustard, Courier, serif; font-weight: 400; }
 body.puzzle #main h1, body.report #main h1 {
   font-size: 32px; margin: 10px 0 0 0; padding: 0;
 }
+body.puzzle #main h1, body.report #main h1, body.solution #main h2 {
+  font-family: 'Buenard', 'Alice', serif;
+  font-weight: 700;
+}
 body.puzzle #main h1 {
   background: url("icon.png") no-repeat 0 8px;
   padding-left: 60px;
@@ -151,6 +155,8 @@ body.index .critic, body.index h2, body.index .report {
 body.solution h2 {
   font-size: 18px;
   padding: 0; margin: 0;
+  padding-left: 4em;
+  text-indent: -1em;
 }
 body.index .critic .name, body.index .materials, #label {
   font-family: 'Nothing You Could Do', cursive;
