@@ -1,0 +1,47 @@
+---
+layout: ben_bitdiddle_solution
+title: Blowing Down The House
+class: puzzle solution
+credits: by David Turner with suggestions from Andrew Lin
+---
+<p>The block of data is Huffman-encoded with a 3-ary tree generated from
+the provided frequency table.  When three items are to be encoded at
+the same level of the tree, the least-frequent gets a zero and the
+most-frequent gets a 2.</p>
+
+<p>The decoded data reads:<br />
+REENCODE THIS STRING OPTIMALLY THEN DECODE USING THE ORIGINAL CODE YOUR ANSWER WILL APPEAR FOLLOWED BY GIBBERISH WHEN OPTIMIZING INCLUDE THE FOLLOWING PADDING BOXTOP CLAMPS CLAY DAN DRILL DUMP DUNK FAMILY FEVER FLAY FLUB GRAMMAR GRAMPS GROW GUNK HIGHWAY HIM HUMPS HUNT JACK JAY JOKER JOVIAL JUMPER JUNK KISMET LOUSE MAJOR MAST MAZE NEON NEST NOSE PLANTS PLOTS PUSHED QUICK RAFFLE ROAD SLIM SLOT SO STOOP STUMPED SWANK THEOREM THINK THUMP UNDERWHELM VIKING VIXEN WARP WHAMMY WHIG WHISKEY ZACK</p>
+
+<p>This has the following frequencies:
+</p><table>
+<tbody><tr><td>[space]</td><td>78</td></tr>
+<tr><td>A</td><td>28</td></tr>
+<tr><td>B</td><td>5</td></tr>
+<tr><td>C</td><td>9</td></tr>
+<tr><td>D</td><td>16</td></tr>
+<tr><td>E</td><td>34</td></tr>
+<tr><td>F</td><td>8</td></tr>
+<tr><td>G</td><td>14</td></tr>
+<tr><td>H</td><td>19</td></tr>
+<tr><td>I</td><td>29</td></tr>
+<tr><td>J</td><td>7</td></tr>
+<tr><td>K</td><td>12</td></tr>
+<tr><td>L</td><td>25</td></tr>
+<tr><td>M</td><td>22</td></tr>
+<tr><td>N</td><td>26</td></tr>
+<tr><td>O</td><td>27</td></tr>
+<tr><td>P</td><td>18</td></tr>
+<tr><td>Q</td><td>1</td></tr>
+<tr><td>R</td><td>21</td></tr>
+<tr><td>S</td><td>23</td></tr>
+<tr><td>T</td><td>20</td></tr>
+<tr><td>U</td><td>17</td></tr>
+<tr><td>V</td><td>4</td></tr>
+<tr><td>W</td><td>13</td></tr>
+<tr><td>X</td><td>2</td></tr>
+<tr><td>Y</td><td>10</td></tr>
+<tr><td>Z</td><td>3</td></tr>
+</tbody></table>
+
+Encoding with a new Huffman tree generated from this data and decoding
+with the original generates the answer, <b>FABRIC</b>, followed by garbage.
