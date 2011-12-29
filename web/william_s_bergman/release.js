@@ -31,8 +31,8 @@ function imagemap() {
 "<img src=\"cheval/-"+
 (puzzle_solved["cheval"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"daisyjo/-"+
-(puzzle_solved["daisyjo"]?"solved":"unsolved")+
+"<img src=\"collect_them_all/-"+
+(puzzle_solved["collect_them_all"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"gingerbread/-"+
 (puzzle_solved["gingerbread"]?"solved":"unsolved")+
@@ -62,7 +62,7 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"175,194,253,234\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"183,235,194,248\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"168,161,238,193\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"157,131,232,160\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"217,115,233,130\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />"+
 "<area shape=\"rect\" coords=\"255,350,305,352\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"242,353,305,361\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"259,337,315,349\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"243,362,289,370\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />\n<area shape=\"rect\" coords=\"280,371,286,374\" alt=\"Bright Eyes\" title=\"Bright Eyes\" href=\"bright_eyes/\" />"+
 "<area shape=\"rect\" coords=\"590,266,630,269\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"575,270,630,306\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"576,307,640,371\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"564,275,574,298\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />\n<area shape=\"rect\" coords=\"617,262,629,265\" alt=\"Cheval\" title=\"Cheval\" href=\"cheval/\" />"+
-"<area shape=\"rect\" coords=\"71,353,158,377\" alt=\"Daisyjo\" title=\"Daisyjo\" href=\"daisyjo/\" />\n<area shape=\"rect\" coords=\"135,378,142,380\" alt=\"Daisyjo\" title=\"Daisyjo\" href=\"daisyjo/\" />\n<area shape=\"rect\" coords=\"83,332,161,352\" alt=\"Daisyjo\" title=\"Daisyjo\" href=\"daisyjo/\" />\n<area shape=\"rect\" coords=\"48,345,70,363\" alt=\"Daisyjo\" title=\"Daisyjo\" href=\"daisyjo/\" />\n<area shape=\"rect\" coords=\"156,323,168,331\" alt=\"Daisyjo\" title=\"Daisyjo\" href=\"daisyjo/\" />"+
+"<area shape=\"rect\" coords=\"71,353,158,377\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"135,378,142,380\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"83,332,161,352\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"48,345,70,363\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"156,323,168,331\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />"+
 "<area shape=\"rect\" coords=\"433,209,462,223\" alt=\"Gingerbread\" title=\"Gingerbread\" href=\"gingerbread/\" />\n<area shape=\"rect\" coords=\"443,224,447,225\" alt=\"Gingerbread\" title=\"Gingerbread\" href=\"gingerbread/\" />\n<area shape=\"rect\" coords=\"463,201,481,217\" alt=\"Gingerbread\" title=\"Gingerbread\" href=\"gingerbread/\" />\n<area shape=\"rect\" coords=\"482,200,498,216\" alt=\"Gingerbread\" title=\"Gingerbread\" href=\"gingerbread/\" />\n<area shape=\"rect\" coords=\"427,202,462,208\" alt=\"Gingerbread\" title=\"Gingerbread\" href=\"gingerbread/\" />"+
 "<area shape=\"rect\" coords=\"526,242,542,245\" alt=\"Honolu-Loo\" title=\"Honolu-Loo\" href=\"honolu_loo/\" />\n<area shape=\"rect\" coords=\"527,246,543,267\" alt=\"Honolu-Loo\" title=\"Honolu-Loo\" href=\"honolu_loo/\" />\n<area shape=\"rect\" coords=\"566,230,604,241\" alt=\"Honolu-Loo\" title=\"Honolu-Loo\" href=\"honolu_loo/\" />\n<area shape=\"rect\" coords=\"552,242,601,249\" alt=\"Honolu-Loo\" title=\"Honolu-Loo\" href=\"honolu_loo/\" />\n<area shape=\"rect\" coords=\"544,244,551,253\" alt=\"Honolu-Loo\" title=\"Honolu-Loo\" href=\"honolu_loo/\" />"+
 "<area shape=\"rect\" coords=\"170,406,180,427\" alt=\"Princess Serena\" title=\"Princess Serena\" href=\"princess_serena/\" />\n<area shape=\"rect\" coords=\"181,407,190,439\" alt=\"Princess Serena\" title=\"Princess Serena\" href=\"princess_serena/\" />\n<area shape=\"rect\" coords=\"158,408,169,444\" alt=\"Princess Serena\" title=\"Princess Serena\" href=\"princess_serena/\" />\n<area shape=\"rect\" coords=\"144,419,157,454\" alt=\"Princess Serena\" title=\"Princess Serena\" href=\"princess_serena/\" />\n<area shape=\"rect\" coords=\"191,404,204,423\" alt=\"Princess Serena\" title=\"Princess Serena\" href=\"princess_serena/\" />"+
@@ -125,8 +125,8 @@ function puzzlelist() {
 "</tr>"+
 "<tr>"+
 "<td class=\"william_s_bergman "+
-(puzzle_solved["daisyjo"]?"solved":"unsolved")+
-"\"><a href=\"daisyjo/\"><span>Daisyjo</span></a></td>"+
+(puzzle_solved["collect_them_all"]?"solved":"unsolved")+
+"\"><a href=\"collect_them_all/\"><span>Collect Them All</span></a></td>"+
 "<td class=\"william_s_bergman "+
 (puzzle_solved["star_catcher"]?"solved":"unsolved")+
 "\"><a href=\"star_catcher/\"><span>Star Catcher</span></a></td>"+

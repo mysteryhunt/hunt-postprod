@@ -22,8 +22,8 @@ function imagemap() {
 "<img src=\"ember/-"+
 (puzzle_solved["ember"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"salty/-"+
-(puzzle_solved["salty"]?"solved":"unsolved")+
+"<img src=\"the_voices_in_your_head/-"+
+(puzzle_solved["the_voices_in_your_head"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"apple_bloom/-"+
 (puzzle_solved["apple_bloom"]?"solved":"unsolved")+
@@ -43,7 +43,7 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"112,275,153,300\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"154,279,190,304\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"373,294,436,319\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"323,290,372,317\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"28,268,72,293\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"73,271,111,297\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"twinkle_twirl/\" />"+
 "<area shape=\"rect\" coords=\"109,297,154,322\" alt=\"Spitfire\" title=\"Spitfire\" href=\"spitfire/\" />\n<area shape=\"rect\" coords=\"155,301,199,325\" alt=\"Spitfire\" title=\"Spitfire\" href=\"spitfire/\" />\n<area shape=\"rect\" coords=\"13,289,75,315\" alt=\"Spitfire\" title=\"Spitfire\" href=\"spitfire/\" />\n<area shape=\"rect\" coords=\"340,315,410,339\" alt=\"Spitfire\" title=\"Spitfire\" href=\"spitfire/\" />\n<area shape=\"rect\" coords=\"411,319,476,340\" alt=\"Spitfire\" title=\"Spitfire\" href=\"spitfire/\" />\n<area shape=\"rect\" coords=\"76,294,108,318\" alt=\"Spitfire\" title=\"Spitfire\" href=\"spitfire/\" />"+
 "<area shape=\"rect\" coords=\"106,318,173,351\" alt=\"Ember\" title=\"Ember\" href=\"ember/\" />\n<area shape=\"rect\" coords=\"174,323,212,353\" alt=\"Ember\" title=\"Ember\" href=\"ember/\" />\n<area shape=\"rect\" coords=\"354,335,439,362\" alt=\"Ember\" title=\"Ember\" href=\"ember/\" />\n<area shape=\"rect\" coords=\"8,311,62,346\" alt=\"Ember\" title=\"Ember\" href=\"ember/\" />\n<area shape=\"rect\" coords=\"440,338,505,366\" alt=\"Ember\" title=\"Ember\" href=\"ember/\" />\n<area shape=\"rect\" coords=\"63,315,105,348\" alt=\"Ember\" title=\"Ember\" href=\"ember/\" />"+
-"<area shape=\"rect\" coords=\"373,359,416,387\" alt=\"Salty\" title=\"Salty\" href=\"salty/\" />\n<area shape=\"rect\" coords=\"417,362,466,392\" alt=\"Salty\" title=\"Salty\" href=\"salty/\" />\n<area shape=\"rect\" coords=\"7,344,104,370\" alt=\"Salty\" title=\"Salty\" href=\"salty/\" />\n<area shape=\"rect\" coords=\"467,365,541,399\" alt=\"Salty\" title=\"Salty\" href=\"salty/\" />\n<area shape=\"rect\" coords=\"105,349,174,375\" alt=\"Salty\" title=\"Salty\" href=\"salty/\" />\n<area shape=\"rect\" coords=\"175,352,225,379\" alt=\"Salty\" title=\"Salty\" href=\"salty/\" />"+
+"<area shape=\"rect\" coords=\"373,359,416,387\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"417,362,466,392\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"7,344,104,370\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"467,365,541,399\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"105,349,174,375\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"175,352,225,379\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"the_voices_in_your_head/\" />"+
 "<area shape=\"rect\" coords=\"121,371,175,408\" alt=\"Apple Bloom\" title=\"Apple Bloom\" href=\"apple_bloom/\" />\n<area shape=\"rect\" coords=\"176,375,241,411\" alt=\"Apple Bloom\" title=\"Apple Bloom\" href=\"apple_bloom/\" />\n<area shape=\"rect\" coords=\"471,391,565,427\" alt=\"Apple Bloom\" title=\"Apple Bloom\" href=\"apple_bloom/\" />\n<area shape=\"rect\" coords=\"390,384,470,422\" alt=\"Apple Bloom\" title=\"Apple Bloom\" href=\"apple_bloom/\" />\n<area shape=\"rect\" coords=\"6,363,63,402\" alt=\"Apple Bloom\" title=\"Apple Bloom\" href=\"apple_bloom/\" />\n<area shape=\"rect\" coords=\"64,367,120,405\" alt=\"Apple Bloom\" title=\"Apple Bloom\" href=\"apple_bloom/\" />"+
 "<area shape=\"rect\" coords=\"2,411,5,434\" alt=\"Derpy Hooves\" title=\"Derpy Hooves\" href=\"derpy_hooves/\" />\n<area shape=\"rect\" coords=\"6,401,138,438\" alt=\"Derpy Hooves\" title=\"Derpy Hooves\" href=\"derpy_hooves/\" />\n<area shape=\"rect\" coords=\"139,404,253,442\" alt=\"Derpy Hooves\" title=\"Derpy Hooves\" href=\"derpy_hooves/\" />\n<area shape=\"rect\" coords=\"506,423,597,463\" alt=\"Derpy Hooves\" title=\"Derpy Hooves\" href=\"derpy_hooves/\" />\n<area shape=\"rect\" coords=\"416,417,505,459\" alt=\"Derpy Hooves\" title=\"Derpy Hooves\" href=\"derpy_hooves/\" />\n<area shape=\"rect\" coords=\"6,396,89,400\" alt=\"Derpy Hooves\" title=\"Derpy Hooves\" href=\"derpy_hooves/\" />"+
 "<area shape=\"rect\" coords=\"148,436,261,464\" alt=\"Princess Primrose\" title=\"Princess Primrose\" href=\"princess_primrose/\" />\n<area shape=\"rect\" coords=\"148,465,271,490\" alt=\"Princess Primrose\" title=\"Princess Primrose\" href=\"princess_primrose/\" />\n<area shape=\"rect\" coords=\"10,452,147,487\" alt=\"Princess Primrose\" title=\"Princess Primrose\" href=\"princess_primrose/\" />\n<area shape=\"rect\" coords=\"440,452,619,480\" alt=\"Princess Primrose\" title=\"Princess Primrose\" href=\"princess_primrose/\" />\n<area shape=\"rect\" coords=\"461,481,638,500\" alt=\"Princess Primrose\" title=\"Princess Primrose\" href=\"princess_primrose/\" />\n<area shape=\"rect\" coords=\"2,432,147,451\" alt=\"Princess Primrose\" title=\"Princess Primrose\" href=\"princess_primrose/\" />"+
@@ -68,9 +68,9 @@ function puzzlelist() {
 (puzzle_solved["4_speed"]?"solved":"unsolved")+
 "\">4-Speed</a></td>"+
 "<td class=\"num\">8.</td>"+
-"<td><a href=\"salty/\" class=\""+
-(puzzle_solved["salty"]?"solved":"unsolved")+
-"\">Salty</a></td>"+
+"<td><a href=\"the_voices_in_your_head/\" class=\""+
+(puzzle_solved["the_voices_in_your_head"]?"solved":"unsolved")+
+"\">The Voices in Your Head</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">3.</td>"+
