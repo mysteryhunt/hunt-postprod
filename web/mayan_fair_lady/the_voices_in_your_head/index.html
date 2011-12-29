@@ -21,4 +21,15 @@ title: The Voices in Your Head
 <li><a href="29.mp3">&#x2610;&#x2610;&#x2610;.&#x2610;&#x2610;</a> - <a href="30.mp3">&#x2610;&#x2610;&#x2610;.&#x2610;&#x2610;</a> = A.GY</li>
 </ul>
 <b>049981551/10016/89640/243599/8510719/89757/799</b>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+// add mouseover playback for convenience
+var links = $('a[href$=".mp3"]');
+links.each(function(i, e) {
+  var a = document.createElement("audio");
+  a.src = e.href;
+  $(e).mouseenter(function() { a.currentTime=0; a.play(); });
+  $(e).mouseleave(function() { a.pause(); a.currentTime=0; });
+});
+</script>
 </div>
