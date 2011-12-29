@@ -155,7 +155,7 @@ body.index .critic, body.index h2, body.index .report {
 body.solution h2 {
   font-size: 18px;
   padding: 0; margin: 0;
-  padding-left: 4em;
+  padding-left: 5em;
   text-indent: -1em;
 }
 body.index .critic .name, body.index .materials, #label {
