@@ -3,6 +3,7 @@
 // IF YOU ARE TEST SOLVING, DON'T LOOK AT THIS.
 
 var DEBUG=false;
+var AUTO_SOLVE=false;
 function dlog() {
     if (!DEBUG) return;
     console.log.apply(console, arguments);
@@ -143,7 +144,7 @@ function expandReset(bitsize, group) {
 
 function letters(state) {
     // for every 8 bits, return one letter of clue phrase
-    var answer = "Answer:PluralizedLastWordOfTitle";
+    var answer = "SolveRestThenPluralizeTitleWord4";
     //            0123456789abcdef0123456789abcdef
     var i,j;
     var result="";
@@ -198,6 +199,55 @@ function updateState(state, which) {
     return letters(new_state);
 }
 
+var SHORTEST = {};
+(function() {
+    var BIG_COST = 9999;
+    // Bellman-Ford algorithm
+    for (var i=0; i<16; i++) SHORTEST[i] = [null, BIG_COST];
+    SHORTEST[0] = [null, 0]; // "source"
+    for (var j=0; j<16; j++) { // a couple of extra iterations here
+	for (var from=1; from<16; from++) {
+	    // try every set bit
+	    for (var i=0; i<4; i++) {
+		if ((from & (1<<i)) == 0) continue;
+		var to = MAP[from][i];
+		console.assert(to!==null);
+		var to_cost = SHORTEST[to][1] + 1;
+		if (to_cost < SHORTEST[from][1]) {
+		    SHORTEST[from] = [i, to_cost];
+		}
+		// verify uniqueness
+		if (j==15 && to_cost == SHORTEST[from][1])
+		    console.assert(i == SHORTEST[from][0],
+				   "ambiguous shortest cost from", from);
+	    }
+	}
+    }
+    for (var i=1; i<16; i++) {
+	console.assert(SHORTEST[i][0] !== null);
+	console.assert(SHORTEST[i][1] !== BIG_COST);
+    }
+})();
+//console.log(SHORTEST);
+
+function solve_step(state) {
+    var start = 0;
+    for (var bitsize=256/4 ; bitsize >= 1; bitsize/=4) {
+	var groupsize = bitsize*4;
+	var group = [];
+	for (var i=0; i<4; i++) {
+	    group[i] = anybits(state.b.slice(start + i*bitsize,
+					     start + (i+1)*bitsize));
+	}
+	// which bit to flip?
+	var b = SHORTEST[bits2num(group)][0];
+	// update start
+	start += b * bitsize;
+    }
+    console.log("Flipping bit", start);
+    return start;
+}
+
 function FakeServer() {
     this.state = initialState();
 }
@@ -222,7 +272,21 @@ FakeServer.prototype.query = function(args, callback) {
 	}
 	result.b[i] = ss;
     }
-    callback(result)
+    callback(result);
+    // auto-solve?
+    if (AUTO_SOLVE) {
+	var that = this;
+	if (anybits(this.state.b)) {
+	    setTimeout(function() {
+		that.query(solve_step(that.state), callback);
+	    }, 0);
+	} else {
+	    var result="";
+	    for (var i=0; i<this.state.c.length; i++)
+		result = String.fromCharCode(this.state.c[i]) + result;
+	    console.log(result);
+	}
+    }
 };
 FakeServer.prototype.clear = function() {
     this.state = initialState();
