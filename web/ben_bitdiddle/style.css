@@ -31,7 +31,7 @@ body.index .materials .mayan_fair_lady.unsolved {
   background-image: url("../mayan_fair_lady/icon-unsolved.png");
 }
 body.index .materials .ben_bitdiddle {
-  background: url("icon.png") no-repeat 0 4px;
+  background: url("icon.png") no-repeat 0 2px;
 }
 body.index .materials .ben_bitdiddle.unsolved {
   background-image: url("icon-unsolved.png");
