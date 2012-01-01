@@ -2,10 +2,10 @@ function imagemap() {
   return ''+
 "<img src=\"photo.png\" />"+
 "<img src=\"1-"+
-(puzzle_solved["starsong"]?"solved":"unsolved")+
+(puzzle_solved["crank_it_up_to_7"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"2-"+
-(puzzle_solved["flitter_flutter"]?"solved":"unsolved")+
+(puzzle_solved["course_7e"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"3-"+
 (puzzle_solved["pipsqueak"]?"solved":"unsolved")+
@@ -14,7 +14,7 @@ function imagemap() {
 (puzzle_solved["princess_royal_blue"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"5-"+
-(puzzle_solved["puzzlemint"]?"solved":"unsolved")+
+(puzzle_solved["criss_cross"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"6-"+
 (puzzle_solved["4_speed"]?"solved":"unsolved")+
@@ -34,11 +34,11 @@ function imagemap() {
 "<img src=\"baby_tumbleweed/-"+
 (puzzle_solved["baby_tumbleweed"]?"solved":"unsolved")+
 ".png\" />"+
+"<img src=\"disorder_of_operations/-"+
+(puzzle_solved["disorder_of_operations"]?"solved":"unsolved")+
+".png\" />"+
 "<img src=\"fiesta_flair/-"+
 (puzzle_solved["fiesta_flair"]?"solved":"unsolved")+
-".png\" />"+
-"<img src=\"lickety_split/-"+
-(puzzle_solved["lickety_split"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"mayor_of_ponyville/-"+
 (puzzle_solved["mayor_of_ponyville"]?"solved":"unsolved")+
@@ -58,19 +58,19 @@ function imagemap() {
 "<div class=\"paperclip\"></div>"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
-"<area shape=\"rect\" coords=\"147,188,155,221\" alt=\"Starsong\" title=\"Starsong\" href=\"../okla_holmes_a/starsong/\" />\n<area shape=\"rect\" coords=\"156,192,157,222\" alt=\"Starsong\" title=\"Starsong\" href=\"../okla_holmes_a/starsong/\" />\n<area shape=\"rect\" coords=\"137,190,146,225\" alt=\"Starsong\" title=\"Starsong\" href=\"../okla_holmes_a/starsong/\" />\n<area shape=\"rect\" coords=\"133,199,136,218\" alt=\"Starsong\" title=\"Starsong\" href=\"../okla_holmes_a/starsong/\" />\n<area shape=\"rect\" coords=\"158,195,162,210\" alt=\"Starsong\" title=\"Starsong\" href=\"../okla_holmes_a/starsong/\" />"+
-"<area shape=\"rect\" coords=\"120,249,167,262\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"../phantom_of_the_operator/flitter_flutter/\" />\n<area shape=\"rect\" coords=\"124,263,168,271\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"../phantom_of_the_operator/flitter_flutter/\" />\n<area shape=\"rect\" coords=\"135,272,164,287\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"../phantom_of_the_operator/flitter_flutter/\" />\n<area shape=\"rect\" coords=\"127,241,163,248\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"../phantom_of_the_operator/flitter_flutter/\" />\n<area shape=\"rect\" coords=\"127,232,146,240\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"../phantom_of_the_operator/flitter_flutter/\" />"+
+"<area shape=\"rect\" coords=\"147,188,155,221\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"156,192,157,222\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"137,190,146,225\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"133,199,136,218\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"158,195,162,210\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />"+
+"<area shape=\"rect\" coords=\"120,249,167,262\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"124,263,168,271\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"135,272,164,287\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"127,241,163,248\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"127,232,146,240\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />"+
 "<area shape=\"rect\" coords=\"147,298,180,332\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"181,316,183,325\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"152,333,172,339\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"141,304,146,322\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"157,290,171,297\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />"+
 "<area shape=\"rect\" coords=\"187,337,196,340\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"173,341,203,353\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"173,361,206,372\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"169,354,208,360\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"182,373,196,379\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />"+
-"<area shape=\"rect\" coords=\"219,370,275,403\" alt=\"Puzzlemint\" title=\"Puzzlemint\" href=\"../into_the_woodstock/puzzlemint/\" />\n<area shape=\"rect\" coords=\"219,404,269,422\" alt=\"Puzzlemint\" title=\"Puzzlemint\" href=\"../into_the_woodstock/puzzlemint/\" />\n<area shape=\"rect\" coords=\"202,368,218,404\" alt=\"Puzzlemint\" title=\"Puzzlemint\" href=\"../into_the_woodstock/puzzlemint/\" />\n<area shape=\"rect\" coords=\"229,353,260,369\" alt=\"Puzzlemint\" title=\"Puzzlemint\" href=\"../into_the_woodstock/puzzlemint/\" />\n<area shape=\"rect\" coords=\"219,423,251,431\" alt=\"Puzzlemint\" title=\"Puzzlemint\" href=\"../into_the_woodstock/puzzlemint/\" />"+
+"<area shape=\"rect\" coords=\"219,370,275,403\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"219,404,269,422\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"202,368,218,404\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"229,353,260,369\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"219,423,251,431\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />"+
 "<area shape=\"rect\" coords=\"277,394,314,421\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"279,422,310,425\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"285,388,312,393\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"287,426,307,430\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"315,404,316,418\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />"+
 "<area shape=\"rect\" coords=\"347,394,359,437\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"../mayan_fair_lady/twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"360,395,364,439\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"../mayan_fair_lady/twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"365,397,375,437\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"../mayan_fair_lady/twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"340,399,346,429\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"../mayan_fair_lady/twinkle_twirl/\" />\n<area shape=\"rect\" coords=\"376,409,382,428\" alt=\"Twinkle Twirl\" title=\"Twinkle Twirl\" href=\"../mayan_fair_lady/twinkle_twirl/\" />"+
 "<area shape=\"rect\" coords=\"401,397,440,428\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"441,401,445,422\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"411,429,436,437\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"409,391,438,396\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"397,404,400,419\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />"+
 "<area shape=\"rect\" coords=\"473,359,496,436\" alt=\"Truly\" title=\"Truly\" href=\"../a_circus_line/truly/\" />\n<area shape=\"rect\" coords=\"497,365,503,428\" alt=\"Truly\" title=\"Truly\" href=\"../a_circus_line/truly/\" />\n<area shape=\"rect\" coords=\"459,367,472,430\" alt=\"Truly\" title=\"Truly\" href=\"../a_circus_line/truly/\" />\n<area shape=\"rect\" coords=\"445,376,458,421\" alt=\"Truly\" title=\"Truly\" href=\"../a_circus_line/truly/\" />\n<area shape=\"rect\" coords=\"504,374,514,419\" alt=\"Truly\" title=\"Truly\" href=\"../a_circus_line/truly/\" />"+
 "<area shape=\"rect\" coords=\"510,383,564,391\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"514,392,595,400\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"529,351,578,382\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"534,401,605,415\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"533,416,556,445\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />"+
 "<area shape=\"rect\" coords=\"341,86,363,154\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"364,90,384,150\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"385,62,434,108\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"285,80,330,114\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"331,96,340,138\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />"+
+"<area shape=\"rect\" coords=\"372,320,415,358\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"387,359,416,363\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"402,364,435,392\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"393,290,414,319\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"365,340,371,350\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />"+
 "<area shape=\"rect\" coords=\"377,224,446,239\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"386,240,438,245\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"372,212,442,223\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"349,196,438,211\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"386,246,414,282\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />"+
-"<area shape=\"rect\" coords=\"372,320,415,358\" alt=\"Lickety-Split\" title=\"Lickety-Split\" href=\"lickety_split/\" />\n<area shape=\"rect\" coords=\"387,359,416,363\" alt=\"Lickety-Split\" title=\"Lickety-Split\" href=\"lickety_split/\" />\n<area shape=\"rect\" coords=\"402,364,435,392\" alt=\"Lickety-Split\" title=\"Lickety-Split\" href=\"lickety_split/\" />\n<area shape=\"rect\" coords=\"393,290,414,319\" alt=\"Lickety-Split\" title=\"Lickety-Split\" href=\"lickety_split/\" />\n<area shape=\"rect\" coords=\"365,340,371,350\" alt=\"Lickety-Split\" title=\"Lickety-Split\" href=\"lickety_split/\" />"+
 "<area shape=\"rect\" coords=\"454,117,474,174\" alt=\"Mayor of Ponyville\" title=\"Mayor of Ponyville\" href=\"mayor_of_ponyville/\" />\n<area shape=\"rect\" coords=\"475,121,477,164\" alt=\"Mayor of Ponyville\" title=\"Mayor of Ponyville\" href=\"mayor_of_ponyville/\" />\n<area shape=\"rect\" coords=\"418,125,447,199\" alt=\"Mayor of Ponyville\" title=\"Mayor of Ponyville\" href=\"mayor_of_ponyville/\" />\n<area shape=\"rect\" coords=\"448,120,453,176\" alt=\"Mayor of Ponyville\" title=\"Mayor of Ponyville\" href=\"mayor_of_ponyville/\" />\n<area shape=\"rect\" coords=\"478,123,482,126\" alt=\"Mayor of Ponyville\" title=\"Mayor of Ponyville\" href=\"mayor_of_ponyville/\" />"+
 "<area shape=\"rect\" coords=\"458,249,466,338\" alt=\"North Star\" title=\"North Star\" href=\"north_star/\" />\n<area shape=\"rect\" coords=\"467,250,477,331\" alt=\"North Star\" title=\"North Star\" href=\"north_star/\" />\n<area shape=\"rect\" coords=\"487,279,528,325\" alt=\"North Star\" title=\"North Star\" href=\"north_star/\" />\n<area shape=\"rect\" coords=\"478,236,486,327\" alt=\"North Star\" title=\"North Star\" href=\"north_star/\" />\n<area shape=\"rect\" coords=\"453,267,457,301\" alt=\"North Star\" title=\"North Star\" href=\"north_star/\" />"+
 "<area shape=\"rect\" coords=\"526,65,531,127\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"532,62,546,141\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"495,77,525,122\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"547,72,557,143\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"558,108,569,136\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />"+
@@ -84,9 +84,9 @@ function puzzlelist() {
 "<table class=\"materials\">"+
 "<tr class=\"n\">"+
 "<td class=\"num\">1.</td>"+
-"<td><a href=\"../okla_holmes_a/starsong/\"><span class=\"okla_holmes_a "+
-(puzzle_solved["starsong"]?"solved":"unsolved")+
-"\"></span>Starsong</a></td>"+
+"<td><a href=\"../okla_holmes_a/crank_it_up_to_7/\"><span class=\"okla_holmes_a "+
+(puzzle_solved["crank_it_up_to_7"]?"solved":"unsolved")+
+"\"></span>Crank it Up To 7</a></td>"+
 "<td class=\"num\">6.</td>"+
 "<td><a href=\"../mayan_fair_lady/4_speed/\"><span class=\"mayan_fair_lady "+
 (puzzle_solved["4_speed"]?"solved":"unsolved")+
@@ -94,9 +94,9 @@ function puzzlelist() {
 "</tr>"+
 "<tr class=\"n\">"+
 "<td class=\"num\">2.</td>"+
-"<td><a href=\"../phantom_of_the_operator/flitter_flutter/\"><span class=\"phantom_of_the_operator "+
-(puzzle_solved["flitter_flutter"]?"solved":"unsolved")+
-"\"></span>Flitter Flutter</a></td>"+
+"<td><a href=\"../phantom_of_the_operator/course_7e/\"><span class=\"phantom_of_the_operator "+
+(puzzle_solved["course_7e"]?"solved":"unsolved")+
+"\"></span>Course 7E</a></td>"+
 "<td class=\"num\">7.</td>"+
 "<td><a href=\"../mayan_fair_lady/twinkle_twirl/\"><span class=\"mayan_fair_lady "+
 (puzzle_solved["twinkle_twirl"]?"solved":"unsolved")+
@@ -124,9 +124,9 @@ function puzzlelist() {
 "</tr>"+
 "<tr class=\"n\">"+
 "<td class=\"num\">5.</td>"+
-"<td><a href=\"../into_the_woodstock/puzzlemint/\"><span class=\"into_the_woodstock "+
-(puzzle_solved["puzzlemint"]?"solved":"unsolved")+
-"\"></span>Puzzlemint</a></td>"+
+"<td><a href=\"../into_the_woodstock/criss_cross/\"><span class=\"into_the_woodstock "+
+(puzzle_solved["criss_cross"]?"solved":"unsolved")+
+"\"></span>Criss-Cross</a></td>"+
 "<td class=\"num\">10.</td>"+
 "<td><a href=\"../into_the_woodstock/fulfilling_puzzle/\"><span class=\"into_the_woodstock "+
 (puzzle_solved["fulfilling_puzzle"]?"solved":"unsolved")+
@@ -144,16 +144,16 @@ function puzzlelist() {
 "</tr>"+
 "<tr>"+
 "<td class=\"sheila_sunshine "+
-(puzzle_solved["fiesta_flair"]?"solved":"unsolved")+
-"\"><a href=\"fiesta_flair/\"><span>Fiesta Flair</span></a></td>"+
+(puzzle_solved["disorder_of_operations"]?"solved":"unsolved")+
+"\"><a href=\"disorder_of_operations/\"><span>Disorder of Operations</span></a></td>"+
 "<td class=\"sheila_sunshine "+
 (puzzle_solved["pinkamena_diane_pinkie_pie"]?"solved":"unsolved")+
 "\"><a href=\"pinkamena_diane_pinkie_pie/\"><span>Pinkamena Diane &ldquo;Pinkie&rdquo; Pie</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"sheila_sunshine "+
-(puzzle_solved["lickety_split"]?"solved":"unsolved")+
-"\"><a href=\"lickety_split/\"><span>Lickety-Split</span></a></td>"+
+(puzzle_solved["fiesta_flair"]?"solved":"unsolved")+
+"\"><a href=\"fiesta_flair/\"><span>Fiesta Flair</span></a></td>"+
 "<td class=\"sheila_sunshine "+
 (puzzle_solved["razzaroo"]?"solved":"unsolved")+
 "\"><a href=\"razzaroo/\"><span>Razzaroo</span></a></td>"+

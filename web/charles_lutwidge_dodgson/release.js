@@ -7,9 +7,6 @@ function imagemap() {
 "<img src=\"1-"+
 (puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"2-"+
-(puzzle_solved["cheerilee"]?"solved":"unsolved")+
-".png\" />"+
 "<img src=\"freshman_physics/-"+
 (puzzle_solved["freshman_physics"]?"solved":"unsolved")+
 ".png\" />"+
@@ -18,6 +15,9 @@ function imagemap() {
 ".png\" />"+
 "<img src=\"medley/-"+
 (puzzle_solved["medley"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"2-"+
+(puzzle_solved["middle_see"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"odd_voided/-"+
 (puzzle_solved["odd_voided"]?"solved":"unsolved")+
@@ -42,10 +42,10 @@ function imagemap() {
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"400,340,452,480\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"400,481,411,486\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"453,389,517,463\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"407,325,435,339\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"393,450,399,484\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />"+
 "<area shape=\"rect\" coords=\"75,185,112,260\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"89,261,112,263\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"113,193,143,289\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"66,151,103,184\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"72,188,74,200\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />"+
-"<area shape=\"rect\" coords=\"486,199,509,307\" alt=\"Cheerilee\" title=\"Cheerilee\" href=\"../a_circus_line/cheerilee/\" />\n<area shape=\"rect\" coords=\"510,209,514,297\" alt=\"Cheerilee\" title=\"Cheerilee\" href=\"../a_circus_line/cheerilee/\" />\n<area shape=\"rect\" coords=\"518,231,621,289\" alt=\"Cheerilee\" title=\"Cheerilee\" href=\"../a_circus_line/cheerilee/\" />\n<area shape=\"rect\" coords=\"466,208,485,315\" alt=\"Cheerilee\" title=\"Cheerilee\" href=\"../a_circus_line/cheerilee/\" />\n<area shape=\"rect\" coords=\"515,242,517,293\" alt=\"Cheerilee\" title=\"Cheerilee\" href=\"../a_circus_line/cheerilee/\" />"+
 "<area shape=\"rect\" coords=\"186,466,200,493\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"207,466,300,493\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"218,420,305,465\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"196,509,272,539\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"183,494,284,508\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />"+
 "<area shape=\"rect\" coords=\"105,374,160,383\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"69,384,181,420\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"76,421,209,453\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"126,454,212,471\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"126,336,155,373\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />"+
 "<area shape=\"rect\" coords=\"530,285,563,390\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"548,391,561,394\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"514,288,529,385\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"474,322,513,380\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"564,337,572,387\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />"+
+"<area shape=\"rect\" coords=\"486,199,509,307\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"510,209,514,297\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"518,231,621,289\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"466,208,485,315\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"515,242,517,293\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />"+
 "<area shape=\"rect\" coords=\"193,178,265,185\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"186,186,267,254\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"172,255,259,315\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"268,186,276,230\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"239,161,255,177\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />"+
 "<area shape=\"rect\" coords=\"489,30,536,57\" alt=\"Sapphire Shores\" title=\"Sapphire Shores\" href=\"sapphire_shores/\" />\n<area shape=\"rect\" coords=\"489,58,554,96\" alt=\"Sapphire Shores\" title=\"Sapphire Shores\" href=\"sapphire_shores/\" />\n<area shape=\"rect\" coords=\"460,147,543,191\" alt=\"Sapphire Shores\" title=\"Sapphire Shores\" href=\"sapphire_shores/\" />\n<area shape=\"rect\" coords=\"470,114,558,146\" alt=\"Sapphire Shores\" title=\"Sapphire Shores\" href=\"sapphire_shores/\" />\n<area shape=\"rect\" coords=\"481,97,560,113\" alt=\"Sapphire Shores\" title=\"Sapphire Shores\" href=\"sapphire_shores/\" />"+
 "<area shape=\"rect\" coords=\"318,391,352,451\" alt=\"Shady\" title=\"Shady\" href=\"shady/\" />\n<area shape=\"rect\" coords=\"353,393,359,441\" alt=\"Shady\" title=\"Shady\" href=\"shady/\" />\n<area shape=\"rect\" coords=\"360,397,425,434\" alt=\"Shady\" title=\"Shady\" href=\"shady/\" />\n<area shape=\"rect\" coords=\"299,400,317,450\" alt=\"Shady\" title=\"Shady\" href=\"shady/\" />\n<area shape=\"rect\" coords=\"338,387,351,390\" alt=\"Shady\" title=\"Shady\" href=\"shady/\" />"+
@@ -75,33 +75,33 @@ function puzzlelist() {
 "\"><a href=\"sapphire_shores/\"><span>Sapphire Shores</span></a></td>"+
 "</tr>"+
 "<tr>"+
-"<td class=\"a_circus_line "+
-(puzzle_solved["cheerilee"]?"solved":"unsolved")+
-"\"><a href=\"../a_circus_line/cheerilee/\"><span>Cheerilee</span></a></td>"+
+"<td class=\"charles_lutwidge_dodgson "+
+(puzzle_solved["freshman_physics"]?"solved":"unsolved")+
+"\"><a href=\"freshman_physics/\"><span>Freshman Physics</span></a></td>"+
 "<td class=\"charles_lutwidge_dodgson "+
 (puzzle_solved["shady"]?"solved":"unsolved")+
 "\"><a href=\"shady/\"><span>Shady</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["freshman_physics"]?"solved":"unsolved")+
-"\"><a href=\"freshman_physics/\"><span>Freshman Physics</span></a></td>"+
+(puzzle_solved["gibberish_and_more_gibberish"]?"solved":"unsolved")+
+"\"><a href=\"gibberish_and_more_gibberish/\"><span>Gibberish and More Gibberish</span></a></td>"+
 "<td class=\"a_circus_line "+
 (puzzle_solved["skydancer"]?"solved":"unsolved")+
 "\"><a href=\"../a_circus_line/skydancer/\"><span>Skydancer</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["gibberish_and_more_gibberish"]?"solved":"unsolved")+
-"\"><a href=\"gibberish_and_more_gibberish/\"><span>Gibberish and More Gibberish</span></a></td>"+
+(puzzle_solved["medley"]?"solved":"unsolved")+
+"\"><a href=\"medley/\"><span>Medley</span></a></td>"+
 "<td class=\"charles_lutwidge_dodgson "+
 (puzzle_solved["toola_roola"]?"solved":"unsolved")+
 "\"><a href=\"toola_roola/\"><span>Toola-Roola</span></a></td>"+
 "</tr>"+
 "<tr>"+
-"<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["medley"]?"solved":"unsolved")+
-"\"><a href=\"medley/\"><span>Medley</span></a></td>"+
+"<td class=\"a_circus_line "+
+(puzzle_solved["middle_see"]?"solved":"unsolved")+
+"\"><a href=\"../a_circus_line/middle_see/\"><span>Middle-See</span></a></td>"+
 "<td class=\"okla_holmes_a "+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
 "\"><a href=\"../okla_holmes_a/winning_conditions/\"><span>Winning Conditions</span></a></td>"+

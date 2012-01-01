@@ -22,8 +22,8 @@ function imagemap() {
 "<img src=\"masquerade/-"+
 (puzzle_solved["masquerade"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"flitter_flutter/-"+
-(puzzle_solved["flitter_flutter"]?"solved":"unsolved")+
+"<img src=\"course_7e/-"+
+(puzzle_solved["course_7e"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"functions/-"+
 (puzzle_solved["functions"]?"solved":"unsolved")+
@@ -37,7 +37,7 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"439,351,472,379\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"439,380,464,384\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"447,346,471,350\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"449,338,463,345\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"432,352,438,361\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"princess_royal_blue/\" />"+
 "<area shape=\"rect\" coords=\"523,367,551,369\" alt=\"Scoops\" title=\"Scoops\" href=\"scoops/\" />\n<area shape=\"rect\" coords=\"505,370,558,378\" alt=\"Scoops\" title=\"Scoops\" href=\"scoops/\" />\n<area shape=\"rect\" coords=\"503,379,545,386\" alt=\"Scoops\" title=\"Scoops\" href=\"scoops/\" />\n<area shape=\"rect\" coords=\"500,387,537,393\" alt=\"Scoops\" title=\"Scoops\" href=\"scoops/\" />\n<area shape=\"rect\" coords=\"509,394,528,405\" alt=\"Scoops\" title=\"Scoops\" href=\"scoops/\" />\n<area shape=\"rect\" coords=\"506,408,519,416\" alt=\"Scoops\" title=\"Scoops\" href=\"scoops/\" />"+
 "<area shape=\"rect\" coords=\"568,405,593,419\" alt=\"Masquerade\" title=\"Masquerade\" href=\"masquerade/\" />\n<area shape=\"rect\" coords=\"564,420,593,452\" alt=\"Masquerade\" title=\"Masquerade\" href=\"masquerade/\" />\n<area shape=\"rect\" coords=\"594,408,602,441\" alt=\"Masquerade\" title=\"Masquerade\" href=\"masquerade/\" />\n<area shape=\"rect\" coords=\"569,394,585,404\" alt=\"Masquerade\" title=\"Masquerade\" href=\"masquerade/\" />\n<area shape=\"rect\" coords=\"558,421,563,429\" alt=\"Masquerade\" title=\"Masquerade\" href=\"masquerade/\" />"+
-"<area shape=\"rect\" coords=\"612,436,618,445\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"flitter_flutter/\" />\n<area shape=\"rect\" coords=\"619,427,637,457\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"flitter_flutter/\" />\n<area shape=\"rect\" coords=\"638,424,656,450\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"flitter_flutter/\" />\n<area shape=\"rect\" coords=\"657,421,668,446\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"flitter_flutter/\" />\n<area shape=\"rect\" coords=\"618,460,631,468\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"flitter_flutter/\" />\n<area shape=\"rect\" coords=\"669,420,680,434\" alt=\"Flitter Flutter\" title=\"Flitter Flutter\" href=\"flitter_flutter/\" />"+
+"<area shape=\"rect\" coords=\"612,436,618,445\" alt=\"Course 7E\" title=\"Course 7E\" href=\"course_7e/\" />\n<area shape=\"rect\" coords=\"619,427,637,457\" alt=\"Course 7E\" title=\"Course 7E\" href=\"course_7e/\" />\n<area shape=\"rect\" coords=\"638,424,656,450\" alt=\"Course 7E\" title=\"Course 7E\" href=\"course_7e/\" />\n<area shape=\"rect\" coords=\"657,421,668,446\" alt=\"Course 7E\" title=\"Course 7E\" href=\"course_7e/\" />\n<area shape=\"rect\" coords=\"618,460,631,468\" alt=\"Course 7E\" title=\"Course 7E\" href=\"course_7e/\" />\n<area shape=\"rect\" coords=\"669,420,680,434\" alt=\"Course 7E\" title=\"Course 7E\" href=\"course_7e/\" />"+
 "<area shape=\"rect\" coords=\"703,440,741,447\" alt=\"Functions\" title=\"Functions\" href=\"functions/\" />\n<area shape=\"rect\" coords=\"703,448,743,473\" alt=\"Functions\" title=\"Functions\" href=\"functions/\" />\n<area shape=\"rect\" coords=\"703,434,737,439\" alt=\"Functions\" title=\"Functions\" href=\"functions/\" />\n<area shape=\"rect\" coords=\"693,426,702,449\" alt=\"Functions\" title=\"Functions\" href=\"functions/\" />\n<area shape=\"rect\" coords=\"703,427,725,433\" alt=\"Functions\" title=\"Functions\" href=\"functions/\" />"+
 "</map>"+
 '';
@@ -70,9 +70,9 @@ function puzzlelist() {
 (puzzle_solved["set_theory"]?"solved":"unsolved")+
 "\">Set Theory</a></td>"+
 "<td class=\"num\">8.</td>"+
-"<td><a href=\"flitter_flutter/\" class=\""+
-(puzzle_solved["flitter_flutter"]?"solved":"unsolved")+
-"\">Flitter Flutter</a></td>"+
+"<td><a href=\"course_7e/\" class=\""+
+(puzzle_solved["course_7e"]?"solved":"unsolved")+
+"\">Course 7E</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">4.</td>"+
