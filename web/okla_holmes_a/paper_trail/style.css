@@ -1,0 +1,26 @@
+.note {
+  text-align: center;
+  font-weight: bold;
+}
+
+.clues th {
+  text-align: left;
+  padding-left: 3em;
+}
+.clues td {
+  vertical-align: top;
+  width: 45%;
+}
+.clues td:first-child {
+  padding-right: 10%;
+  width: 55%;
+}
+.clues ol { margin: 0; }
+.clues li { page-break-inside: avoid; }
+
+.clues .blank {
+  border-bottom: 1px solid black;
+  color: transparent;
+  position: relative;
+  bottom: 4px;
+}
