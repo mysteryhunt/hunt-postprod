@@ -1,7 +1,5 @@
-  body {
-  }
-  .padded-top {
-    padding-top: 20px;
+  .fp-marg-top {
+    margin-top: 20px;
   }
   .grid-div {
     padding: 30px 0 0 20px;

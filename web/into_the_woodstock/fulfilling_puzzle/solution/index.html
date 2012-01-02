@@ -2,60 +2,55 @@
 layout: into_the_woodstock_solution
 title: Fulfilling Puzzle
 class: puzzle solution
+style: style.css
 credits: by Kai Huang
 ---
 <p>
 The first step is to encode each string of letters using a common puzzle encoding such that it fits into a grid of one of the given sizes. You&rsquo;ll have to do a little bit of experimentation to see which combinations produce sensible grids, since all the strings are length 12. However, it should be pretty clear after getting a couple of correct grids that the results are supposed to draw letters (or parts of letters).
 </p>
+
 <p>
 The string PBKEJUJWRUCE is encoded into the 10 x 6 grid using binary.<br />
 </p>
-<pre>    P<font color="blue">B</font>    10000<font color="blue">00010</font>
-    <font color="blue">K</font>E    <font color="blue">01011</font>00101
-    J<font color="blue">U</font>    01010<font color="blue">10101</font>
-    <font color="blue">J</font>W    <font color="blue">01010</font>10111
-    R<font color="blue">U</font>    10010<font color="blue">10101</font>
-    <font color="blue">C</font>E    <font color="blue">00011</font>00101
+<pre>    P<span class="fp-blue">B</span>    10000<span class="fp-blue">00010</span>
+    <span class="fp-blue">K</span>E    <span class="fp-blue">01011</span>00101
+    J<span class="fp-blue">U</span>    01010<span class="fp-blue">10101</span>
+    <span class="fp-blue">J</span>W    <span class="fp-blue">01010</span>10111
+    R<span class="fp-blue">U</span>    10010<span class="fp-blue">10101</span>
+    <span class="fp-blue">C</span>E    <span class="fp-blue">00011</span>00101
 </pre>
-
 
 <p>
 The string PCAPASVXLXLE is encoded into the 12 x 6 grid using Braille.<br />
 </p>
-<pre>              **<font color="blue">**</font>*'<font color="blue">**</font>*'<font color="blue">'*</font>
-    P<font color="blue">C</font>A<font color="blue">P</font>A<font color="blue">S</font>    *'<font color="blue">''</font>''<font color="blue">*'</font>''<font color="blue">*'</font>
-              *'<font color="blue">''</font>''<font color="blue">*'</font>''<font color="blue">*'</font>
-              <font color="blue">*'</font>**<font color="blue">*'</font>**<font color="blue">*'</font>*'
-    <font color="blue">V</font>X<font color="blue">L</font>X<font color="blue">L</font>E    <font color="blue">*'</font>''<font color="blue">*'</font>''<font color="blue">*'</font>'*
-              <font color="blue">**</font>**<font color="blue">*'</font>**<font color="blue">*'</font>''
+<pre>              **<span class="fp-blue">**</span>*'<span class="fp-blue">**</span>*'<span class="fp-blue">'*</span>
+    P<span class="fp-blue">C</span>A<span class="fp-blue">P</span>A<span class="fp-blue">S</span>    *'<span class="fp-blue">''</span>''<span class="fp-blue">*'</span>''<span class="fp-blue">*'</span>
+              *'<span class="fp-blue">''</span>''<span class="fp-blue">*'</span>''<span class="fp-blue">*'</span>
+              <span class="fp-blue">*'</span>**<span class="fp-blue">*'</span>**<span class="fp-blue">*'</span>*'
+    <span class="fp-blue">V</span>X<span class="fp-blue">L</span>X<span class="fp-blue">L</span>E    <span class="fp-blue">*'</span>''<span class="fp-blue">*'</span>''<span class="fp-blue">*'</span>'*
+              <span class="fp-blue">**</span>**<span class="fp-blue">*'</span>**<span class="fp-blue">*'</span>''
 </pre>
-
-
 
 <p>
 The string RRTZXZXVTVRR is encoded into the 14 x 6 grid using ASCII.<br />
 </p>
-<pre>    
-    R<font color="blue">R</font>    1010010<font color="blue">1010010</font>
-    <font color="blue">T</font>Z    <font color="blue">1010100</font>1011010
-    X<font color="blue">Z</font>    1011000<font color="blue">1011010</font>
-    <font color="blue">X</font>V    <font color="blue">1011000</font>1010110
-    T<font color="blue">V</font>    1010100<font color="blue">1010110</font>
-    <font color="blue">R</font>R    <font color="blue">1010010</font>1010010
+<pre>    R<span class="fp-blue">R</span>    1010010<span class="fp-blue">1010010</span>
+    <span class="fp-blue">T</span>Z    <span class="fp-blue">1010100</span>1011010
+    X<span class="fp-blue">Z</span>    1011000<span class="fp-blue">1011010</span>
+    <span class="fp-blue">X</span>V    <span class="fp-blue">1011000</span>1010110
+    T<span class="fp-blue">V</span>    1010100<span class="fp-blue">1010110</span>
+    <span class="fp-blue">R</span>R    <span class="fp-blue">1010010</span>1010010
 </pre>
-
 
 <p>The string VGRQUQRBRYVW is encoded into the 7 x 6 grid using Morse code.<br />
 </p>
-
-<pre>    V<font color="blue">G</font>    ***-<font color="blue">--*</font>
-    <font color="blue">R</font>Q    <font color="blue">*-*</font>--*-
-    U<font color="blue">Q</font>    **-<font color="blue">--*-</font>
-    <font color="blue">R</font>B    <font color="blue">*-*</font>-***
-    R<font color="blue">Y</font>    *-*<font color="blue">-*--</font>
-    <font color="blue">V</font>W    <font color="blue">***-</font>*--
+<pre>    V<span class="fp-blue">G</span>    ***-<span class="fp-blue">--*</span>
+    <span class="fp-blue">R</span>Q    <span class="fp-blue">*-*</span>--*-
+    U<span class="fp-blue">Q</span>    **-<span class="fp-blue">--*-</span>
+    <span class="fp-blue">R</span>B    <span class="fp-blue">*-*</span>-***
+    R<span class="fp-blue">Y</span>    *-*<span class="fp-blue">-*--</span>
+    <span class="fp-blue">V</span>W    <span class="fp-blue">***-</span>*--
 </pre>
-
 
 <p>
 After encoding, the 4 resulting grids should be arranged side by side into a readable message. There are only 24 arrangements, and only one arrangement causes all the 1&rsquo;s and dots to draw letters, separated by single columns without 1&rsquo;s and dots. The correct arrangement is shown below (0&rsquo;s and dashes have been omitted for ease of reading).<br />
@@ -66,7 +61,7 @@ After encoding, the 4 resulting grids should be arranged side by side into a rea
     * * ***1 11   1 1 11 * *** *** *  1 1 1 111
     * * *  1 1 1  1 1 11 *   *   *  *1  1 1 1 1
     *** *  1 1  1 1 1  1 ***** ***      11  1 1
-    </pre>
+</pre>
 <p>   
 The answer <b>BAKING SODA</b> can be read off the image.
 </p>
