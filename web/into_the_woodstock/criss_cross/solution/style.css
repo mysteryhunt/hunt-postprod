@@ -1,0 +1,22 @@
+.cc-marg-top {
+  margin-top: 1em;
+}
+
+.cc-ul {
+  margin: 0;
+}
+
+#cc-sol-t {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#cc-sol-t th, #cc-sol-t td {
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 3px 6px;
+}
+
+#cc-sol-grid img {
+  border: 0;
+}
