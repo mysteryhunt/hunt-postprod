@@ -1,6 +1,7 @@
 p.RainbowConnection {
-    font-family: monospace;
-    font-size: 16px;
+}
+p.spacer {
+    padding-top: 1em;
 }
 .RCr {
     background-color: red;
