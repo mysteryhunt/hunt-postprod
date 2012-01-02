@@ -16,8 +16,8 @@ function imagemap() {
 "<img src=\"winning_conditions/-"+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"desert_rose/-"+
-(puzzle_solved["desert_rose"]?"solved":"unsolved")+
+"<img src=\"zugzwaang/-"+
+(puzzle_solved["zugzwaang"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"baby_sniffles/-"+
 (puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
@@ -29,7 +29,7 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"274,331,299,346\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"272,347,299,414\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"276,276,303,330\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"272,415,296,430\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"269,371,271,426\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"crank_it_up_to_7/\" />"+
 "<area shape=\"rect\" coords=\"341,347,372,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"347,427,360,430\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"342,292,376,346\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"344,260,378,291\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"338,373,340,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />"+
 "<area shape=\"rect\" coords=\"429,244,474,282\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"425,283,473,324\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,325,472,388\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,389,471,430\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"422,372,422,401\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />"+
-"<area shape=\"rect\" coords=\"520,234,583,293\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"518,294,582,317\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"515,343,578,428\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"516,318,580,342\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />\n<area shape=\"rect\" coords=\"542,429,554,430\" alt=\"Desert Rose\" title=\"Desert Rose\" href=\"desert_rose/\" />"+
+"<area shape=\"rect\" coords=\"520,234,583,293\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"518,294,582,317\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"515,343,578,428\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"516,318,580,342\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"542,429,554,430\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />"+
 "<area shape=\"rect\" coords=\"635,363,636,427\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"637,331,709,429\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"638,266,715,330\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"642,223,718,265\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"660,430,708,432\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />"+
 "</map>"+
 '';
@@ -52,9 +52,9 @@ function puzzlelist() {
 (puzzle_solved["granny_smith"]?"solved":"unsolved")+
 "\">Granny Smith</a></td>"+
 "<td class=\"num\">6.</td>"+
-"<td><a href=\"desert_rose/\" class=\""+
-(puzzle_solved["desert_rose"]?"solved":"unsolved")+
-"\">Desert Rose</a></td>"+
+"<td><a href=\"zugzwaang/\" class=\""+
+(puzzle_solved["zugzwaang"]?"solved":"unsolved")+
+"\">Zugzwaang</a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">3.</td>"+

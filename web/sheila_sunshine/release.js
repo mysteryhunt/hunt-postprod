@@ -8,7 +8,7 @@ function imagemap() {
 (puzzle_solved["course_7e"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"3-"+
-(puzzle_solved["pipsqueak"]?"solved":"unsolved")+
+(puzzle_solved["equal_billing"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"4-"+
 (puzzle_solved["princess_royal_blue"]?"solved":"unsolved")+
@@ -60,7 +60,7 @@ function imagemap() {
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"147,188,155,221\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"156,192,157,222\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"137,190,146,225\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"133,199,136,218\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"158,195,162,210\" alt=\"Crank it Up To 7\" title=\"Crank it Up To 7\" href=\"../okla_holmes_a/crank_it_up_to_7/\" />"+
 "<area shape=\"rect\" coords=\"120,249,167,262\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"124,263,168,271\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"135,272,164,287\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"127,241,163,248\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />\n<area shape=\"rect\" coords=\"127,232,146,240\" alt=\"Course 7E\" title=\"Course 7E\" href=\"../phantom_of_the_operator/course_7e/\" />"+
-"<area shape=\"rect\" coords=\"147,298,180,332\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"181,316,183,325\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"152,333,172,339\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"141,304,146,322\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />\n<area shape=\"rect\" coords=\"157,290,171,297\" alt=\"Pipsqueak\" title=\"Pipsqueak\" href=\"../into_the_woodstock/pipsqueak/\" />"+
+"<area shape=\"rect\" coords=\"147,298,180,332\" alt=\"Equal Billing\" title=\"Equal Billing\" href=\"../into_the_woodstock/equal_billing/\" />\n<area shape=\"rect\" coords=\"181,316,183,325\" alt=\"Equal Billing\" title=\"Equal Billing\" href=\"../into_the_woodstock/equal_billing/\" />\n<area shape=\"rect\" coords=\"152,333,172,339\" alt=\"Equal Billing\" title=\"Equal Billing\" href=\"../into_the_woodstock/equal_billing/\" />\n<area shape=\"rect\" coords=\"141,304,146,322\" alt=\"Equal Billing\" title=\"Equal Billing\" href=\"../into_the_woodstock/equal_billing/\" />\n<area shape=\"rect\" coords=\"157,290,171,297\" alt=\"Equal Billing\" title=\"Equal Billing\" href=\"../into_the_woodstock/equal_billing/\" />"+
 "<area shape=\"rect\" coords=\"187,337,196,340\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"173,341,203,353\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"173,361,206,372\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"169,354,208,360\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />\n<area shape=\"rect\" coords=\"182,373,196,379\" alt=\"Princess Royal Blue\" title=\"Princess Royal Blue\" href=\"../phantom_of_the_operator/princess_royal_blue/\" />"+
 "<area shape=\"rect\" coords=\"219,370,275,403\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"219,404,269,422\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"202,368,218,404\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"229,353,260,369\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />\n<area shape=\"rect\" coords=\"219,423,251,431\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"../into_the_woodstock/criss_cross/\" />"+
 "<area shape=\"rect\" coords=\"277,394,314,421\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"279,422,310,425\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"285,388,312,393\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"287,426,307,430\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />\n<area shape=\"rect\" coords=\"315,404,316,418\" alt=\"4-Speed\" title=\"4-Speed\" href=\"../mayan_fair_lady/4_speed/\" />"+
@@ -104,9 +104,9 @@ function puzzlelist() {
 "</tr>"+
 "<tr class=\"n\">"+
 "<td class=\"num\">3.</td>"+
-"<td><a href=\"../into_the_woodstock/pipsqueak/\"><span class=\"into_the_woodstock "+
-(puzzle_solved["pipsqueak"]?"solved":"unsolved")+
-"\"></span>Pipsqueak</a></td>"+
+"<td><a href=\"../into_the_woodstock/equal_billing/\"><span class=\"into_the_woodstock "+
+(puzzle_solved["equal_billing"]?"solved":"unsolved")+
+"\"></span>Equal Billing</a></td>"+
 "<td class=\"num\">8.</td>"+
 "<td><a href=\"../a_circus_line/revisiting_history/\"><span class=\"a_circus_line "+
 (puzzle_solved["revisiting_history"]?"solved":"unsolved")+
