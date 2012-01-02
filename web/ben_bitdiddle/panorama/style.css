@@ -1,0 +1,28 @@
+.pa-margin-top-sm {
+  margin-top: 1em;
+}
+
+.pa-margin-top-lg {
+  margin-top: 2em;
+}
+
+.panos-table tr td, .regs-table tr td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #AAF;
+}
+
+.panos-table tr td img, .regs-table tr td img {
+  border: none;
+  vertical-align: top;
+}
+
+.panos-table tr td {
+  width: 726px;  /* 716 + 10, where 716 is width of p3sm.jpg */
+  height: 220px;  /* 210 + 10 */
+}
+
+.regs-table tr td {
+  width: 242px;  /* 232 + 10 */
+  height: 242px;  /* 232 + 10 */
+}

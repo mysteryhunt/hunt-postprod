@@ -1,0 +1,31 @@
+.marg-top {
+  margin-top: 1em;
+}
+
+ul {
+  margin: 0;
+}
+
+#pano-t1, #pano-t2 {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#pano-t1 th, #pano-t1 td,
+#pano-t2 th, #pano-t2 td {
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 3px 6px;
+}
+
+/* Specific for table 2 column 2. */
+#pano-t2 th:first-child + th,
+#pano-t2 td:first-child + td {
+  text-align: center;
+}
+
+/* Specific for table 2 column 5. */
+#pano-t2 th:first-child + th + th + th + th,
+#pano-t2 td:first-child + td + td + td + td {
+  text-align: center;
+}
