@@ -1,0 +1,29 @@
+#dne-t1, #dne-t2 {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#dne-t1 th, #dne-t1 td,
+#dne-t2 th, #dne-t2 td {
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 3px 6px;
+}
+
+/* Specific for table 1 column 4. */
+#dne-t1 th:first-child + th + th + th,
+#dne-t1 td:first-child + td + td + td {
+  padding-left: 12px;
+}
+
+/* Specific for table 2 column 4. */
+#dne-t2 th:first-child + th + th + th,
+#dne-t2 td:first-child + td + td + td {
+  padding-left: 12px;
+}
+
+/* Specific for table 2 column 5. */
+#dne-t2 th:first-child + th + th + th + th,
+#dne-t2 td:first-child + td + td + td + td {
+  text-align: center;
+}
