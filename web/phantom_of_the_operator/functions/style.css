@@ -3,6 +3,7 @@
 .functions, .ffunc {
   font-family: 'Gentium Basic', Times New Roman; font-weight: 400;
 }
+.marg-top-lg { margin-top: 2em; }
 .functions .func, .ffunc { font-style: italic; margin: 0 .1em; }
 .functions .word { font-family: Inconsolata, monospace; }
 .functions .final { margin-top: 2em; text-indent: -1em; margin-left: 1em; }
