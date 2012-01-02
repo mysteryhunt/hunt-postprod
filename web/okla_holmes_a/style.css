@@ -14,7 +14,7 @@ body {
 }
 #background .screen {
   position: absolute;
-  left: 120px; right: 120px;
+  left: 110px; right: 110px;
   top: 0; bottom: 0;
   background: rgba(255,255,255,0.65);
 }
@@ -44,7 +44,7 @@ body {
 }
 
 #main {
-  padding: 10px 100px 60px 100px;
+  padding: 10px 110px 60px 110px;
   position: relative; /* put #main in z-order */
 }
 .index #main {
