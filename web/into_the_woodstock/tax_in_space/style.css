@@ -20,32 +20,28 @@ border-collapse:collapse;
 body {
     counter-reset: list1;
 }
-ol.letters li { 
+ol.letters li,
+ol.numbers li,
+ol.innerletters li {
     list-style: none;
+    text-indent: -1.4em;
+    margin-left:  1.4em;
 }
-ol.letters li::before { 
+ol.letters li::before {
     counter-increment:list1;
-    content: "(" counter(list1, lower-alpha) ")"; 
+    content: "(" counter(list1, lower-alpha) ") ";
     counter-reset: list2;
-}
-
-ol.numbers li {
-    list-style: none;
 }
 
 ol.numbers li::before {
     counter-increment:list2;
-    content: "(" counter(list2, decimal) ")"; 
+    content: "(" counter(list2, decimal) ") ";
     counter-reset: list3;
 }
 
-ol.innerletters li { 
-    list-style: none;
-}
-
-ol.innerletters li::before { 
+ol.innerletters li::before {
     counter-increment: list3;
-    content: "(" counter(list3, lower-alpha) ")"; 
+    content: "(" counter(list3, lower-alpha) ") ";
     counter-reset: list4;
 }
 
