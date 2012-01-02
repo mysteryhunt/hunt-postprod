@@ -1,0 +1,20 @@
+.pl-answer-table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.pl-answer-table th,
+.pl-answer-table td {
+  text-align: center;
+  padding: 3px;
+  border-top: 1px solid black;
+}
+
+.pl-answer-table th:first-child + th,
+.pl-answer-table td:first-child + td {
+  text-align: left;
+}
+.pl-answer-table th:first-child + th + th,
+.pl-answer-table td:first-child + td + td {
+  text-align: left;
+}

@@ -1,12 +1,13 @@
-  body {
-  }
-  .potline-div {
-    padding-top: 30px;
-  }
-  .potline-num {
-    font-weight: bold;
-  }
-  .potline-note {
-    font-size: small;
-    font-style: italic;
-  }
+.pl-instruction-div {
+  margin-top: 2em;
+}
+.potline-div {
+  margin-top: 2em;
+}
+.potline-num {
+  font-weight: bold;
+}
+.potline-note {
+  font-size: small;
+  font-style: italic;
+}
