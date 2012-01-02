@@ -1,3 +1,11 @@
+.fp-ol {
+  margin: 0;
+}
+
+.ol-marg-top {
+  margin-top: 1em;
+}
+
 #data { font-size: 14px; cell-spacing: 0; border-collapse: collapse; }
 #data td + td,
 #data th + th { border-left: 1px solid black; }
