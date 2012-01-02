@@ -1,0 +1,13 @@
+table.crank,
+table.crank2 {
+  border-collapse: collapse;
+  page-break-inside: avoid;
+}
+table.crank { border: none; }
+table.crank td { width: 116px; }
+table.crank2 td { width: 100px; }
+table.crank2 td { border: 1px solid black; }
+table.crank2 tr:first-child,
+table.crank2 tr:first-child + tr + tr + tr + tr {
+  border-bottom: 2px solid black;
+}
