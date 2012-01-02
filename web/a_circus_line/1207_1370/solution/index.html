@@ -1,0 +1,179 @@
+---
+layout: a_circus_line_solution
+title: 1207 1370
+class: puzzle solution
+credits: by C. Scott Ananian
+---
+<p>
+You should first realize that there are exactly as many numbers in the
+first paragraph of numbers as there are words in the first paragraph
+of words.  Googling a handful of words from the paragraph should turn
+up Lewis Carroll&rsquo;s &ldquo;Through the Looking Glass&rdquo;.  And indeed, the
+words in this book have been numbered, starting from the beginning.
+The words in the first paragraph describe the details of the rules
+used, as follows:
+</p>
+<p>
+IDENTIFYING THE BOOK:<br />
+L(1) = one<br />
+L(2) = thing<br />
+L(11) = nothing<br />
+[not much is needed, this book has major google juice]<br />
+</p>
+<p>
+ABBREVIATIONS ARE COUNTED AS ONE WORD:<br />
+L(19) = black<br />
+L(20) = kitten&rsquo;s  [not present in the puzzle text]<br />
+L(21) = fault<br />
+</p>
+<p>
+L(54) = it<br />
+L(55) = couldn&rsquo;t  [not present in the puzzle text]<br />
+L(56) = have<br />
+</p>
+<p>
+HYPHENATED COMPOUNDS ARE COUNTED AS ONE WORD:<br />
+L(164) = great<br />
+L(165) = arm-chair [not present in puzzle]<br />
+L(166) = half<br />
+<br />
+L(216) = the<br />
+L(217) = hearth-rug [not present in puzzle text]<br />
+L(218) = all<br />
+</p>
+<p>
+CHAPTER TITLES ARE IGNORED, ONLY BODY TEXT IS COUNTED:<br />
+L(3241) = natural<br />
+L(3242) = way.    [end of chapter 1] [not present in puzzle]<br />
+L(3243) = I       [start of chapter 2]<br />
+</p>
+<p>
+ITALICIZED TEXT IS COUNTED AS A NORMAL WORD:<br />
+L(4460) = Rose:<br />
+L(4461) = I       [italicized in original text, not present in puzzle]<br />
+L(4462) = should<br />
+</p>
+<p>
+Now that we&rsquo;re oriented, we can translate the title of the puzzle
+(&ldquo;Looking-glass words&rdquo;) and the remaining paragraphs of numbers,
+written with only words found in Through the Looking Glass:
+</p>
+<p>
+&ldquo;One.  What word number is the fourth it?  Find that many of of.
+That last of has an even number with a repeated five.
+Double that number, twice.&rdquo;
+</p>
+<p>
+The fourth instance of the word &ldquo;it&rdquo; is word 54.  The fifty-fourth
+instance of the word &ldquo;of&rdquo; is word 3558 (&ldquo;with a repeated five&rdquo;).
+Doubling this twice yields the number 14232.
+</p>
+<p>
+&ldquo;Two.  Sum the words of Jabberwocky.   (After the first eight, the sum should
+be the last helmet.)  Take from this sum the second pin, then
+divide by twenty.&rdquo;
+</p>
+<p>
+The Jabberwocky poem starts at word 2861 and runs through word 3026.
+Summing the first eight words gives
+   2861+2862+2863+2864+2865+2866+2867+2868 = 22916,
+and the last of ten occurrences of the word &ldquo;helmet&rdquo; in the text is
+word number 22916.  Summing the word numbers of the complete poem
+gives the number 488621.  The second of 3 instances of the word &ldquo;pin&rdquo;
+is word number 12821. Subtracting these gives 475800, which can be divided
+evenly by 20 to yield the number 23790.
+</p>
+<p>
+&ldquo;Three.  One less than the sixth square.&rdquo;
+</p>
+<p>
+The sixth occurrence of the word &ldquo;square&rdquo; is word 5908.  One less than
+this is 5907.
+</p>
+<p>
+&ldquo;Four. Start at word one, counting all the letters.  After the first white
+there should be thirty.  After the first knight there should be
+thirty nine hundred eighty-seven.  How many after the first thought?&rdquo;
+</p>
+<p>
+Counting all the letters in all the words up to and including the
+first occurrence of the word &ldquo;thought&rdquo; (word 1657) yields the number
+6653.
+</p>
+<p>
+&ldquo;Five. Count how many people.  Count how many oysters.  Count how many
+ideas.  (Sum is twenty five.) People times people times oysters times ideas is?&rdquo;
+</p>
+<p>
+There are 13 occurrences of the word &ldquo;people&rdquo;.  There are ten
+occurrences of the word &ldquo;oysters&rdquo;.  There are two occurrences of
+the word &ldquo;ideas&rdquo;.  13+10+2 = 25.  13*13*10*2 = 3380.
+</p>
+<p>
+&ldquo;Six.  First pretty is a number which nothing divides but itself and one.
+First said is another such number.  First pretty times first said is?&rdquo;
+</p>
+<p>
+The first occurrence of the word &ldquo;pretty&rdquo; is word 47, a prime.
+The first occurrence of the word &ldquo;said&rdquo; is word 109, another prime.
+47*109 = 5123.
+</p>
+<p>
+&ldquo;Seven.  Begin before first word and mark each &ldquo;a&rdquo;, &ldquo;e&rdquo;, &ldquo;i&rdquo;, &ldquo;o&rdquo;, and the
+letter that sounds like you.  Move past alice seven times.
+You have marked one three three six letters.  Move past alice
+ninety more times. How many letters have you marked?  That is one too many.&rdquo;
+</p>
+<p>
+Counting all the vowels (not including &ldquo;y&rdquo;) in all the words up to and
+including the ninety-seventh occurrence of the word &ldquo;alice&rdquo; (word
+7470) yields 11502 vowels.  This is &ldquo;one too many&rdquo;, so the desired
+number is 11501.
+</p>
+<p>
+Now we&rsquo;ve got the sequence 14232 23790 5907 6653 3380 5123 11501.  The initial
+paragraph included a few words nearby these word numbers, to orient you if
+you&rsquo;ve got a slightly corrupted text:
+</p>
+<p>
+L(14223) = of
+L(23766) = the
+L(5936) = and
+L(6658) = a
+L(3337) = the
+L(5137) = a
+L(11481) = the
+</p>
+<p>
+The answer clue phrase is found by converting the answers to the questions
+(14232 23790 5907 6653 3380 5123 11501) from looking-glass numbers back to words:
+</p>
+<p>
+L(14232) = TANGLED
+L(23790) = TALE
+L( 5907) = SEVENTH
+L( 6653) = WORD
+L( 3380) = BEFORE
+L( 5123) = SECOND
+L(11501) = OPPORTUNITY
+</p>
+<p>
+&ldquo;Tangled Tale&rdquo; is the name of a short book of puzzles by Lewis Carroll.
+The word &ldquo;opportunity&rdquo; appears three times in the book; the second
+time is in this paragraph:
+</p>
+<p>
+ &ldquo;Ninety-seven answers have been received. Of these, 15 are beyond the
+ reach of discussion, as they give no working. I can but enumerate
+ their names, and I take this opportunity of saying that this is the
+ last time I shall put on record the names of competitors who give
+ no sort of clue to the process by which their answers were
+ obtained. In guessing a conundrum, or in catching a flea, we do not
+ expect the breathless victor to give us afterwards, in cold blood, a
+ history of the mental or muscular efforts by which he achieved
+ success; but a mathematical calculation is another thing.&rdquo;
+</p>
+<p>
+The seventh word before &ldquo;opportunity&rdquo; is <b>ENUMERATE</b>, the answer to this
+puzzle.
+</p>
