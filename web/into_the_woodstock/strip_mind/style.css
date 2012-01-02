@@ -6,6 +6,7 @@ td.clues:first-child {
   padding-right: 10%;
   width: 55%;
 }
+.clues li { page-break-inside: avoid; }
 
 .clues .blank {
   border-bottom: 1px solid black;
