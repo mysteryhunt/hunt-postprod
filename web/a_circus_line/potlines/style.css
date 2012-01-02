@@ -3,11 +3,21 @@
 }
 .potline-div {
   margin-top: 2em;
+  page-break-inside: avoid;
 }
 .potline-num {
   font-weight: bold;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+.potline-div img {
+  page-break-before: avoid;
 }
 .potline-note {
   font-size: small;
   font-style: italic;
+  page-break-before: avoid;
 }
+
+/* grumble, manually set pagebreaks because chrome ignores page-break-inside */
+.potline-div.pb { page-break-before: always; }
