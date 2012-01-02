@@ -4,6 +4,7 @@
 
 .ol-marg-top {
   margin-top: 1em;
+  margin-bottom: 0;
 }
 
 #data { font-size: 14px; cell-spacing: 0; border-collapse: collapse; }
