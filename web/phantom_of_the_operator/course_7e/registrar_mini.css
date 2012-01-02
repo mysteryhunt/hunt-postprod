@@ -1,0 +1,133 @@
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px; 
+  line-height: 15px;
+  color: #333333;
+  margin: 0px;
+  padding: 0px;
+  background-image: url(background.gif);
+  background-repeat: repeat-y;
+  background-color: #fff;
+  background-position: center top;
+  text-align: center; /* IE bug fix */
+}
+
+/* UNIVERSAL LINK STYLES */
+
+a {text-decoration: none; }
+a:link {color: #006699; }
+a:visited {color: #006699; }
+a:hover {color: #b12b28; text-decoration: underline; }
+a:active {color: #006699; }
+/* MAIN CONTENT STYLES */
+
+#contentleft
+{ width: 770px; margin: 0px auto; text-align: left;
+  background-position: left top; 
+}
+
+#contentmini
+{ width: 750px; margin: 0px auto;
+  text-align: center;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  padding: 5px;
+  background-color: #fff; 
+}
+/* REGISTRAR CONTAINER CONTENT STYLES */
+
+#registrarheadercontainer
+{ background-color: #e4e4e4;
+ height: 70px;
+ border-bottom: 4px solid #993333;
+ margin: 0px 0px 12px 0px; }
+
+#registrarmininav
+{ width: 755px;
+ height: 54px;
+ margin: 0px auto;
+ padding: 6px 16px 10px 0px;
+ text-align: right;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ line-height: 15px;
+ color: #333333;
+ background-color: #fff; }
+
+#registrarmininav input.searchfield
+{ border: 1px solid #e4e4e4; padding: 2px;
+ height: 16px;
+ width: 115px;
+ font-size: 10px;
+ color: #333; }
+/* REGISTRAR LINK STYLES */
+
+#registrarheadercontainer a
+{ text-decoration: none; }
+
+#registrarheadercontainer a:link
+{ color: #006699; }
+
+#registrarheadercontainer a:visited
+{ color: #006699; }
+
+#registrarheadercontainer a:hover
+{ color: #b12b28;
+ text-decoration: underline; }
+
+#registrarheadercontainer a:active
+{ color: #006699; }
+
+/* FOOTER */
+
+#footer { clear: both; width: 770px; 
+ margin: 24px auto; text-align: left; }
+
+#footer td { padding: 12px 12px 0px 0px; 
+ color: #666666; font-size: 11px; 
+ vertical-align: top; }
+
+img.registrarlogo
+{ float: left;
+ margin: 6px 0px 13px -1px; }
+h1 { margin: 0px 0px 8px 0px; padding: 0px; 
+  font-size: 18px; line-height: 21px; 
+  font-weight: bold; color: #b12b28; }
+
+h1.nomargin { margin: 0px; padding: 0px; 
+  font-size: 18px; line-height: 21px; 
+  font-weight: bold; color: #b12b28; }
+
+h2 { margin: 18px 0px 0px 0px; padding: 3px; 
+  font-size: 16px; line-height: 21px;
+  font-weight: bold; color: #b12b28; }
+
+h2.introduction { 
+ font-family: 'Arial Narrow', sans-serif; 
+ font-size: 24px; line-height: 26px; 
+ font-weight: normal; color:#434343; 
+ margin: 0px 0px 12px 0px; }
+
+h3 { margin: 0px; padding: 0px; 
+ font-size: 14px; line-height: 17px; 
+ font-weight: bold; color: #333333; }
+
+h4 { margin: 0px; padding: 0px; 
+ font-size: 11px; line-height: 17px; 
+ font-weight: normal; 
+ font-style: italic; color: #333333; }
+
+ul { margin: 0px 12px 4px 24px; padding: 0px; }
+ol { margin: 0px 12px 4px 24px; padding: 0px; }
+li {font-size: 12px; }
+
+form { margin: 0px; padding: 0px; }
+
+.tablestandard th { font-size: 12px; 
+ background-color:#993333; color: #fff; 
+ text-align: left; vertical-align: top; 
+ padding: 3px; }
+
+.tablestandard td { font-size: 12px; 
+ text-align: left; vertical-align: top; 
+ padding: 3px; border-top: 1px solid #e4e4e4; }
