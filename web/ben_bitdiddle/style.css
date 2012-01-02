@@ -41,7 +41,7 @@ body.puzzle #main h1 {
   padding-left: 90px;
   min-height: 85px;
   padding-top: 18px;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
   margin-left: -10px;
 }
 @media print {
