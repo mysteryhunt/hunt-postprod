@@ -5,94 +5,189 @@ class: puzzle solution
 credits: by Paul Jeray
 ---
 <p>
-This is a set of three Arimaa puzzles, each using a different one of the three Arimaa victory conditions.  In each, the solution involves recognizing that your opponent is obliged to make a move on his turn, even if he has only bad options.  This idea occurs in other board games (notably chess), it is called &ldquo;Zugzwang&rdquo;.
+This is a set of three Arimaa puzzles, each using a different one of
+the three Arimaa victory conditions.  In each, the solution involves
+recognizing that your opponent is obliged to make a move on his turn,
+even if he has only bad options.  This idea occurs in other board
+games (notably chess); it is called &ldquo;Zugzwang&rdquo;. 
+</p>
+
+<p>
+Arimaa is a strategy game played on the same board and with the same
+pieces as chess.  (Arimaa specific sets now exist, but it was
+originally designed for a chessboard.)  The rules can be found at <a href="http://arimaa.com/arimaa/">arimaa.com</a>.
+White chess pieces represent the gold side, and black pieces represent
+the silver side.
+</p>
+
+<p>
+In these photographs, I have substituted chess pieces for Arimaa
+pieces. (These substitutions are listed in the official rules.)
+The pieces from strongest to weakest are:</p>
+
+<ul>
+<li>Elephant, represented by a king
+<li>caMel, represented by a queen
+<li>Horse, represented by a rook
+<li>Dog, represented by a bishop
+<li>Cat, represented by a knight
+<li>Rabbit, represented by a pawn
+</ul>
+
+<p>
+In Arimaa, each player&rsquo;s turn consists of up to 4 steps.  Note
+especially this rule:</p>
+
+<blockquote>&ldquo;A player may pass some of the steps, but may not
+pass the whole turn or make a move equivalent to passing the whole
+turn.&rdquo;</blockquote>
+
+<p>This allows for board positions where one player can be forced to
+lose the game, and also for puzzle statements such as &ldquo;to play
+and win in 0.75 (moves)&rdquo;.</p>
+
+<p>
+Note also the three types of win conditions: rabbit making goal,
+unable to move because all pieces are frozen, and losing all rabbits.
+All three will be used here.</p>
+
+<h3>Puzzle 1</h3>
+<p>
+On the first board, gold has two rabbits close to goal: one on e6 and
+the other on h7.  He cannot quite get either of them to goal on his
+own.
 </p>
 <p>
-Arimaa is a strategy game played on the same board and with the same pieces as chess.  (Arimaa specific sets now exist, but it was originally designed for a chessboard.)  The rules can be found on this pagehttp://arimaa.com/arimaa/
-White chess pieces represent the Gold side, and black pieces represent the Silver side.
+Considering first the rabbit on e6:</p>
+<ul>
+<li>Heading north, north requires 3 steps to get his own pieces out of the way for a total of 5 steps
+<li>Heading west, north, north would require two additional steps for the gold cat to pull the silver rabbit out of the way, for a total of 5 steps.
+<li>Heading west, west, (north, north) drops the rabbit into the unguarded trap.
+</ul>
+
+<p>
+The rabbit on h7 is immobilized by the silver elephant and cat.  It
+could be unimmobilized by support from h8, but then could not advance.
+It could not be unimmobilzed from g7 because the silver elephant
+cannot be dislodged.  The only way for gold to advance it on his own
+would be to get a piece to h6.  This cannot be done this turn because
+the gold dog is immobilized by the silver elephant, and it would take
+too many moves to circumvent this.  Probably the easiest way is Hg4e,
+Rh5w, ch6s, Dg6e, Rh7n, which would use 5 steps.
 </p>
 <p>
-In these photographs, I have used these substitutions for Arimaa -&gt; Chess (which are also listed in the official rules)
-The pieces from Strongest to Weakest are: <br />
-Elephant - Represented by a king <br />
-caMel - Represented by a queen <br />
-Horse - Represented by a rook <br />
-Dog - Represented by a bishop <br />
-Cat - Represented by a knight <br />
-Rabbit - Represented by a pawn <br />
+Although gold cannot advance his own rabbits to goal this turn, he can
+arrange to force silver to push gold&rsquo;s rabbit to goal for him.
+In the starting position, none of silver&rsquo;s pieces except his
+elephant can move, as most are immobilized and the f6 and f7 rabbits
+have no square to move to.  (Rabbits cannot move backwards.)
+Silver&rsquo;s elephant could move to g8, push the g6 cat, or push the
+h7 rabbit to goal.  The g8 square can be blocked by the gold elephant,
+and the push square for the cat can be blocked by the gold horse.</p>
+<p>So to force silver to goal his rabbit, gold may play as follows (in some
+order):
+</p>
+<ul>
+<li>Gold: Elephant (e8) east to f8.  Elephant (f8) east to g8. Horse
+  (g4) north to g5. (Can end turn)
+<li>Silver: Push gold rabbit (h7) north to h8.  Elephant (g7) east to h7.
+</ul>
+<p>
+Henceforth, this will be writen as Ee8e (to f8), Ef8e (to g8), Hg4n
+(to g5) etc.  Uppercase are gold pieces, lowercase are silver.
 </p>
 <p>
-In arimaa, each player&rsquo;s turn consists of up to 4 steps.  Note especially the rule &ldquo;A player may pass some of the steps, but may not pass the whole turn or make a move equivalent to passing the whole turn.&rdquo; This allows for board positions where one players can be forced to lose the game, and also for puzzle statements such as &ldquo;to play and win in 0.75 (moves)&rdquo;.
+Even though silver has already advanced the gold rabbit to goal, he
+has only used two steps.  There are several things that silver can do
+with his remaining two steps.  None of these will prevent him from
+losing, but they needed to be accounted for to ensure uniqueness of
+extraction:</p>
+<ul>
+<li>Rh5s (to h4) ch6s (to h5)
+<li>rf7e (to g7) rf7w (to f7)
+<li>rf7e (to g7)
+<li>eh7w (to g7)
+<li>eh7w (to g7) eg7e (to h7)
+</ul>
+
+<p>Note that trying to pull the rabbit back off the goal square with
+eh7w rh8s is illegal, as it leads to the same state as the start of
+the turn, and is considered equivalent to not moving.
 </p>
+
 <p>
-Note also the three types of win conditions: Rabbit making goal, unable to move because all pieces are frozen, and losing all rabbits.  All three will be used here.
+The first four options should all be irrelevant to the puzzle answer.
+On the instruction grid, f7 and g7 are both &ldquo;Do nothing&rdquo;
+squares, while h5 undoes h4.  The fifth adds an additional copy of an
+F.
 </p>
+
 <p>
-Puzzle 1:<br />
-On the first board, gold has two rabbits close to goal: one on e6 and the other on h7.  He cannot quite get either of them to goal on his own.
+Following the instruction board, this spells - NUACF, NAUCF, or ANUCF
+(depending on the order used).
 </p>
+
+<h3>Puzzle 2</h3>
 <p>
-Considering first the rabbit on e6: <br />
-Heading north, north requires 3 steps to get his own pieces out of the way for a total of 5 steps
-Heading west, north, north would require two additional steps for the gold cat to pull the silver rabbit out of the way, for a total of 5 steps. Heading west, west, (north, north) drops the rabbit into the unguarded trap. 
+It should be fairly clear that silver will require more than 4 steps
+to goal either rabbit.  The c5 rabbit is four ranks away and blocked
+by a trap and would have to pass the gold dog on d2.  The e4 rabbit
+has a horse in his way.</p>
+
+<p>But gold only has one rabbit left, so if silver captures that he
+wins.  That rabbit&rsquo;s trap is guarded by the elephant and horse.
+The elephant can not be pushed or pulled, so silver must move the
+horse and force gold to move his elephant by eliminating all other
+possible (horse and rabbit) moves.  The horse will have to be moved to
+e4, because if it were pushed or pulled to d3 or e2 then gold could
+move his dog on his turn.  And e3 and f4 must be occupied to prevent
+the rabbit from moving.  There is a unique way to do this:
 </p>
-<p>
-The rabbit on h7 is immobilized by the silver elephant and cat.  It could be unimmobilized by support from h8, but then could not advance.  It could not be unimmobilzed from g7 because the silver elephant cannot be dislodged.  The only way for gold to advance it on his own would be to get a piece to h6.  This cannot be done this turn because the gold dog is immobilized by the silver elephant, and it would take too many moves to circumvent this.  Probably the easiest way is Hg4e, Rh5w, ch6s, Dg6e, Rh7n, which would use 5 steps.
-</p>
-<p>
-Although gold cannot advance his own rabbits to goal this turn, he can arrange to force Silver to push Gold&rsquo;s rabbit to goal for him.  In the starting position, all of silver&rsquo;s pieces but his elephant cannot move, as most are immobilized and the f6 and f7 rabbits have no square to move to.  (Rabbits cannot move backwards.)  Silver&rsquo;s elephant could move to g8, push the g6 cat, or push the h7 rabbit to goal.  g8 can be blocked by the gold elephant, and the push square for the cat can be blocked by the gold horse.  So to force Silver to goal his rabbit, Gold may play as follows (in some order).
-</p>
-<p>
-Gold: Elephant(e8)east to f8.  Elephant(f8)east to g8. Horse(g4)north to g5. (can end turn)<br />
-Silver: Push gold Rabbit(h7)north to h8, elephant(g7)east to h7.
-</p>
-<p>
-Henceforth, this will be writen as Ee8e (to f8), Ef8e (to g8), Hg4n (to g5) etc.  Uppercase are gold pieces, lowercase are silver.
-</p>
-<p>
-Even though Silver has already advanced the gold rabbit to goal, he has only used two steps.  There are several things that Silver can do with his remaining two steps.  None of these will prevent him from losing, but they needed to be accounted for to insure uniqueness of extraction:<br />
-Rh5s (to h4) ch6s (to h5)<br />
-rf7e (to g7) rf7w (to f7)<br />
-rf7e (to g7)<br />
-eh7w (to g7)<br />
-eh7w (to g7) eg7e (to h7)<br />
-Note that trying to pull the rabbit back off the goal square with eh7w rh8s is illegal, as it leads to the same state as the start of the turn, and is considered equivalent to not moving.
-</p>
-<p>
-The first four options should all be irrelevant to the puzzle answer.  On the instruction grid, f7 and g7 are both &ldquo;Do nothing&rdquo; squares, while h5 undoes h4.  The fifth adds an additional copy of an F.
-</p>
-<p>
-Following the instruction board, this spells - NUACF, NAUCF, or ANUCF (depending on the order used).
-</p>
-<p>
-Puzzle 2:<br />
-It should be fairly clear that silver will require more than 4 steps to goal either rabbit.  The c5 rabbit is four ranks away and blocked by a trap and would have to pass the gold dog on d2.  The e4 rabbit has a horse in his way.  
-But Gold only has one rabbit left, so if silver captures that he wins.  That rabbit&rsquo;s trap is guarded by the elephant and horse.  The elephant can not be pushed or pulled, so silver must move the horse and force gold to move his elephant be eliminating all other possible (horse and rabbit) moves.  The horse will have to be moved to e4, because if it were pushed or pulled to d3 or e2 then gold could move his dog on his turn.  And e3 and f4 must be occupied to prevent the rabbit from moving.  There is a unique way to do this:
-</p>
-<p>
-Silver: re4e (to f4), md4s (to d3), He3n (to e4), md3e (to e3)
-Gold: E anywhere (to a &ldquo;Ignore Further Moves this Turn&rdquo; square). This captures his own last rabbit.  What he does with his remaining three steps is irrelevant.
-</p>
+<ul>
+<li>Silver: re4e (to f4), md4s (to d3), He3n (to e4), md3e (to e3)
+<li>Gold: E anywhere (to a &ldquo;Ignore Further Moves this
+  Turn&rdquo; square). This captures his own last rabbit.  What he
+  does with his remaining three steps is irrelevant.
+</ul>
 <p>
 Using the instruction board this spells NUCFFEO.
 </p>
+
+<h3>Puzzle 3</h3>
 <p>
-Puzzle 3:<br />
-Gold here is at least 6 steps short of goaling his rabbit, and not particularly close to capturing all of silver&rsquo;s rabbits.  He faces a threat of immediately losing to r(b4)wsss, and a lesser threat of losing his last rabbit.  He would like to win by immobilization, but silver currently has three unimmobilized pieces: the rabbit at b4, the cat at 2, and the horse at g6.  He can&rsquo;t immobilize all three, but if he immobilizes the first two, the third will fling itself into the f6 trap on his own.
+Gold here is at least 6 steps short of goaling his rabbit, and not
+particularly close to capturing all of silver&rsquo;s rabbits.  He
+faces a threat of immediately losing to r(b4)wsss, and a lesser threat
+of losing his last rabbit.  He would like to win by immobilization,
+but silver currently has three unimmobilized pieces: the rabbit at b4,
+the cat at 2, and the horse at g6.  He can&rsquo;t immobilize all
+three, but if he immobilizes the first two, the third will fling
+itself into the f6 trap on its own.
 </p>
+
+<ul>
+<li>Gold: Df4w (to e4), De4s (to e3), Cd3w (to c3), Cc3n (to c4)
+<li>Silver: hg6wx (into the f6 trap). No further steps possible.
+</ul>
+
 <p>
-Gold: Df4w (to e4), De4s (to e3), Cd3w (to c3), Cc3n (to c4)<br />
-Silver: hg6wx (into the f6 trap) - No further steps possible.
+This order by gold is forced:  The dog must make his steps before the
+cat, as the cat is immobilized by the silver dog until the gold dog
+arrives.  The dog cannot move south before west, because he would fall
+into the unguarded trap.
 </p>
+
 <p>
-This order by Gold is forced:  The dog must make his steps before the cat, as the cat is immobilized by the silver dog until the gold dog arrives.  The dog cannot move south before west, because he would fall into the unguarded trap.  
+However, this does not end the game, because there is nothing against
+immobilizing yourself in the rules.  Only immobilizing your opponent
+is victory.  So gold needs a waiting move, and only has one piece
+available that can do it in a single step.
 </p>
-<p>
-However, this does not end the game, because there is nothing against immobilizing yourself in the rules.  Only immobilizing your opponent is victory.  So Gold needs a waiting move, and only has one piece available that can do it in a single step.
-</p>
-<p>
-Gold: ch5s (to h4)
-</p>
+
+<ul>
+<li>Gold: ch5s (to h4)
+</ul>
+
 <p>
 Using the instruction board this spells <b>BUFFOON</b>, which is the final answer.
 </p>
