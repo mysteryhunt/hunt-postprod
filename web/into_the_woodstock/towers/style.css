@@ -1,0 +1,12 @@
+h1.ptitle > span {
+  display: block;
+  position: absolute;
+  background: url('1.png') no-repeat;
+  top: 0; left: 70px;
+  width: 224px; height: 187px;
+}
+h1.ptitle {
+  color: transparent;
+  height: 238px;
+  background-position-y: 128px;
+}
