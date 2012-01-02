@@ -484,7 +484,9 @@ voidElements = frozenset((
     "col",
     "input",
     "source",
-    "track"
+    "track",
+    "keygen",
+    "wbr"
 ))
 
 cdataElements = frozenset(('title', 'textarea'))
