@@ -1,0 +1,31 @@
+ul, ol {
+  margin: 0;
+}
+
+.doo-marg-top {
+  margin-top: 1em;
+}
+.doo-marg-top-sm {
+  margin-top: 0.5em;
+}
+
+.doo-str {
+  font-family: Inconsolata, monospace; 
+}
+
+#doo-t {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#doo-t th, #doo-t td {
+  text-align: center;
+  border-top: 1px solid black;
+  padding: 3px 6px;
+}
+
+/* Specific for table column 1. */
+#doo-t th:first-child,
+#doo-t td:first-child {
+  text-align: left;
+}
