@@ -63,6 +63,9 @@ HR		\<hr{ATTRIBUTES}?>
 
 %x pre
 %x tt
+%x code
+%x samp
+%x kbd
 %x comment
 %x script
 
@@ -97,6 +100,9 @@ HR		\<hr{ATTRIBUTES}?>
 
 \<pre{ATTRIBUTES}?\>	{out(yytext); BEGIN(pre); }
 \<tt{ATTRIBUTES}?\>	{out(yytext); BEGIN(tt); }
+\<code{ATTRIBUTES}?\>	{out(yytext); BEGIN(code); }
+\<kbd{ATTRIBUTES}?\>	{out(yytext); BEGIN(kbd); }
+\<samp{ATTRIBUTES}?\>	{out(yytext); BEGIN(samp); }
 \<script{ATTRIBUTES}?\>	{out(yytext); BEGIN(script); }
 \<\!\-\-	{out(yytext); BEGIN(comment); }
 
@@ -113,6 +119,15 @@ HR		\<hr{ATTRIBUTES}?>
 
 <tt>\<\/tt{ATTRIBUTES}?\>	{ out(yytext); BEGIN(INITIAL); }
 <tt>.		{ out(yytext); }
+
+<code>\<\/code{ATTRIBUTES}?\>	{ out(yytext); BEGIN(INITIAL); }
+<code>.		{ out(yytext); }
+
+<kbd>\<\/kbd{ATTRIBUTES}?\>	{ out(yytext); BEGIN(INITIAL); }
+<kbd>.		{ out(yytext); }
+
+<samp>\<\/samp{ATTRIBUTES}?\>	{ out(yytext); BEGIN(INITIAL); }
+<samp>.		{ out(yytext); }
 
 <script>\<\/script{ATTRIBUTES}?\>	{ out(yytext); BEGIN(INITIAL); }
 <script>.		{ out(yytext); }
