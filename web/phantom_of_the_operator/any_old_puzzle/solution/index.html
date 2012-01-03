@@ -1,0 +1,33 @@
+---
+layout: phantom_of_the_operator_solution
+title: Any Old Puzzle
+class: puzzle solution
+credits: by Andrew Lin; original concept by Seth Schoen
+---
+<p>Each clue resolves to a word containing only the letters A, N, and Y.  (The clue &ldquo;cat&rdquo; reveals the hidden <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4">theme</a> of this puzzle, and the reason for the otherwise arbitrary use of Pop-Tart flavors for reference strings.)  From the first group of indexes you can infer how strings are converted to numbers: you list all of the possible strings formed from these letters, sorted first by length and then alphabetically, and take the index in the list.  So:</p>
+
+<p>A = 1<br />
+N = 2<br />
+Y = 3<br />
+AA = 4<br />
+AN = 5<br />
+...</p>
+
+<p>Doing the math and indexing reveals the answer, <b>FIRESTONE</b>.  In detail:</p>
+
+<pre>A RASPBERRY (N = 2)
+N CINNAMONROLL (AA = 4)
+S SMORES (A = 1)
+W STRAWBERRY (AN = 5)
+E CHERRY (Y = 3)
+R BLUEBERRY (NA = 7)
+F MINICRISPSFROSTEDCHOCOLATE (NAY - AAA = 24 - 13 = 11)
+I WILDLICIOUSWILDGRAPE (YAY - AYN = 33 - 20 = 13)
+R BROWNSUGARCINNAMONUNFROSTED (YAYA / YA = 100 / 10 = 10)
+E LIMITEDEDITIONGINGERBREAD ([AYANA + AY] / NAN = [178 + 6] / 23 = 8)
+S MINICRISPSFROSTEDSTRAWBERRY (NYAN - NAAN = 86 - 68 = 18)
+T NEWLIMITEDEDITIONCONFETTICAKE (NANNY / NY = 216 / 9 = 24)
+O CHOCOLATECHIPCOOKIEDOUGH (ANYA - ANNA = 55 - 52 = 3)
+N RAINBOWCOOKIESANDWICH (YAN - ANA = 32 - 16 = 16)
+E NEWBROWNSUGARCINNAMONLOWFAT (AYA - ANN = 19 - 17 = 2)
+</pre>
