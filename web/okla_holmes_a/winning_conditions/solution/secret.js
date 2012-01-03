@@ -89,7 +89,7 @@ function ruleA(guess) {
 function ruleB(guess) {
     if (!is_in_sowpods(guess)) {
 	throw new BadGuess(
-	    'B', "Your guess must be a valid word in the <a href='http://www.isc.ro/lists/sowpods.zip'>SOWPODS</a> list.");
+	    'B', "Your guess must be a valid word in the <a href='sowpods.zip'>SOWPODS</a> list.");
     }
 }
 function ruleC(guess) {
@@ -117,7 +117,7 @@ function ruleE(guess) {
 	var other = look_for_anagram(guess).toUpperCase();
 	throw new BadGuess(
 	    'E', "Your guess must not have any anagrams in the "+
-		"<a href='http://www.isc.ro/lists/sowpods.zip'>SOWPODS</a> "+
+		"<a href='sowpods.zip'>SOWPODS</a> "+
 		"list. ("+other+" is an anagram of "+guess+".)");
     }
 }
@@ -150,7 +150,7 @@ function ruleI(guess) {
     var new_word = guess.substring(1) + guess[0];
     if (!is_in_sowpods(new_word)) {
 	throw new BadGuess(
-	    'I', 'Your guess must have the property that moving its first letter to the end creates a valid word in the <a href="http://www.isc.ro/lists/sowpods.zip">SOWPODS</a> list.');
+	    'I', 'Your guess must have the property that moving its first letter to the end creates a valid word in the <a href="sowpods.zip">SOWPODS</a> list.');
     }
 }
 
