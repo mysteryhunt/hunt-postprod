@@ -1,1 +1,5 @@
 @import "me/mediaelementplayer.css";
+#sf { margin-left: -42px; }
+@media print {
+  margin: 0;
+}

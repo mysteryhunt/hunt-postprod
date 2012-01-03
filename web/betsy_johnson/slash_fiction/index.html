@@ -5,7 +5,9 @@ style: style.css
 ---
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="me/mediaelement-and-player.min.js"></script>
+<div id="sf">
 <video controls="" height="480" src="slash_fiction.mp4" width="720">
+  <source src="slash_fiction.webm" type="video/webm" />
   <source src="slash_fiction.mp4" type="video/mp4" />
   <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
   <object data="me/flashmediaelement.swf" height="480" type="application/x-shockwave-flash" width="720">
@@ -13,6 +15,7 @@ style: style.css
     <param name="flashvars" value="controls=true&amp;file=slash_fiction.mp4" />
   </object>
 </video>
+</div>
 <script type="text/javascript">
 $('video').mediaelementplayer({
   enableAutosize: true,
