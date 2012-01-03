@@ -27,9 +27,24 @@ title: The Voices in Your Head
 var links = $('a[href$=".mp3"]');
 links.each(function(i, e) {
   var a = document.createElement("audio");
-  a.src = e.href;
-  $(e).mouseenter(function() { a.currentTime=0; a.play(); });
-  $(e).mouseleave(function() { a.pause(); a.currentTime=0; });
+  // add loading indication
+  var i = document.createElement("img");
+  i.src="wait16trans.gif";
+  $(e).after(i);
+  $(a).bind('canplay', function() { $(i).remove(); });
+  // start to load mp3/ogg files.
+  var s1 = document.createElement("source");
+  s1.type = "audio/mpeg";
+  s1.src = e.href;
+  var s2 = document.createElement("source");
+  s2.type = "audio/ogg;codec=vorbis";
+  s2.src = e.href.replace(/[.]mp.$/, ".ogg");
+  a.appendChild(s1);
+  a.appendChild(s2);
+  document.body.appendChild(a);
+  function tryToReset() { try { a.currentTime=0; } catch(e) { } }
+  $(e).mouseenter(function() { tryToReset(); a.play(); });
+  $(e).mouseleave(function() { a.pause(); tryToReset(); });
 });
 </script>
 </div>
