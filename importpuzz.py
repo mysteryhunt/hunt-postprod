@@ -194,7 +194,7 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
         sol = tidy_with_log(zf.read('solution/index.html'))
         sol_body = extract_body(sol)
         if not sol_body.strip():
-            log_error("Solution is missing")
+            log_error("Solution is empty")
         solution_suffix = '_solution'
         if is_show_meta: solution_suffix = '_show_solution'
         options = { 'layout': canon(round_name)+solution_suffix,
