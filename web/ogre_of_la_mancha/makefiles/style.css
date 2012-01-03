@@ -1,7 +1,3 @@
-.mf-cmd-text {
-  font-family: Inconsolata, monospace;
-}
-
 .mf-marg-top {
   margin-top: 1em;
 }
@@ -35,14 +31,26 @@
 }
 
 .mf-open-box td {
-  border: 1px solid #AAA;
+  border: 1px solid #888;
 }
 
 .mf-solid-box td {
-  border: 1px solid #AAA;
-  background-color: #AAA;
+  border: 1px solid #888;
+  background-color: #888;
 }
 
 .mf-spacer-box td {
-  border: 0px solid #FFF;
+  border: 0px solid transparent;
+}
+
+@media print {
+  .mf-open-box td,
+  .mf-solid-box td {
+    border-color: black;
+  }
+  .mf-solid-box td {
+    border-width: 11px;
+    width: 0px;
+    height: 16px;
+  }
 }

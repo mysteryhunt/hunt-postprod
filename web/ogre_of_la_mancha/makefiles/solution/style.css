@@ -1,6 +1,9 @@
 .mf-marg-top {
   margin-top: 1em;
 }
+.mf-marg-bot {
+  margin-bottom: 0;
+}
 
 .mf-pipeline {
   margin: 0 0 0 3em;

@@ -6,11 +6,21 @@ style: style.css
 credits: by Kai Huang with cross-platform expertise from Michael Constant
 ---
 <p>
-This puzzle requires knowledge of UNIX/Linux command-line utilities. If nobody on your MIT Mystery Hunt team has significant experience with UNIX/Linux (extremely unlikely), we apologize.
+This puzzle requires knowledge of UNIX/Linux command-line
+utilities. If nobody on your MIT Mystery Hunt team has significant
+experience with UNIX/Linux (extremely unlikely), we apologize.
 </p>
 
 <p>
-The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying to reconstruct the correct versions of a few text files by running UNIX/Linux text-processing commands on the given files. The options for the commands that you&rsquo;ll be running are all given, but not the command names themselves. A few of the command names are obvious from the given options, and enough of them are obvious that it should also be easy to conjecture the list is in alphabetical order by command name. For ease of reading, we first list all command names, even though some of them are only ascertained during solving.
+The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying
+to reconstruct the correct versions of a few text files by running
+UNIX/Linux text-processing commands on the given files. The options
+for the commands that you&rsquo;ll be running are all given, but not the
+command names themselves. A few of the command names are obvious from
+the given options, and enough of them are obvious that it should also
+be easy to conjecture the list is in alphabetical order by command
+name. For ease of reading, we first list all command names, even
+though some of them are only ascertained during solving.
 </p>
 
 <table class="mf-marg-top" id="mf-t1">
@@ -20,7 +30,7 @@ The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying
 </tr>
 <tr>
 <td><code>awk</code></td>
-<td><code>&rsquo;!/! /&amp;&amp;NR&gt;3&rsquo;</code></td>
+<td><code>'!/! /&amp;&amp;NR&gt;3'</code></td>
 </tr>
 <tr>
 <td><code>diff</code></td>
@@ -28,7 +38,7 @@ The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying
 </tr>
 <tr>
 <td><code>egrep</code></td>
-<td><code>&rsquo;^ ?[0-9]+ ([^ ]+$|.+[A-Z])&rsquo;</code></td>
+<td><code>'^ ?[0-9]+ ([^ ]+$|.+[A-Z])'</code></td>
 </tr>
 <tr>
 <td><code>expand</code></td>
@@ -56,15 +66,15 @@ The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying
 </tr>
 <tr>
 <td><code>nl</code></td>
-<td><code>-w2 -s&rsquo; &lsquo; -bp&rsquo;[[:upper:]][^[:cntrl:]]*$&rsquo;</code></td>
+<td><code>-w2 -s' ' -bp'[[:upper:]][^[:cntrl:]]*$'</code></td>
 </tr>
 <tr>
 <td><code>paste</code></td>
-<td><code>-d&rsquo; &lsquo;</code></td>
+<td><code>-d' '</code></td>
 </tr>
 <tr>
 <td><code>sed</code></td>
-<td><code>-e&rsquo;s/[^a-z][^[:alnum:]]\{1,2\}//g&rsquo; -e&rsquo;s/ $//&rsquo;</code></td>
+<td><code>-e's/[^a-z][^[:alnum:]]\{1,2\}//g' -e's/ $//'</code></td>
 </tr>
 <tr>
 <td><code>sort</code></td>
@@ -76,7 +86,7 @@ The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying
 </tr>
 <tr>
 <td><code>tr</code></td>
-<td><code>&rsquo;. &lsquo; &lsquo; \n&rsquo;</code></td>
+<td><code>'. ' ' \n'</code></td>
 </tr>
 <tr>
 <td><code>tsort</code></td>
@@ -96,55 +106,70 @@ The first step is to realize what you&rsquo;re trying to do. You&rsquo;re trying
 The solving involves examining the file contents carefully, thinking about what steps need to be taken to fix up and/or combine the given files, and finally matching those steps with the given commands/options. We&rsquo;ll list the correct command lines to reconstruct the 5 correct files, in numerical order by file number.
 </p>
 
-<div class="mf-marg-top">
-Files f1 and f2 are processed into the list of all generic and infrastructure top-level domains.
+<p class="mf-marg-top mf-marg-bot">
+Files f1 and f2 are processed into the list of all generic and
+infrastructure top-level domains.
+</p>
 <pre class="mf-pipeline">paste -d' ' f2 f1 | \
 awk '!/! /&amp;&amp;NR&gt;3' | \
 tsort | \
 head -22
 </pre>
-</div>
 
-<div class="mf-marg-top">
-File f3 is processed into the list of amino acids that are encoded by DNA.
+<p class="mf-marg-top mf-marg-bot">
+File f3 is processed into the list of amino acids that are encoded by
+DNA.
+</p>
 <pre class="mf-pipeline">fold -bsw14 f3 | \
 uniq -c | \
 sed -e's/[^a-z][^[:alnum:]]\{1,2\}//g' -e's/ $//' | \
 expand -t3
 </pre>
-</div>
 
-<div class="mf-marg-top">
+<p class="mf-marg-top mf-marg-bot">
 Files f4 and f5 are processed into the list of numbered MIT Courses.
+</p>
 <pre class="mf-pipeline">diff f5 f4 | \
 tr '. ' ' \n' | \
 egrep '^ ?[0-9]+ ([^ ]+$|.+[A-Z])'
 </pre>
-</div>
 
-<div class="mf-marg-top">
-File f6 is processed into the list of elementary fermions (and their antiparticles).
+<p class="mf-marg-top mf-marg-bot">
+File f6 is processed into the list of elementary fermions (and their
+antiparticles).
+</p>
 <pre class="mf-pipeline">iconv -c -t ascii -f ascii f6 | \
 fmt -w22 | \
 fgrep -v .
 </pre>
-</div>
 
-<div class="mf-marg-top">
+<p class="mf-marg-top mf-marg-bot">
 File f7 is processed into the list of Hilbert&rsquo;s problems in mathematics.
+</p>
 <pre class="mf-pipeline">unexpand -a f7 | \
 nl -w2 -s' ' -bp'[[:upper:]][^[:cntrl:]]*$' | \
 sort -n | \
 tail -23
 </pre>
-</div>
 
 <p>
-After correctly reconstructing the 5 files, consider the hint &ldquo;wc -l *.out&rdquo;. It should lead you to discover that the 5 files are lists of different consecutive lengths, 20-24. This gives an ordering for answer extraction.
+After correctly reconstructing the 5 files, consider the hint
+&ldquo;<samp><kbd>wc -l *.out</kbd></samp>&rdquo;. It should lead you to discover
+that the 5 files are lists of
+different consecutive lengths, 20-24. This gives an ordering for
+answer extraction.
 </p>
 
 <p>
-Finally, consider the boxes at the bottom. Notice that the number of open boxes is equal to the number of commands. Furthermore, they&rsquo;re arranged into 5 words with 3/3/4/4/4 open boxes, just as the commands are used in 5 pipelines with 3/3/4/4/4 commands. It turns out that if you take the first letters of the command names in a pipeline and put it into the open boxes of an appropriately chosen word at the bottom, then you can fill the solid box with a missing letter to form the name of a common UNIX/Linux command. The added letters in the solid boxes are the letters that will form the final answer.
+Finally, consider the boxes at the bottom. Notice that the number of
+open boxes is equal to the number of commands. Furthermore, they&rsquo;re
+arranged into 5 words with 3/3/4/4/4 open boxes, just as the commands
+are used in 5 pipelines with 3/3/4/4/4 commands. It turns out that if
+you take the first letters of the command names in a pipeline and put
+it into the open boxes of an appropriately chosen word at the bottom,
+then you can fill the solid box with a missing letter to form the name
+of a common UNIX/Linux command. The added letters in the solid boxes
+are the letters that will form the final answer.
 </p>
 
 <p>
