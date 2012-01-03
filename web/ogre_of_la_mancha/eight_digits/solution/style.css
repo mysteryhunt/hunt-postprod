@@ -2,6 +2,13 @@
   margin: 0;
 }
 
+.ed-list-top {
+  margin-bottom: 0;
+}
+.ed-list-bot {
+  margin-top: 0;
+}
+
 .ed-marg-top {
   margin-top: 1em;
 }
