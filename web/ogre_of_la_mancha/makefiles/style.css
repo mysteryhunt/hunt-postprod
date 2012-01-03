@@ -1,0 +1,48 @@
+.mf-cmd-text {
+  font-family: Inconsolata, monospace;
+}
+
+.mf-marg-top {
+  margin-top: 1em;
+}
+
+.mf-marg-top-lg {
+  margin-top: 2em;
+}
+
+.mf-note-div {
+  margin-top: 0.5em;
+  font-size: 80%;
+}
+
+.mf-spaced-list li {
+  margin-top: 0.3em;
+}
+
+.mf-container-table .mf-open-box .mf-solid-box .mf-spacer-box {
+  border-collapse: collapse;
+}
+
+.mf-container-table td {
+  padding: 10px 2px;
+}
+
+.mf-open-box td, .mf-solid-box td, .mf-spacer-box td {
+  width: 20px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.mf-open-box td {
+  border: 1px solid #AAA;
+}
+
+.mf-solid-box td {
+  border: 1px solid #AAA;
+  background-color: #AAA;
+}
+
+.mf-spacer-box td {
+  border: 0px solid #FFF;
+}

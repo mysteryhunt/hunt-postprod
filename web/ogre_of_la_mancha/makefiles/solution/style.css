@@ -1,0 +1,43 @@
+.mf-marg-top {
+  margin-top: 1em;
+}
+
+.mf-pipeline {
+  margin: 0 0 0 3em;
+}
+
+#mf-t1, #mf-t2 {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#mf-t1 th, #mf-t1 td,
+#mf-t2 th, #mf-t2 td {
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 3px 6px;
+}
+
+/* Specific for table 2 column 4. */
+#mf-t2 th:first-child + th + th + th,
+#mf-t2 td:first-child + td + td + td {
+  padding-right: 12px;
+}
+
+/* Specific for table 2 columns 1, 3, 7. */
+#mf-t2 th:first-child,
+#mf-t2 td:first-child,
+#mf-t2 th:first-child + th + th,
+#mf-t2 td:first-child + td + td,
+#mf-t2 th:first-child + th + th + th + th + th + th,
+#mf-t2 td:first-child + td + td + td + td + td + td {
+  text-align: center;
+}
+
+.mf-blue {
+  color: #0000FF;
+}
+
+.mf-gray {
+  color: #AAAAAA;
+}
