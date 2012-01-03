@@ -31,12 +31,6 @@ function imagemap() {
 "<img src=\"10-"+
 (puzzle_solved["towers"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"ace/-"+
-(puzzle_solved["ace"]?"solved":"unsolved")+
-".png\" />"+
-"<img src=\"big_mcintosh/-"+
-(puzzle_solved["big_mcintosh"]?"solved":"unsolved")+
-".png\" />"+
 "<img src=\"blowing_down_the_house/-"+
 (puzzle_solved["blowing_down_the_house"]?"solved":"unsolved")+
 ".png\" />"+
@@ -52,8 +46,14 @@ function imagemap() {
 "<img src=\"miss_hackney/-"+
 (puzzle_solved["miss_hackney"]?"solved":"unsolved")+
 ".png\" />"+
+"<img src=\"pacific_overtones/-"+
+(puzzle_solved["pacific_overtones"]?"solved":"unsolved")+
+".png\" />"+
 "<img src=\"panorama/-"+
 (puzzle_solved["panorama"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"qed/-"+
+(puzzle_solved["qed"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"rainbow_dash/-"+
 (puzzle_solved["rainbow_dash"]?"solved":"unsolved")+
@@ -71,14 +71,14 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"247,493,256,512\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"../mayan_fair_lady/the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"257,496,273,514\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"../mayan_fair_lady/the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"222,485,233,522\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"../mayan_fair_lady/the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"234,488,246,508\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"../mayan_fair_lady/the_voices_in_your_head/\" />\n<area shape=\"rect\" coords=\"213,484,221,508\" alt=\"The Voices in Your Head\" title=\"The Voices in Your Head\" href=\"../mayan_fair_lady/the_voices_in_your_head/\" />"+
 "<area shape=\"rect\" coords=\"125,485,178,503\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"127,504,175,515\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"187,425,258,477\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"134,516,159,528\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"167,470,186,484\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />"+
 "<area shape=\"rect\" coords=\"79,438,112,471\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"83,472,109,475\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"113,444,124,482\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"82,432,105,437\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"78,451,78,455\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />"+
-"<area shape=\"rect\" coords=\"162,186,177,225\" alt=\"Ace\" title=\"Ace\" href=\"ace/\" />\n<area shape=\"rect\" coords=\"178,156,209,220\" alt=\"Ace\" title=\"Ace\" href=\"ace/\" />\n<area shape=\"rect\" coords=\"269,86,313,146\" alt=\"Ace\" title=\"Ace\" href=\"ace/\" />\n<area shape=\"rect\" coords=\"236,101,268,170\" alt=\"Ace\" title=\"Ace\" href=\"ace/\" />\n<area shape=\"rect\" coords=\"210,131,235,188\" alt=\"Ace\" title=\"Ace\" href=\"ace/\" />"+
-"<area shape=\"rect\" coords=\"458,102,504,104\" alt=\"Big McIntosh\" title=\"Big McIntosh\" href=\"big_mcintosh/\" />\n<area shape=\"rect\" coords=\"449,105,504,137\" alt=\"Big McIntosh\" title=\"Big McIntosh\" href=\"big_mcintosh/\" />\n<area shape=\"rect\" coords=\"505,90,541,132\" alt=\"Big McIntosh\" title=\"Big McIntosh\" href=\"big_mcintosh/\" />\n<area shape=\"rect\" coords=\"469,95,504,101\" alt=\"Big McIntosh\" title=\"Big McIntosh\" href=\"big_mcintosh/\" />\n<area shape=\"rect\" coords=\"522,74,540,87\" alt=\"Big McIntosh\" title=\"Big McIntosh\" href=\"big_mcintosh/\" />\n<area shape=\"rect\" coords=\"442,114,448,134\" alt=\"Big McIntosh\" title=\"Big McIntosh\" href=\"big_mcintosh/\" />"+
 "<area shape=\"rect\" coords=\"321,154,333,193\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"334,157,338,190\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"304,156,320,195\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"339,153,366,187\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"289,168,303,199\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />"+
 "<area shape=\"rect\" coords=\"376,214,377,233\" alt=\"Kimono\" title=\"Kimono\" href=\"kimono/\" />\n<area shape=\"rect\" coords=\"378,209,402,235\" alt=\"Kimono\" title=\"Kimono\" href=\"kimono/\" />\n<area shape=\"rect\" coords=\"403,211,415,243\" alt=\"Kimono\" title=\"Kimono\" href=\"kimono/\" />\n<area shape=\"rect\" coords=\"370,217,375,226\" alt=\"Kimono\" title=\"Kimono\" href=\"kimono/\" />\n<area shape=\"rect\" coords=\"385,205,400,208\" alt=\"Kimono\" title=\"Kimono\" href=\"kimono/\" />"+
 "<area shape=\"rect\" coords=\"445,262,447,280\" alt=\"Knight Shade\" title=\"Knight Shade\" href=\"knight_shade/\" />\n<area shape=\"rect\" coords=\"448,259,474,284\" alt=\"Knight Shade\" title=\"Knight Shade\" href=\"knight_shade/\" />\n<area shape=\"rect\" coords=\"475,270,481,283\" alt=\"Knight Shade\" title=\"Knight Shade\" href=\"knight_shade/\" />\n<area shape=\"rect\" coords=\"436,267,444,275\" alt=\"Knight Shade\" title=\"Knight Shade\" href=\"knight_shade/\" />\n<area shape=\"rect\" coords=\"470,286,478,292\" alt=\"Knight Shade\" title=\"Knight Shade\" href=\"knight_shade/\" />\n<area shape=\"rect\" coords=\"451,256,468,258\" alt=\"Knight Shade\" title=\"Knight Shade\" href=\"knight_shade/\" />"+
 "<area shape=\"rect\" coords=\"408,328,446,345\" alt=\"Lancer\" title=\"Lancer\" href=\"lancer/\" />\n<area shape=\"rect\" coords=\"413,346,443,347\" alt=\"Lancer\" title=\"Lancer\" href=\"lancer/\" />\n<area shape=\"rect\" coords=\"414,309,444,327\" alt=\"Lancer\" title=\"Lancer\" href=\"lancer/\" />\n<area shape=\"rect\" coords=\"428,348,441,350\" alt=\"Lancer\" title=\"Lancer\" href=\"lancer/\" />\n<area shape=\"rect\" coords=\"405,339,407,345\" alt=\"Lancer\" title=\"Lancer\" href=\"lancer/\" />"+
 "<area shape=\"rect\" coords=\"512,330,536,332\" alt=\"Miss Hackney\" title=\"Miss Hackney\" href=\"miss_hackney/\" />\n<area shape=\"rect\" coords=\"510,333,546,343\" alt=\"Miss Hackney\" title=\"Miss Hackney\" href=\"miss_hackney/\" />\n<area shape=\"rect\" coords=\"514,301,538,329\" alt=\"Miss Hackney\" title=\"Miss Hackney\" href=\"miss_hackney/\" />\n<area shape=\"rect\" coords=\"507,344,543,355\" alt=\"Miss Hackney\" title=\"Miss Hackney\" href=\"miss_hackney/\" />\n<area shape=\"rect\" coords=\"507,356,517,360\" alt=\"Miss Hackney\" title=\"Miss Hackney\" href=\"miss_hackney/\" />"+
+"<area shape=\"rect\" coords=\"162,186,177,225\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"178,156,209,220\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"269,86,313,146\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"236,101,268,170\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"210,131,235,188\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />"+
 "<area shape=\"rect\" coords=\"428,164,457,186\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"430,187,454,191\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"458,158,480,183\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"446,192,454,198\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"426,174,427,181\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />"+
+"<area shape=\"rect\" coords=\"458,102,504,104\" alt=\"QED\" title=\"QED\" href=\"qed/\" />\n<area shape=\"rect\" coords=\"449,105,504,137\" alt=\"QED\" title=\"QED\" href=\"qed/\" />\n<area shape=\"rect\" coords=\"505,90,541,132\" alt=\"QED\" title=\"QED\" href=\"qed/\" />\n<area shape=\"rect\" coords=\"469,95,504,101\" alt=\"QED\" title=\"QED\" href=\"qed/\" />\n<area shape=\"rect\" coords=\"522,74,540,87\" alt=\"QED\" title=\"QED\" href=\"qed/\" />\n<area shape=\"rect\" coords=\"442,114,448,134\" alt=\"QED\" title=\"QED\" href=\"qed/\" />"+
 "<area shape=\"rect\" coords=\"346,371,421,381\" alt=\"Rainbow Dash\" title=\"Rainbow Dash\" href=\"rainbow_dash/\" />\n<area shape=\"rect\" coords=\"351,382,421,410\" alt=\"Rainbow Dash\" title=\"Rainbow Dash\" href=\"rainbow_dash/\" />\n<area shape=\"rect\" coords=\"362,411,419,467\" alt=\"Rainbow Dash\" title=\"Rainbow Dash\" href=\"rainbow_dash/\" />\n<area shape=\"rect\" coords=\"422,376,434,389\" alt=\"Rainbow Dash\" title=\"Rainbow Dash\" href=\"rainbow_dash/\" />\n<area shape=\"rect\" coords=\"397,367,410,370\" alt=\"Rainbow Dash\" title=\"Rainbow Dash\" href=\"rainbow_dash/\" />"+
 "</map>"+
 '';
@@ -129,40 +129,40 @@ function puzzlelist() {
 "<tr class=\"spacer\"></tr>"+
 "<tr>"+
 "<td class=\"ben_bitdiddle "+
-(puzzle_solved["ace"]?"solved":"unsolved")+
-"\"><a href=\"ace/\"><span>Ace</span></a></td>"+
-"<td class=\"ben_bitdiddle "+
-(puzzle_solved["lancer"]?"solved":"unsolved")+
-"\"><a href=\"lancer/\"><span>Lancer</span></a></td>"+
-"</tr>"+
-"<tr>"+
-"<td class=\"ben_bitdiddle "+
-(puzzle_solved["big_mcintosh"]?"solved":"unsolved")+
-"\"><a href=\"big_mcintosh/\"><span>Big McIntosh</span></a></td>"+
-"<td class=\"ben_bitdiddle "+
-(puzzle_solved["miss_hackney"]?"solved":"unsolved")+
-"\"><a href=\"miss_hackney/\"><span>Miss Hackney</span></a></td>"+
-"</tr>"+
-"<tr>"+
-"<td class=\"ben_bitdiddle "+
 (puzzle_solved["blowing_down_the_house"]?"solved":"unsolved")+
 "\"><a href=\"blowing_down_the_house/\"><span>Blowing Down the House</span></a></td>"+
 "<td class=\"ben_bitdiddle "+
-(puzzle_solved["panorama"]?"solved":"unsolved")+
-"\"><a href=\"panorama/\"><span>Panorama</span></a></td>"+
+(puzzle_solved["pacific_overtones"]?"solved":"unsolved")+
+"\"><a href=\"pacific_overtones/\"><span>Pacific Overtones</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"ben_bitdiddle "+
 (puzzle_solved["kimono"]?"solved":"unsolved")+
 "\"><a href=\"kimono/\"><span>Kimono</span></a></td>"+
 "<td class=\"ben_bitdiddle "+
-(puzzle_solved["rainbow_dash"]?"solved":"unsolved")+
-"\"><a href=\"rainbow_dash/\"><span>Rainbow Dash</span></a></td>"+
+(puzzle_solved["panorama"]?"solved":"unsolved")+
+"\"><a href=\"panorama/\"><span>Panorama</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"ben_bitdiddle "+
 (puzzle_solved["knight_shade"]?"solved":"unsolved")+
 "\"><a href=\"knight_shade/\"><span>Knight Shade</span></a></td>"+
+"<td class=\"ben_bitdiddle "+
+(puzzle_solved["qed"]?"solved":"unsolved")+
+"\"><a href=\"qed/\"><span>QED</span></a></td>"+
+"</tr>"+
+"<tr>"+
+"<td class=\"ben_bitdiddle "+
+(puzzle_solved["lancer"]?"solved":"unsolved")+
+"\"><a href=\"lancer/\"><span>Lancer</span></a></td>"+
+"<td class=\"ben_bitdiddle "+
+(puzzle_solved["rainbow_dash"]?"solved":"unsolved")+
+"\"><a href=\"rainbow_dash/\"><span>Rainbow Dash</span></a></td>"+
+"</tr>"+
+"<tr>"+
+"<td class=\"ben_bitdiddle "+
+(puzzle_solved["miss_hackney"]?"solved":"unsolved")+
+"\"><a href=\"miss_hackney/\"><span>Miss Hackney</span></a></td>"+
 "</tr>"+
 "</table>"+
 '';
