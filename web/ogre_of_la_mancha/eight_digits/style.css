@@ -1,0 +1,13 @@
+.equ-div {
+  font-family: Inconsolata, monospace;
+  margin-left: 20px;
+  margin-top: 1.2em;
+}
+
+.equ-div div {
+  margin-top: 0.5em;
+}
+
+.equ-div .expr {
+  margin-top: 1.2em;
+}

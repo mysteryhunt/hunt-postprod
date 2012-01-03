@@ -1,0 +1,67 @@
+---
+layout: ogre_of_la_mancha_solution
+title: Eight Digits
+class: puzzle solution
+style: style.css
+credits: by Kai Huang
+---
+<div class="ed-marg-top">
+Given the fact that each letter corresponds to one of eight digits, a natural guess is that the puzzle uses base 8 arithmetic. Attempting to solve the first part will confirm that this assumption is likely true since there&rsquo;s exactly one solution.
+</div>
+
+<div class="ed-marg-top">
+One possible series of deductions for the first part is:
+<ol class="ed-ol">
+<li>P = 0 &nbsp; &nbsp;(by units digit of equation 4)</li>
+<li>Y = 0 or Y = 4 &nbsp; &nbsp;(by units digit of equation 2)</li>
+<li>Y = 4 &nbsp; &nbsp;(following the Y = 0 path from deduction 2 leads us to the trivial result where all letters are 0)</li>
+<li>M = 4 &nbsp; &nbsp;(by units digit of equation 6)</li>
+<li>V = G &nbsp; &nbsp;(by units digit of equation 1)</li>
+<li>Q = Z &nbsp; &nbsp;(by tens digit of equation 1 and tens digit of equation 6)</li>
+<li>V = Q + 4 or V = Q + 5 &nbsp; &nbsp;(by tens digit of equation 3, depending whether units digit carries)</li>
+<li>V = Q + J + 1 &nbsp; &nbsp;(by tens digit of equation 2, note the units digit carries)</li>
+<li>J = 3 or J = 4 &nbsp; &nbsp;(by deductions 7 and 8)</li>
+<li>J &equiv; 2V (mod 8) &nbsp; &nbsp;(by units digit of equation 3)</li>
+<li>J = 4 &nbsp; &nbsp;(by deductions 9 and 10, where deduction 10 tells us J is even)</li>
+<li>V = 2 or 6 &nbsp; &nbsp;(by deduction 10)</li>
+<li>V = 6 and G = 6 &nbsp; &nbsp;(by deductions 8 and 12, where deduction 8 tells us V &ge; J)</li>
+<li>Q = 1 and Z = 1 &nbsp; &nbsp;(by deduction 8)</li>
+<li>C = 7 &nbsp; &nbsp;(by tens digit of equation 1)</li>
+<li>B = 2X &nbsp; &nbsp;(by tens digit of equation 4)</li>
+<li>X &equiv; B + K (mod 8) &nbsp; &nbsp;(by units digit of equation 5)</li>
+<li>-X &equiv; K (mod 8) &nbsp; &nbsp;(by deductions 16 and 17)</li>
+<li>K = X + 1 or K = X + 2 &nbsp; &nbsp;(by tens digit of equation 5, depending whether units digit carries)</li>
+<li>K = 5 and X = 3 &nbsp; &nbsp;(by deductions 18 and 19)</li>
+<li>B = 6 &nbsp; &nbsp;(by deduction 16)</li>
+</ol>
+</div>
+
+<div class="ed-marg-top">
+Thus, the first part gives the correspondences P = 0, Q = Z = 1, X = 3, J = M = Y = 4, K = 5, B = G = V = 6, and C = 7.
+</div>
+
+<div class="ed-marg-top">
+Looking at the last computation, you&rsquo;ll notice that it uses only letters not used in the first part. Thus, you&rsquo;ll have to figure out how to map the rest of the alphabet to octal digits as well. By some combination of
+<ul class="ed-ul">
+<li>analyzing the correspondences from the first part for patterns that may indicate how to map the rest of the alphabet, and/or</li>
+<li>noticing the flavor text contains the word &ldquo;digits&rdquo;, which may also mean &ldquo;fingers&rdquo;,</li>
+</ul>
+the aha that you&rsquo;ll hopefully reach is that the statement &ldquo;every letter below corresponds to one of eight digits&rdquo; has two relevant meanings in this puzzle. It means both
+<ul class="ed-ul">
+<li>every letter corresponds to 1 of 8 octal digits, and</li>
+<li>every letter corresponds to 1 of 8 fingers.</li>
+</ul>
+One particularly natural way to correspond every letter to 1 of 8 fingers is according to which letters are typed by each finger on a qwerty keyboard (minus the thumbs). Indeed, the correspondences from the first part match up with this way of associating fingers. Specifically, two letters are assigned the same octal digit if and only if they are typed by the same finger.
+</div>
+
+<div class="ed-marg-top">
+Once the aha is reached, you can extend the octal digit correspondences to the whole alphabet: A = Q = Z = 1, S = W = X = 3, C = D = E = 7, B = F = G = R = T = V = 6, H = J = M = N = U = Y = 4, I = K = 5, L = O = 2, and P = 0.
+</div>
+
+<div class="ed-marg-top">
+Now you can make the last computation:
+<div class="final-expr">
+  FINAL + ANSWER - DTIFW - EDUHO = 65412 + 143376 - 76563 - 77442 = 32563
+</div>
+The result 32563 only corresponds to one English word, <b>SLITS</b>, which is the answer to this puzzle.
+</div>
