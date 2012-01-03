@@ -1,8 +1,8 @@
 function imagemap() {
   return ''+
 "<img src=\"key.png\" />"+
-"<img src=\"lofty/-"+
-(puzzle_solved["lofty"]?"solved":"unsolved")+
+"<img src=\"picture_an_acorn/-"+
+(puzzle_solved["picture_an_acorn"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"evil_influence/-"+
 (puzzle_solved["evil_influence"]?"solved":"unsolved")+
@@ -36,7 +36,7 @@ function imagemap() {
 ".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
-"<area shape=\"rect\" coords=\"252,181,283,198\" alt=\"Lofty\" title=\"Lofty\" href=\"lofty/\" />\n<area shape=\"rect\" coords=\"262,199,294,213\" alt=\"Lofty\" title=\"Lofty\" href=\"lofty/\" />\n<area shape=\"rect\" coords=\"102,165,143,183\" alt=\"Lofty\" title=\"Lofty\" href=\"lofty/\" />\n<area shape=\"rect\" coords=\"96,192,150,201\" alt=\"Lofty\" title=\"Lofty\" href=\"lofty/\" />\n<area shape=\"rect\" coords=\"99,184,146,191\" alt=\"Lofty\" title=\"Lofty\" href=\"lofty/\" />\n<area shape=\"rect\" coords=\"125,202,151,204\" alt=\"Lofty\" title=\"Lofty\" href=\"lofty/\" />"+
+"<area shape=\"rect\" coords=\"252,181,283,198\" alt=\"Picture an Acorn\" title=\"Picture an Acorn\" href=\"picture_an_acorn/\" />\n<area shape=\"rect\" coords=\"262,199,294,213\" alt=\"Picture an Acorn\" title=\"Picture an Acorn\" href=\"picture_an_acorn/\" />\n<area shape=\"rect\" coords=\"102,165,143,183\" alt=\"Picture an Acorn\" title=\"Picture an Acorn\" href=\"picture_an_acorn/\" />\n<area shape=\"rect\" coords=\"96,192,150,201\" alt=\"Picture an Acorn\" title=\"Picture an Acorn\" href=\"picture_an_acorn/\" />\n<area shape=\"rect\" coords=\"99,184,146,191\" alt=\"Picture an Acorn\" title=\"Picture an Acorn\" href=\"picture_an_acorn/\" />\n<area shape=\"rect\" coords=\"125,202,151,204\" alt=\"Picture an Acorn\" title=\"Picture an Acorn\" href=\"picture_an_acorn/\" />"+
 "<area shape=\"rect\" coords=\"80,197,100,218\" alt=\"Evil Influence\" title=\"Evil Influence\" href=\"evil_influence/\" />\n<area shape=\"rect\" coords=\"101,198,117,220\" alt=\"Evil Influence\" title=\"Evil Influence\" href=\"evil_influence/\" />\n<area shape=\"rect\" coords=\"270,212,320,226\" alt=\"Evil Influence\" title=\"Evil Influence\" href=\"evil_influence/\" />\n<area shape=\"rect\" coords=\"280,227,330,241\" alt=\"Evil Influence\" title=\"Evil Influence\" href=\"evil_influence/\" />\n<area shape=\"rect\" coords=\"118,200,139,223\" alt=\"Evil Influence\" title=\"Evil Influence\" href=\"evil_influence/\" />\n<area shape=\"rect\" coords=\"140,202,160,225\" alt=\"Evil Influence\" title=\"Evil Influence\" href=\"evil_influence/\" />"+
 "<area shape=\"rect\" coords=\"121,221,143,247\" alt=\"Itinerant People of America\" title=\"Itinerant People of America\" href=\"itinerant_people_of_america/\" />\n<area shape=\"rect\" coords=\"144,223,169,250\" alt=\"Itinerant People of America\" title=\"Itinerant People of America\" href=\"itinerant_people_of_america/\" />\n<area shape=\"rect\" coords=\"285,235,329,263\" alt=\"Itinerant People of America\" title=\"Itinerant People of America\" href=\"itinerant_people_of_america/\" />\n<area shape=\"rect\" coords=\"65,216,98,242\" alt=\"Itinerant People of America\" title=\"Itinerant People of America\" href=\"itinerant_people_of_america/\" />\n<area shape=\"rect\" coords=\"330,240,367,268\" alt=\"Itinerant People of America\" title=\"Itinerant People of America\" href=\"itinerant_people_of_america/\" />\n<area shape=\"rect\" coords=\"99,218,120,245\" alt=\"Itinerant People of America\" title=\"Itinerant People of America\" href=\"itinerant_people_of_america/\" />"+
 "<area shape=\"rect\" coords=\"308,269,396,281\" alt=\"Sweetheart\" title=\"Sweetheart\" href=\"sweetheart/\" />\n<area shape=\"rect\" coords=\"317,282,404,296\" alt=\"Sweetheart\" title=\"Sweetheart\" href=\"sweetheart/\" />\n<area shape=\"rect\" coords=\"120,246,181,281\" alt=\"Sweetheart\" title=\"Sweetheart\" href=\"sweetheart/\" />\n<area shape=\"rect\" coords=\"84,242,119,275\" alt=\"Sweetheart\" title=\"Sweetheart\" href=\"sweetheart/\" />\n<area shape=\"rect\" coords=\"45,239,83,272\" alt=\"Sweetheart\" title=\"Sweetheart\" href=\"sweetheart/\" />\n<area shape=\"rect\" coords=\"301,260,367,268\" alt=\"Sweetheart\" title=\"Sweetheart\" href=\"sweetheart/\" />"+
@@ -54,9 +54,9 @@ function puzzlelist() {
   return ""+
 "<tr>"+
 "<td class=\"num\">1.</td>"+
-"<td><a href=\"lofty/\" class=\""+
-(puzzle_solved["lofty"]?"solved":"unsolved")+
-"\">Lofty</a></td>"+
+"<td><a href=\"picture_an_acorn/\" class=\""+
+(puzzle_solved["picture_an_acorn"]?"solved":"unsolved")+
+"\">Picture an Acorn</a></td>"+
 "<td class=\"num\">7.</td>"+
 "<td><a href=\"ember/\" class=\""+
 (puzzle_solved["ember"]?"solved":"unsolved")+
