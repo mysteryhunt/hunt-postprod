@@ -16,8 +16,8 @@ function imagemap() {
 "<img src=\"3-"+
 (puzzle_solved["pure_and_simple"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"silver_spoon/-"+
-(puzzle_solved["silver_spoon"]?"solved":"unsolved")+
+"<img src=\"slash_fiction/-"+
+(puzzle_solved["slash_fiction"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"soarin/-"+
 (puzzle_solved["soarin"]?"solved":"unsolved")+
@@ -39,7 +39,7 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"301,198,321,242\" alt=\"Jekyll and Hyde\" title=\"Jekyll and Hyde\" href=\"jekyll_and_hyde/\" />\n<area shape=\"rect\" coords=\"322,220,324,239\" alt=\"Jekyll and Hyde\" title=\"Jekyll and Hyde\" href=\"jekyll_and_hyde/\" />\n<area shape=\"rect\" coords=\"246,207,267,250\" alt=\"Jekyll and Hyde\" title=\"Jekyll and Hyde\" href=\"jekyll_and_hyde/\" />\n<area shape=\"rect\" coords=\"268,204,284,248\" alt=\"Jekyll and Hyde\" title=\"Jekyll and Hyde\" href=\"jekyll_and_hyde/\" />\n<area shape=\"rect\" coords=\"285,201,300,245\" alt=\"Jekyll and Hyde\" title=\"Jekyll and Hyde\" href=\"jekyll_and_hyde/\" />"+
 "<area shape=\"rect\" coords=\"391,223,425,228\" alt=\"Potlines\" title=\"Potlines\" href=\"../a_circus_line/potlines/\" />\n<area shape=\"rect\" coords=\"355,229,431,263\" alt=\"Potlines\" title=\"Potlines\" href=\"../a_circus_line/potlines/\" />\n<area shape=\"rect\" coords=\"363,281,436,301\" alt=\"Potlines\" title=\"Potlines\" href=\"../a_circus_line/potlines/\" />\n<area shape=\"rect\" coords=\"360,264,434,280\" alt=\"Potlines\" title=\"Potlines\" href=\"../a_circus_line/potlines/\" />\n<area shape=\"rect\" coords=\"366,302,403,307\" alt=\"Potlines\" title=\"Potlines\" href=\"../a_circus_line/potlines/\" />"+
 "<area shape=\"rect\" coords=\"491,197,538,221\" alt=\"Pure and Simple\" title=\"Pure and Simple\" href=\"../a_circus_line/pure_and_simple/\" />\n<area shape=\"rect\" coords=\"495,222,519,225\" alt=\"Pure and Simple\" title=\"Pure and Simple\" href=\"../a_circus_line/pure_and_simple/\" />\n<area shape=\"rect\" coords=\"487,170,533,184\" alt=\"Pure and Simple\" title=\"Pure and Simple\" href=\"../a_circus_line/pure_and_simple/\" />\n<area shape=\"rect\" coords=\"489,185,535,196\" alt=\"Pure and Simple\" title=\"Pure and Simple\" href=\"../a_circus_line/pure_and_simple/\" />\n<area shape=\"rect\" coords=\"506,166,530,169\" alt=\"Pure and Simple\" title=\"Pure and Simple\" href=\"../a_circus_line/pure_and_simple/\" />"+
-"<area shape=\"rect\" coords=\"275,165,329,171\" alt=\"Silver Spoon\" title=\"Silver Spoon\" href=\"silver_spoon/\" />\n<area shape=\"rect\" coords=\"271,172,329,181\" alt=\"Silver Spoon\" title=\"Silver Spoon\" href=\"silver_spoon/\" />\n<area shape=\"rect\" coords=\"286,147,321,158\" alt=\"Silver Spoon\" title=\"Silver Spoon\" href=\"silver_spoon/\" />\n<area shape=\"rect\" coords=\"281,159,326,164\" alt=\"Silver Spoon\" title=\"Silver Spoon\" href=\"silver_spoon/\" />\n<area shape=\"rect\" coords=\"274,182,312,190\" alt=\"Silver Spoon\" title=\"Silver Spoon\" href=\"silver_spoon/\" />"+
+"<area shape=\"rect\" coords=\"275,165,329,171\" alt=\"Slash Fiction\" title=\"Slash Fiction\" href=\"slash_fiction/\" />\n<area shape=\"rect\" coords=\"271,172,329,181\" alt=\"Slash Fiction\" title=\"Slash Fiction\" href=\"slash_fiction/\" />\n<area shape=\"rect\" coords=\"286,147,321,158\" alt=\"Slash Fiction\" title=\"Slash Fiction\" href=\"slash_fiction/\" />\n<area shape=\"rect\" coords=\"281,159,326,164\" alt=\"Slash Fiction\" title=\"Slash Fiction\" href=\"slash_fiction/\" />\n<area shape=\"rect\" coords=\"274,182,312,190\" alt=\"Slash Fiction\" title=\"Slash Fiction\" href=\"slash_fiction/\" />"+
 "<area shape=\"rect\" coords=\"457,127,501,139\" alt=\"Soarin&rsquo;\" title=\"Soarin&rsquo;\" href=\"soarin/\" />\n<area shape=\"rect\" coords=\"453,140,503,148\" alt=\"Soarin&rsquo;\" title=\"Soarin&rsquo;\" href=\"soarin/\" />\n<area shape=\"rect\" coords=\"444,156,482,174\" alt=\"Soarin&rsquo;\" title=\"Soarin&rsquo;\" href=\"soarin/\" />\n<area shape=\"rect\" coords=\"449,149,494,155\" alt=\"Soarin&rsquo;\" title=\"Soarin&rsquo;\" href=\"soarin/\" />\n<area shape=\"rect\" coords=\"466,118,493,126\" alt=\"Soarin&rsquo;\" title=\"Soarin&rsquo;\" href=\"soarin/\" />"+
 "<area shape=\"rect\" coords=\"436,27,456,89\" alt=\"Sparkleworks\" title=\"Sparkleworks\" href=\"sparkleworks/\" />\n<area shape=\"rect\" coords=\"440,90,450,94\" alt=\"Sparkleworks\" title=\"Sparkleworks\" href=\"sparkleworks/\" />\n<area shape=\"rect\" coords=\"404,38,430,79\" alt=\"Sparkleworks\" title=\"Sparkleworks\" href=\"sparkleworks/\" />\n<area shape=\"rect\" coords=\"431,33,435,79\" alt=\"Sparkleworks\" title=\"Sparkleworks\" href=\"sparkleworks/\" />\n<area shape=\"rect\" coords=\"457,50,458,56\" alt=\"Sparkleworks\" title=\"Sparkleworks\" href=\"sparkleworks/\" />"+
 "<area shape=\"rect\" coords=\"398,186,401,210\" alt=\"Star Search\" title=\"Star Search\" href=\"../a_circus_line/star_search/\" />\n<area shape=\"rect\" coords=\"402,183,422,232\" alt=\"Star Search\" title=\"Star Search\" href=\"../a_circus_line/star_search/\" />\n<area shape=\"rect\" coords=\"423,180,438,229\" alt=\"Star Search\" title=\"Star Search\" href=\"../a_circus_line/star_search/\" />\n<area shape=\"rect\" coords=\"439,178,454,226\" alt=\"Star Search\" title=\"Star Search\" href=\"../a_circus_line/star_search/\" />\n<area shape=\"rect\" coords=\"455,197,458,224\" alt=\"Star Search\" title=\"Star Search\" href=\"../a_circus_line/star_search/\" />"+
@@ -55,8 +55,8 @@ function puzzlelist() {
 (puzzle_solved["blinkenlights"]?"solved":"unsolved")+
 "\"><a href=\"blinkenlights/\"><span>Blinkenlights</span></a></td>"+
 "<td class=\"betsy_johnson "+
-(puzzle_solved["silver_spoon"]?"solved":"unsolved")+
-"\"><a href=\"silver_spoon/\"><span>Silver Spoon</span></a></td>"+
+(puzzle_solved["slash_fiction"]?"solved":"unsolved")+
+"\"><a href=\"slash_fiction/\"><span>Slash Fiction</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"a_circus_line "+
