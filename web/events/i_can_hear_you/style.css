@@ -1,0 +1,6 @@
+#startup {
+}
+#sender, #receiver {
+  display: none;
+}
+.error { color: red; }

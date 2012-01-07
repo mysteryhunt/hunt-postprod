@@ -1,0 +1,43 @@
+---
+layout: events
+title: I Can Hear You
+style: style.css
+---
+<p>Hello, <span id="team_name">TEAM</span>!
+<span id="score">You have <span id="team_score">0</span> points.</span>
+</p>
+
+<div id="startup">
+  <p>This puzzle can only be solved in person at the event.</p>
+  <p>A member of Codex needs to get you started.</p>
+  <form>
+  <p class="error"></p>
+  <input class="message" type="password" />
+  <input type="submit" value="Authenticate" />
+  </form>
+</div>
+
+<div id="pleasewait">
+  <p class="error">Please wait.  This event has not yet started.</p>
+  <form><input type="submit" value="Click here when we say go!" /></form>
+</div>
+
+<div id="sender">
+<p>Please communicate the following message to your teammate:</p>
+<pre class="message"></pre>
+<form>
+  <input type="submit" value="Click here when they've got it!" />
+</form>
+</div>
+
+<div id="receiver">
+<p>Please enter the message your teammate is trying to tell you:</p>
+  <form>
+  <p class="error"></p>
+  <input class="message" type="text" />
+  <input type="submit" value="I've got it!" />
+  </form>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="hear_you.js" type="text/javascript"></script>
