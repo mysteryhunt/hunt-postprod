@@ -1,18 +1,24 @@
-<!DOCTYPE html><html><head>
-<meta content="text/html; charset=ascii" http-equiv="Content-Type" />
-<title>Middle-See</title>
-</head>
-
-    <body>
-    <video controls="">
-        <source src="4.webm" type='video/webm; codecs="vp8.0,
-        vorbis"' />
-
-        <source src="4.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
-            If you&rsquo;re using Internet Explorer (sorry, IE9 only), you need <a href="https://tools.google.com/dlpage/webmmf">this</a>
+---
+layout: a_circus_line
+title: Middle-See
+style: style.css
+ponyhash: 9e83dc29916b578cea7f04ea9997580c8c980800d7a26ae4c1a32086
+---
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="me/mediaelement-and-player.min.js"></script>
+    <video controls="" width="320" height="240">
+        <source src="4.webm" type='video/webm; codecs="vp8.0,vorbis"' />
+        <source src="4.mp4" type='video/mp4; codecs="avc1.4D401E,mp4a.40.2"' />
+  <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+  <object data="me/flashmediaelement.swf" width="320" height="240" type="application/x-shockwave-flash">
+    <param name="movie" value="me/flashmediaelement.swf" />
+    <param name="flashvars" value="controls=true&amp;file=../4.mp4" />
+  </object>
     </video>
-    
-    
-    
-    
-</body></html>
+
+<script type="text/javascript">
+$('video').mediaelementplayer({
+  enableAutosize: true,
+  features: ['playpause','progress','current','duration','volume','fullscreen'],
+});
+</script>
