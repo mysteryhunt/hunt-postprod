@@ -142,6 +142,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
         if not s.startswith("<!DOCTYPE"):
             s = "<!DOCTYPE HTML>\n" + s
             lineoffset = 1
+        # HACK TO PROTECT &#39;
+        s = re.sub(r'(&#[0-9]+;)',r'<tt class="ponypony">\1</tt>', s)
         parser = html5lib.HTMLParser(
             tree=html5lib.treebuilders.getTreeBuilder("dom"))
         doc = parser.parse(s)
@@ -161,6 +163,7 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                                               encoding='ascii',
                                               omit_optional_tags=False)
         cleaner = smart_quotes(clean)
+        cleaner = re.sub(r'<tt class="ponypony">([^<]+)</tt>',r'\1', cleaner)
         return cleaner
 
     if is_show_meta:
