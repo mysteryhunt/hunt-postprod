@@ -3,8 +3,24 @@
 this into the database."""
 import csv
 import sys
+from dbfetch import with_db, db_select_all
 
-ponyMap = {}
+def getTitle(db, pony):
+    r = db_select_all(db, """
+SELECT puzzle_idea.title, pstatus.name, rounds.name
+FROM puzzle_idea, ponies, answers, pstatus, answers_rounds, rounds
+WHERE ponies.name = %s AND answers.aid = ponies.aid AND
+      answers_rounds.aid = answers.aid AND rounds.rid = answers_rounds.rid AND
+      puzzle_idea.id = answers.pid AND
+      puzzle_idea.pstatus = pstatus.id AND
+      rounds.name != %s""", pony, "Arbitrary Answer Puzzles")
+    assert len(r)<=1
+    if len(r):
+        title, status, round = r[0]
+        if status.startswith('6') or status.startswith('7'):
+            return title
+    return None
+
 critics = ['Betsy Johnson', 'Charles Lutwidge Dodgson', 'William S. Bergman',
            'Ben Bitdiddle', 'Sheila Sunshine', 'Watson 2.0']
 roundMap = {'1 S': 'A Circus Line',
@@ -30,9 +46,11 @@ metaPonyMap = { '1 S': ('Beachcomber', 'ELEPHANT IN A TUTU'),
                 '6C':  ('Zipzee', 'ALT F FOUR'),
 }
 
-first=True
-ponyReader = csv.reader(open('fake-puzzle-names.csv'))
-for row in ponyReader:
+def mkPonyMap(db):
+ ponyMap = {}
+ first=True
+ ponyReader = csv.reader(open('fake-puzzle-names.csv'))
+ for row in ponyReader:
     if first:
         # skip header
         first=False
@@ -40,23 +58,34 @@ for row in ponyReader:
     round,answer,reused,pony,order = row[:5]
     if reused: assert int(reused) <= len(critics)
     assert round in roundMap
-    ponyMap[pony.strip()] = {
+    pony = pony.strip()
+    title = getTitle(db, pony)
+    if title is None: title = pony
+    ponyMap[pony] = {
+        'title': title,
         'answer': answer.strip(),
         'reused': critics[int(reused)-1] if reused else None,
         'order': int(order) if order else None,
         'round': roundMap[round],
-        'is_meta': False
+        'is_meta': False,
+        'batch': None # XXX
     }
-for idx,r in zip(xrange(99), metaPonyMap.keys()):
+ for idx,r in zip(xrange(99), metaPonyMap.keys()):
     pony,answer = metaPonyMap[r]
+    roundtitle = getTitle(db, pony)
+    assert roundtitle is not None
     ponyMap[pony.strip()] = {
+        'title': roundtitle,
         'answer': answer,
         'reused': None,
         'order': idx,
-        'round': 'Meta',
+        'round': roundtitle,
         'is_meta': True,
+        'batch': None
         }
+ return ponyMap
 
+ponyMap = with_db(mkPonyMap)
 longest = max(len(p) for p in ponyMap.iterkeys())
 
 def emit_sql():
