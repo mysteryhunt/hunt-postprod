@@ -2,6 +2,7 @@
 from __future__ import with_statement
 """Import a puzzle file.
 Requires 'python2.6', 'python-html5lib', and 'python-yaml'.
+Also requires 'pngcrush' to be on your path.
 
 Command line:
 
@@ -17,7 +18,7 @@ import yaml
 from cStringIO import StringIO
 from contextlib import contextmanager, closing
 from htmlentitydefs import name2codepoint
-from subprocess import Popen, PIPE
+from subprocess import Popen, PIPE, check_call
 from zipfile import ZipFile
 # import local copy of html5lib
 sys.path.insert(0, os.path.dirname(__file__))
@@ -240,8 +241,18 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                     html = tidy_with_log(html)
                 fd.write(html)
                 LOG_CONTEXT2 = ''
+        elif f.endswith('.png'):
+            LOG_CONTEXT2 = f
+            with open(full_path+".XXX", 'w') as fd:
+                fd.write(zf.read(f))
+            check_call(['pngcrush', '-rem', 'text', '-q',
+                        full_path+".XXX", full_path])
+            os.remove(full_path+".XXX")
+            LOG_CONTEXT2 = ''
         else:
-            if f.endswith("~") or f.endswith(".bak") or f.endswith(".htm"):
+            if f.endswith("~") or f.endswith(".bak") or f.endswith(".htm") \
+                    or f.endswith(".PNG") or f.endswith(".jpeg") \
+                    or f.endswith(".JPG") or f.endswith(".GIF"):
                 log_error("Suspicious filename: %s" % f)
             zf.extract(f, target_dir)
     if is_show_meta:
