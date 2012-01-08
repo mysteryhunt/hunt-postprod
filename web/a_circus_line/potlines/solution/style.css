@@ -1,3 +1,15 @@
+.pl-ul {
+  margin: 0;
+}
+
+.pl-p-top {
+  margin-bottom: 0;
+}
+
+.pl-p-bottom {
+  margin-top: 0;
+}
+
 .pl-answer-table {
   border-collapse: collapse;
   border: 1px solid black;
@@ -6,7 +18,7 @@
 .pl-answer-table th,
 .pl-answer-table td {
   text-align: center;
-  padding: 3px;
+  padding: 3px 6px;
   border-top: 1px solid black;
 }
 
