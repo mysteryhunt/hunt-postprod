@@ -18,7 +18,7 @@ import yaml
 from cStringIO import StringIO
 from contextlib import contextmanager, closing
 from htmlentitydefs import name2codepoint
-from subprocess import Popen, PIPE, check_call
+from subprocess import Popen, PIPE, check_call, call
 from zipfile import ZipFile
 # import local copy of html5lib
 sys.path.insert(0, os.path.dirname(__file__))
@@ -31,6 +31,8 @@ html5lib.constants.E.setdefault(
 html5lib.constants.E.setdefault(
     "invalid-codepoint",
     u"Invalid codepoint (ignore line number given)")
+
+DO_GIT=False
 
 @contextmanager
 def rmdir_after(d):
@@ -228,8 +230,13 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
     if not os.path.isdir(solution_dir):
         os.makedirs(solution_dir)
     # XXX clean target? (if not show_meta)
+    if os.path.isdir(target_dir) and DO_GIT and \
+            not is_show_meta and not any(f.endswith('.mp4') for f in files):
+        call(['git','rm','-rf',target_dir])
     for f in files:
         full_path = os.path.join(target_dir, f)
+        if not os.path.isdir(os.path.dirname(full_path)):
+            os.makedirs(os.path.dirname(full_path))
         if f == 'index.html':
             with open(full_path, 'w') as fd:
                 fd.write(index_html.encode('utf8'))
@@ -266,6 +273,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                             index_html)
         with open(index_html_path, 'w') as fd:
             fd.write(index_html)
+    if DO_GIT:
+        check_call(['git','add',target_dir])
 
 def listdir_rec(d):
     for dirpath, dirnames, filenames in os.walk(d, followlinks=True):
