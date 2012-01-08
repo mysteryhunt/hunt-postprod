@@ -187,6 +187,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
             options['ponyhash'] = ponyhash
         if 'style.css' in files:
             options['style'] = 'style.css'
+        if 'solution/secret.js' in files:
+            options['appengine'] = 'true'
         if re.match(r'Investigator.s Report', title):
             options['class'] = 'report'
         # replace index.html with template version
