@@ -240,6 +240,14 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
             if f.endswith("~") or f.endswith(".bak") or f.endswith(".htm"):
                 log_error("Suspicious filename: %s" % f)
             zf.extract(f, target_dir)
+    if is_show_meta:
+        index_html_path = os.path.join(target_dir, 'index.html')
+        index_html = open(index_html_path, 'r').read()
+        index_html = re.sub(r'(?m)^ponyhash:(.*)$',
+                            'ponyhash: '+ponyhash,
+                            index_html)
+        with open(index_html_path, 'w') as fd:
+            fd.write(index_html)
 
 def listdir_rec(d):
     for dirpath, dirnames, filenames in os.walk(d, followlinks=True):
