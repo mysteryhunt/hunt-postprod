@@ -1,0 +1,13 @@
+.MiddleSeeouter {
+    vertical-align: top;
+    padding: 10px 10px 10px 10px;
+}
+.MiddleSeeinner {
+    border-collapse: collapse;
+}
+.MiddleSeecell {
+    height: 250px;
+    width: 250px;
+    border: 1px solid;
+    text-align: center;
+}
