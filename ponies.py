@@ -16,6 +16,20 @@ roundMap = {'1 S': 'A Circus Line',
 for i in xrange(len(critics)):
     roundMap['%dC' % (i+1)] = critics[i]
 
+metaPonyMap = { '1 S': ('Beachcomber', 'ELEPHANT IN A TUTU'),
+                '1C':  ('Ripple', 'THROW GRAMMAR OUT THE WINDOW'),
+                '2 S': ('Sealight', 'CORNY CLUES'),
+                '2C':  ('Seashimmer', 'DRAWLING'),
+                '3 S': ('Seawinkle', 'RAPUNZEL HAS A FRO'),
+                '3C':  ('Surfrider', 'CAST HUGE TV ACTORS'),
+                '4 S': ('Sunshower', 'HARVEST HEARTS'),
+                '4C':  ('Waterlily', 'THE UNEXPECTED DESTRUCTION OF ELABORATELY ENGINEERED ARTIFACTS'),
+                '5 S': ('Wavedancer', 'DIAL TONE RECITATIVE'),
+                '5C':  ('Tiddlywink', 'WRECK A VW BUG'),
+                '6 S': ('Tralala', 'DONKEY ODS'),
+                '6C':  ('Zipzee', 'ALT F FOUR'),
+}
+
 first=True
 ponyReader = csv.reader(open('fake-puzzle-names.csv'))
 for row in ponyReader:
@@ -30,8 +44,18 @@ for row in ponyReader:
         'answer': answer.strip(),
         'reused': critics[int(reused)-1] if reused else None,
         'order': int(order) if order else None,
-        'round': roundMap[round]
+        'round': roundMap[round],
+        'is_meta': False
     }
+for idx,r in zip(xrange(99), metaPonyMap.keys()):
+    pony,answer = metaPonyMap[r]
+    ponyMap[pony.strip()] = {
+        'answer': answer,
+        'reused': None,
+        'order': idx,
+        'round': 'Meta',
+        'is_meta': True,
+        }
 
 longest = max(len(p) for p in ponyMap.iterkeys())
 
