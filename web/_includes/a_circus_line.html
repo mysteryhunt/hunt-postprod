@@ -15,6 +15,7 @@
 </style>
 {% endif %}
 <title>{% if is_solution %}Solution: {% endif %}{{ page.title }}</title>
+{% include appengine.html %}
 </head>
 
 <body class="{% if page.class %}{{ page.class }}{% else %}puzzle{% endif %}">
