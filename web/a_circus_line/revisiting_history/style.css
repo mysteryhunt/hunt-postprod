@@ -1,17 +1,30 @@
-#revisitinghistory {
-	border-spacing: 0;
-	border-collapse: collapse;
- }
-#revisitinghistory td
+table.revisitinghistory {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+table.revisitinghistory td
 {
     padding: 5pt;
     margin: 5pt;
     
     text-align: center;
     vertical-align: top;
-    
+    width: 50%;
+
+   white-space: nowrap;
+}
+
+table.revisitinghistory td:first-child {
+   width: 35%;
+}
+table.revisitinghistory td:first-child + td {
+   width: 65%;
+}
+body {
+  min-width: 925px;
 }
 
 .printbreak {
-	page-break-after:always
+    page-break-after:always
 }
