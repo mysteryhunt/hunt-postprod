@@ -2,12 +2,13 @@
 """Read in the file of pony fake names for puzzles and general SQL to stuff
 this into the database."""
 import csv
+import re
 import sys
 from dbfetch import with_db, db_select_all
 
-def getTitle(db, pony):
+def getTitleAndBatch(db, pony):
     r = db_select_all(db, """
-SELECT puzzle_idea.title, pstatus.name, rounds.name
+SELECT puzzle_idea.title, pstatus.name, rounds.name, answers.batch
 FROM puzzle_idea, ponies, answers, pstatus, answers_rounds, rounds
 WHERE ponies.name = %s AND answers.aid = ponies.aid AND
       answers_rounds.aid = answers.aid AND rounds.rid = answers_rounds.rid AND
@@ -16,10 +17,12 @@ WHERE ponies.name = %s AND answers.aid = ponies.aid AND
       rounds.name != %s""", pony, "Arbitrary Answer Puzzles")
     assert len(r)<=1
     if len(r):
-        title, status, round = r[0]
-        if status.startswith('6') or status.startswith('7'):
-            return title
-    return None
+        title, status, round, batch = r[0]
+        if batch is not None: batch = int(batch)
+        if status.startswith('6c') or status.startswith('7'):
+            return title, batch
+        return None, batch
+    return None, None
 
 critics = ['Betsy Johnson', 'Charles Lutwidge Dodgson', 'William S. Bergman',
            'Ben Bitdiddle', 'Sheila Sunshine', 'Watson 2.0']
@@ -32,18 +35,18 @@ roundMap = {'1 S': 'A Circus Line',
 for i in xrange(len(critics)):
     roundMap['%dC' % (i+1)] = critics[i]
 
-metaPonyMap = { '1 S': ('Beachcomber', 'ELEPHANT IN A TUTU'),
-                '1C':  ('Ripple', 'THROW GRAMMAR OUT THE WINDOW'),
-                '2 S': ('Sealight', 'CORNY CLUES'),
-                '2C':  ('Seashimmer', 'DRAWLING'),
-                '3 S': ('Seawinkle', 'RAPUNZEL HAS A FRO'),
-                '3C':  ('Surfrider', 'CAST HUGE TV ACTORS'),
-                '4 S': ('Sunshower', 'HARVEST HEARTS'),
-                '4C':  ('Waterlily', 'THE UNEXPECTED DESTRUCTION OF ELABORATELY ENGINEERED ARTIFACTS'),
-                '5 S': ('Wavedancer', 'DIAL TONE RECITATIVE'),
-                '5C':  ('Tiddlywink', 'WRECK A VW BUG'),
-                '6 S': ('Tralala', 'DONKEY ODS'),
-                '6C':  ('Zipzee', 'ALT F FOUR'),
+metaPonyMap = { '1 S': ('Beachcomber', 'ELEPHANT IN A TUTU', 1100),
+                '1C':  ('Ripple', 'THROW GRAMMAR OUT THE WINDOW', 1200),
+                '2 S': ('Sealight', 'CORNY CLUES', 2100),
+                '2C':  ('Seashimmer', 'DRAWLING', 2200),
+                '3 S': ('Seawinkle', 'RAPUNZEL HAS A FRO', 3100),
+                '3C':  ('Surfrider', 'CAST HUGE TV ACTORS', 3200),
+                '4 S': ('Sunshower', 'HARVEST HEARTS', 4100),
+                '4C':  ('Waterlily', 'THE UNEXPECTED DESTRUCTION OF ELABORATELY ENGINEERED ARTIFACTS', 4200),
+                '5 S': ('Wavedancer', 'DIAL TONE RECITATIVE', 5100),
+                '5C':  ('Tiddlywink', 'WRECK A VW BUG', 5200),
+                '6 S': ('Tralala', 'DONKEY ODS', 6100),
+                '6C':  ('Zipzee', 'ALT F FOUR', 6200),
 }
 
 def mkPonyMap(db):
@@ -59,7 +62,7 @@ def mkPonyMap(db):
     if reused: assert int(reused) <= len(critics)
     assert round in roundMap
     pony = pony.strip()
-    title = getTitle(db, pony)
+    title, batch = getTitleAndBatch(db, pony)
     if title is None: title = pony
     ponyMap[pony] = {
         'title': title,
@@ -68,20 +71,24 @@ def mkPonyMap(db):
         'order': int(order) if order else None,
         'round': roundMap[round],
         'is_meta': False,
-        'batch': None # XXX
+        'is_critic_meta': False,
+        'batch': batch
     }
  for idx,r in zip(xrange(99), metaPonyMap.keys()):
-    pony,answer = metaPonyMap[r]
-    roundtitle = getTitle(db, pony)
+    pony,answer,batch = metaPonyMap[r]
+    roundtitle, _ = getTitleAndBatch(db, pony)
+    is_critic = "C-META" in roundtitle
+    roundtitle = re.sub(r'\(.-META\)','',roundtitle).strip()
     assert roundtitle is not None
     ponyMap[pony.strip()] = {
-        'title': roundtitle,
+        'title': "Investigator's Report" if is_critic else roundtitle,
         'answer': answer,
         'reused': None,
         'order': idx,
         'round': roundtitle,
         'is_meta': True,
-        'batch': None
+        'batch': batch,
+        'is_critic_meta': is_critic
         }
  return ponyMap
 

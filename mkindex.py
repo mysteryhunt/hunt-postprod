@@ -15,12 +15,13 @@ WEBDIR='web'
 
 def getRoundPuzzlesWithPostProd(db):
     rinfo = dbfetch.db_select_all(db, """
-SELECT rounds.name, ponies.name FROM rounds, answers, answers_rounds, ponies
+SELECT rounds.name, ponies.name, answers.batch
+FROM rounds, answers, answers_rounds, ponies
 WHERE answers_rounds.aid = answers.aid AND rounds.rid = answers_rounds.rid
   AND  ponies.aid = answers.aid ORDER BY rounds.name;""")
     rounds = {}
-    for round_name, pony_name in rinfo:
-        batch = 1 # XXX fetch from db
+    for round_name, pony_name, batch in rinfo:
+        if PONY_INFO[pony_name]['is_meta']: continue
         rounds.setdefault(round_name, {})\
               .setdefault(pony_name,
                           { 'batch': batch, 'title': None })
@@ -34,6 +35,7 @@ AND answers_rounds.aid = answers.aid
 AND rounds.rid = answers_rounds.rid AND ponies.aid = answers.aid;""", pid)
         if pinfo is None: continue # hrm
         round_name, puzzle_title, pony_name = pinfo
+        if PONY_INFO[pony_name]['is_meta']: continue
         rounds[round_name][pony_name]['title'] = puzzle_title
 
     # delete rounds which are not real
@@ -55,7 +57,7 @@ def unordered_titles(round_info):
 
 def make_pony_order(round_name):
     ponies = [(info['order'], pony) for pony,info in PONY_INFO.iteritems()
-              if info['round'] == round_name]
+              if info['round'] == round_name and not info['is_meta']]
     assert all((order is not None) for order,pony in ponies)
     ponies.sort() # by order!
     return [pony for order,pony in ponies]
@@ -137,7 +139,8 @@ def buildCritic(round_name, rinfo, split=4, unified=False, ordered=False):
     critic_puzzles = unordered_titles(round_info)
     critic_puzzles = [(title,round_name,None) for title in critic_puzzles]
     show_puzzles = [(info['round'], pony) for pony,info
-                    in PONY_INFO.iteritems() if info['reused']==round_name]
+                    in PONY_INFO.iteritems() if info['reused']==round_name
+                    and not info['is_meta']]
     if ordered:
         show_puzzles.sort(key=lambda (_,pony): PONY_ORDER[round_name].index(pony))
     show_puzzles = [(pony,round,rinfo[round][pony]['title'])
