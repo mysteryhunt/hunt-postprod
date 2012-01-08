@@ -1,0 +1,18 @@
+div.group {
+  padding-top: 2em;
+  border-top: 1px solid #888;
+  margin-bottom: 2em;
+}
+div.group.first {
+  border: none;
+  padding-top: 1em;
+}
+div.group, div.group p, div.group img {
+  page-break-inside: avoid;
+}
+div.group p {
+  page-break-before: avoid;
+}
+div.group img {
+  page-break-after: avoid;
+}
