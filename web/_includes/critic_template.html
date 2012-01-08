@@ -33,6 +33,7 @@ this.up_title="{{ page.title }}";
 {% else %}
 this.depth="../../";
 this.up_title="{{ critic_name }}";
+this.puzzlehash="{{ ponyhash }}";
 {% endif %}
 </script>
 <script src="{% if is_solution %}../{% endif %}../../shortcuts.js" type="text/javascript"></script>
