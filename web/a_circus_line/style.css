@@ -88,3 +88,8 @@ body { min-width: 700px; }
 body.index #main {
   padding-top: 85px;
 }
+body.solution h2 {
+  padding: 0; margin: 0;
+  padding-left: 2em;
+  text-indent: -2em;
+}
