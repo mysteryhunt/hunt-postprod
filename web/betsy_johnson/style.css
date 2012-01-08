@@ -47,6 +47,7 @@ body {
 #main {
   position: relative; left: 0; top: 0; /* make positioned so it's in z order */
   padding: 47px 105px 10px 102px;
+  min-height: 650px;
 }
 #title {
   position: absolute; left: 130px; top: 5px;
