@@ -3,3 +3,7 @@
 @media print {
   margin: 0;
 }
+
+@media print {
+  .mejs-layers, .mejs-controls, .mejs-clear { display: none; }
+}
