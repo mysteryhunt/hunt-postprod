@@ -166,6 +166,7 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                                               omit_optional_tags=False)
         cleaner = smart_quotes(clean)
         cleaner = re.sub(r'<tt class="ponypony">([^<]+)</tt>',r'\1', cleaner)
+        cleaner = cleaner.replace('&amacr;', '&#257;')
         return cleaner
 
     if is_show_meta:
