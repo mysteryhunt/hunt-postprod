@@ -235,7 +235,10 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
         elif f.endswith(".html"):
             with open(full_path, 'w') as fd:
                 LOG_CONTEXT2 = f
-                fd.write(tidy_with_log(zf.read(f)))
+                html = zf.read(f)
+                if not html.startswith("---"):
+                    html = tidy_with_log(html)
+                fd.write(html)
                 LOG_CONTEXT2 = ''
         else:
             if f.endswith("~") or f.endswith(".bak") or f.endswith(".htm"):
