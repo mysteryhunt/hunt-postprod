@@ -1,0 +1,19 @@
+.nikma-t {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.nikma-t th,
+.nikma-t td {
+  text-align: left;
+  padding: 3px 6px;
+  border-top: 1px solid black;
+}
+
+/* Specific for columns 5 and 6. */
+.nikma-t th:first-child + th + th + th + th,
+.nikma-t td:first-child + td + td + td + td,
+.nikma-t th:first-child + th + th + th + th + th,
+.nikma-t td:first-child + td + td + td + td + td {
+  text-align: center;
+}

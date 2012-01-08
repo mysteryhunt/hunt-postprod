@@ -1,0 +1,94 @@
+---
+layout: charles_lutwidge_dodgson_solution
+title: Audio Games
+class: puzzle solution
+credits: by Michael Constant
+---
+<p>The puzzle consists of seven audio files, each exactly 26 seconds
+long.  (To help you notice this, each one ends abruptly after 26
+seconds instead of fading out.  Also, the in-browser audio player
+should show &ldquo;0:26&rdquo; for each file when it finishes playing.)</p>
+
+<p>Each file contains audio from a classic NES game, complete with
+sound effects.  By listening to the audio and looking at the title
+(&ldquo;Audio Games&rdquo;), hopefully anyone can at least identify this as a
+video-game puzzle; any video gamer should have no trouble identifying
+the games themselves.  They are: Mega Man 2, Castlevania, The Legend
+of Zelda, Marble Madness, Metroid, Final Fantasy, and Super Mario
+Bros.</p>
+
+<p>Listening more carefully to the audio clips, you should notice
+that they sound like plausible recordings of actual gameplay, rather
+than just video game music or music with random sound effects.  This
+will hopefully inspire you to see if you can reproduce them.  To
+make this as easy as possible, each clip is taken from the very
+beginning of its game, or close to it.  (This also provides another
+clue that you&rsquo;re supposed to actually play these games, or at least
+watch YouTube videos of them being played.)</p>
+
+<p>It turns out that each clip can be reproduced exactly, except for a
+single extraneous sound effect:</p>
+
+<dl>
+<dt>Mega Man 2:</dt>
+<dd>The music identifies this as Bubble Man&rsquo;s stage.  At the beginning
+of the clip, you hear the splash of Mega Man entering the water,
+followed immediately by the sounds of Mega Man shooting at a bunch of
+enemies.  Mixed in with those are several &ldquo;dink&rdquo; sounds of shots
+bouncing off an enemy, which can only come from the giant
+shrimp-launcher robots.  However, there&rsquo;s no way to get to those
+robots so quickly after jumping in the water.  The splash at 0:01 is
+fake.</dd>
+
+<dt>Castlevania:</dt>
+<dd>At the beginning of the clip, you hear the last few notes of the
+intro music, which means this must be the very beginning of the game.
+Soon afterwards, you hear Simon getting hit -- but there aren&rsquo;t any
+enemies on the first screen, and there&rsquo;s no way to get to the second
+screen that quickly.  The hit sound at 0:08 is fake.</dd>
+
+<dt>The Legend of Zelda:</dt>
+<dd>Near the end of the clip, Link gets hit several times while
+attacking the enemies.  Right afterwards you hear him using his magic
+sword attack, though, which only works when he has full health.  (It
+is possible for Link to get hit three times and still have full
+health, if he&rsquo;s wearing the red ring from the final dungeon, but that
+can&rsquo;t be what&rsquo;s happening here.  You hear him killing enemies without
+the magic sword attack, so he must really have taken damage.)  The
+magic sword sound at 0:25 is fake.</dd>
+
+<dt>Marble Madness:</dt>
+<dd>The music identifies this as the second level.  At the very
+beginning of the clip, you hear the marble falling through a chute,
+and immediately afterwards it gets hit twice.  There are two chutes
+in the level, but neither one has anything you can get hit by
+afterwards.  The chute sound at 0:00 is fake.</dd>
+
+<dt>Metroid:</dt>
+<dd>The clip begins with the title-screen music, and then goes
+straight to gameplay without the sounds of selecting &ldquo;Continue&rdquo; and
+entering a password, so this must be a new game.  Near the end of the
+clip, you hear Samus collecting an upgrade, which therefore must be
+ball mode.  However, you hear her use ball mode at 0:17, before she&rsquo;s
+gotten the upgrade.</dd>
+
+<dt>Final Fantasy:</dt>
+<dd>After the battle music finishes, you hear the sounds of entering a
+town; immediately afterwards, there&rsquo;s the sound of walking through a
+door.  No town in the game has a door so close to the town entrance,
+though (as you can verify with the maps at <a href="http://achurch.org/ff1-maps.html">http://achurch.org/ff1-maps.html</a>).
+The door sound at 0:17 is fake.</dd>
+
+<dt>Super Mario Bros.:</dt>
+<dd>The brief silence at the beginning identifies this as the
+beginning of a level, which means Mario must be standing on the
+ground.  The first sound effect you hear is Mario squashing a Goomba,
+though, which isn&rsquo;t possible unless you jump first or fall from a
+platform.  The squashing sound at 0:04 is fake.</dd>
+</dl>
+
+<p>Once you&rsquo;ve identified the fake sound effects and noticed that each
+clip is exactly 26 seconds, there&rsquo;s only one natural encoding for the
+answer: the 26 seconds of the clip represent the 26 letters of the
+alphabet.  For each clip, the position of the incorrect sound effect
+gives one letter, spelling out the answer <b>BIZARRE</b>.</p>

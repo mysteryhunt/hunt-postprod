@@ -1,0 +1,197 @@
+---
+layout: sheila_sunshine_solution
+title: Highlights
+class: puzzle solution
+style: style.css
+credits: by Josh Ain
+---
+<p>
+The puzzle is a series of 11 pictures of board games in progress. Each game, when examined carefully, has a numerical mistake -- one number is replaced with another number.
+</p>
+
+<table cellspacing="0" class="highlightstable">
+<tbody><tr>
+<th>Game Name</th>
+<th>Error</th>
+<th>Incorrect Number</th>
+<th>Correct Number</th>
+</tr>
+
+<tr>
+<td class="highlightstd">Race for the Galaxy</td>
+<td class="highlightstd">The blue player has 1 card in hand, when he should have 5 cards in hand, based on the actions he has taken.</td>
+<td class="num">1</td>
+<td class="num">5</td>
+</tr>
+<tr>
+<td class="highlightstd">Dominant Species</td>
+<td class="highlightstd">In a four player game, each player should have 4 action pawns, yet the green player instead has 7.</td>
+<td class="num">7</td>
+<td class="num">4</td>
+</tr>
+<tr>
+<td class="highlightstd">7 Wonders</td>
+<td class="highlightstd">The game is at the end of the first age. The Halicarnassus player should have played 7 cards, based on her wonder ability, but has instead played 10 cards. A solver can also confirm that Halicarnassus did not discard any cards by counting the total money in circulation among the players, confirming no money has entered play through discarded cards. </td>
+<td class="num">10</td>
+<td class="num">7</td>
+</tr>
+<tr>
+<td class="highlightstd">The Settlers of Catan</td>
+<td class="highlightstd">Normal number distribution in Settlers has two of each number, except one each of 2 and 12. In this game, one of the 4s has been replaced by a 3.</td>
+<td class="num">3</td>
+<td class="num">4</td>
+</tr>
+<tr>
+<td class="highlightstd">Puerto Rico</td>
+<td class="highlightstd">The colonist ship has 2 colonists on it, when it should have been refilled to 5 colonists.</td>
+<td class="num">2</td>
+<td class="num">5</td>
+</tr>
+<tr>
+<td class="highlightstd">Power Grid</td>
+<td class="highlightstd">The yellow player has 9 cities on the board, but only has marked himself as having 8.</td>
+<td class="num">8</td>
+<td class="num">9</td>
+</tr>
+<tr>
+<td class="highlightstd">Space Alert</td>
+<td class="highlightstd">The main power supply has just been refilled, and has 9 power blocks, not 5.</td>
+<td class="num">9</td>
+<td class="num">5</td>
+</tr>
+<tr>
+<td class="highlightstd">Small World</td>
+<td class="highlightstd">One of the Ratmen territories has 3 Ratmen in it, even though the race is in decline. Races in decline should only have a single token per square.</td>
+<td class="num">3</td>
+<td class="num">1</td>
+</tr>
+<tr>
+<td class="highlightstd">Saint Petersburg</td>
+<td class="highlightstd">The red player has 4 cards in hand, when the maximum hand size is 3.</td>
+<td class="num">4</td>
+<td class="num">3</td>
+</tr>
+<tr>
+<td class="highlightstd">Vegas Showdown</td>
+<td class="highlightstd">The blue player has played a fancy restaurant, worth 3 fame, but his fame track is only at 2.</td>
+<td class="num">2</td>
+<td class="num">3</td>
+</tr>
+<tr>
+<td class="highlightstd">Pandemic</td>
+<td class="highlightstd">The game is at the end of the first turn, which was the dispatcher&rsquo;s turn. She has drawn one infection card, but has not yet drawn the second card (10 cards in the infection discard pile). Based on the actions that have been taken on the board, the dispatcher should have 3 cards in hand, but instead has 6 cards in hand.</td>
+<td class="num">6</td>
+<td class="num">3</td>
+</tr>
+</tbody></table>
+
+
+Indexing into the game names in order by the correct numbers, we get FIRSTDESIGN. Looking up the designer of each board game and finding the first board game design he or she published leads to this table:
+
+<table cellspacing="0" class="highlightstable">
+<tbody><tr>
+<th>Game Name</th>
+<th>Designer</th>
+<th>First Game</th>
+<th>Incorrect number</th>
+<th>Correct number</th>
+</tr>
+
+<tr>
+<td class="highlightstd">Race for the Galaxy</td>
+<td class="highlightstd">Thomas Lehmann</td>
+<td class="highlightstd">Suzerain</td>
+<td class="num">1</td>
+<td class="num">5</td>
+</tr>
+<tr>
+<td class="highlightstd">Dominant Species</td>
+<td class="highlightstd">Chad Jenson</td>
+<td class="highlightstd">Combat Commander: Europe</td>
+<td class="num">7</td>
+<td class="num">4</td>
+</tr>
+<tr>
+<td class="highlightstd">7 Wonders</td>
+<td class="highlightstd">Antoine Bauza</td>
+<td class="highlightstd">Chabyrinthe</td>
+<td class="num">10</td>
+<td class="num">7</td>
+</tr>
+<tr>
+<td class="highlightstd">The Settlers of Catan</td>
+<td class="highlightstd">Klaus Teuber</td>
+<td class="highlightstd">Barbarossa</td>
+<td class="num">3</td>
+<td class="num">4</td>
+</tr>
+<tr>
+<td class="highlightstd">Puerto Rico</td>
+<td class="highlightstd">Andreas Seyfarth</td>
+<td class="highlightstd">Zorro: The Fight Against Alcalde</td>
+<td class="num">2</td>
+<td class="num">5</td>
+</tr>
+<tr>
+<td class="highlightstd">Power Grid</td>
+<td class="highlightstd">Friedemann Friese</td>
+<td class="highlightstd">Landlord!</td>
+<td class="num">8</td>
+<td class="num">9</td>
+</tr>
+<tr>
+<td class="highlightstd">Space Alert</td>
+<td class="highlightstd">Vlaada Chv&aacute;til</td>
+<td class="highlightstd">Arena: Morituri te salutant </td>
+<td class="num">9</td>
+<td class="num">5</td>
+</tr>
+<tr>
+<td class="highlightstd">Small World</td>
+<td class="highlightstd">Philippe Keyaerts</td>
+<td class="highlightstd">Vinci</td>
+<td class="num">3</td>
+<td class="num">1</td>
+</tr>
+<tr>
+<td class="highlightstd">Saint Petersburg</td>
+<td class="highlightstd">Bernd Brunnhofer</td>
+<td class="highlightstd">Dodge City</td>
+<td class="num">4</td>
+<td class="num">3</td>
+</tr>
+<tr>
+<td class="highlightstd">Vegas Showdown</td>
+<td class="highlightstd">Henry Stern</td>
+<td class="highlightstd">Vegas Showdown</td>
+<td class="num">2</td>
+<td class="num">3</td>
+</tr>
+<tr>
+<td class="highlightstd">Pandemic</td>
+<td class="highlightstd">Matt Leacock</td>
+<td class="highlightstd">Borderlands</td>
+<td class="num">6</td>
+<td class="num">3</td>
+</tr>
+</tbody>
+</table>
+
+We have already used the missing numbers to get FIRSTDESIGN. Now, using the incorrect numbers to index into each designer&rsquo;s first game leads to <b>SCHRODINGER</b>, which is the answer.
+
+<h3>Bonus Material</h3>
+
+In developing Highlights, we put together a number of board game scenarios that were not ultimately used in production. If you enjoyed solving Highlights and want more, check out these bonus game scenarios. Just like the 11 pictures in Highlights, each bonus picture should solve to a number that is incorrect in the scenario.
+
+
+<a href="extra1.jpg" title="Endeavor"><img src="extra1s.jpg" /></a>
+<br />
+<a href="bonus1.html">show answer</a><br /><br />
+
+<a href="extra2.jpg" title="Battle Line"><img src="extra2s.jpg" /></a>
+<br />
+<a href="bonus2.html">show answer</a><br /><br />
+
+<a href="extra3.jpg" title="Vegas Showdown"><img src="extra3s.jpg" /></a>
+<br />
+<a href="bonus3.html">show answer</a><br /><br />

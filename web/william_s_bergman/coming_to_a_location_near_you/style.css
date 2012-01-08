@@ -1,0 +1,49 @@
+.log-p-top, .log-p-middle {
+  margin-bottom: 0;
+}
+
+.log-p-bottom, .log-p-middle {
+  margin-top: 0;
+}
+
+.log-ol {
+  margin: 0;
+}
+
+.log-pre {
+  margin: 0 0 0 2em;
+}
+
+.log-t {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.log-t th,
+.log-t td {
+  text-align: center;
+  padding: 3px 6px;
+  border-top: 1px solid black;
+}
+
+/* Vertical divides before columns 3, 5, 7. */
+.log-t th:first-child + th + th,
+.log-t td:first-child + td + td,
+.log-t th:first-child + th + th + th + th,
+.log-t td:first-child + td + td + td + td,
+.log-t th:first-child + th + th + th + th + th + th,
+.log-t td:first-child + td + td + td + td + td + td {
+  border-left: 1px solid black;
+}
+
+/* Extra padding after columns 2, 4, 6, 8. */
+.log-t th:first-child + th,
+.log-t td:first-child + td,
+.log-t th:first-child + th + th + th,
+.log-t td:first-child + td + td + td,
+.log-t th:first-child + th + th + th + th + th,
+.log-t td:first-child + td + td + td + td + td,
+.log-t th:first-child + th + th + th + th + th + th + th,
+.log-t td:first-child + td + td + td + td + td + td + td {
+  padding-right: 15px;
+}

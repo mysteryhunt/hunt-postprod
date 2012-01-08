@@ -1,0 +1,19 @@
+.yow td {
+ width: 100px;
+ height: 100px;
+ border-style: solid;
+ border-color: black;
+ text-align: center;
+ vertical-align: middle;
+} 
+
+ .yow {
+ border-spacing: 0px;
+ border-style: solid;
+ border-color: black
+}
+
+
+.twoclass {
+ border-spacing: 100px 0px;
+}

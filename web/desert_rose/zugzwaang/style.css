@@ -1,0 +1,19 @@
+table.Zugzwaangtable {
+	border-collapse: collapse;
+	border: 2px solid;
+	}
+table.Zugzwaangtable td {
+	height: 80px;
+	width: 80px;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 12px;
+}
+table.Zugzwaangtable tr {
+	padding: 0;
+}
+.Zugzwaangb {background-color: black; color: white;}
+.Zugzwaangw {background-color: white; color: black;}
+
+

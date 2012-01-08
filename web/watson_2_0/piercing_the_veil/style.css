@@ -1,0 +1,89 @@
+div.bingobody {
+    text-align: left;
+    font-size: 13px;
+    font-family: calibri, 'lucida grande', tahoma, helvetica, arial, verdana, sans-serif;
+    margin: 50px;
+}
+
+div.h1class {
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+}
+
+table.bingotable {
+    margin: 0;
+    font-size: inherit;
+    border-style: none;
+    border-collapse: collapse;
+    
+}
+
+td.bingotd {
+    margin: 0;
+    padding: .5em;
+    border-style: none;
+    vertical-align: top;
+}
+
+td.puzzledescription {
+    background-color: #F0E8E0;
+}
+
+tr.comment {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+
+td.comment-left {
+    width: 120px;
+	padding:7px;
+}
+
+td.author {
+    background-color:#E0B4BD;
+	padding:7px;
+	vertical-align: top;
+}
+
+td.editor {
+    background-color:#B4C1E0;
+	padding:7px;
+	vertical-align: top;
+}
+
+td.server {
+    background-color:#E0E0B4;
+	padding:7px;
+	vertical-align: top;
+	}
+
+td.lurker {
+    background-color:#B4D8C8;
+	padding:7px;
+	vertical-align: top;
+}
+
+td.testsolver {
+    background-color: #FFFFFF;
+	padding:7px;
+	vertical-align: top;
+}
+
+td.testingadmin {
+    background-color: #B4E0E0;
+	padding:7px;
+	vertical-align: top;
+}
+
+div.itemgroup {
+    padding-top: 1.5em;
+}
+
+div.disclaimer {
+    padding-bottom: 3.0em;
+}
+
+td.item {
+    padding: .25em 1em 0em 0em;
+}

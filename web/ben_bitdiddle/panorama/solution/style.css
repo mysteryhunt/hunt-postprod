@@ -1,9 +1,13 @@
-.marg-top {
-  margin-top: 1em;
+.pa-ul {
+  margin: 0;
 }
 
-ul {
-  margin: 0;
+.pa-p-top {
+  margin-bottom: 0;
+}
+
+.pa-p-bottom {
+  margin-top: 0;
 }
 
 #pano-t1, #pano-t2 {

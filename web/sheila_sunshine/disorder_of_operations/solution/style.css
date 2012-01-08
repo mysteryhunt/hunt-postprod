@@ -1,16 +1,17 @@
-#main ul, ol {
+.doo-ol {
   margin: 0;
 }
 
-.doo-marg-top {
-  margin-top: 1em;
+.doo-p-top, .doo-p-top-sm {
+  margin-bottom: 0;
 }
-.doo-marg-top-sm {
+
+.doo-p-top-sm {
   margin-top: 0.5em;
 }
 
-.doo-str {
-  font-family: Inconsolata, monospace; 
+.doo-p-bottom {
+  margin-top: 0;
 }
 
 #doo-t {

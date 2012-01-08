@@ -1,0 +1,26 @@
+.highlightstd {
+	border: solid black 1px;
+	padding: 2px;
+}
+
+.highlightstable {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 650px;
+}
+
+
+.num {
+  text-align: right;
+	border: solid black 1px;
+	padding: 2px;
+  
+}
+
+.answer {
+    display: none;
+}
+
+.answerWrapper{
+    padding-bottom: 20px;
+}

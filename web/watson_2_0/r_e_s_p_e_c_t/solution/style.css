@@ -1,0 +1,27 @@
+
+.restable {
+  border-collapse: collapse;
+}
+
+.restop {
+border-top: solid 1px;
+}
+
+.resbottom {
+	border-bottom: solid 1px;
+}
+
+.resall {
+	border-bottom: solid 1px;
+	border-top: solid 1px;
+	border-left: solid 1px;
+	border-right: solid 1px;
+}
+.resleft {
+	border-left: solid 1px;
+	padding: 2px;
+}
+
+.resright {
+	border-right: solid 1px;
+}

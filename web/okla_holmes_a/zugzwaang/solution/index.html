@@ -17,7 +17,7 @@ Arimaa is a strategy game played on the same board and with the same
 pieces as chess.  (Arimaa specific sets now exist, but it was
 originally designed for a chessboard.)  The rules can be found at <a href="http://arimaa.com/arimaa/">arimaa.com</a>.
 White chess pieces represent the gold side, and black pieces represent
-the silver side.
+the silver side. Quarters represent the four &ldquo;trap&rdquo; squares where pieces can be captured.
 </p>
 
 <p>
@@ -96,8 +96,13 @@ order):
 Henceforth, this will be writen as Ee8e (to f8), Ef8e (to g8), Hg4n
 (to g5) etc.  Uppercase are gold pieces, lowercase are silver.
 </p>
+
 <p>
-Even though silver has already advanced the gold rabbit to goal, he
+Following the instruction board, you get A, N, and U in some order, alphabetize them, and add an F to end at ANUF.
+</p>
+
+<p>
+Note: Even though silver has already advanced the gold rabbit to goal, he
 has only used two steps.  There are several things that silver can do
 with his remaining two steps.  None of these will prevent him from
 losing, but they needed to be accounted for to ensure uniqueness of
@@ -116,15 +121,7 @@ the turn, and is considered equivalent to not moving.
 </p>
 
 <p>
-The first four options should all be irrelevant to the puzzle answer.
-On the instruction grid, f7 and g7 are both &ldquo;Do nothing&rdquo;
-squares, while h5 undoes h4.  The fifth adds an additional copy of an
-F.
-</p>
-
-<p>
-Following the instruction board, this spells - NUACF, NAUCF, or ANUCF
-(depending on the order used).
+All of these extended moves are irrelevant to the instruction board.  On the instruction board, h5 undoes h4, and g7 says to &ldquo;Ignore Further Moves This Turn&rdquo;.
 </p>
 
 <h3>Puzzle 2</h3>
@@ -150,7 +147,7 @@ the rabbit from moving.  There is a unique way to do this:
   does with his remaining three steps is irrelevant.
 </li></ul>
 <p>
-Using the instruction board this spells NUCFFEO.
+Using the instruction board this will change ANUF (the result after the first puzzle) to ANUFF, ANUFFE, ANUFFEO, and NUFFEO.
 </p>
 
 <h3>Puzzle 3</h3>
@@ -189,5 +186,5 @@ available that can do it in a single step.
 </li></ul>
 
 <p>
-Using the instruction board this spells <b>BUFFOON</b>, which is the final answer.
+Using the instruction board, this will change NUFFEO (the result after the second puzzle) into NUFFEOO, NUFFOO, UFFOON, UFFOONB, and lastly <b>BUFFOON</b>, which is the final answer.
 </p>

@@ -1,0 +1,16 @@
+
+table.bingo {
+    border-collapse: collapse;
+}
+td.bingo_cell {
+    border: 1px solid;
+    height: 120px;
+    width: 120px;
+    font-family: monospace;
+    vertical-align: top;
+}
+
+.bingo_word {
+    font-family: monospace;
+    vertical-align: top;
+}

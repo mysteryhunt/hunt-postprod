@@ -1,0 +1,35 @@
+---
+layout: ogre_of_la_mancha_solution
+title: I’ll Teach You
+class: puzzle solution
+style: style.css
+credits: by Kai Huang with story by Francis Heaney
+---
+<p>
+The first step is to identify the unusual symbols in the score sheet. They come from the Dr. Seuss book On Beyond Zebra!, which introduces 20 extra letters that come after Z in an imaginary extended alphabet.
+</p>
+
+<p>
+The next step is to figure out how to read the unusual notation. The puzzle text hints that the notation is appropriate both for the Dr. Seuss extended alphabet and for the oversized deck in Tichu. You should think about how one might use an extended alphabet to write numbers. One usual way is to use the alphabet as extra digits. For the normal alphabet, people often write numbers in base 36 with the digits 0-9 followed by digits A-Z. So by extension, using our extended alphabet, we can now write numbers in base 56 with digits 0-9, then A-Z, then [Yuzz]-[Unnamed]. Also, note that a Tichu deck has 56 cards, so base 56 notation is appropriate considering the size of the deck.
+</p>
+
+<p>
+If you manage to come upon this guess and convert a few of the scores to base 10, it will become clear very quickly that this is the correct notation, since all the pairs of scores will be valid for Tichu. (Specifically, they&rsquo;re all multiples of 5, and each pair of scores adds up to a multiple of 100.) Note that we&rsquo;ve purposely made the notation non-obvious by choosing Tichu scores that don&rsquo;t use the digits A-Z when written in base 56.
+</p>
+
+<p>
+The final step is to convert the scores to new scores using the revised scoring system described in the puzzle text. If you notice the hint given in the names, then you would save a little bit of work by only computing the revised scores in the Me+A column. The hint is that Me+A stands for Me+&rdquo;Ani Ng&rdquo; = MEANING, while H+R stands for Her+&rdquo;Ri Ng&rdquo; = HERRING, which hints that the meaningful data is in the Me+A column while red herring data is in the H+R column. Note that this hint only saves you a little bit of work because both columns need to be decoded in order to deduce the base scores and Tichu bonus scores in each game, which in turn are needed to compute the revised scores.
+</p>
+
+<p>
+We made sure only to use pairs of game scores that logically produce one unique pair of revised scores. (When deducing scores, note the puzzle text mentions that neither team ever has both players declare &ldquo;Tichu&rdquo;.) Below are the original and revised scores, in bases 56 and 10. Columns 6 and 8 (in gray text) are the ones that don&rsquo;t need to be computed in order to get the answer.
+</p>
+
+<table class="itu-t">
+<tbody><tr><th>Me+A<br />original<br />(base 56)</th><th>H+R<br />original<br />(base 56)</th><th>Me+A<br />original<br />(base 10)</th><th>H+R<br />original<br />(base 10)</th><th>Me+A<br />revised<br />(base 10)</th><th>H+R<br />revised<br />(base 10)</th><th>Me+A<br />revised<br />(base 56)</th><th>H+R<br />revised<br />(base 56)</th></tr>
+<tr><td>4[Yuzz]</td><td>-14</td><td>260</td><td>-60</td><td>360</td><td>40</td><td>6O</td><td>[Fuddle]</td></tr><tr><td>-3[Yekk]</td><td>5[Fuddle]</td><td>-220</td><td>320</td><td>-20</td><td>520</td><td>-K</td><td>9G</td></tr><tr><td>-3[Nuh]</td><td>1[Hi!]</td><td>-210</td><td>110</td><td>-10</td><td>310</td><td>-A</td><td>5U</td></tr><tr><td>-1[Humph]</td><td>-3[Wum]</td><td>-95</td><td>-205</td><td>305</td><td>195</td><td>5P</td><td>3R</td></tr><tr><td>3[Nuh]</td><td>-3[Nuh]</td><td>210</td><td>-210</td><td>410</td><td>-10</td><td>7I</td><td>-A</td></tr>
+</tbody></table>
+
+<p>
+After computing the revised scores for Me+A (column 7 in the table), notice that all the scores contain a letter A-Z in their units digits. Reading these letters gives the answer <b>OKAPI</b> (which is thematic to On Beyond Zebra! because an okapi has black-and-white stripes like a zebra).
+</p>

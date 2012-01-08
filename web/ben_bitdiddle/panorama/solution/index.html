@@ -5,31 +5,33 @@ class: puzzle solution
 style: style.css
 credits: by Kai Huang and Melissa Shi
 ---
-<div class="marg-top">
+<p>
 The first step is to identify the locations (mostly cities). The regular photos (not the panoramas) are listed in alphabetical order by location name to help you identify them easier. Here&rsquo;s the info on all the photos:
-</div>
+</p>
 
-<table class="marg-top" id="pano-t1">
+<table class="pa-marg-top" id="pano-t1">
 <tbody><tr><th>File</th><th>Location</th><th>Photo note</th></tr>
-<tr><td>p1.jpg</td><td>Kyoto, Japan</td><td>Kinkaku-ji (a.k.a. Golden Pavilion)</td></tr><tr><td>p2.jpg</td><td>Istanbul, Turkey</td><td>City view from Galata Tower (notice mosques with lit minarets)</td></tr><tr><td>p3.jpg</td><td>Berlin, Germany</td><td>Berlin Wall (East Side Gallery)</td></tr><tr><td>p4.jpg</td><td>Kuala Lumpur, Malaysia</td><td>City view from KL Tower (notice Petronas Towers)</td></tr><tr><td>p5.jpg</td><td>Niagara Falls, Canada/USA</td><td>American and Horseshoe Falls with rainbow</td></tr><tr><td>p6.jpg</td><td>Iguazu Falls, Argentina/Brazil</td><td>Waterfalls flanking the Devil&rsquo;s Throat</td></tr><tr><td>r01.jpg</td><td>Athens, Greece</td><td>Temple of Olympian Zeus</td></tr><tr><td>r02.jpg</td><td>Bangkok, Thailand</td><td>Wat Pho</td></tr><tr><td>r03.jpg</td><td>Bruges, Belgium</td><td>Canal</td></tr><tr><td>r04.jpg</td><td>Buenos Aires, Argentina</td><td>The Obelisk</td></tr><tr><td>r05.jpg</td><td>Chicago, USA</td><td>&rdquo;The Bean&rdquo; in Millennium Park (with snow on top)</td></tr><tr><td>r06.jpg</td><td>Dubrovnik, Croatia</td><td>Old Port</td></tr><tr><td>r07.jpg</td><td>Jeju Island, South Korea</td><td>Fountain of Five Blessings (notice sign says &ldquo;Fountain of Five&rdquo;)</td></tr><tr><td>r08.jpg</td><td>New York, USA</td><td>FAO Schwarz (notice Patrick the Pup)</td></tr><tr><td>r09.jpg</td><td>Oslo, Norway</td><td>Monolith at Frogner Park</td></tr><tr><td>r10.jpg</td><td>Rio de Janiero, Brazil</td><td>Back of Christ the Redeemer</td></tr><tr><td>r11.jpg</td><td>Singapore, Singapore</td><td>Merlion statue (from Sentosa)</td></tr><tr><td>r12.jpg</td><td>Tokyo, Japan</td><td>Tokyo Tower</td></tr>
+<tr><td>p1.jpg</td><td>Kyoto, Japan</td><td>Kinkaku-ji (a.k.a. Golden Pavilion)</td></tr><tr><td>p2.jpg</td><td>Istanbul, Turkey</td><td>City view from Galata Tower (notice mosques with lit minarets)</td></tr><tr><td>p3.jpg</td><td>Berlin, Germany</td><td>Berlin Wall (East Side Gallery)</td></tr><tr><td>p4.jpg</td><td>Kuala Lumpur, Malaysia</td><td>City view from KL Tower (notice Petronas Towers)</td></tr><tr><td>p5.jpg</td><td>Niagara Falls, Canada/USA</td><td>American and Horseshoe Falls with rainbow</td></tr><tr><td>p6.jpg</td><td>Iguazu Falls, Argentina/Brazil</td><td>Waterfalls flanking the Devil's Throat</td></tr><tr><td>r01.jpg</td><td>Athens, Greece</td><td>Temple of Olympian Zeus</td></tr><tr><td>r02.jpg</td><td>Bangkok, Thailand</td><td>Wat Pho</td></tr><tr><td>r03.jpg</td><td>Bruges, Belgium</td><td>Canal</td></tr><tr><td>r04.jpg</td><td>Buenos Aires, Argentina</td><td>The Obelisk</td></tr><tr><td>r05.jpg</td><td>Chicago, USA</td><td>&rdquo;The Bean&rdquo; in Millennium Park (with snow on top)</td></tr><tr><td>r06.jpg</td><td>Dubrovnik, Croatia</td><td>Old Port</td></tr><tr><td>r07.jpg</td><td>Jeju Island, South Korea</td><td>Fountain of Five Blessings (notice sign says &ldquo;Fountain of Five&rdquo;)</td></tr><tr><td>r08.jpg</td><td>New York, USA</td><td>FAO Schwarz (notice Patrick the Pup)</td></tr><tr><td>r09.jpg</td><td>Oslo, Norway</td><td>Monolith at Frogner Park</td></tr><tr><td>r10.jpg</td><td>Rio de Janiero, Brazil</td><td>Back of Christ the Redeemer</td></tr><tr><td>r11.jpg</td><td>Singapore, Singapore</td><td>Merlion statue (from Sentosa)</td></tr><tr><td>r12.jpg</td><td>Tokyo, Japan</td><td>Tokyo Tower</td></tr>
 </tbody></table>
 
-<div class="marg-top">
+<p class="pa-p-top">
 After identifying enough photos, answer extraction involves grouping the locations geographically. The 18 locations can be grouped geographically into groups of 3 that are closer to each other than to the other groups (the two groups in Europe are a little bit near each other, but it&rsquo;s still easy to divide them up once you&rsquo;ve identified the pattern from the rest of the world). Each group contains
-<ul>
+</p>
+<ul class="pa-ul">
 <li>1 location with a panorama</li>
 <li>That location comes with a compass direction (written on the bottom-right corner of the panorama)</li>
 <li>2 other locations</li>
 </ul>
+<p class="pa-p-bottom">
 This set of info should suggest semaphore encoding to an experienced solver. The location with the panorama is the center of the semaphore, and the given compass direction is the &ldquo;up&rdquo; direction. The two semaphore arm directions are the directions toward the other two locations.
 Here are the 6 geographic groups and their extracted letters, in the order that the panoramas are listed:
-</div>
+</p>
 
-<table class="marg-top" id="pano-t2">
+<table class="pa-marg-top" id="pano-t2">
 <tbody><tr><th>Semaphore center</th><th>&rdquo;Up&rdquo; dir</th><th>Geographic area</th><th>Semaphore arm directions</th><th>Letter</th></tr>
 <tr><td>Kyoto</td><td>WbS</td><td>SE Asia</td><td>Jeju Island, Tokyo</td><td>D</td></tr><tr><td>Istanbul</td><td>NWbN</td><td>SE Europe</td><td>Athens, Dubrovnik</td><td>O</td></tr><tr><td>Berlin</td><td>SEbE</td><td>N&amp;C Europe</td><td>Bruges, Oslo</td><td>N</td></tr><tr><td>Kuala Lumpur</td><td>SE</td><td>NE Asia</td><td>Bangkok, Singapore</td><td>K</td></tr><tr><td>Niagara Falls</td><td>EbN</td><td>E North America</td><td>Chicago, New York</td><td>E</td></tr><tr><td>Iguazu Falls</td><td>ESE</td><td>SE South America</td><td>Buenos Aires, Rio de Janeiro</td><td>Y</td></tr>
 </tbody></table>
 
-<div class="marg-top">
+<p>
 The final answer is <b>DONKEY</b>.
-</div>
+</p>

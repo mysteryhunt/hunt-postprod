@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Handlee);
+
+.score-table {
+  margin: 20px 0 20px 40px;
+  border-collapse: collapse;
+  font: bold 45px 'Handlee', cursive;
+}
+
+.score-table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.ity-symbol {
+  height: 45px;
+}
+
+.symbol-col {
+  width: 30px;
+}
+
+.spacer-col {
+  width: 20px;
+}
+
+.ity-sep-line {
+  height: 2px;
+  background-color: #000;
+}

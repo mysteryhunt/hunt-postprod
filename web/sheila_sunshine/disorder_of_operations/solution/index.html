@@ -5,111 +5,113 @@ class: puzzle solution
 style: style.css
 credits: by Kai Huang
 ---
-<div class="doo-marg-top">
-<p>This puzzle consists of 11 instructions for either removing or rearranging letters in strings. Each instruction is also used as a target string for processing. Specifically:</p>
-<ol>
+<p class="doo-p-top">
+This puzzle consists of 11 instructions for either removing or rearranging letters in strings. Each instruction is also used as a target string for processing. Specifically:
+</p>
+<ol class="doo-ol">
 <li>Each instruction is written in all caps without spaces</li>
 <li>Then the instruction is applied to itself</li>
 <li>Then another instruction is applied</li>
 </ol>
-<p>The clue strings given in the puzzle are the results of these transformations.</p>
-</div>
+<p class="doo-p-bottom">
+The clue strings given in the puzzle are the results of these transformations.
+</p>
 
-<p class="doo-marg-top">
+<p>
 Here are how the 11 clue strings came about, in the order given in the puzzle.
 </p>
 
-<div class="doo-marg-top-sm">
-<span class="monospace">ALPHABETIZE</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Alphabetize&rdquo; &rArr; <span class="monospace">AABEEHILPTZ</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Omit every fourth symbol&rdquo; &rArr; <span class="monospace">AABEHIPTZ</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">REMOVETHEALPHABETSTWENTIETHLETTER</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Remove the alphabet&rsquo;s twentieth letter&rdquo; &rArr; <span class="monospace">REMOVEHEALPHABESWENIEHLEER</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Swap each pair of letters&rdquo; &rArr; <span class="monospace">EROMEVEHLAHPBASEEWINHEELRE</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">EXPUNGECHARACTERSATPRIMEINDICES</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Expunge characters at prime indices&rdquo; &rArr; <span class="monospace">EUGCHAATERAPRIEINDIE</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Collapse double letters&rdquo; &rArr; <span class="monospace">EUGCHATERAPRIEINDIE</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">REVERSETHESTRING</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Reverse the string&rdquo; &rArr; <span class="monospace">GNIRTSEHTESREVER</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Expunge characters at prime indices&rdquo; &rArr; <span class="monospace">GRSHTERVER</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">DISCARDSYMBOLSWITHCURVEDANDSTRAIGHTSEGMENTS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Discard symbols with curved and straight segments&rdquo; &rArr; <span class="monospace">ISCASYMOLSWITHCVEANSTAIHTSEMENTS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Remove the alphabet&rsquo;s twentieth letter&rdquo; &rArr; <span class="monospace">ISCASYMOLSWIHCVEANSAIHSEMENS</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">REMOVEVOWELS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Remove vowels&rdquo; &rArr; <span class="monospace">RMVVWLS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Alphabetize&rdquo; &rArr; <span class="monospace">LMRSVVW</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">KEEPJUSTTHEFIRSTOCCURRENCE</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Keep just the first occurrence&rdquo; &rArr; <span class="monospace">KEPJUSTHFIROCN</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Reverse the string&rdquo; &rArr; <span class="monospace">NCORIFHTSUJPEK</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">COLLAPSEDOUBLELETTERS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Collapse double letters&rdquo; &rArr; <span class="monospace">COLAPSEDOUBLELETERS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Remove characters that rhyme with the word key&rdquo; &rArr; <span class="monospace">OLASOULLRS</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">OMITEVERYFOURTHSYMBOL</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Omit every fourth symbol&rdquo; &rArr; <span class="monospace">OMIEVEYFORTHYMBL</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Discard symbols with curved and straight segments&rdquo; &rArr; <span class="monospace">OMIEVEYFOTHYML</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Remove characters that rhyme with the word key&rdquo; &rArr; <span class="monospace">RMOHARARSHARHYMWIHHWORKY</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Remove vowels&rdquo; &rArr; <span class="monospace">RMHRRSHRHYMWHHWRKY</span>
-</div>
-
-<div class="doo-marg-top-sm">
-<span class="monospace">SWAPEACHPAIROFLETTERS</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Swap each pair of letters&rdquo; &rArr; <span class="monospace">WSPAAEHCAPRIFOELTTRES</span><br />
-&nbsp; &nbsp; &rArr; apply &ldquo;Keep just the first occurrence&rdquo; &rArr; <span class="monospace">WSPAEHCRIFOLT</span>
-</div>
-
-<p class="doo-marg-top">
-Next, notice that since each instruction string is processed by one other instruction, the strings can be put into a ring. The ring is (with arbitrary starting point and direction)
+<p class="doo-p-top-sm">
+<kbd>ALPHABETIZE</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Alphabetize&rdquo; &rArr; <kbd>AABEEHILPTZ</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Omit every fourth symbol&rdquo; &rArr; <kbd>AABEHIPTZ</kbd>
 </p>
 
-<div class="doo-marg-top-sm">
-<span class="monospace">ALPHABETIZE</span><br />
-<span class="monospace">OMITEVERYFOURTHSYMBOL</span><br />
-<span class="monospace">DISCARDSYMBOLSWITHCURVEDANDSTRAIGHTSEGMENTS</span><br />
-<span class="monospace">REMOVETHEALPHABETSTWENTIETHLETTER</span><br />
-<span class="monospace">SWAPEACHPAIROFLETTERS</span><br />
-<span class="monospace">KEEPJUSTTHEFIRSTOCCURRENCE</span><br />
-<span class="monospace">REVERSETHESTRING</span><br />
-<span class="monospace">EXPUNGECHARACTERSATPRIMEINDICES</span><br />
-<span class="monospace">COLLAPSEDOUBLELETTERS</span><br />
-<span class="monospace">REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</span><br />
-<span class="monospace">REMOVEVOWELS</span><br />
-<span class="monospace">ALPHABETIZE</span><br />
-</div>
+<p class="doo-p-top-sm">
+<kbd>REMOVETHEALPHABETSTWENTIETHLETTER</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Remove the alphabet&rsquo;s twentieth letter&rdquo; &rArr; <kbd>REMOVEHEALPHABESWENIEHLEER</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Swap each pair of letters&rdquo; &rArr; <kbd>EROMEVEHLAHPBASEEWINHEELRE</kbd>
+</p>
 
-<p class="doo-marg-top">
+<p class="doo-p-top-sm">
+<kbd>EXPUNGECHARACTERSATPRIMEINDICES</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Expunge characters at prime indices&rdquo; &rArr; <kbd>EUGCHAATERAPRIEINDIE</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Collapse double letters&rdquo; &rArr; <kbd>EUGCHATERAPRIEINDIE</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>REVERSETHESTRING</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Reverse the string&rdquo; &rArr; <kbd>GNIRTSEHTESREVER</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Expunge characters at prime indices&rdquo; &rArr; <kbd>GRSHTERVER</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>DISCARDSYMBOLSWITHCURVEDANDSTRAIGHTSEGMENTS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Discard symbols with curved and straight segments&rdquo; &rArr; <kbd>ISCASYMOLSWITHCVEANSTAIHTSEMENTS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Remove the alphabet&rsquo;s twentieth letter&rdquo; &rArr; <kbd>ISCASYMOLSWIHCVEANSAIHSEMENS</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>REMOVEVOWELS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Remove vowels&rdquo; &rArr; <kbd>RMVVWLS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Alphabetize&rdquo; &rArr; <kbd>LMRSVVW</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>KEEPJUSTTHEFIRSTOCCURRENCE</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Keep just the first occurrence&rdquo; &rArr; <kbd>KEPJUSTHFIROCN</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Reverse the string&rdquo; &rArr; <kbd>NCORIFHTSUJPEK</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>COLLAPSEDOUBLELETTERS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Collapse double letters&rdquo; &rArr; <kbd>COLAPSEDOUBLELETERS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Remove characters that rhyme with the word key&rdquo; &rArr; <kbd>OLASOULLRS</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>OMITEVERYFOURTHSYMBOL</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Omit every fourth symbol&rdquo; &rArr; <kbd>OMIEVEYFORTHYMBL</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Discard symbols with curved and straight segments&rdquo; &rArr; <kbd>OMIEVEYFOTHYML</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Remove characters that rhyme with the word key&rdquo; &rArr; <kbd>RMOHARARSHARHYMWIHHWORKY</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Remove vowels&rdquo; &rArr; <kbd>RMHRRSHRHYMWHHWRKY</kbd>
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>SWAPEACHPAIROFLETTERS</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Swap each pair of letters&rdquo; &rArr; <kbd>WSPAAEHCAPRIFOELTTRES</kbd><br />
+&nbsp; &nbsp; &rArr; apply &ldquo;Keep just the first occurrence&rdquo; &rArr; <kbd>WSPAEHCRIFOLT</kbd>
+</p>
+
+<p>
+Next, notice that since each instruction string is processed by one other instruction, the strings can be put into a ring. The ring is (with arbitrary starting point and direction):
+</p>
+
+<p class="doo-p-top-sm">
+<kbd>ALPHABETIZE</kbd><br />
+<kbd>OMITEVERYFOURTHSYMBOL</kbd><br />
+<kbd>DISCARDSYMBOLSWITHCURVEDANDSTRAIGHTSEGMENTS</kbd><br />
+<kbd>REMOVETHEALPHABETSTWENTIETHLETTER</kbd><br />
+<kbd>SWAPEACHPAIROFLETTERS</kbd><br />
+<kbd>KEEPJUSTTHEFIRSTOCCURRENCE</kbd><br />
+<kbd>REVERSETHESTRING</kbd><br />
+<kbd>EXPUNGECHARACTERSATPRIMEINDICES</kbd><br />
+<kbd>COLLAPSEDOUBLELETTERS</kbd><br />
+<kbd>REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</kbd><br />
+<kbd>REMOVEVOWELS</kbd><br />
+<kbd>ALPHABETIZE</kbd><br />
+</p>
+
+<p>
 Finally, the numbers given at the bottom of the puzzle are used to index into these instruction strings.
 </p>
 
-<p class="doo-marg-top">
-Observe that there&rsquo;s only one way to map the indices in the order given onto the ring such that every index number is valid (not out-of-bounds) for the corresponding string. Specifically, notice that adjacent strings <span class="monospace">ALPHABETIZE</span> and <span class="monospace">REMOVEVOWELS</span> are length 11 and 12, respectively, and there&rsquo;s only one adjacent pair of indices that can fit them (7 and 11). Furthermore, the index 34 adjacent to the index 7 must go with one of the other neighbors of <span class="monospace">ALPHABETIZE</span> and <span class="monospace">REMOVEVOWELS</span>, and out of those it only fits with <span class="monospace">REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</span>. This locks down the mapping of indices to strings. The extraction is shown in the table below.
+<p>
+Observe that there&rsquo;s only one way to map the indices in the order given onto the ring such that every index number is valid (not out-of-bounds) for the corresponding string. Specifically, notice that adjacent strings <kbd>ALPHABETIZE</kbd> and <kbd>REMOVEVOWELS</kbd> are length 11 and 12, respectively, and there&rsquo;s only one adjacent pair of indices that can fit them (7 and 11). Furthermore, the index 34 adjacent to the index 7 must go with one of the other neighbors of <kbd>ALPHABETIZE</kbd> and <kbd>REMOVEVOWELS</kbd>, and out of those it only fits with <kbd>REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</kbd>. This locks down the mapping of indices to strings. The extraction is shown in the table below.
 </p>
 
 <table class="doo-marg-top" id="doo-t">
@@ -119,62 +121,62 @@ Observe that there&rsquo;s only one way to map the indices in the order given on
 <th>Letter</th>
 </tr>
 <tr>
-<td><span class="monospace">REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</span></td>
+<td><kbd>REMOVECHARACTERSTHATRHYMEWITHTHEWORDKEY</kbd></td>
 <td>34</td>
 <td>O</td>
 </tr>
 <tr>
-<td><span class="monospace">REMOVEVOWELS</span></td>
+<td><kbd>REMOVEVOWELS</kbd></td>
 <td>7</td>
 <td>V</td>
 </tr>
 <tr>
-<td><span class="monospace">ALPHABETIZE</span></td>
+<td><kbd>ALPHABETIZE</kbd></td>
 <td>11</td>
 <td>E</td>
 </tr>
 <tr>
-<td><span class="monospace">OMITEVERYFOURTHSYMBOL</span></td>
+<td><kbd>OMITEVERYFOURTHSYMBOL</kbd></td>
 <td>13</td>
 <td>R</td>
 </tr>
 <tr>
-<td><span class="monospace">DISCARDSYMBOLSWITHCURVEDANDSTRAIGHTSEGMENTS</span></td>
+<td><kbd>DISCARDSYMBOLSWITHCURVEDANDSTRAIGHTSEGMENTS</kbd></td>
 <td>15</td>
 <td>W</td>
 </tr>
 <tr>
-<td><span class="monospace">REMOVETHEALPHABETSTWENTIETHLETTER</span></td>
+<td><kbd>REMOVETHEALPHABETSTWENTIETHLETTER</kbd></td>
 <td>33</td>
 <td>R</td>
 </tr>
 <tr>
-<td><span class="monospace">SWAPEACHPAIROFLETTERS</span></td>
+<td><kbd>SWAPEACHPAIROFLETTERS</kbd></td>
 <td>13</td>
 <td>O</td>
 </tr>
 <tr>
-<td><span class="monospace">KEEPJUSTTHEFIRSTOCCURRENCE</span></td>
+<td><kbd>KEEPJUSTTHEFIRSTOCCURRENCE</kbd></td>
 <td>6</td>
 <td>U</td>
 </tr>
 <tr>
-<td><span class="monospace">REVERSETHESTRING</span></td>
+<td><kbd>REVERSETHESTRING</kbd></td>
 <td>16</td>
 <td>G</td>
 </tr>
 <tr>
-<td><span class="monospace">EXPUNGECHARACTERSATPRIMEINDICES</span></td>
+<td><kbd>EXPUNGECHARACTERSATPRIMEINDICES</kbd></td>
 <td>9</td>
 <td>H</td>
 </tr>
 <tr>
-<td><span class="monospace">COLLAPSEDOUBLELETTERS</span></td>
+<td><kbd>COLLAPSEDOUBLELETTERS</kbd></td>
 <td>18</td>
 <td>T</td>
 </tr>
 </tbody></table>
 
-<p class="doo-marg-top">
+<p>
 The answer to the puzzle is <b>OVERWROUGHT</b>.
 </p>

@@ -1,0 +1,97 @@
+---
+layout: watson_2_0_solution
+title: Piercing the Veil
+class: puzzle solution
+style: style.css
+credits: by Andrew Lin
+---
+<p>From the discussion, you can reconstruct enough information about the grid to find the words in it and their arrangement.  The notional grid is shown below:</p>
+
+<table class="bingo">
+    <tbody><tr>
+        <td class="bingo_cell">CUBA<br />(Image)<br />Outline of Cuba</td>
+        <td class="bingo_cell">SHIRAZ<br />(Text)<br />Cryptic clue</td>
+        <td class="bingo_cell">GNOME<br />(Image)<br />Icons of the WoW classes accessible to <a href="http://us.battle.net/wow/en/game/race/gnome">gnomes</a></td>
+        <td class="bingo_cell">POLYBIUS<br />(Image)<br /><a href="http://en.wikipedia.org/wiki/Polybius_square">Polybius square</a>, eventually replaced by a picture of <a href="http://en.wikipedia.org/wiki/Polybius_%28crater%29">Polybius crater</a></td>
+        <td class="bingo_cell">EIGHT<br />(Text)<br />Seuss cryptarithm</td>
+    </tr>
+    <tr>
+        <td class="bingo_cell">SLIPKNOT<br />(Video)<br />Person tying a slipknot with no actual string</td>
+        <td class="bingo_cell">QWERTY<br />(Object)<br />Bag of keyboard keys (123456 ASDFGH ZXCVBN)</td>
+        <td class="bingo_cell">LINUS<br />(Video)<br />Clip of <a href="http://www.imdb.com/title/tt1376209/">Life Without Lucy</a>, audio replaced with <a href="http://www.youtube.com/watch?v=JgoPl35n_AY">&rdquo;Linus and Lucy&rdquo;</a></td>
+        <td class="bingo_cell">WAFER<br />(Audio)<br /><a href="http://www.youtube.com/watch?v=BlK62rjQWLk">&rdquo;A wafer thin mint&rdquo;</a> with &ldquo;wafer&rdquo; muted</td>
+        <td class="bingo_cell">SACKBUT<br />(Image)<br />Rebus: SACK + BUTT - T</td>
+    </tr>
+    <tr>
+        <td class="bingo_cell">ICBM<br />(Image)<br />Things that are also ICBM names: Trident, Atlas, Peacekeeper</td>
+        <td class="bingo_cell">CONFLUX<br />(Image)<br />Magic card &ldquo;odd man out&rdquo; puzzle; odd cards out are all in <a href="http://gatherer.wizards.com/Pages/Search/Default.aspx?action=advanced&amp;set=[%22Conflux%22]">Conflux</a></td>
+        <td class="bingo_cell"></td>
+        <td class="bingo_cell">TROY<br />(Video)<br />Clip from <a href="http://www.imdb.com/title/tt0332452/">Troy</a></td>
+        <td class="bingo_cell">PHLOX<br />(Image)<br />Picture of <a href="http://en.memory-alpha.org/wiki/Phlox">Phlox</a></td>
+    </tr>
+    <tr>
+        <td class="bingo_cell">SPANDEX<br />(Object)<br />Piece of spandex</td>
+        <td class="bingo_cell">ETHYL<br />(Text)<br />Chemistry puzzle</td>
+        <td class="bingo_cell">BOINK<br />(Image)<br />Photoshopped frame from the <a href="http://www4.ncsu.edu/~jecanner/calvinhobbes.GIF">Calvin and Hobbes comic</a></td>
+        <td class="bingo_cell">CHANG<br />(Image)<br />Picture of <a href="http://en.memory-alpha.org/wiki/Chang_%28General%29">Chang</a></td>
+        <td class="bingo_cell">JUPITER<br />(Audio)<br />Clip of Holst&rsquo;s <a href="http://www.youtube.com/watch?v=hUx3G6YHp7Y">Jupiter</a></td>
+    </tr>
+    <tr>
+        <td class="bingo_cell">SOUTH<br />(Text)<br />Cryptic clue</td>
+        <td class="bingo_cell">FARGO<br />(Video)<br />Clip from <a href="http://www.imdb.com/title/tt0116282/">Fargo</a></td>
+        <td class="bingo_cell">WISTFUL<br />(Text)<br />Cryptic clue</td>
+        <td class="bingo_cell">POCKY<br />(Object)<br />Sample of <a href="http://en.wikipedia.org/wiki/Pocky">Pocky</a></td>
+        <td class="bingo_cell">SNORLAX<br />(Text)<br />Pokemon puzzle (<a href="http://bulbapedia.bulbagarden.net/wiki/Snorlax_%28Pok%C3%A9mon%29">Pokedex entry</a>) (<a href="http://web.mit.edu/~puzzle/www/00/set2/1/Puzzle.html">MH2K puzzle</a>)</td>
+    </tr>
+</tbody></table>
+
+<p>You can work this out as follows.  First, many items can be placed without reference to others:</p>
+<ul>
+<li>Row 1, column 1 is <tt>CUBA</tt>, from comments #10, #14, and #16.</li>
+<li>Row 1, column 2 is <tt>SHIRAZ</tt>, from comments #11-12 (content, row), #28 (content, giving IR AZ), and #64 (location; there is a cryptic clue in this cell, and this is the only one in the row).  (You have to figure out <tt>POLYBIUS</tt>, at least a little, first.)</li>
+<li>Row 1, column 3 is <tt>GNOME</tt>, from comments #22 (location) and #61 (content).</li>
+<li>Row 1, column 5 is <tt>EIGHT</tt>, from comments #19-20 (content) and #96-97 (location).</li>
+<li>Row 2, column 1 is <tt>SLIPKNOT</tt>, from comments #17 (column), #96 (row), and #97 (content).</li>
+<li>Row 2, column 3 is <tt>LINUS</tt>, from comments #17 (location, audio) and #62 (video).</li>
+<li>Row 2, column 4 is <tt>WAFER</tt>, from comments #10 (content, column) and #89 (content, row).</li>
+<li>Row 3, column 1 is <tt>ICBM</tt>, from comments #30-35.</li>
+<li>Row 3, column 2 is <tt>CONFLUX</tt>, from comments #22 (location) and #90 (content).</li>
+<li>Row 4, column 3 is <tt>BOINK</tt>, from comments #17 and #18.</li>
+<li>Row 5, column 1 is <tt>SOUTH</tt>, from comments #11 (location, content) and #28 (content; &ldquo;rose petal?&rdquo; as in &ldquo;compass rose&rdquo;).</li>
+<li>Row 5, column 3 is <tt>WISTFUL</tt>, from comments #11-12.</li>
+<li>Row 5, column 5 is <tt>SNORLAX</tt>, from comments #22 (location) and #49-50 (content).</li>
+</ul>
+Other items are placed in relation to these:
+<ul>
+<li>Row 1, column 4 is <tt>POLYBIUS</tt>, from comment #59 (the rest of this row is occupied already).</li>
+<li>Row 2, column 5 is <tt>SACKBUT</tt>, from comments #36-39 (content) and #61 (location, content).</li>
+<li>Row 3, column 4 is <tt>TROY</tt>, from comments #52-55 (content, row) and #10 (column; row 3, column 2 is occupied already).</li>
+<li>Row 3, column 5 is <tt>PHLOX</tt>, from comments #64 (row; the rest of this row is occupied) and #70 (content).</li>
+<li>Row 4, column 2 is <tt>ETHYL</tt>, from comments #22 (location) and #47-48 (content).</li>
+<li>Row 4, column 5 is <tt>JUPITER</tt>, from comments #10 (content) and #63 (location, content).</li>
+<li>Row 5, column 2 is <tt>FARGO</tt>, from comments #27-28 (content, row) and #10 (column; the one in column 4 was found above).</li>
+</ul>
+Finally, from comment #50, the three packages are in different rows and lettered from top to bottom.  So the two open cells in row 4 must contain package B and the missing Star Trek character.  But by comment #61, that character is in column 4, pinning down the remaining locations.
+<ul>
+<li>Row 2, column 2 is <tt>QWERTY</tt>, from comments #27-28 (content, package letter) and #90 (content).</li>
+<li>Row 4, column 1 is <tt>SPANDEX</tt>, from comments #41-42 (content) and the fact that it must be package B by elimination.</li>
+<li>Row 4, column 4 is <tt>CHANG</tt>, from comment #61 and elimination.
+</li><li>Row 5, column 4 is <tt>POCKY</tt>, from comments #41-42 (content) and #61 (package letter).</li>
+</ul>
+
+
+<p>The extraction is slightly obscure, but fortunately hints are sprinkled throughout the discussion.  Note that no word contains a repeated letter, suggesting that you should look at the letter content.  Then note that adjacent words share zero or one letter:</p>
+
+<pre>CUBA     -A- SHIRAZ       GNOME    -O- POLYBIUS -I- EIGHT
+               R            N                         T
+SLIPKNOT -T- QWERTY       LINUS        WAFER    -A- SACKBUT
+  I                                      R
+ICBM     -C- CONFLUX                   TROY     -O- PHLOX
+               L                                      P
+SPANDEX  -E- ETHYL        BOINK    -N- CHANG        JUPITER
+  S                         I            C            R
+SOUTH    -O- FARGO    -F- WISTFUL      POCKY    -O- SNORLAX</pre>
+
+<p>
+Trace the path through the grid to find the answer, <b>ARTICLES OF INCORPORATION</b>.
+</p>

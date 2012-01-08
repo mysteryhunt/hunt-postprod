@@ -1,5 +1,9 @@
-.cc-marg-top {
-  margin-top: 1em;
+.cc-p-top {
+  margin-bottom: 0;
+}
+
+.cc-p-bottom {
+  margin-top: 0;
 }
 
 .cc-ul {

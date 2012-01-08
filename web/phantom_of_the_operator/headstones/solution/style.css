@@ -1,0 +1,21 @@
+.Headstonesclue
+{
+    background-image: url('2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 230px;
+    height: 350px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+.Headstonesepitaph
+{
+    margin: 25px;
+    text-style: italic;
+}
+
+.Headstonescrosses img
+{
+    margin: 1px;
+}
