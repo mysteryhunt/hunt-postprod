@@ -4,7 +4,15 @@
   position: relative;
   bottom: 4px;
 }
+#tws td ol {
+  margin: 0;
+}
 
 #tws th {
   text-align: left;
+  padding-left: 2.5em;
+}
+
+@media print {
+#tws td { font-size: 90%; }
 }
