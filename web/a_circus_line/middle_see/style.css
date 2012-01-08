@@ -13,3 +13,7 @@
     border: 1px solid;
     text-align: center;
 }
+
+@media print {
+  .mejs-layers, .mejs-controls, .mejs-clear { display: none; }
+}
