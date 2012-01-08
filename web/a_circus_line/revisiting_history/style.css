@@ -1,12 +1,17 @@
-#revisitinghistory { border-spacing: 0; border-collapse: collapse; }
+#revisitinghistory {
+	border-spacing: 0;
+	border-collapse: collapse;
+ }
 #revisitinghistory td
 {
-    padding: 10pt;
-    margin: 10pt;
-    border: 1px solid black;
+    padding: 5pt;
+    margin: 5pt;
+    
     text-align: center;
     vertical-align: top;
-    page-break-inside: avoid;
+    
 }
-#revisitinghistory td img { page-break-inside: avoid; }
-#revisitinghistory .pb { page-break-before: always; }
+
+.printbreak {
+	page-break-after:always
+}
