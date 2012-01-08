@@ -178,6 +178,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
             title = ntitle
         body = extract_body(puz)
         options = { 'layout': canon(round_name), 'title': title }
+        if ponyhash is not None:
+            options['ponyhash'] = ponyhash
         if 'style.css' in files:
             options['style'] = 'style.css'
         if re.match(r'Investigator.s Report', title):
@@ -201,8 +203,6 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                     'title': title,
                     'credits': authors,
                     'class': 'puzzle solution' }
-        if ponyhash is not None:
-            options['ponyhash'] = ponyhash
         if 'solution/style.css' in files:
             options['style'] = 'style.css'
         if re.match(r'Investigator.s Report', title):

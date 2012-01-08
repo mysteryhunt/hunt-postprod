@@ -14,6 +14,7 @@ import sys
 from contextlib import closing
 from importpuzz import canon, do_import, log_error
 from os import path
+import hashlib
 
 def with_db(func, *args, **kwargs):
     with closing(MySQLdb.connect(host=secrets.DB_SERVER, user=secrets.DB_USER,
@@ -90,19 +91,19 @@ WHERE ponies.aid = answers.aid AND answers.pid = %s;""", pid)
 
 def fetch_all(db):
     for pid in getPuzzlesWithPostProd(db):
-        pony = getPonyName(db, pid)
         print "Processing puzzle %3d: %22s  " % \
             (pid, getPuzzleStatus(db, pid)[1]),\
             '(', getTitle(db, pid), ')'
         try:
-            fetch_puzzle(db, pid, pony)
+            fetch_puzzle(db, pid)
         except:
             print sys.exc_info()[1]
             print "** SKIPPING", pid, "DUE TO ERRORS **"
 
-def fetch_puzzle(db, pid, pony):
+def fetch_puzzle(db, pid):
     # fetch info about the puzzle
     title = getTitle(db, pid)
+    pony = getPonyName(db, pid)
     roundName = getRoundName(db, pid)
     credits = getCredits(db, pid)
     # SPECIAL CASE for metas
@@ -130,7 +131,7 @@ def fetch_puzzle(db, pid, pony):
 
     # do the import!
     do_import(ppfile, outpath, roundName, credits, title=title,
-              is_show_meta=is_show_meta, pony
+              is_show_meta=is_show_meta,
               ponyhash=hashlib.sha224(pony).hexdigest())
 
 if __name__ == '__main__':
