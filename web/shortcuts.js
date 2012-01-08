@@ -20,7 +20,7 @@ shortcuts.innerHTML=(
 {% if site.release.solutions %}
 '<a id="check-answer" href="solution/">Solution</a>'+
 {% else %}
-'<a id="check-answer" href="'+this.depth+'check-answer.cgi">Call in answer</a>'+
+'<a id="check-answer" href="'+this.depth+'callin?puzzle='+this.puzzlehash+'">Call in answer</a>'+
 {% endif %}
 '');
 var checkAnswer = shortcuts.children[1];

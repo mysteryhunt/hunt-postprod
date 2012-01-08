@@ -54,7 +54,7 @@ def emit_python():
 #!/usr/bin/python
 ROUNDS = %s
 PONY_INFO = %s
-""" % (repr([roundMap[r] for r in ['1 S', '1C', '2 S', '2C', '3 S', '3C', '4 S', '4C', '5 S', '5C', '6 S', '6C']]), repr(ponyMap))
+""".strip() % (repr([roundMap[r] for r in ['1 S', '1C', '2 S', '2C', '3 S', '3C', '4 S', '4C', '5 S', '5C', '6 S', '6C']]), repr(ponyMap))
 
 if __name__ == '__main__':
     if len(sys.argv)>=2 and sys.argv[1] == 'sql':

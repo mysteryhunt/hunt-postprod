@@ -118,7 +118,7 @@ def is_reserved_filename(fname):
     return fname.startswith('-') or fname.startswith('_')
 
 def do_import_of_zf(zf, root_dir, round_name, authors,
-                    title=None, is_show_meta=False):
+                    title=None, is_show_meta=False, ponyhash=None):
     global LOG_CONTEXT2
     LOG_CONTEXT2 = ''
     files = zf.namelist()
@@ -201,6 +201,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                     'title': title,
                     'credits': authors,
                     'class': 'puzzle solution' }
+        if ponyhash is not None:
+            options['ponyhash'] = ponyhash
         if 'solution/style.css' in files:
             options['style'] = 'style.css'
         if re.match(r'Investigator.s Report', title):

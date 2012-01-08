@@ -90,16 +90,17 @@ WHERE ponies.aid = answers.aid AND answers.pid = %s;""", pid)
 
 def fetch_all(db):
     for pid in getPuzzlesWithPostProd(db):
+        pony = getPonyName(db, pid)
         print "Processing puzzle %3d: %22s  " % \
             (pid, getPuzzleStatus(db, pid)[1]),\
-            '(', getPonyName(db, pid), ')'
+            '(', getTitle(db, pid), ')'
         try:
-            fetch_puzzle(db, pid)
+            fetch_puzzle(db, pid, pony)
         except:
             print sys.exc_info()[1]
             print "** SKIPPING", pid, "DUE TO ERRORS **"
 
-def fetch_puzzle(db, pid):
+def fetch_puzzle(db, pid, pony):
     # fetch info about the puzzle
     title = getTitle(db, pid)
     roundName = getRoundName(db, pid)
@@ -129,7 +130,8 @@ def fetch_puzzle(db, pid):
 
     # do the import!
     do_import(ppfile, outpath, roundName, credits, title=title,
-              is_show_meta=is_show_meta)
+              is_show_meta=is_show_meta, pony
+              ponyhash=hashlib.sha224(pony).hexdigest())
 
 if __name__ == '__main__':
     _, pid = sys.argv
