@@ -1,31 +1,12 @@
-.cc-clues-outer, .cc-clues {
-  border-collapse: collapse;
-}
-
 .cc-grid {
   margin: 2em 0;
 }
 
-.cc-clues-outer {
-  margin: 2em 0;
+#cc-clues td ol {
+  margin: 0;
 }
 
-.cc-clues-outer td {
-  vertical-align: top;
-}
-
-.cc-clues-outer td:first-child + td {
-  padding-left: 1em;
-}
-
-.cc-clues td {
-  line-height: 120%;
-}
-
-.cc-clues td:first-child {
-  text-align: right;
-}
-
-.cc-clues td:first-child + td {
-  padding-left: 0.3em;
+#cc-clues th {
+  text-align: left;
+  padding-left: 2.5em;
 }
