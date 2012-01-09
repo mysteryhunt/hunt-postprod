@@ -42,7 +42,7 @@ body.puzzle #main h1 {
   padding-left: 95px;
   min-height: 50px;
   padding-top: 8px;
-  margin-bottom: -15px;
+  margin-bottom: 5px;
 }
 #bored { float: right; margin-right: 1em; }
 @media print {
