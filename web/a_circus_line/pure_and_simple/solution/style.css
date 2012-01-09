@@ -1,1 +1,4 @@
 @import "../style.css";
+
+.pas > div { page-break-before: avoid; }
+.pas > div > span:first-child + span { clear: right; float: right; }

@@ -1,2 +1,5 @@
 .blackout, .blackout h2 { text-align: center; }
 .blackout img { display: block; margin: 1em auto; }
+
+.blackout h2 { page-break-before: always; }
+.blackout h2:first-child { page-break-before: avoid; }

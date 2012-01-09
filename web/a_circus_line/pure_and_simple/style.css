@@ -1,6 +1,11 @@
-.leftcol {
- text-align: left;
+body {
+  min-width: 868px;
 }
-.rightcol {
- text-align: right;
+.pas {
+  min-width: 715px;
+  margin: 1em 0;
+  overflow: auto;
+  width:100%;
+  page-break-inside: avoid;
 }
+.pas > img:first-child + img { float:right; }
