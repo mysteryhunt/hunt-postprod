@@ -1,0 +1,146 @@
+---
+layout: sheila_sunshine
+title: Sovereignty
+style: style.css
+ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
+---
+<i>Donald, I need your help with this programming class.  It uses a new programming language, D++, which is exactly the grade I&rsquo;m going to get if I don&rsquo;t figure this out.</i>
+
+<pre>// assign values to piles
+{
+    Set.PileName(00) = A
+    Set.PileName(01) = B
+    Set.PileName(02) = C
+    Set.PileName(03) = D
+    Set.PileName(04) = E
+    Set.PileName(05) = F
+    Set.PileName(06) = G
+    Set.PileName(07) = H
+    Set.PileName(08) = I
+    Set.PileName(09) = J
+    Set.PileName(10) = K
+    Set.PileName(11) = L
+    Set.PileName(12) = M
+    Set.PileName(20) = N
+    Set.PileName(21) = O
+    Set.PileName(22) = P
+    Set.PileName(30) = Q
+}
+</pre>
+<pre class="break">// start player 1
+{
+    |PPPMM|,(%P,%P,%P),[@O],,[&amp;]
+    |PPPPM|,(%P,%P,%P,%P),[@I],[Sh],[&amp;]
+    |PPOMI|,(%I,[tM])(%P,%P,%O),[@I],,[&amp;]
+    |PPPPM|,(%P,%P,%P,%P),[@O],[Sh],[&amp;]
+    |PPPMM|,(%P,%P,%P),[@O],,[&amp;]
+    |PPPOI|,(%I,[tP])(%P,%P,%O),[@O],[Sh],[&amp;]
+    |PPPOI|,(%P,%P,%P,%O),[@C],,[&amp;]
+    |OOMMI|,(%I,[tM])(%O,%O),[@O],,[&amp;]
+    |PPOOO|,(%O,%O,%O),[@G],[Sh],[&amp;]
+    |PPOCG|,(%G)(%C)(%O,%O,%O),[@G][@D],,[&amp;]
+    |POOOI|,(%I,[tP])(%O,%O,%O),[@G],,[&amp;]
+    |PPOOM|,(%P,%P,%O,%O),[@N],,[&amp;]
+    |PPOOI|,(%I,[tP])(%P,%O,%O),[@C],[Sh],[&amp;]
+    |POOGI|,(%G)(%I,[tQ])(%O,%O,%P),[@C][@D],,[&amp;]
+    |POOMC|,(%C)(%P,%P,%O,%O),[@C],,[&amp;]
+    |POOOI|,(%I)(%O,%O,%O),[@L],,[&amp;]
+    |OOQGG|,(%G)(%G)(%D)(%C)(%O,%O,%O,%O,%P),[@K][@L],[Sh],[&amp;]
+    |OOONL|,(%O,%O,%O,%N),[@K],,[&amp;]
+    |OMKGI|,(%G)(%C)(%O,%O,%O),[@K],,[&amp;]
+    |POCDG|,(%D,[^])(%C)(%G)(%O,%O,%O,%O,%O,%P),[@K][@L],,[&amp;]
+}
+</pre>
+<pre>// start player 2
+{
+    |PPPMM|,(%P,%P,%P),[@O],,[&amp;]
+    |PPPPM|,(%P,%P,%P,%P),[@I],[Sh],[&amp;]
+    |PPPOM|,(%P,%P,%P,%O),[@H],,[&amp;]
+    |PPPMI|,(%I,[tM])(%P,%P,%P),[@D],[Sh],[&amp;]
+    |PPPOM|,(%P,%P,%P,%O),[@C],,[&amp;]
+    |PPOMH|,(%H,[p1?I])(%P,%P,%P,%P,%O,%O),[@N],[Sh],[&amp;]
+    |PPPCD|,(%C)(%D,[^])(%P,%P,%P,%P,%O),[@N],,[&amp;]
+    |POONM|,(%N,%O,%O),[@G],,[&amp;]
+    |PPMHI|,(%H,[p3?I])(%P,%P,%N),[@C],,[&amp;]
+    |PPONG|,(%G)(%N,%O,%O),[@G][@O],,[&amp;]
+    |PPPMD|,(%D,[Sh],[^])(%P,%P,%P,%P),[@M],,[&amp;]
+    |PPONI|,(%I,[tP])(%P,%O,%N),[@L],,[&amp;]
+    |OOCGH|,(%C)(%G)(%G)(%H,[p1?I])(%O,%O,%O,%N),[@G][@C][@D],[Sh],[&amp;]
+    |PPOLC|,(%C)(%P,%P,%O),[@O],,[&amp;]
+    |PMQDH|,(%D,[^])(%H,[p3?I],[p1?I])(%P,%P,%N),[@L],,[&amp;]
+    |PONCG|,(%C)(%G)(%G)(%C)(%N,%O,%O,%O,%P,%P),[@K][@L][@D],[Sh],[&amp;]
+    |KQDGI|,(%D)(%G)(%H)(%O,%O),[@L],,[&amp;]
+    |POOMQ|,(%P,%O,%O),[@L],,[&amp;]
+    |PMLCG|,(%C)(%C)(%G)(%D)(%N,%N,%P,%P,%P),[@K][@L],,[&amp;]
+}
+</pre>
+<pre class="break">// start player 3
+{
+    |PPPPM|,(%P,%P,%P,%P),[@E],,[&amp;]
+    |PPPMM|,(%P,%P,%P),[@O],[Sh],[&amp;]
+    |PPOMM|,(%P,%P,%O),[@E],,[&amp;]
+    |PPPPE|,(%E,[tP])(%P,%P,%P),[@N],[Sh],[&amp;]
+    |PPOMM|,(%P,%P,%O),[@I],,[&amp;]
+    |PPNME|,(%E,[tP])(%N),[@G],[Sh],[&amp;]
+    |PPNMM|,(%P,%P,%N),[@C],,[&amp;]
+    |POMEE|,(%E,[tP])(%O),[@A],,[&amp;]
+    |PPPGI|,(%G)(%E,[tP])(%P,%P),[@N],,[&amp;]
+    |PNMAC|,(%C)(%A,[p3*P],[p3*M],[p3*Q],[p3*O])(%N),[@G],[Sh],[&amp;]
+    |PONAE|,(%A,[p3*O],[p3*N],[p3*I],[p3*M])(%N,%O),[@G],,[&amp;]
+    |PQQCE|,(%C)(%E,[tP]),[@O],,[&amp;]
+    |POMGG|,(%G)(%G,[Sh])(%O,%P),[@C][@D],,[&amp;]
+    |POMQC|,(%C)(%P,%O),[@M],,[&amp;]
+    |OQAEI|,(%A,[p3*P],[p3*O],[p3*N],[p3*E])(%O),[@N],[Sh],[&amp;]
+    |NMEGG|,(%G)(%G)(%E,[tP])(%N),[@K][@M],,[&amp;]
+    |OMQQC|,(%C)(%O,%P),[@M][@M],,[&amp;]
+    |POONN|,(%N,%N,%O,%O),[@K],,[&amp;]
+    |OOQDI|,(%D)(%C)(%G)(%A,[p3*N],[p3*Q],[p3*O],[p3*E])(%I,[tE])(%O,%O),[@K][@M],,[&amp;]
+}
+</pre>
+<pre>// start player 4
+{
+    |PPMMM|,(%P,%P),[@D],,[&amp;]
+    |PPPPP|,(%P,%P,%P,%P,%P),[@J],[Sh],[&amp;]
+    |PPPMD|,(%D,[^])(%P,%P,%P,%P),[@E],,[&amp;]
+    |PPPMJ|,(%J,[p1*O],[p2*D],[p3*E])(%P,%P,%P),[@B],[Sh],[&amp;]
+    |PPOMJ|,(%J,[p1*O],[p2*I],[p3*P])(%P,%P,%O),[@N],,[&amp;]
+    |PMDDE|,(%D,[^])(%D,[^])(%B,[p1?I])(%P,%P),[@D],[Sh],[&amp;]
+    |PPPOM|,(%P,%P,%P,%O),[@F],,[&amp;]
+    |PDDEI|,(%D)(%D)(%J,[p1*P],[p2Sh],[p2*O],[p3Sh],[p3*E],[p3?I])(%P),[@M],,[&amp;]
+    |PPONB|,(%B)(%P,%O,%N),[@N],[Sh],[&amp;]
+    |OMMEE|,(%O),[@D],,[&amp;]
+    |PPNNM|,(%N,%N,%P,%P),[@K],,[&amp;]
+    |PPDDI|,(%D)(%D)(%F)(%I,[tP])(%P,%O),[@L],,[&amp;]
+    |OMBDJ|,(%D)(%B,[p1?I])(%P,%P,%P,%O),[@C],[Sh],[&amp;]
+    |PPKLI|,(%I,[tP]),,,[&amp;]
+    |ONMDF|,(%D)(%F)(%O,%O,%N),[@K][@P],,[&amp;]
+    |NMQCD|,(%C)(%D,[^])(%J,[p1*N],[p2*P],[p2?I],[p3*M])(%N,%P,%P),[@K],,[&amp;]
+    |PPMDE|,(%D,[^])(%E,[tP])(%O),[@L],[Sh],[&amp;]
+    |MBDEI|,(%D,[^])(%D)(%I,[tB])(%O),[@M],,[&amp;]
+    |PMMMK|,,,,[&amp;]
+}
+</pre>
+<pre>// remember nlen() ignores whitespace!
+{
+Output=[
+	A.nlen()+F.nlen()-K.nlen()-O.nlen(),
+	E.nlen()+H.nlen()+I.nlen()-Q.nlen(),
+	D.nlen()+E.nlen()+G.nlen()-M.nlen(),
+	A.nlen()+J.nlen()-K.nlen(),
+	A.nlen()+B.nlen()+G.nlen()-L.nlen(),
+	C.nlen()+F.nlen()+H.nlen()-Q.nlen(),
+	D.nlen()+I.nlen()-M.nlen()-P.nlen(),
+	A.nlen()+D.nlen()+F.nlen()-L.nlen(),
+	C.nlen()+G.nlen()+I.nlen()-P.nlen(),
+	A.nlen()+E.nlen()+J.nlen()-O.nlen(),
+	D.nlen()+F.nlen()+H.nlen()-N.nlen(),
+	D.nlen()+E.nlen()-O.nlen(),
+	B.nlen()+I.nlen()+J.nlen()-L.nlen(),
+	H.nlen()+I.nlen()+J.nlen()-L.nlen(),
+	A.nlen()+C.nlen()+J.nlen()-O.nlen(),
+	B.nlen()+F.nlen()-Q.nlen(),
+	B.nlen()+E.nlen()-L.nlen()-M.nlen(),
+	G.nlen()+H.nlen()-M.nlen()-P.nlen()
+	]
+}
+</pre>

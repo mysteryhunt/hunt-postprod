@@ -3,20 +3,24 @@
 .score-table {
   margin: 20px 0 20px 40px;
   border-collapse: collapse;
-  font: bold 45px 'Handlee', cursive;
+  font: bold 30px 'Handlee', cursive;
 }
 
-.score-table td {
+.score-table th, .score-table td {
   vertical-align: middle;
   text-align: center;
 }
 
+.score-table th {
+  font-size: 26px;
+}
+
 .ity-symbol {
-  height: 45px;
+  height: 30px;
 }
 
 .symbol-col {
-  width: 30px;
+  width: 25px;
 }
 
 .spacer-col {
@@ -24,6 +28,5 @@
 }
 
 .ity-sep-line {
-  height: 2px;
   background-color: #000;
 }

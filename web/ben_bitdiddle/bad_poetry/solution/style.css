@@ -1,0 +1,15 @@
+.blank {
+  border-bottom: 1px solid black;
+  color: transparent;
+  position: relative;
+  bottom: 4px;
+}
+
+.badptable {
+border-collapse:collapse;
+
+}
+.badptd {
+border: 1px solid black;
+padding: 4px;
+}

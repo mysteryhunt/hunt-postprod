@@ -31,9 +31,6 @@ function imagemap() {
 "<img src=\"10-"+
 (puzzle_solved["fulfilling_puzzle"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"baby_tumbleweed/-"+
-(puzzle_solved["baby_tumbleweed"]?"solved":"unsolved")+
-".png\" />"+
 "<img src=\"curiouser_and_curiouser/-"+
 (puzzle_solved["curiouser_and_curiouser"]?"solved":"unsolved")+
 ".png\" />"+
@@ -48,6 +45,9 @@ function imagemap() {
 ".png\" />"+
 "<img src=\"pinkamena_diane_pinkie_pie/-"+
 (puzzle_solved["pinkamena_diane_pinkie_pie"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"sovereignty/-"+
+(puzzle_solved["sovereignty"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"stand/-"+
 (puzzle_solved["stand"]?"solved":"unsolved")+
@@ -68,12 +68,12 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"401,397,440,428\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"441,401,445,422\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"411,429,436,437\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"409,391,438,396\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />\n<area shape=\"rect\" coords=\"397,404,400,419\" alt=\"Revisiting History\" title=\"Revisiting History\" href=\"../a_circus_line/revisiting_history/\" />"+
 "<area shape=\"rect\" coords=\"473,359,496,436\" alt=\"Good Auspicious Hunting\" title=\"Good Auspicious Hunting\" href=\"../a_circus_line/good_auspicious_hunting/\" />\n<area shape=\"rect\" coords=\"497,365,503,428\" alt=\"Good Auspicious Hunting\" title=\"Good Auspicious Hunting\" href=\"../a_circus_line/good_auspicious_hunting/\" />\n<area shape=\"rect\" coords=\"459,367,472,430\" alt=\"Good Auspicious Hunting\" title=\"Good Auspicious Hunting\" href=\"../a_circus_line/good_auspicious_hunting/\" />\n<area shape=\"rect\" coords=\"445,376,458,421\" alt=\"Good Auspicious Hunting\" title=\"Good Auspicious Hunting\" href=\"../a_circus_line/good_auspicious_hunting/\" />\n<area shape=\"rect\" coords=\"504,374,514,419\" alt=\"Good Auspicious Hunting\" title=\"Good Auspicious Hunting\" href=\"../a_circus_line/good_auspicious_hunting/\" />"+
 "<area shape=\"rect\" coords=\"510,383,564,391\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"514,392,595,400\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"529,351,578,382\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"534,401,605,415\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"533,416,556,445\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />"+
-"<area shape=\"rect\" coords=\"341,86,363,154\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"364,90,384,150\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"385,62,434,108\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"285,80,330,114\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />\n<area shape=\"rect\" coords=\"331,96,340,138\" alt=\"Baby Tumbleweed\" title=\"Baby Tumbleweed\" href=\"baby_tumbleweed/\" />"+
 "<area shape=\"rect\" coords=\"458,249,466,338\" alt=\"Curiouser and Curiouser\" title=\"Curiouser and Curiouser\" href=\"curiouser_and_curiouser/\" />\n<area shape=\"rect\" coords=\"467,250,477,331\" alt=\"Curiouser and Curiouser\" title=\"Curiouser and Curiouser\" href=\"curiouser_and_curiouser/\" />\n<area shape=\"rect\" coords=\"487,279,528,325\" alt=\"Curiouser and Curiouser\" title=\"Curiouser and Curiouser\" href=\"curiouser_and_curiouser/\" />\n<area shape=\"rect\" coords=\"478,236,486,327\" alt=\"Curiouser and Curiouser\" title=\"Curiouser and Curiouser\" href=\"curiouser_and_curiouser/\" />\n<area shape=\"rect\" coords=\"453,267,457,301\" alt=\"Curiouser and Curiouser\" title=\"Curiouser and Curiouser\" href=\"curiouser_and_curiouser/\" />"+
 "<area shape=\"rect\" coords=\"372,320,415,358\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"387,359,416,363\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"402,364,435,392\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"393,290,414,319\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"365,340,371,350\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />"+
 "<area shape=\"rect\" coords=\"377,224,446,239\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"386,240,438,245\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"372,212,442,223\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"349,196,438,211\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />\n<area shape=\"rect\" coords=\"386,246,414,282\" alt=\"Fiesta Flair\" title=\"Fiesta Flair\" href=\"fiesta_flair/\" />"+
 "<area shape=\"rect\" coords=\"549,315,615,322\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"540,323,621,332\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"574,333,619,359\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"562,302,626,314\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"598,286,641,301\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />"+
 "<area shape=\"rect\" coords=\"526,65,531,127\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"532,62,546,141\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"495,77,525,122\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"547,72,557,143\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />\n<area shape=\"rect\" coords=\"558,108,569,136\" alt=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" title=\"Pinkamena Diane &ldquo;Pinkie&rdquo; Pie\" href=\"pinkamena_diane_pinkie_pie/\" />"+
+"<area shape=\"rect\" coords=\"341,86,363,154\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"364,90,384,150\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"385,62,434,108\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"285,80,330,114\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"331,96,340,138\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />"+
 "<area shape=\"rect\" coords=\"536,167,545,207\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"546,162,568,205\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"500,176,535,239\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"569,173,584,202\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"585,176,621,196\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />"+
 "<area shape=\"rect\" coords=\"454,117,474,174\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"475,121,477,164\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"418,125,447,199\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"448,120,453,176\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"478,123,482,126\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />"+
 "</map>"+
@@ -136,14 +136,6 @@ function puzzlelist() {
 "<tr class=\"spacer\"></tr>"+
 "<tr>"+
 "<td class=\"sheila_sunshine "+
-(puzzle_solved["baby_tumbleweed"]?"solved":"unsolved")+
-"\"><a href=\"baby_tumbleweed/\"><span>Baby Tumbleweed</span></a></td>"+
-"<td class=\"sheila_sunshine "+
-(puzzle_solved["highlights"]?"solved":"unsolved")+
-"\"><a href=\"highlights/\"><span>Highlights</span></a></td>"+
-"</tr>"+
-"<tr>"+
-"<td class=\"sheila_sunshine "+
 (puzzle_solved["curiouser_and_curiouser"]?"solved":"unsolved")+
 "\"><a href=\"curiouser_and_curiouser/\"><span>Curiouser and Curiouser</span></a></td>"+
 "<td class=\"sheila_sunshine "+
@@ -155,13 +147,21 @@ function puzzlelist() {
 (puzzle_solved["disorder_of_operations"]?"solved":"unsolved")+
 "\"><a href=\"disorder_of_operations/\"><span>Disorder of Operations</span></a></td>"+
 "<td class=\"sheila_sunshine "+
-(puzzle_solved["stand"]?"solved":"unsolved")+
-"\"><a href=\"stand/\"><span>Stand</span></a></td>"+
+(puzzle_solved["sovereignty"]?"solved":"unsolved")+
+"\"><a href=\"sovereignty/\"><span>Sovereignty</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"sheila_sunshine "+
 (puzzle_solved["fiesta_flair"]?"solved":"unsolved")+
 "\"><a href=\"fiesta_flair/\"><span>Fiesta Flair</span></a></td>"+
+"<td class=\"sheila_sunshine "+
+(puzzle_solved["stand"]?"solved":"unsolved")+
+"\"><a href=\"stand/\"><span>Stand</span></a></td>"+
+"</tr>"+
+"<tr>"+
+"<td class=\"sheila_sunshine "+
+(puzzle_solved["highlights"]?"solved":"unsolved")+
+"\"><a href=\"highlights/\"><span>Highlights</span></a></td>"+
 "<td class=\"sheila_sunshine "+
 (puzzle_solved["the_signs_they_are_a_changin"]?"solved":"unsolved")+
 "\"><a href=\"the_signs_they_are_a_changin/\"><span>The Signs They Are A-Changin&rsquo;</span></a></td>"+

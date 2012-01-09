@@ -1,0 +1,935 @@
+---
+layout: sheila_sunshine_solution
+title: Sovereignty
+class: puzzle solution
+credits: by Alex Pearson and Arthur Wright
+---
+<p>
+The first solution step is realizing that this is a Dominion puzzle (Sovereignty is a synonym, Donald created the game, each player starts with 7 of one thing and 3 of the other). After that leap, it&rsquo;s a logic puzzle to determine what each card does, and how the markup works. Here&rsquo;s one path to take:
+</p>
+
+<p>
+----<br />
+K Province by game-ending after 12 are taken from the pile, implying there were exactly 12. Costs 8 or more each time, never played as an action.<br />
+L Duchy by induction (never played, part of VP section of cards, costs 5)<br />
+M Estate by opening hand distribution<br />
+N treasure by use, Gold by cost<br />
+O treasure by use, Silver by cost<br />
+P copper by opening hand distribution<br />
+Q curse, never bought or played.<br />
+</p>
+<p>
+A Harvest: by p3, each time revealing 4 cards, gaining up to 4 coins.
+</p>
+<p>
+E Moneylender: by p3t4, trashing a copper for 3 coins
+</p>
+<p>
+I Trader: Reaction per p2t6. Playing it normally causes a card to be trashed by p1t3. Only reaction that causes a trash is Trader.
+</p>
+<p>
+G Grand Market: Often bought without coppers, even though coppers were in hand. Costs 6 or more every time. That&rsquo;s enough for Grand Market, even without confirming the rest (1 card, 1 buy, 2 coin by p2t10, 1 action by p1t10)
+</p>
+<p>
+J Jester: by Harvest, * is discard from top of deck. Each other player discards from their deck every time. p4t8, plays I that he never bought, must have got from Jester reveal in p4t5.
+</p>
+<p>
+C City: 1 action, 1 card by p2t7. no coin in p3t12 (only the 3 from the moneylender). 1 buy, 1 coin by p3t17. Counting piles of other cards, this is exactly the difference between 0 and 2 empty piles (C and D), so C is City.
+</p>
+<p>
+D Pearl Diver: Costs 2 by p4t1, +1 card by p2t11 (forces a shuffle), +1 action by p2t15. Sometimes does ^, so not Pawn or Hamlet, since everything those cards do is done by other cards already identified without notation. Not Haven, since hand size doesn&rsquo;t grow. +1 action even when not first time played by p4t6, so not Crossroads. Only other +c +a 2-cost card is Pearl Diver, so ^ must be bottom card to top of deck.
+</p>
+<p>
+H Torturer: Attack card by p2t6, having reaction played on it. p2t6, playing it draws 3 cards. Nothing is revealed p4t9, a copper is left unplayed, where every other player plays all their treasure even if it leads to overpayment (except when buying G, more on that under G). So the P must have been discarded in an attack from H. But I is only a response to gaining a card, so H must cause either a discard or a gain. With the 3 card draws, that&rsquo;s uniquely the Torturer
+</p>
+<p>
+B Witch: Attack per p4t6 (reaction played). p4t13, +2 cards. Not +1 action, or J would have been played after B in p4t13. Other players hands don&rsquo;t show the reduction of Ghost Ship, Rabble, Margrave or Followers. No self discard, so not Young Witch. No reveals cuts out most other attacks. Must be Witch. Curse acquisition lines up with this assumption.
+</p>
+<p>
+F Festival: Costs &lt;=5, +1 action +2 coin by p4t12. Bought with copper, so not Grand Market. Conspirator possible, if not for the +1 buy in p4t15. Not Trusty Steed, since it was bought. 
+</p>
+<p>
+----<br />
+Having derived the names of each card used, we can take nlen() to mean the length of the name of the card, and doing all the indicated math at the end gives the clue phrase ATZERODT OR VOLOKH, E.G. , for the answer <b>CONSPIRATOR</b>.
+</p>
+<p>
+For the curious, here is the basis for the game, taken from the wonderful logs created by dominion.isotropic.org . One change had to be made to uniquely determine all the cards using our notation.
+</p>
+<p>
+#####################<br />
+<br />
+Player1 wins!<br />
+All Provinces are gone.<br />
+<br />
+Cards in supply: City, Festival, Grand Market, Harvest, Jester, Moneylender, Pearl Diver, Torturer, Trader, and Witch<br />
+----------------------<br />
+</p>
+<pre>#1 Player1: 32 points (4 Provinces, 3 Duchies, an Estate, and 2 Curses); 20 turns
+          [40 cards] 4 Cities, 3 Grand Markets, 2 Pearl Divers, 2 Traders, 4 Coppers, 14 Silvers, 1 Gold, 1 Estate, 3 Duchies, 4 Provinces, 2 Curses
+
+#2 Player2: 30 points (6 Duchies, 2 Provinces, 3 Estates, and 3 Curses); 19 turns
+       [39 cards] 3 Cities, 3 Grand Markets, 3 Pearl Divers, 1 Torturer, 1 Trader, 6 Coppers, 6 Silvers, 2 Golds, 3 Estates, 6 Duchies, 2 Provinces, 3 Curses
+
+#3 Player4: 27 points (3 Provinces, 2 Duchies, 5 Estates, and 2 Curses); 19 turns
+              [37 cards] 4 Pearl Divers, 2 Moneylenders, 1 City, 1 Festival, 1 Jester, 1 Trader, 4 Coppers, 8 Silvers, 3 Golds, 5 Estates, 2 Duchies, 3 Provinces, 2 Curses
+
+#4 Player3: 22 points (3 Provinces, 8 Estates, and 4 Curses); 19 turns
+            [38 cards] 3 Grand Markets, 2 Cities, 1 Harvest, 1 Moneylender, 1 Pearl Diver, 1 Trader, 2 Coppers, 9 Silvers, 3 Golds, 8 Estates, 3 Provinces, 4 Curses
+
+----------------------
+</pre>
+<p>
+trash: 14 Coppers, 3 Estates, a Curse, a Witch, and a Moneylender
+</p>
+<p>
+<b>Game log:</b><br />
+<br />
+Turn order is Player1, Player2, Player3, and then Player4.<br />
+<br />
+(Player1&rsquo;s first hand: 3 Coppers and 2 Estates.)<br />
+(Player2&rsquo;s first hand: 3 Coppers and 2 Estates.)<br />
+(Player3&rsquo;s first hand: 4 Coppers and an Estate.)<br />
+(Player4&rsquo;s first hand: 2 Coppers and 3 Estates.)<br />
+</p>
+
+<pre>&mdash; Player1's turn 1 &mdash;
+Player1 plays 3 Coppers.
+Player1 buys a Silver.
+(Player1 draws: 4 Coppers and an Estate.)
+   
+
+   &mdash; Player2's turn 1 &mdash;
+   Player2 plays 3 Coppers.
+   Player2 buys a Silver.
+   (Player2 draws: 4 Coppers and an Estate.)
+      
+
+      &mdash; Player3's turn 1 &mdash;
+      Player3 plays 4 Coppers.
+      Player3 buys a Moneylender.
+      (Player3 draws: 3 Coppers and 2 Estates.)
+         
+
+         &mdash; Player4's turn 1 &mdash;
+         Player4 plays 2 Coppers.
+         Player4 buys a Pearl Diver.
+         (Player4 draws: 5 Coppers.)
+
+
+&mdash; Player1's turn 2 &mdash;
+Player1 plays 4 Coppers.
+Player1 buys a Trader.
+(Player1 reshuffles.)
+(Player1 draws: 2 Coppers, an Estate, a Silver, and a Trader.)
+   
+
+   &mdash; Player2's turn 2 &mdash;
+   Player2 plays 4 Coppers.
+   Player2 buys a Trader.
+   (Player2 reshuffles.)
+   (Player2 draws: 3 Coppers, an Estate, and a Silver.)
+      
+
+      &mdash; Player3's turn 2 &mdash;
+      Player3 plays 3 Coppers.
+      Player3 buys a Silver.
+      (Player3 reshuffles.)
+      (Player3 draws: 2 Coppers, 2 Estates, and a Silver.)
+         
+
+         &mdash; Player4's turn 2 &mdash;
+         Player4 plays 5 Coppers.
+         Player4 buys a Jester.
+         (Player4 reshuffles.)
+         (Player4 draws: 3 Coppers, an Estate, and a Pearl Diver.)
+
+
+&mdash; Player1's turn 3 &mdash;
+Player1 plays a Trader.
+... trashing an Estate.
+... gaining 2 Silvers.
+Player1 plays 2 Coppers and a Silver.
+Player1 buys a Trader.
+(Player1 draws: 4 Coppers and an Estate.)
+   
+
+   &mdash; Player2's turn 3 &mdash;
+   Player2 plays 3 Coppers and a Silver.
+   Player2 buys a Torturer.
+   (Player2 draws: 3 Coppers, an Estate, and a Trader.)
+      
+
+      &mdash; Player3's turn 3 &mdash;
+      Player3 plays 2 Coppers and a Silver.
+      Player3 buys a Moneylender.
+      (Player3 draws: 4 Coppers and a Moneylender.)
+         
+
+         &mdash; Player4's turn 3 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... and moving the bottom card of the deck to the top.
+         Player4 plays 4 Coppers.
+         Player4 buys a Moneylender.
+         (Player4 draws: 3 Coppers, a Jester, and an Estate.)
+
+
+&mdash; Player1's turn 4 &mdash;
+Player1 plays 4 Coppers.
+Player1 buys a Silver.
+(Player1 reshuffles.)
+(Player1 draws: 3 Coppers and 2 Estates.)
+   
+
+   &mdash; Player2's turn 4 &mdash;
+   Player2 plays a Trader.
+   ... trashing an Estate.
+   ... gaining 2 Silvers.
+   Player2 plays 3 Coppers.
+   Player2 buys a Pearl Diver.
+   (Player2 reshuffles.)
+   (Player2 draws: 3 Coppers, an Estate, and a Silver.)
+      
+
+      &mdash; Player3's turn 4 &mdash;
+      Player3 plays a Moneylender.
+      ... trashing a Copper for +$3.
+      Player3 plays 3 Coppers.
+      Player3 buys a Gold.
+      (Player3 reshuffles.)
+      (Player3 draws: 2 Coppers, 2 Estates, and a Silver.)
+         
+
+         &mdash; Player4's turn 4 &mdash;
+         Player4 plays a Jester.
+         ... getting +$2.
+         ... Player1 draws and discards a Silver.
+         ... Player4 gains a Silver.
+         ... Player2 draws and discards a Pearl Diver.
+         ... Player4 gains a Pearl Diver.
+         ... Player3 draws and discards a Moneylender.
+         ... Player4 gains a Moneylender.
+         Player4 plays 3 Coppers.
+         Player4 buys a Witch.
+         (Player4 reshuffles.)
+         (Player4 draws: 2 Coppers, an Estate, a Silver, and a Jester.)
+
+
+&mdash; Player1's turn 5 &mdash;
+Player1 plays 3 Coppers.
+Player1 buys a Silver.
+(Player1 draws: 3 Coppers, a Silver, and a Trader.)
+   
+
+   &mdash; Player2's turn 5 &mdash;
+   Player2 plays 3 Coppers and a Silver.
+   Player2 buys a City.
+   (Player2 draws: 2 Coppers, an Estate, a Silver, and a Torturer.)
+      
+
+      &mdash; Player3's turn 5 &mdash;
+      Player3 plays 2 Coppers and a Silver.
+      Player3 buys a Trader.
+      (Player3 draws: 2 Coppers, an Estate, a Gold, and a Moneylender.)
+         
+
+         &mdash; Player4's turn 5 &mdash;
+         Player4 plays a Jester.
+         ... getting +$2.
+         ... Player1 draws and discards a Silver.
+         ... Player4 gains a Silver.
+         ... Player2 draws and discards a Trader.
+         ... Player4 gains a Trader.
+         ... Player3 draws and discards a Copper.
+         ... Player3 gains a Copper.
+         Player4 plays 2 Coppers and a Silver.
+         Player4 buys a Gold.
+         (Player4 draws: a Copper, an Estate, 2 Pearl Divers, and a Moneylender.)
+
+
+&mdash; Player1's turn 6 &mdash;
+Player1 plays a Trader.
+... trashing a Copper.
+Player1 plays 2 Coppers and a Silver.
+Player1 buys a Silver.
+(Player1 reshuffles.)
+(Player1 draws: 3 Coppers, a Silver, and a Trader.)
+   
+
+   &mdash; Player2's turn 6 &mdash;
+   Player2 plays a Torturer.
+   ... drawing 3 cards.
+   ... Player3 discards 2 cards.
+   ... Player4 discards 2 cards.
+   ... Player1 gains a Curse in hand.
+   ... ... Player1 reveals a Trader to gain a Silver instead of a Curse.
+   ... ... Player1 gains a Silver.
+   Player2 plays 4 Coppers and 2 Silvers.
+   Player2 buys a Gold.
+   (Player2 reshuffles.)
+   (Player2 draws: 3 Coppers, a Pearl Diver, and a City.)
+      
+
+      &mdash; Player3's turn 6 &mdash;
+      Player3 plays a Moneylender.
+      ... trashing a Copper for +$3.
+      Player3 plays a Gold.
+      Player3 buys a Grand Market.
+      (Player3 reshuffles.)
+      (Player3 draws: 2 Coppers, 2 Estates, and a Gold.)
+         
+
+         &mdash; Player4's turn 6 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... and moving the bottom card of the deck to the top.
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... and moving the bottom card of the deck to the top.
+         Player4 plays a Witch.
+         ... drawing 2 cards.
+         ... Player1 gains a Curse.
+         ... ... Player1 reveals a Trader to gain a Silver instead of a Curse.
+         ... ... Player1 gains a Silver.
+         ... Player2 gains a Curse.
+         ... Player3 gains a Curse.
+         Player4 plays 2 Coppers.
+         Player4 buys a Pearl Diver.
+         (Player4 reshuffles.)
+         (Player4 draws: 3 Coppers, an Estate, and a Silver.)
+
+
+&mdash; Player1's turn 7 &mdash;
+Player1 plays 3 Coppers and a Silver.
+Player1 buys a City.
+(Player1 draws: 2 Estates, 2 Silvers, and a Trader.)
+   
+
+   &mdash; Player2's turn 7 &mdash;
+   Player2 plays a City.
+   ... drawing 1 card and getting +2 actions.
+   Player2 plays a Pearl Diver.
+   ... drawing 1 card and getting +1 action.
+   ... and moving the bottom card of the deck to the top.
+   Player2 plays 4 Coppers and a Silver.
+   Player2 buys a Gold.
+   (Player2 draws: a Copper, an Estate, a Gold, and 2 Silvers.)
+      
+
+      &mdash; Player3's turn 7 &mdash;
+      Player3 plays 2 Coppers and a Gold.
+      Player3 buys a City.
+      (Player3 draws: a Copper, an Estate, a Silver, and 2 Moneylenders.)
+         
+
+         &mdash; Player4's turn 7 &mdash;
+         Player4 plays 3 Coppers and a Silver.
+         Player4 buys a Festival.
+         (Player4 draws: a Copper, 2 Pearl Divers, a Trader, and a Moneylender.)
+
+
+&mdash; Player1's turn 8 &mdash;
+Player1 plays a Trader.
+... trashing an Estate.
+... gaining 2 Silvers.
+Player1 plays 2 Silvers.
+Player1 buys a Silver.
+(Player1 draws: 2 Coppers and 3 Silvers.)
+   
+
+   &mdash; Player2's turn 8 &mdash;
+   Player2 plays a Gold.
+   Player2 plays a Silver.
+   Player2 plays a Silver.
+   Player2 buys a Grand Market.
+   (Player2 draws: 2 Coppers, an Estate, a Trader, and a Torturer.)
+      
+
+      &mdash; Player3's turn 8 &mdash;
+      Player3 plays a Moneylender.
+      ... trashing a Copper for +$3.
+      Player3 plays a Silver.
+      Player3 buys a Harvest.
+      (Player3 draws: 3 Coppers, a Grand Market, and a Trader.)
+         
+
+         &mdash; Player4's turn 8 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Jester.
+         ... getting +$2.
+         ... Player1 draws and discards a Copper.
+         ... Player1 gains a Copper.
+         ... (Player2 reshuffles.)
+         ... Player2 draws and discards a Silver.
+         ... Player4 gains a Silver.
+         ... (Player3 reshuffles.)
+         ... Player3 draws and discards a Moneylender.
+         ... Player3 gains a Moneylender.
+         ... ... Player3 reveals a Trader to gain a Silver instead of a Moneylender.
+         ... ... Player3 gains a Silver.
+         Player4 plays a Copper.
+         Player4 buys an Estate.
+         (Player4 draws: 2 Coppers, a Gold, a Witch, and a Silver.)
+
+
+&mdash; Player1's turn 9 &mdash;
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 buys a Grand Market.
+(Player1 reshuffles.)
+(Player1 draws: a Copper, 2 Silvers, a Grand Market, and a City.)
+   
+
+   &mdash; Player2's turn 9 &mdash;
+   Player2 plays a Torturer.
+   ... drawing 3 cards.
+   ... Player3 gains a Curse in hand.
+   ... ... Player3 reveals a Trader to gain a Silver instead of a Curse.
+   ... ... Player3 gains a Silver.
+   ... Player4 discards 2 cards.
+   ... Player1 gains a Curse in hand.
+   Player2 plays 2 Coppers and a Gold.
+   Player2 buys a City.
+   (Player2 draws: 2 Coppers, a Silver, a Gold, and a Grand Market.)
+      
+
+      &mdash; Player3's turn 9 &mdash;
+      Player3 plays a Grand Market.
+      ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+      Player3 plays a Moneylender.
+      ... trashing a Copper for +$3.
+      Player3 plays 2 Coppers.
+      Player3 buys a Gold.
+      (Player3 draws: a Copper, an Estate, a Harvest, a Gold, and a City.)
+         
+
+         &mdash; Player4's turn 9 &mdash;
+         Player4 plays a Witch.
+         ... drawing 2 cards.
+         ... Player1 gains a Curse.
+         ... Player2 gains a Curse.
+         ... Player3 gains a Curse.
+         Player4 plays a Copper, a Gold, and a Silver.
+         Player4 buys a Gold.
+         (Player4 reshuffles.)
+         (Player4 draws: 2 Estates, a Silver, and 2 Moneylenders.)
+
+
+&mdash; Player1's turn 10 &mdash;
+Player1 plays a Grand Market.
+... drawing 1 card and getting +1 action, +1 buy, and +$2.
+Player1 plays a City.
+... drawing 1 card and getting +2 actions.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 buys a Grand Market.
+Player1 buys a Pearl Diver.
+(Player1 draws: a Copper, 3 Silvers, and a Trader.)
+   
+
+   &mdash; Player2's turn 10 &mdash;
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a Gold.
+   Player2 plays a Silver.
+   Player2 plays a Silver.
+   Player2 buys a Grand Market.
+   Player2 buys a Silver.
+   (Player2 draws: 3 Coppers, an Estate, and a Pearl Diver.)
+      
+
+      &mdash; Player3's turn 10 &mdash;
+      Player3 plays a City.
+      ... drawing 1 card and getting +2 actions.
+      Player3 plays a Harvest.
+      ... revealing and discarding a Copper, an Estate, a Curse, and a Silver and getting +$4.
+      Player3 plays a Gold.
+      Player3 buys a Grand Market.
+      (Player3 reshuffles.)
+      (Player3 draws: a Copper, a Gold, a Harvest, a Silver, and a Moneylender.)
+         
+
+         &mdash; Player4's turn 10 &mdash;
+         Player4 plays a Silver.
+         Player4 buys a Pearl Diver.
+         (Player4 draws: 2 Coppers, an Estate, and 2 Golds.)
+
+
+&mdash; Player1's turn 11 &mdash;
+Player1 plays a Trader.
+... trashing a Copper.
+Player1 plays 3 Silvers.
+Player1 buys a Grand Market.
+(Player1 draws: 2 Coppers, an Estate, and 2 Silvers.)
+   
+
+   &mdash; Player2's turn 11 &mdash;
+   Player2 plays a Pearl Diver.
+   ... (Player2 reshuffles.)
+   ... drawing 1 card and getting +1 action.
+   ... and moving the bottom card of the deck to the top.
+   Player2 plays 4 Coppers.
+   Player2 buys an Estate.
+   (Player2 draws: 2 Coppers, a Silver, a Gold, and a Trader.)
+      
+
+      &mdash; Player3's turn 11 &mdash;
+      Player3 plays a Harvest.
+      ... revealing and discarding a Silver, a Gold, a Trader, and an Estate and getting +$4.
+      Player3 plays a Gold.
+      Player3 plays a Silver.
+      Player3 buys a Grand Market.
+      (Player3 draws: a Copper, 2 Curses, a Moneylender, and a City.)
+         
+
+         &mdash; Player4's turn 11 &mdash;
+         Player4 plays a Gold.
+         Player4 plays a Gold.
+         Player4 plays a Copper.
+         Player4 plays a Copper.
+         Player4 buys a Province.
+         (Player4 draws: 2 Coppers, 2 Pearl Divers, and a Trader.)
+
+
+&mdash; Player1's turn 12 &mdash;
+Player1 plays 2 Coppers and 2 Silvers.
+Player1 buys a Gold.
+(Player1 draws: 2 Coppers, 2 Silvers, and a Trader.)
+   
+
+   &mdash; Player2's turn 12 &mdash;
+   Player2 plays a Trader.
+   ... trashing a Copper.
+   Player2 plays a Copper, a Silver, and a Gold.
+   Player2 buys a Duchy.
+   (Player2 draws: a Grand Market, 2 Silvers, a City, and a Torturer.)
+      
+
+      &mdash; Player3's turn 12 &mdash;
+      Player3 plays a City.
+      ... drawing 1 card and getting +2 actions.
+      Player3 plays a Moneylender.
+      ... trashing a Copper for +$3.
+      Player3 buys a Silver.
+      (Player3 draws: a Copper, an Estate, 2 Grand Markets, and a Silver.)
+         
+
+         &mdash; Player4's turn 12 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Festival.
+         ... getting +2 actions, +1 buy, and +$2.
+         Player4 plays a Trader.
+         ... trashing a Copper.
+         Player4 plays a Copper and a Silver.
+         Player4 buys a Duchy.
+         (Player4 draws: a Jester, a Witch, a Silver, a Pearl Diver, and an Estate.)
+
+
+&mdash; Player1's turn 13 &mdash;
+Player1 plays a Trader.
+... trashing a Copper.
+Player1 plays a Copper and 2 Silvers.
+Player1 buys a City.
+(Player1 reshuffles.)
+(Player1 draws: a Copper, a Grand Market, 2 Silvers, and a Trader.)
+   
+
+   &mdash; Player2's turn 13 &mdash;
+   Player2 plays a City.
+   ... drawing 1 card and getting +2 actions.
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a Torturer.
+   ... drawing 3 cards.
+   ... Player3 discards 2 cards.
+   ... Player4 gains a Curse in hand.
+   ... Player1 gains a Curse in hand.
+   ... ... Player1 reveals a Trader to gain a Silver instead of a Curse.
+   ... ... Player1 gains a Silver.
+   Player2 plays a Silver.
+   Player2 plays a Silver.
+   Player2 plays a Silver.
+   Player2 plays a Gold.
+   Player2 buys a Grand Market.
+   Player2 buys a City.
+   Player2 buys a Pearl Diver.
+   (Player2 reshuffles.)
+   (Player2 draws: 2 Coppers, a Duchy, a Silver, and a City.)
+      
+
+      &mdash; Player3's turn 13 &mdash;
+      Player3 plays a Grand Market.
+      ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+      Player3 plays a Grand Market.
+      ... (Player3 reshuffles.)
+      ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+      Player3 plays a Silver.
+      Player3 plays a Copper.
+      Player3 buys a City.
+      Player3 buys a Pearl Diver.
+      (Player3 draws: a Copper, an Estate, a Curse, a Silver, and a City.)
+         
+
+         &mdash; Player4's turn 13 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Witch.
+         ... drawing 2 cards.
+         ... Player1 gains a Curse.
+         ... ... Player1 reveals a Trader to gain a Silver instead of a Curse.
+         ... ... Player1 gains a Silver.
+         ... Player2 gains a Curse.
+         ... Player3 gains a Curse.
+         Player4 plays 3 Coppers and a Silver.
+         Player4 buys a City.
+         (Player4 reshuffles.)
+         (Player4 draws: a Province, a Duchy, 2 Coppers, and a Trader.)
+
+
+&mdash; Player1's turn 14 &mdash;
+Player1 plays a Grand Market.
+... drawing 1 card and getting +1 action, +1 buy, and +$2.
+Player1 plays a Trader.
+... trashing a Curse.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 plays a Copper.
+Player1 buys a City.
+Player1 buys a Pearl Diver.
+(Player1 draws: a Copper, an Estate, 2 Silvers, and a City.)
+   
+
+   &mdash; Player2's turn 14 &mdash;
+   Player2 plays a City.
+   ... drawing 1 card and getting +2 actions.
+   Player2 plays 2 Coppers and a Silver.
+   Player2 buys a Silver.
+   (Player2 draws: a Copper, an Estate, a Curse, a Pearl Diver, and a Torturer.)
+      
+
+      &mdash; Player3's turn 14 &mdash;
+      Player3 plays a City.
+      ... drawing 1 card and getting +2 actions.
+      Player3 plays a Copper and a Silver.
+      Player3 buys an Estate.
+      (Player3 draws: a Curse, a Harvest, a Silver, a Moneylender, and a Trader.)
+         
+
+         &mdash; Player4's turn 14 &mdash;
+         Player4 plays a Trader.
+         ... trashing a Copper.
+         (Player4 draws: a Silver, a Festival, a Gold, a Pearl Diver, and an Estate.)
+
+
+&mdash; Player1's turn 15 &mdash;
+Player1 plays a City.
+... drawing 1 card and getting +2 actions.
+Player1 plays 2 Coppers and 2 Silvers.
+Player1 buys a City.
+(Player1 draws: a Copper, 3 Silvers, and a Trader.)
+   
+
+   &mdash; Player2's turn 15 &mdash;
+   Player2 plays a Pearl Diver.
+   ... drawing 1 card and getting +1 action.
+   ... and moving the bottom card of the deck to the top.
+   Player2 plays a Torturer.
+   ... drawing 3 cards.
+   ... Player3 gains a Curse in hand.
+   ... ... Player3 reveals a Trader to gain a Silver instead of a Curse.
+   ... ... Player3 gains a Silver.
+   ... Player4 gains a Curse in hand.
+   ... Player1 gains a Curse in hand.
+   ... ... Player1 reveals a Trader to gain a Silver instead of a Curse.
+   ... ... Player1 gains a Silver.
+   Player2 plays a Gold.
+   Player2 plays a Copper.
+   Player2 plays a Copper.
+   Player2 buys a Duchy.
+   (Player2 draws: a Copper, a Gold, a Silver, a City, and a Grand Market.)
+      
+
+      &mdash; Player3's turn 15 &mdash;
+      Player3 plays a Harvest.
+      ... revealing and discarding a Copper, a Silver, a Gold, and a Moneylender and getting +$4.
+      Player3 plays a Silver.
+      Player3 buys a Gold.
+      (Player3 reshuffles.)
+      (Player3 draws: 2 Grand Markets, a Gold, a Moneylender, and an Estate.)
+         
+
+         &mdash; Player4's turn 15 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Festival.
+         ... getting +2 actions, +1 buy, and +$2.
+         Player4 plays 2 Silvers and a Gold.
+         Player4 buys a Province.
+         (Player4 draws: a Gold, a Curse, a Pearl Diver, a City, and an Estate.)
+
+
+&mdash; Player1's turn 16 &mdash;
+Player1 plays a Trader.
+... trashing a Copper.
+Player1 plays 3 Silvers.
+Player1 buys a Duchy.
+(Player1 draws: 2 Grand Markets, a Curse, and 2 Silvers.)
+   
+
+   &mdash; Player2's turn 16 &mdash;
+   Player2 plays a City.
+   ... drawing 2 cards and getting +2 actions.
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a City.
+   ... drawing 2 cards and getting +2 actions.
+   Player2 plays a Gold and 3 Silvers.
+   Player2 plays a Copper.
+   Player2 plays a Copper.
+   Player2 buys a Province.
+   Player2 buys a Duchy.
+   Player2 buys a Pearl Diver.
+   (Player2 reshuffles.)
+   (Player2 draws: a Province, a Grand Market, a Curse, a Pearl Diver, and a Trader.)
+      
+
+      &mdash; Player3's turn 16 &mdash;
+      Player3 plays a Grand Market.
+      ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+      Player3 plays a Grand Market.
+      ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+      Player3 plays a Moneylender.
+      ... trashing a Copper for +$3.
+      Player3 plays a Gold.
+      Player3 buys a Province.
+      Player3 buys an Estate.
+      (Player3 draws: an Estate, 2 Curses, a Silver, and a City.)
+         
+
+         &mdash; Player4's turn 16 &mdash;
+         Player4 plays a City.
+         ... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... and moving the bottom card of the deck to the top.
+         Player4 plays a Jester.
+         ... getting +$2.
+         ... Player1 draws and discards a Gold.
+         ... Player4 gains a Gold.
+         ... Player2 draws and discards a Copper.
+         ... Player2 gains a Copper.
+         ... ... Player2 reveals a Trader to gain a Silver instead of a Copper.
+         ... ... Player2 gains a Silver.
+         ... Player3 draws and discards an Estate.
+         ... Player3 gains a Curse.
+         Player4 plays a Gold.
+         Player4 plays a Copper.
+         Player4 plays a Copper.
+         Player4 buys a Province.
+         (Player4 draws: 2 Coppers, an Estate, a Pearl Diver, and a Moneylender.)
+
+
+&mdash; Player1's turn 17 &mdash;
+Player1 plays a Grand Market.
+... drawing 1 card and getting +1 action, +1 buy, and +$2.
+Player1 plays a Grand Market.
+... drawing 1 card and getting +1 action, +1 buy, and +$2.
+Player1 plays a Pearl Diver.
+... drawing 1 card and getting +1 action.
+... but leaving the bottom card of the deck where it is.
+Player1 plays a City.
+... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 plays a Silver.
+Player1 plays a Copper.
+Player1 buys a Province.
+Player1 buys a Duchy.
+(Player1 reshuffles.)
+(Player1 draws: a Duchy, 3 Silvers, and a Gold.)
+   
+
+   &mdash; Player2's turn 17 &mdash;
+   Player2 plays a Pearl Diver.
+   ... drawing 1 card and getting +1 action.
+   ... but leaving the bottom card of the deck where it is.
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a Torturer.
+   ... drawing 3 cards.
+   ... Player3 discards 2 cards.
+   ... Player4 discards 2 cards.
+   ... Player1 gains a Curse in hand.
+   Player2 plays 2 Silvers.
+   Player2 buys a Duchy.
+   (Player2 draws: a Copper, an Estate, a Curse, and 2 Silvers.)
+      
+
+      &mdash; Player3's turn 17 &mdash;
+      Player3 plays a City.
+      ... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+      Player3 plays a Silver.
+      Player3 plays a Copper.
+      Player3 buys an Estate.
+      Player3 buys an Estate.
+      (Player3 draws: a Copper, 2 Golds, and 2 Silvers.)
+         
+
+         &mdash; Player4's turn 17 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... and moving the bottom card of the deck to the top.
+         Player4 plays a Moneylender.
+         ... trashing a Copper for +$3.
+         Player4 plays a Silver.
+         Player4 buys a Duchy.
+         (Player4 reshuffles.)
+         (Player4 draws: an Estate, a Witch, a Pearl Diver, a Moneylender, and a Trader.)
+
+
+&mdash; Player1's turn 18 &mdash;
+Player1 plays 3 Silvers and a Gold.
+Player1 buys a Province.
+(Player1 draws: a Province, an Estate, a Grand Market, a Trader, and a Silver.)
+   
+
+   &mdash; Player2's turn 18 &mdash;
+   Player2 plays a Copper and 2 Silvers.
+   Player2 buys a Duchy.
+   (Player2 draws: a Copper, an Estate, a Grand Market, a Duchy, and a City.)
+      
+
+      &mdash; Player3's turn 18 &mdash;
+      Player3 plays 2 Golds and 2 Silvers.
+      Player3 buys a Province.
+      (Player3 draws: 2 Silvers, a Curse, a Pearl Diver, and a Trader.)
+         
+
+         &mdash; Player4's turn 18 &mdash;
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... and moving the bottom card of the deck to the top.
+         Player4 plays a Pearl Diver.
+         ... drawing 1 card and getting +1 action.
+         ... but leaving the bottom card of the deck where it is.
+         Player4 plays a Trader.
+         ... trashing a Witch.
+         ... gaining 5 Silvers.
+         Player4 plays a Silver.
+         Player4 buys an Estate.
+         (Player4 draws: a Copper, 3 Estates, and a Province.)
+
+
+&mdash; Player1's turn 19 &mdash;
+Player1 plays a Grand Market.
+... drawing 1 card and getting +1 action, +1 buy, and +$2.
+Player1 plays a City.
+... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+Player1 plays 3 Silvers.
+Player1 buys a Province.
+(Player1 draws: a Copper, a Grand Market, a Pearl Diver, a Silver, and a City.)
+   
+
+   &mdash; Player2's turn 19 &mdash;
+   Player2 plays a City.
+   ... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+   Player2 plays a City.
+   ... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+   Player2 plays a Grand Market.
+   ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+   Player2 plays a Pearl Diver.
+   ... drawing 1 card and getting +1 action.
+   ... but leaving the bottom card of the deck where it is.
+   Player2 plays 2 Golds.
+   Player2 plays a Copper.
+   Player2 plays a Copper.
+   Player2 plays a Copper.
+   Player2 buys a Province.
+   Player2 buys a Duchy.
+   (Player2 draws: a Copper, a Silver, a Curse, a Grand Market, and a Duchy.)
+      
+
+      &mdash; Player3's turn 19 &mdash;
+      Player3 plays a Pearl Diver.
+      ... drawing 1 card and getting +1 action.
+      ... and moving the bottom card of the deck to the top.
+      Player3 plays a City.
+      ... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+      Player3 plays a Grand Market.
+      ... (Player3 reshuffles.)
+      ... drawing 1 card and getting +1 action, +1 buy, and +$2.
+      Player3 plays a Harvest.
+      ... revealing and discarding a Gold, a Curse, a Silver, and a Moneylender and getting +$4.
+      Player3 plays a Trader.
+      ... trashing a Moneylender.
+      ... gaining 4 Silvers.
+      Player3 plays 2 Silvers.
+      Player3 buys a Province.
+      Player3 buys an Estate.
+      (Player3 draws: 2 Estates, a Curse, a Grand Market, and a Gold.)
+         
+
+         &mdash; Player4's turn 19 &mdash;
+         Player4 does nothing.
+         (Player4 draws: a Duchy, a Jester, a Gold, a Moneylender, and a Silver.)
+
+
+&mdash; Player1's turn 20 &mdash;
+Player1 plays a Pearl Diver.
+... drawing 1 card and getting +1 action.
+... and moving the bottom card of the deck to the top.
+Player1 plays a City.
+... drawing 2 cards and getting +2 actions, +1 buy, and +$1.
+Player1 plays a Grand Market.
+... drawing 1 card and getting +1 action, +1 buy, and +$2.
+Player1 plays 5 Silvers.
+Player1 plays a Copper.
+Player1 buys a Province.
+Player1 buys a Duchy.
+(Player1 draws: a Copper, a Grand Market, a Silver, a Trader, and a City.)
+
+</pre>
+<p>
+All Provinces are gone.<br />
+Player1 wins!<br />
+</p>
+<p>
+cards in piles at end of game:
+</p>
+
+Harvest 9<br />
+Witch 9<br />
+City 0<br />
+Pearl Diver 0<br />
+Moneylender 6<br />
+Festival 9<br />
+Grand Market 1<br />
+Torturer 9<br />
+Trader 5<br />
+Jester 9<br />
+Province 0<br />
+Duchy 1<br />
+Estate 4<br />
+Gold 21<br />
+Silver 3<br />
+Copper 30<br />
+Curse 18<br />

@@ -5,6 +5,8 @@ class: puzzle solution
 style: style.css
 credits: by Josh Ain
 ---
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
 <p>
 The puzzle is a series of 11 pictures of board games in progress. Each game, when examined carefully, has a numerical mistake -- one number is replaced with another number.
 </p>
@@ -184,14 +186,40 @@ We have already used the missing numbers to get FIRSTDESIGN. Now, using the inco
 In developing Highlights, we put together a number of board game scenarios that were not ultimately used in production. If you enjoyed solving Highlights and want more, check out these bonus game scenarios. Just like the 11 pictures in Highlights, each bonus picture should solve to a number that is incorrect in the scenario.
 
 
+<div class="answerWrapper">
 <a href="extra1.jpg" title="Endeavor"><img src="extra1s.jpg" /></a>
 <br />
-<a href="bonus1.html">show answer</a><br /><br />
+<a href="" onclick="$('#answer1').show('slow'); $(this).hide('slow'); return false;">show answer</a>
 
+<div class="answer" id="answer1">
+
+In this Endeavor scenario, the green player is listed as having 9 shields, but reviewing his board position and tokens collected indicates  he should only have 2 shields. In some of the scenarios that we used, we had to fix the game state to happen towards the beginning of the game, so that more was provably correct about the game board. I liked how much was going on in this game board, and how late in the game we were. Unfortunately, we decided that using Endeavor was confusing because it had two designers. Using the first design of the two designers collectively was inelegant. Endeavor was designed by Carl de Visser, and Jarratt Gray. Carl de Visser&rsquo;s first game was Final Decrees.
+
+</div>
+</div>
+
+<div class="answerWrapper">
 <a href="extra2.jpg" title="Battle Line"><img src="extra2s.jpg" /></a>
 <br />
-<a href="bonus2.html">show answer</a><br /><br />
+<a href="" onclick="$('#answer2').show('slow'); $(this).hide('slow'); return false;">show answer</a>
 
+<div class="answer" id="answer2">
+
+Developing a Battle Line scenario was thematically fun because of its proof mechanic, which is core to its gameplay. This mechanic was similar to the reasoning we had to use in some of the actual puzzle&rsquo;s game scenarios, to be sure that a game had a single specific error.
+
+<br /><br />In this scenario, the top player has claimed with a 6, 9, 10 against an empty column. This move is not legal. But if the 6 had been a 9, the player could have proved that he would win that column, and claimed it. This error, we concluded, was slightly odd because the error could also be interpretted as the top player illegally claiming the column. Playing the 6 in that column was a perfectly legal move, but claiming the column was illegal. In addition, there was some ambiguity about Reiner Knizia&rsquo;s first design. So, much as I would have liked to represent Knizia in this puzzle, we dropped Battle Line.
+
+</div>
+</div>
+
+<div class="answerWrapper">
 <a href="extra3.jpg" title="Vegas Showdown"><img src="extra3s.jpg" /></a>
 <br />
-<a href="bonus3.html">show answer</a><br /><br />
+<a href="" onclick="$('#answer3').show('slow'); $(this).hide('slow'); return false;">show answer</a>
+
+<div class="answer" id="answer3">
+
+Here is another Vegas Showdown scenario. In this scenario, only 2 premier tiles are present, rather than the requisite 3 premier tiles. The Vegas scenario that we used in Highlights was straightforward -- a simple scoring error. I liked this more complex scenario more, but we had trouble getting it past our test solvers.
+
+</div>
+</div>
