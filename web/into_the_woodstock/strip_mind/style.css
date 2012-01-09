@@ -1,16 +1,25 @@
-.clues {
-  vertical-align: top;
-  width: 45%;
-}
-td.clues:first-child {
-  padding-right: 10%;
-  width: 55%;
-}
-.clues li { page-break-inside: avoid; }
+#sm-across { float: left; width: 49%; }
+#sm-down { float: right; width: 49%; }
+#sm-clues { position: relative; overflow: auto; width: 100%; }
 
-.clues .blank {
+#sm-clues h3, #sm-clues ol {
+  margin-top: 0; margin-bottom: 0;
+}
+#sm-clues h3 { padding-left: 2.2em; }
+#sm-clues .blank {
   border-bottom: 1px solid black;
   color: transparent;
   position: relative;
   bottom: 4px;
+}
+@media screen {
+  body.puzzle {
+    min-width: 1170px;
+  }
+}
+@media print {
+  #sm-across, #sm-down {
+    float: none;
+    width: auto;
+  }
 }
