@@ -1,0 +1,30 @@
+---
+layout: watson_2_0_solution
+title: Encoded
+class: puzzle solution
+credits: by David Turner with language consulting from Elan Pavlov
+---
+<p>This puzzle presents as a big GIF.  The palette of the GIF
+file, interpreted as ASCII, reads &ldquo;Pixels are UTF-8&rdquo;.</p>
+
+<p>Interpreting the pixels as UTF-8 reveals Chinese numbers between 0 and
+255 (either normal or financial, but this does not yet matter),
+separated by spaces.</p>
+
+<p>Treating each number as a byte gives a large animated GIF, where
+each frame is a Hebrew letter (either red or blue), or the Hebrew word
+&times;&#xfffd;&times;&curren;&times;&iexcl;, or a blank.  The Hebrew word means zero; the letters are
+interpreted as gematria (which doesn&rsquo;t have a zero, hence the need for
+a special case).  The numbers, again, are between 0 and 255 </p>
+
+<p>Treating the numbers as bytes again gives another image, which
+reads &ldquo;odd red and even blue numbers are ones.&rdquo;  Interpreting the
+Hebrew according to this instruction, you get &ldquo;even financial and odd
+normal numbers = 1.&rdquo;</p>
+
+<p>Reinterpreting the Chinese gives another GIF, with the
+answer, <b>Harry Potter and the Order of the Phoenix</b> (it&rsquo;s a
+crop of the book cover)</p>
+
+<p>A Python script implementing the solution is
+available <a href="solution.zip">here</a>.</p>
