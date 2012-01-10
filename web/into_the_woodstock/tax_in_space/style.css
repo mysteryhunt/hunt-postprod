@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lekton);
 
-.monospace {
+#tis .monospace {
   font-family: 'Lekton', sans-serif;
 }
 
-table.first td
+#tis table.first td
 {
     padding: 10pt;
     margin: 10pt;
@@ -13,38 +13,40 @@ table.first td
     text-align: center;
 }
 
-table.first
+#tis table.first
 {
-border-collapse:collapse;
+    border-collapse:collapse;
 }
-body {
+#tis {
     counter-reset: list1;
 }
-ol.letters li,
-ol.numbers li,
-ol.innerletters li {
+#tis ol.letters li,
+#tis ol.numbers li,
+#tis ol.innerletters li {
     list-style: none;
     text-indent: -1.4em;
     margin-left:  1.4em;
 }
-ol.letters li::before {
+#tis ol.letters li::before {
     counter-increment:list1;
     content: "(" counter(list1, lower-alpha) ") ";
     counter-reset: list2;
 }
 
-ol.numbers li::before {
+#tis ol.numbers li::before {
     counter-increment:list2;
     content: "(" counter(list2, decimal) ") ";
     counter-reset: list3;
 }
 
-ol.innerletters li::before {
+#tis ol.innerletters li::before {
     counter-increment: list3;
     content: "(" counter(list3, lower-alpha) ") ";
     counter-reset: list4;
 }
 
-table.second
+#tis table.second
 {
 }
+
+#tis h1, #tis h2 { page-break-after: avoid; }
