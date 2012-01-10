@@ -4,11 +4,13 @@ this.PUZZLE_AUTH = "467982318ae425c3ee4ea6a4dcc6a1a04abe0771";
 
 var start;
 var deadline;
+var timer_id;
 
 function countDown() {
   var remaining = deadline - Date.now();
   if (remaining <= 0) {
-    window.location.reload()
+    window.clearInterval(timer_id);
+    server.query({'cmd': 'get'}, callback);
   } else {
     var elem = document.getElementById("delay");
     elem.textContent = Math.round(remaining / 1000);
@@ -20,7 +22,7 @@ function startDelay(delay) {
   elem.textContent = delay;
   start = Date.now();
   deadline = start + (delay * 1000);
-  window.setInterval(countDown, 1000);
+  timer_id = window.setInterval(countDown, 1000);
 }
 
 function showHide() {
