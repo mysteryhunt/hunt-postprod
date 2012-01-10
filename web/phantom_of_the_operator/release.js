@@ -46,49 +46,70 @@ function puzzlelist() {
   return ""+
 "<tr>"+
 "<td class=\"num\">1.</td>"+
-"<td><a href=\"any_old_puzzle/\" class=\""+
+"<td>"+
+"<a href=\"any_old_puzzle/\" class=\""+
 (puzzle_solved["any_old_puzzle"]?"solved":"unsolved")+
-"\">Any Old Puzzle</a></td>"+
+"\">Any Old Puzzle</a>"+
+"</td>"+
 "<td class=\"num\">6.</td>"+
-"<td><a href=\"get_your_dog_back/\" class=\""+
+"<td>"+
+"<a href=\"get_your_dog_back/\" class=\""+
 (puzzle_solved["get_your_dog_back"]?"solved":"unsolved")+
-"\">Get Your Dog Back...</a></td>"+
+"\">Get Your Dog Back...</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">2.</td>"+
-"<td><a href=\"cross_breeding/\" class=\""+
+"<td>"+
+"<a href=\"cross_breeding/\" class=\""+
 (puzzle_solved["cross_breeding"]?"solved":"unsolved")+
-"\">Cross-Breeding</a></td>"+
+"\">Cross-Breeding</a>"+
+"</td>"+
 "<td class=\"num\">7.</td>"+
-"<td><a href=\"masquerade/\" class=\""+
+"<td>"+
+"<a href=\"masquerade/\" class=\""+
 (puzzle_solved["masquerade"]?"solved":"unsolved")+
-"\">Masquerade</a></td>"+
+"\">Masquerade</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">3.</td>"+
-"<td><a href=\"set_theory/\" class=\""+
+"<td>"+
+"<a href=\"set_theory/\" class=\""+
 (puzzle_solved["set_theory"]?"solved":"unsolved")+
-"\">Set Theory</a></td>"+
+"\">Set Theory</a>"+
+"</td>"+
 "<td class=\"num\">8.</td>"+
-"<td><a href=\"course_7e/\" class=\""+
+"<td>"+
+"<a href=\"course_7e/\" class=\""+
 (puzzle_solved["course_7e"]?"solved":"unsolved")+
-"\">Course 7E</a></td>"+
+"\">Course 7E</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">4.</td>"+
-"<td><a href=\"headstones/\" class=\""+
+"<td>"+
+"<a href=\"headstones/\" class=\""+
 (puzzle_solved["headstones"]?"solved":"unsolved")+
-"\">Headstones</a></td>"+
+"\">Headstones</a>"+
+"</td>"+
 "<td class=\"num\">9.</td>"+
-"<td><a href=\"functions/\" class=\""+
+"<td>"+
+"<a href=\"functions/\" class=\""+
 (puzzle_solved["functions"]?"solved":"unsolved")+
-"\">Functions</a></td>"+
+"\">Functions</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">5.</td>"+
-"<td><a href=\"general_knowledge/\" class=\""+
+"<td>"+
+"<a href=\"general_knowledge/\" class=\""+
 (puzzle_solved["general_knowledge"]?"solved":"unsolved")+
-"\">General Knowledge</a></td>"+
+"\">General Knowledge</a>"+
+"</td>"+
+"<td class=\"num\">10.</td>"+
+"<td>"+
+"</td>"+
 "</tr>"+
 '';
 }

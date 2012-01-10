@@ -38,39 +38,56 @@ function puzzlelist() {
   return ""+
 "<tr>"+
 "<td class=\"num\">1.</td>"+
-"<td><a href=\"playing_a_part/\" class=\""+
+"<td>"+
+"<a href=\"playing_a_part/\" class=\""+
 (puzzle_solved["playing_a_part"]?"solved":"unsolved")+
-"\">Playing a Part</a></td>"+
+"\">Playing a Part</a>"+
+"</td>"+
 "<td class=\"num\">5.</td>"+
-"<td><a href=\"winning_conditions/\" class=\""+
+"<td>"+
+"<a href=\"winning_conditions/\" class=\""+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
-"\">Winning Conditions</a></td>"+
+"\">Winning Conditions</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">2.</td>"+
-"<td><a href=\"granny_smith/\" class=\""+
+"<td>"+
+"<a href=\"granny_smith/\" class=\""+
 (puzzle_solved["granny_smith"]?"solved":"unsolved")+
-"\">Granny Smith</a></td>"+
+"\">Granny Smith</a>"+
+"</td>"+
 "<td class=\"num\">6.</td>"+
-"<td><a href=\"zugzwaang/\" class=\""+
+"<td>"+
+"<a href=\"zugzwaang/\" class=\""+
 (puzzle_solved["zugzwaang"]?"solved":"unsolved")+
-"\">Zugzwaang</a></td>"+
+"\">Zugzwaang</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">3.</td>"+
-"<td><a href=\"crank_it_up_to_7/\" class=\""+
+"<td>"+
+"<a href=\"crank_it_up_to_7/\" class=\""+
 (puzzle_solved["crank_it_up_to_7"]?"solved":"unsolved")+
-"\">Crank It Up To 7</a></td>"+
+"\">Crank It Up To 7</a>"+
+"</td>"+
 "<td class=\"num\">7.</td>"+
-"<td><a href=\"baby_sniffles/\" class=\""+
+"<td>"+
+"<a href=\"baby_sniffles/\" class=\""+
 (puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
-"\">Baby Sniffles</a></td>"+
+"\">Baby Sniffles</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">4.</td>"+
-"<td><a href=\"paper_trail/\" class=\""+
+"<td>"+
+"<a href=\"paper_trail/\" class=\""+
 (puzzle_solved["paper_trail"]?"solved":"unsolved")+
-"\">Paper Trail</a></td>"+
+"\">Paper Trail</a>"+
+"</td>"+
+"<td class=\"num\">8.</td>"+
+"<td>"+
+"</td>"+
 "</tr>"+
 '';
 }

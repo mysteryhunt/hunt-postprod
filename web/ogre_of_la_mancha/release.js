@@ -41,36 +41,52 @@ function imagemap() {
 function puzzlelist() {
   return ""+
 "<tr>"+
-"<td><a href=\"apple_spice/\" class=\""+
+"<td>"+
+"<a href=\"apple_spice/\" class=\""+
 (puzzle_solved["apple_spice"]?"solved":"unsolved")+
-"\">Apple Spice</a></td>"+
-"<td><a href=\"i_ll_teach_you/\" class=\""+
+"\">Apple Spice</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"i_ll_teach_you/\" class=\""+
 (puzzle_solved["i_ll_teach_you"]?"solved":"unsolved")+
-"\">I&rsquo;ll Teach You</a></td>"+
+"\">I&rsquo;ll Teach You</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"argh/\" class=\""+
+"<td>"+
+"<a href=\"argh/\" class=\""+
 (puzzle_solved["argh"]?"solved":"unsolved")+
-"\">Argh</a></td>"+
-"<td><a href=\"jfk_shags_a_sad_slim_lass/\" class=\""+
+"\">Argh</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"jfk_shags_a_sad_slim_lass/\" class=\""+
 (puzzle_solved["jfk_shags_a_sad_slim_lass"]?"solved":"unsolved")+
-"\">JFK SHAGS A SAD SLIM LASS</a></td>"+
+"\">JFK SHAGS A SAD SLIM LASS</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"cookin/\" class=\""+
+"<td>"+
+"<a href=\"cookin/\" class=\""+
 (puzzle_solved["cookin"]?"solved":"unsolved")+
-"\">Cookin&rsquo;</a></td>"+
-"<td><a href=\"letter_head/\" class=\""+
+"\">Cookin&rsquo;</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"letter_head/\" class=\""+
 (puzzle_solved["letter_head"]?"solved":"unsolved")+
-"\">Letter Head</a></td>"+
+"\">Letter Head</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"eight_digits/\" class=\""+
+"<td>"+
+"<a href=\"eight_digits/\" class=\""+
 (puzzle_solved["eight_digits"]?"solved":"unsolved")+
-"\">Eight Digits</a></td>"+
-"<td><a href=\"makefiles/\" class=\""+
+"\">Eight Digits</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"makefiles/\" class=\""+
 (puzzle_solved["makefiles"]?"solved":"unsolved")+
-"\">Makefiles</a></td>"+
+"\">Makefiles</a>"+
+"</td>"+
 "</tr>"+
 '';
 }

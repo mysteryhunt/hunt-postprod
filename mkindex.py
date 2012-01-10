@@ -322,6 +322,64 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
     with open(os.path.join(BASEDIR, 'release-%d.js' % batch), 'w') as fd:
         fd.write('\n'.join(lines))
 
+ROUND_BATCH = dict((info['round'],info['batch']) for pony,info in
+                   PONY_INFO.iteritems() if info['is_meta'] is True)
+
+def buildTopLevelRelease(batch, split=4):
+    lines = []
+    def add(s): lines.append(s)
+    def addesc(s): add(jsEscape(s)+'+')
+    # generate imagemap
+    add("function imagemap() {")
+    add("  return ''+")
+    addesc('<img src="mainpage.jpg" />')
+    for round_name in ROUNDS:
+        if ROUND_BATCH[round_name] > batch: continue
+        addesc('<img src="%s/mainpage-overlay.png" />' % canon(round_name))
+    addesc('<img src="1px.png" usemap="#map" style="z-index:99" />')
+
+    addesc('<map name="map">')
+    for round_name in ROUNDS:
+        if ROUND_BATCH[round_name] > batch: continue
+        sqr = smart_quotes(htmlEscape(round_name))
+        area = imagemap(os.path.join(WEBDIR, canon(round_name),
+                                     "mainpage-overlay.png"),
+                        round_name, split)
+        addesc(area.format(canon(round_name), sqr))
+    addesc('</map>')
+    add("'';");
+    add("}")
+
+    add('function puzzlelist() {');
+    add('  return ""+');
+    addesc("<tr><th><h2>Shows</h2></th>")
+    if batch > min(ROUND_BATCH.values()):
+        addesc("<th><h2>Critics</h2>")
+    addesc("</tr>");
+    for i in xrange(0,len(ROUNDS),2):
+        round_name = ROUNDS[i]
+        if ROUND_BATCH[round_name] > batch:
+            continue
+        addesc('<tr><td><a href="%s/">%s</a></td>' %
+               (canon(round_name), round_name))
+        round_name = ROUNDS[i+1]
+        if ROUND_BATCH[round_name] <= batch:
+            addesc('<td><a href="%s/">%s</a></td>' %
+                   (canon(round_name), round_name))
+        addesc('</tr>')
+    add("'';")
+    add("}")
+    
+    # invoke
+    add("function onLoad() {");
+    add("document.getElementById('index-image').innerHTML = imagemap();")
+    add("document.getElementById('index-table').innerHTML = puzzlelist();")
+    add("}")
+
+    # write this as release.js
+    with open(os.path.join(WEBDIR, 'release-%d.js' % batch), 'w') as fd:
+        fd.write('\n'.join(lines))
+
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
     # build some indexes
@@ -349,8 +407,20 @@ if __name__ == '__main__':
                                  round_info.iteritems()))
             for batch in batches:
                 build(round_name, rounds, batch, **kwargs)
+            shutil.copyfile(os.path.join(WEBDIR, canon(round_name),
+                                         'release-%d.js' % max(batches)),
+                            os.path.join(WEBDIR, canon(round_name),
+                                         'release.js'))
         else: print "SKIPPING", jsEscape(round_name)
         ignorable += ignorable_ponies(round_name, round_info)
+
+    # round release pages
+    for round_name, round_batch in ROUND_BATCH.iteritems():
+        buildTopLevelRelease(round_batch)
+    shutil.copyfile(os.path.join(WEBDIR,
+                                 'release-%d.js' % max(ROUND_BATCH.values())),
+                    os.path.join(WEBDIR, 'release.js'))
+
     # write a solved.js file indicating which puzzles are written
     h = {}
     for round_name, round_info in rounds.iteritems():

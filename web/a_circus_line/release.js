@@ -49,44 +49,64 @@ function imagemap() {
 function puzzlelist() {
   return ""+
 "<tr>"+
-"<td><a href=\"1207_1370/\" class=\""+
+"<td>"+
+"<a href=\"1207_1370/\" class=\""+
 (puzzle_solved["1207_1370"]?"solved":"unsolved")+
-"\">1207 1370</a></td>"+
-"<td><a href=\"potlines/\" class=\""+
+"\">1207 1370</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"potlines/\" class=\""+
 (puzzle_solved["potlines"]?"solved":"unsolved")+
-"\">Potlines</a></td>"+
+"\">Potlines</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"blackout/\" class=\""+
+"<td>"+
+"<a href=\"blackout/\" class=\""+
 (puzzle_solved["blackout"]?"solved":"unsolved")+
-"\">Blackout</a></td>"+
-"<td><a href=\"pure_and_simple/\" class=\""+
+"\">Blackout</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"pure_and_simple/\" class=\""+
 (puzzle_solved["pure_and_simple"]?"solved":"unsolved")+
-"\">Pure and Simple</a></td>"+
+"\">Pure and Simple</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"fight_choreography/\" class=\""+
+"<td>"+
+"<a href=\"fight_choreography/\" class=\""+
 (puzzle_solved["fight_choreography"]?"solved":"unsolved")+
-"\">Fight Choreography</a></td>"+
-"<td><a href=\"revisiting_history/\" class=\""+
+"\">Fight Choreography</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"revisiting_history/\" class=\""+
 (puzzle_solved["revisiting_history"]?"solved":"unsolved")+
-"\">Revisiting History</a></td>"+
+"\">Revisiting History</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"good_auspicious_hunting/\" class=\""+
+"<td>"+
+"<a href=\"good_auspicious_hunting/\" class=\""+
 (puzzle_solved["good_auspicious_hunting"]?"solved":"unsolved")+
-"\">Good Auspicious Hunting</a></td>"+
-"<td><a href=\"star_search/\" class=\""+
+"\">Good Auspicious Hunting</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"star_search/\" class=\""+
 (puzzle_solved["star_search"]?"solved":"unsolved")+
-"\">Star Search</a></td>"+
+"\">Star Search</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"middle_see/\" class=\""+
+"<td>"+
+"<a href=\"middle_see/\" class=\""+
 (puzzle_solved["middle_see"]?"solved":"unsolved")+
-"\">Middle-See</a></td>"+
-"<td><a href=\"the_wicked_switch/\" class=\""+
+"\">Middle-See</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"the_wicked_switch/\" class=\""+
 (puzzle_solved["the_wicked_switch"]?"solved":"unsolved")+
-"\">The Wicked Switch</a></td>"+
+"\">The Wicked Switch</a>"+
+"</td>"+
 "</tr>"+
 '';
 }

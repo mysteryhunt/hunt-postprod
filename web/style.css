@@ -9,9 +9,9 @@ body {
  }
 body, #main { height: 100%; }
 #main { background: black; width: 900px; margin: 0px auto; }
-#art, #art img { width: 900px; height: 679px; }
-#art { position: relative; }
-#art img { position: absolute; left: 0; top: 0; border: none; }
+#index-image, #index-image img { width: 900px; height: 679px; }
+#index-image { position: relative; }
+#index-image img { position: absolute; left: 0; top: 0; border: none; }
 #index-table, body>div>p { font-size: 24px; }
 #index-table { width: 80%; }
 #footer {

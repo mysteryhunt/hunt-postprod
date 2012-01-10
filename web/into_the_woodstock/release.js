@@ -69,65 +69,97 @@ function imagemap() {
 function puzzlelist() {
   return ""+
 "<tr>"+
-"<td><a href=\"braeburn/\" class=\""+
+"<td>"+
+"<a href=\"braeburn/\" class=\""+
 (puzzle_solved["braeburn"]?"solved":"unsolved")+
-"\">Braeburn</a></td>"+
-"<td><a href=\"keeping_records/\" class=\""+
+"\">Braeburn</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"keeping_records/\" class=\""+
 (puzzle_solved["keeping_records"]?"solved":"unsolved")+
-"\">Keeping Records</a></td>"+
+"\">Keeping Records</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"bubbles/\" class=\""+
+"<td>"+
+"<a href=\"bubbles/\" class=\""+
 (puzzle_solved["bubbles"]?"solved":"unsolved")+
-"\">Bubbles</a></td>"+
-"<td><a href=\"of_course/\" class=\""+
+"\">Bubbles</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"of_course/\" class=\""+
 (puzzle_solved["of_course"]?"solved":"unsolved")+
-"\">Of Course!</a></td>"+
+"\">Of Course!</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"criss_cross/\" class=\""+
+"<td>"+
+"<a href=\"criss_cross/\" class=\""+
 (puzzle_solved["criss_cross"]?"solved":"unsolved")+
-"\">Criss-Cross</a></td>"+
-"<td><a href=\"sounds_good_to_me/\" class=\""+
+"\">Criss-Cross</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"sounds_good_to_me/\" class=\""+
 (puzzle_solved["sounds_good_to_me"]?"solved":"unsolved")+
-"\">Sounds Good to Me</a></td>"+
+"\">Sounds Good to Me</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"critical_thinking/\" class=\""+
+"<td>"+
+"<a href=\"critical_thinking/\" class=\""+
 (puzzle_solved["critical_thinking"]?"solved":"unsolved")+
-"\">Critical Thinking</a></td>"+
-"<td><a href=\"strip_mind/\" class=\""+
+"\">Critical Thinking</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"strip_mind/\" class=\""+
 (puzzle_solved["strip_mind"]?"solved":"unsolved")+
-"\">Strip Mind</a></td>"+
+"\">Strip Mind</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"dawn_of_a_new_era/\" class=\""+
+"<td>"+
+"<a href=\"dawn_of_a_new_era/\" class=\""+
 (puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
-"\">Dawn of a New Era</a></td>"+
-"<td><a href=\"tax_in_space/\" class=\""+
+"\">Dawn of a New Era</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"tax_in_space/\" class=\""+
 (puzzle_solved["tax_in_space"]?"solved":"unsolved")+
-"\">Tax... In... Space</a></td>"+
+"\">Tax... In... Space</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"equal_billing/\" class=\""+
+"<td>"+
+"<a href=\"equal_billing/\" class=\""+
 (puzzle_solved["equal_billing"]?"solved":"unsolved")+
-"\">Equal Billing</a></td>"+
-"<td><a href=\"the_answers_are_somehow_connected/\" class=\""+
+"\">Equal Billing</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"the_answers_are_somehow_connected/\" class=\""+
 (puzzle_solved["the_answers_are_somehow_connected"]?"solved":"unsolved")+
-"\">The Answers Are Somehow Connected</a></td>"+
+"\">The Answers Are Somehow Connected</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"fulfilling_puzzle/\" class=\""+
+"<td>"+
+"<a href=\"fulfilling_puzzle/\" class=\""+
 (puzzle_solved["fulfilling_puzzle"]?"solved":"unsolved")+
-"\">Fulfilling Puzzle</a></td>"+
-"<td><a href=\"towers/\" class=\""+
+"\">Fulfilling Puzzle</a>"+
+"</td>"+
+"<td>"+
+"<a href=\"towers/\" class=\""+
 (puzzle_solved["towers"]?"solved":"unsolved")+
-"\">Towers</a></td>"+
+"\">Towers</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
-"<td><a href=\"google_bodyslam/\" class=\""+
+"<td>"+
+"<a href=\"google_bodyslam/\" class=\""+
 (puzzle_solved["google_bodyslam"]?"solved":"unsolved")+
-"\">Google Bodyslam</a></td>"+
+"\">Google Bodyslam</a>"+
+"</td>"+
+"<td>"+
+"</td>"+
 "</tr>"+
 '';
 }

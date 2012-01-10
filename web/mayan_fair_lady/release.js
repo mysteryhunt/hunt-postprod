@@ -54,59 +54,84 @@ function puzzlelist() {
   return ""+
 "<tr>"+
 "<td class=\"num\">1.</td>"+
-"<td><a href=\"picture_an_acorn/\" class=\""+
+"<td>"+
+"<a href=\"picture_an_acorn/\" class=\""+
 (puzzle_solved["picture_an_acorn"]?"solved":"unsolved")+
-"\">Picture an Acorn</a></td>"+
+"\">Picture an Acorn</a>"+
+"</td>"+
 "<td class=\"num\">7.</td>"+
-"<td><a href=\"initial_public_offering/\" class=\""+
+"<td>"+
+"<a href=\"initial_public_offering/\" class=\""+
 (puzzle_solved["initial_public_offering"]?"solved":"unsolved")+
-"\">Initial Public Offering</a></td>"+
+"\">Initial Public Offering</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">2.</td>"+
-"<td><a href=\"evil_influence/\" class=\""+
+"<td>"+
+"<a href=\"evil_influence/\" class=\""+
 (puzzle_solved["evil_influence"]?"solved":"unsolved")+
-"\">Evil Influence</a></td>"+
+"\">Evil Influence</a>"+
+"</td>"+
 "<td class=\"num\">8.</td>"+
-"<td><a href=\"the_voices_in_your_head/\" class=\""+
+"<td>"+
+"<a href=\"the_voices_in_your_head/\" class=\""+
 (puzzle_solved["the_voices_in_your_head"]?"solved":"unsolved")+
-"\">The Voices in Your Head</a></td>"+
+"\">The Voices in Your Head</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">3.</td>"+
-"<td><a href=\"itinerant_people_of_america/\" class=\""+
+"<td>"+
+"<a href=\"itinerant_people_of_america/\" class=\""+
 (puzzle_solved["itinerant_people_of_america"]?"solved":"unsolved")+
-"\">Itinerant People of America</a></td>"+
+"\">Itinerant People of America</a>"+
+"</td>"+
 "<td class=\"num\">9.</td>"+
-"<td><a href=\"stage_lines/\" class=\""+
+"<td>"+
+"<a href=\"stage_lines/\" class=\""+
 (puzzle_solved["stage_lines"]?"solved":"unsolved")+
-"\">Stage Lines</a></td>"+
+"\">Stage Lines</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">4.</td>"+
-"<td><a href=\"eek/\" class=\""+
+"<td>"+
+"<a href=\"eek/\" class=\""+
 (puzzle_solved["eek"]?"solved":"unsolved")+
-"\">Eek!</a></td>"+
+"\">Eek!</a>"+
+"</td>"+
 "<td class=\"num\">10.</td>"+
-"<td><a href=\"award_winning_poetry/\" class=\""+
+"<td>"+
+"<a href=\"award_winning_poetry/\" class=\""+
 (puzzle_solved["award_winning_poetry"]?"solved":"unsolved")+
-"\">Award-Winning Poetry</a></td>"+
+"\">Award-Winning Poetry</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">5.</td>"+
-"<td><a href=\"the_rainbow_connection/\" class=\""+
+"<td>"+
+"<a href=\"the_rainbow_connection/\" class=\""+
 (puzzle_solved["the_rainbow_connection"]?"solved":"unsolved")+
-"\">The Rainbow Connection</a></td>"+
+"\">The Rainbow Connection</a>"+
+"</td>"+
 "<td class=\"num\">11.</td>"+
-"<td><a href=\"princess_primrose/\" class=\""+
+"<td>"+
+"<a href=\"princess_primrose/\" class=\""+
 (puzzle_solved["princess_primrose"]?"solved":"unsolved")+
-"\">Princess Primrose</a></td>"+
+"\">Princess Primrose</a>"+
+"</td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"num\">6.</td>"+
-"<td><a href=\"spitfire/\" class=\""+
+"<td>"+
+"<a href=\"spitfire/\" class=\""+
 (puzzle_solved["spitfire"]?"solved":"unsolved")+
-"\">Spitfire</a></td>"+
+"\">Spitfire</a>"+
+"</td>"+
+"<td class=\"num\">12.</td>"+
+"<td>"+
+"</td>"+
 "</tr>"+
 '';
 }
