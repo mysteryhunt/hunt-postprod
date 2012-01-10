@@ -255,7 +255,8 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
             LOG_CONTEXT2 = f
             with open(full_path+".XXX", 'w') as fd:
                 fd.write(zf.read(f))
-            check_call(['pngcrush', '-rem', 'text', '-q',
+            check_call(['pngcrush', '-q', '-rem', 'time',
+                        '-rem', 'text', '-rem', 'itxt', '-rem', 'ztxt',
                         full_path+".XXX", full_path])
             os.remove(full_path+".XXX")
             LOG_CONTEXT2 = ''
