@@ -1,0 +1,62 @@
+.tq-ul-middle {
+  margin: 0;
+}
+
+.tq-p-top {
+  margin-bottom: 0;
+}
+
+.tq-p-bottom {
+  margin-top: 0;
+}
+
+
+/* table qa */
+
+.tq-t-qa {
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-size: 80%;
+}
+
+.tq-t-qa th,
+.tq-t-qa td {
+  text-align: center;
+  padding: 2px 4px;
+  border-top: 1px solid black;
+}
+
+.tq-t-qa td:first-child {
+  text-align: right;
+}
+
+.tq-t-qa th:first-child,
+.tq-t-qa td:first-child {
+  font-weight: bold;
+  padding-right: 8px;
+  border-right: 1px solid black;
+}
+
+
+/* table msg */
+
+.tq-t-msg {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.tq-t-msg th,
+.tq-t-msg td {
+  text-align: center;
+  padding: 3px 6px;
+  border-top: 1px solid black;
+}
+
+.tq-t-msg th:first-child + th + th + th,
+.tq-t-msg td:first-child + td + td + td,
+.tq-t-msg th:first-child + th + th + th + th + th + th,
+.tq-t-msg td:first-child + td + td + td + td + td + td,
+.tq-t-msg th:first-child + th + th + th + th + th + th + th + th + th,
+.tq-t-msg td:first-child + td + td + td + td + td + td + td + td + td {
+  border-left: 1px solid black;
+}

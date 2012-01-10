@@ -87,15 +87,15 @@ function callback(data) {
     $('#question_1').text(data['questions'][0]['description']);
     qid2 = data['questions'][1]['id'];
     $('#question_2').text(data['questions'][1]['description']);
+  }
 
-    if (data['numbers']) {
-      $('#pl').show();
-      var number_html = "";
-      for (var number in data['numbers']) {
-        number_html += "" + data['numbers'][number] + "<br>";
-      }
-      $('#pn').html(number_html);
+  if (data['numbers']) {
+    $('#pl').show();
+    var number_html = "";
+    for (var number in data['numbers']) {
+      number_html += "" + data['numbers'][number] + "<br>";
     }
+    $('#pn').html(number_html);
   }
 }
 
