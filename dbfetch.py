@@ -96,6 +96,8 @@ def fetch_all(db):
             '(', getTitle(db, pid), ')'
         try:
             fetch_puzzle(db, pid)
+        except KeyboardInterrupt:
+            raise
         except:
             print sys.exc_info()[1]
             print "** SKIPPING", pid, "DUE TO ERRORS **"
