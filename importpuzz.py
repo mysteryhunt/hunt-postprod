@@ -2,7 +2,7 @@
 from __future__ import with_statement
 """Import a puzzle file.
 Requires 'python2.6', 'python-html5lib', and 'python-yaml'.
-Also requires 'pngcrush' to be on your path.
+Also requires 'pngcrush' and 'jpegtran' to be on your path.
 
 Command line:
 
@@ -257,6 +257,14 @@ def do_import_of_zf(zf, root_dir, round_name, authors,
                 fd.write(zf.read(f))
             check_call(['pngcrush', '-rem', 'text', '-q',
                         full_path+".XXX", full_path])
+            os.remove(full_path+".XXX")
+            LOG_CONTEXT2 = ''
+        elif f.endswith('.jpg'):
+            LOG_CONTEXT2 = f
+            with open(full_path+".XXX", 'w') as fd:
+                fd.write(zf.read(f))
+            check_call(['jpegtran', '-o', '-progressive', '-copy', 'none',
+                        '-outfile', full_path, full_path+".XXX"])
             os.remove(full_path+".XXX")
             LOG_CONTEXT2 = ''
         else:
