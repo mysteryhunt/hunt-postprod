@@ -214,7 +214,7 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
             for (pt,round,_),num in [ (first[i],i),
                             (second[i] if i<len(second) else (None,None,None),
                              i+len(first)) ]:
-                if pt is None: continue
+                if num >= len(plist): continue
                 if ordered and first_table:
                     addesc('<td class="num">%d.</td>' % (num+1))
                 url = canon(pt) if round==round_name else \
@@ -302,6 +302,7 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
         addesc('<tr>')
         for pt,num in [ (first[i],i),
                         (second[i] if i<len(second) else None, i+len(first)) ]:
+            if num >= len(puzzle_titles): continue
             if ordered:
                 addesc('<td class="num">%d.</td>' % (num+1))
             addesc('<td>')
