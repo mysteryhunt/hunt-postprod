@@ -65,4 +65,7 @@ body.index #puzzle-list td { vertical-align: baseline; }
     margin: 0 0 0 0 !important;
     height: auto !important;
   }
+  body, body.puzzle, body.index {
+    min-width: 0 !important;
+  }
 }
