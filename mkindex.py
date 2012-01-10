@@ -160,6 +160,15 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
         all_puzzles.sort(key=lambda (s,_,__): s.lower())
 
     critic_released = set(unordered_titles(round_info, batch))
+    def remove_unreleased(l):
+        return [(title,round,pony) for title,round,pony in l
+                if round != round_name or title in critic_released]
+    if unified:
+        # filter out unreleased puzzles
+        assert not ordered
+        all_puzzles = remove_unreleased(all_puzzles)
+    elif not ordered:
+        critic_puzzles = remove_unreleased(critic_puzzles)
 
     # ok, now we've got one or two lists to lay out.
     # generate imagemap
@@ -216,7 +225,10 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
                              i+len(first)) ]:
                 if num >= len(plist): continue
                 if ordered and first_table:
-                    addesc('<td class="num">%d.</td>' % (num+1))
+                    if round==round_name and pt not in critic_released:
+                        addesc('<td></td>')
+                    else:
+                        addesc('<td class="num">%d.</td>' % (num+1))
                 url = canon(pt) if round==round_name else \
                       '../%s/%s' % (canon(round), canon(pt))
                 def ps():
@@ -253,9 +265,8 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
         % canon(round_name))
     add("}")
 
-    # write this as release.js
-    with open(os.path.join(BASEDIR, 'release-%d.js' % batch), 'w') as fd:
-        fd.write('\n'.join(lines))
+    # return this javascript fragment
+    return '\n'.join(lines)
 
 
 def buildShow(round_name, rinfo, batch, split=4, ordered=False):
@@ -304,7 +315,10 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
                         (second[i] if i<len(second) else None, i+len(first)) ]:
             if num >= len(puzzle_titles): continue
             if ordered:
-                addesc('<td class="num">%d.</td>' % (num+1))
+                if pt is None:
+                    addesc('<td class="num"></td>')
+                else:
+                    addesc('<td class="num">%d.</td>' % (num+1))
             addesc('<td>')
             if pt is not None:
                 addesc('<a href="%s/" class="' % canon(pt))
@@ -325,9 +339,8 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
         % canon(round_name))
     add("}")
 
-    # write this as release.js
-    with open(os.path.join(BASEDIR, 'release-%d.js' % batch), 'w') as fd:
-        fd.write('\n'.join(lines))
+    # return this javascript fragment
+    return '\n'.join(lines)
 
 ROUND_BATCH = dict((info['round'],info['batch']) for pony,info in
                    PONY_INFO.iteritems() if info['is_meta'] is True)
@@ -383,9 +396,8 @@ def buildTopLevelRelease(batch, split=4):
     add("document.getElementById('index-table').innerHTML = puzzlelist_mainpage();")
     add("}")
 
-    # write this as release.js
-    with open(os.path.join(WEBDIR, 'release-%d.js' % batch), 'w') as fd:
-        fd.write('\n'.join(lines))
+    # return this javascript fragment
+    return '\n'.join(lines)
 
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
@@ -406,26 +418,45 @@ if __name__ == '__main__':
         'Watson 2.0': (buildCritic, {'ordered': True}),
     }
     ignorable = []
+    fragments = {}
     for round_name, round_info in rounds.iteritems():
         copy_dash_files(round_name, round_info)
+        fragments[round_name] = {}
         if round_name in builders:
             build, kwargs = builders[round_name]
             batches = sorted(set(int(puzzle['batch']) for pony, puzzle in
                                  round_info.iteritems()))
             for batch in batches:
-                build(round_name, rounds, batch, **kwargs)
-            shutil.copyfile(os.path.join(WEBDIR, canon(round_name),
-                                         'release-%d.js' % max(batches)),
-                            os.path.join(WEBDIR, canon(round_name),
-                                         'release.js'))
+                f = build(round_name, rounds, batch, **kwargs)
+                fragments[round_name][batch] = f
         else: print "SKIPPING", jsEscape(round_name)
         ignorable += ignorable_ponies(round_name, round_info)
 
     # round release pages
+    fragments['mainpage'] = {}
     for round_name, round_batch in ROUND_BATCH.iteritems():
-        buildTopLevelRelease(round_batch)
+        f = buildTopLevelRelease(round_batch)
+        fragments['mainpage'][round_batch] = f
+
+    # ok, now assemble all the fragments into a coherent set of big honkin'
+    # release files.
+    all_batches = set()
+    for round_name,round_info in rounds.iteritems():
+        all_batches.update(int(puzzle['batch']) for pony,puzzle
+                           in round_info.iteritems())
+    #all_batches.update(round_batch
+    #                   for round_name,round_batch in ROUND_BATCH.iteritems())
+    for batch in sorted(all_batches):
+        with open(os.path.join(WEBDIR, 'release-%d.js' % batch), 'w') as fd:
+            for name in sorted(fragments.keys()):
+                if all(k > batch for k in fragments[name].keys()):
+                    continue # this piece not released yet
+                b = max(k for k in fragments[name].keys() if k <= batch)
+                fd.write(fragments[name][b])
+                fd.write('\n')
+
     shutil.copyfile(os.path.join(WEBDIR,
-                                 'release-%d.js' % max(ROUND_BATCH.values())),
+                                 'release-%d.js' % max(all_batches)),
                     os.path.join(WEBDIR, 'release.js'))
 
     # write a solved.js file indicating which puzzles are written
