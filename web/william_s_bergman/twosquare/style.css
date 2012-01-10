@@ -1,6 +1,6 @@
 .yow td {
- width: 100px;
- height: 100px;
+ width: 58px;
+ height: 58px;
  border-style: solid;
  border-color: black;
  text-align: center;
@@ -15,5 +15,5 @@
 
 
 .twoclass {
- border-spacing: 100px 0px;
+ border-spacing: 29px 0px;
 }

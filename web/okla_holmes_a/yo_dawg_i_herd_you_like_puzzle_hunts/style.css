@@ -1,0 +1,6 @@
+.blank {
+  border-bottom: 1px solid black;
+  color: transparent;
+  position: relative;
+  bottom: 4px;
+}
