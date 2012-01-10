@@ -1,0 +1,101 @@
+---
+layout: into_the_woodstock
+title: 20 Questions!
+ponyhash: 31481139a59df89392dcc960e43fd4f5233cf9ee5ba0a3a4ed118af3
+---
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="twenty_questions.js" type="text/javascript"></script>
+
+<h2>Welcome to 20 Questions!</h2>
+
+<div id="lockout" style="display: none">
+  <p>Sorry, you have made too many wrong guesses.  You&rsquo;ll need to wait
+  <span id="delay"></span> seconds to try
+  again.</p>
+</div>
+
+<div id="correct" style="display: none">
+  <p><b>Correct!  My number was <span id="correct_last_guess"></span>.</b></p>
+
+  <div id="completely_done" style="display: none">
+    <p>Thank you for playing 20 Questions.  You have correctly guessed all
+    of my secret numbers.</p>
+
+    <p>Here are all of the secret numbers, one last time:<br />
+    <span id="completely_done_numbers"></span>
+    </p>
+
+    Warning: Clicking the &ldquo;Start over&rdquo; button will erase these numbers.
+
+    <button onclick="restart()">Start over</button>
+  </div>
+
+  <div id="correct2" style="display: none">
+    <p><button onclick="next()">Guess another number</button></p>
+  </div>
+</div>
+
+<div id="puzzle" style="display: none">
+  <p>I am thinking of a positive integer that is three or four digits long.</p>
+
+  <div id="answer_div" style="display: none">
+    <p>You asked me this question: <b><span id="question"></span></b>
+    </p><p>The answer is: <b><span id="answer"></span></b>.
+  </p></div>
+
+  <div id="last_guess_div" style="display: none">
+    <p><b>Sorry, <span id="last_guess"></span> is incorrect.</b></p>
+  </div>
+
+  <div id="error_div" style="display: none">
+    <p><b><span id="error" style="color: red"></span></b></p>
+  </div>
+
+  <p>Take a guess:
+  <input id="number" size="5" type="text" />
+  <button onclick="guess()">Guess</button>
+  </p>
+
+  <p>
+  Or, ask me a question:
+  </p>
+
+  <table border="0" cellspacing="0">
+    <tbody><tr>
+      <td valign="top">
+        <button onclick="ask1()">Ask this question</button>
+      </td>
+      <td id="question_1" valign="top"></td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <button onclick="ask2()">Ask this question</button>
+      </td>
+      <td id="question_2" valign="top"></td>
+    </tr>
+  </tbody></table>
+
+<script type="text/javascript">
+  function showHide() {
+    var l = document.getElementById("pl");
+    var n = document.getElementById("pn");
+    if (n.style.display == "none") {
+      l.textContent = "Hide previous secret numbers";
+      n.style.display = "block";
+    } else {
+      l.textContent = "Show previous secret numbers";
+      n.style.display = "none";
+    }
+  }
+</script>
+
+<p><a href="javascript:showHide()" id="pl" style="display: none">
+Show previous secret numbers</a><br /></p>
+
+<div id="pn" style="display: none"></div>
+
+<p>
+<small><i>Note: Your team&rsquo;s progress is being saved on the server.  Feel free to leave and come back.</i></small></p>
+
+
+</div>

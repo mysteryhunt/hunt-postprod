@@ -1,0 +1,4702 @@
+---
+layout: into_the_woodstock_solution
+title: 20 Questions!
+class: puzzle solution
+credits: by unknown Codexian heroes
+---
+<p>
+The app asks you to guess a series of 3 or 4 digit numbers, using data gathered
+from a set of questions.  The questions always appear in adjacent pairs.  The
+complete set of questions, in order, are as follows:
+</p>
+<ol>
+
+
+  <li>
+If your secret number is written in base 3, what&rsquo;s the sum of its digits (give
+the answer in base 10)?
+</li>
+
+  <li>
+Sort the digits of your secret number in non-increasing numerical order to
+create a new number, subtract your secret number from the new number, and
+divide the result by 9. What&rsquo;s the remainder?
+</li>
+
+  <li>
+What&rsquo;s the sum of the first and last digits of your number?
+</li>
+
+  <li>
+What&rsquo;s the largest Fibonacci number that can be found as a prefix substring of
+your secret number?  (If there is none, answer &ldquo;None&rdquo;.)
+</li>
+
+  <li>
+How many dots are used in the Morse code representation of your secret number?
+</li>
+
+  <li>
+How many segments are lit in the standard seven-segment display of your secret
+number?
+</li>
+
+  <li>
+If your secret number is written in hexadecimal, what&rsquo;s its first digit?
+</li>
+
+  <li>
+If you were to count from 1 up to your secret number at the rate of one number
+per second, how many hours would you spend (take the ceiling to get an integer
+number of hours)?
+</li>
+
+  <li>
+What&rsquo;s the remainder when your secret number is divided by its leftmost digit?
+</li>
+
+  <li>
+What&rsquo;s the largest odd prime divisor of your secret number that&rsquo;s also a
+palindrome? (If there is none, answer &ldquo;None&rdquo;.)
+</li>
+
+  <li>
+What&rsquo;s the sum of all the repeated digits in your secret number? (Repeated
+digits don&rsquo;t need to be adjacent. Add all instances of each repeated digit. If
+no digit is repeated, answer &ldquo;Not applicable&rdquo;.)
+</li>
+
+  <li>
+What&rsquo;s the highest MIT Course number that is a substring of your secret number?
+</li>
+
+  <li>
+How many letters are in the Roman numeral representation of your secret number?
+(Use the modern rules for writing Roman numerals, with the modification that M
+can be repeated as many times as necessary.)
+</li>
+
+  <li>
+How many distinct permutations are there of the digits of your secret number?
+(The permutation may begin with 0.)
+</li>
+
+  <li>
+Assume that digits 4 and 5 each take 2 strokes to write, while the rest of the
+digits each take 1 stroke to write. How many strokes does it take to write
+your secret number?
+</li>
+
+  <li>
+Put a decimal point before the last two digits of your secret number.
+What&rsquo;s the minimum number of pieces of US currency featuring past US presidents
+required to make this number of dollars and cents?  (You&rsquo;re allowed to use
+2-dollar bills and half-dollar coins if necessary.)
+</li>
+
+  <li>
+What&rsquo;s the Chinese zodiac animal of the year represented by your secret number?
+</li>
+
+  <li>
+How many syllables does it take to say your secret number (in the standard way
+to write the number in English)?
+</li>
+
+  <li>
+Take the number represented by the last two digits of your secret number.
+What&rsquo;s the Scrabble score of this number spelled out in English?  (Use &ldquo;zero&rdquo;
+if the last two digits are 00.)
+</li>
+
+  <li>
+What&rsquo;s the floor of the base-100 logarithm of your secret number?
+</li>
+
+</ol>
+
+<p>
+The answers to the questions can be used to deduce the numbers.  All of the
+numbers to guess, and their corresponding answers to each question, are shown
+in the following table.
+</p>
+
+<p>
+Note that for each number, some questions are omitted and cannot be seen.  The
+missing questions are (x-1 % 20) + 1, (x % 20) + 1, and (x+1 % 20) + 1, where x
+is the secret number divided by 100.  It&rsquo;s not necessary to figure this pattern
+out, but it might be helpful in guessing the numbers if you happen to notice
+it.  The answers to all of the questions are shown below regardless.
+</p>
+
+<table border="1" cellspacing="0">
+<tbody><tr>
+  <th></th>
+  
+    <th width="50">1</th>
+  
+    <th width="50">2</th>
+  
+    <th width="50">3</th>
+  
+    <th width="50">4</th>
+  
+    <th width="50">5</th>
+  
+    <th width="50">6</th>
+  
+    <th width="50">7</th>
+  
+    <th width="50">8</th>
+  
+    <th width="50">9</th>
+  
+    <th width="50">10</th>
+  
+    <th width="50">11</th>
+  
+    <th width="50">12</th>
+  
+    <th width="50">13</th>
+  
+    <th width="50">14</th>
+  
+    <th width="50">15</th>
+  
+    <th width="50">16</th>
+  
+    <th width="50">17</th>
+  
+    <th width="50">18</th>
+  
+    <th width="50">19</th>
+  
+    <th width="50">20</th>
+  
+</tr>
+
+
+<tr>
+  <td align="right"><b>1701</b></td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1015</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>912</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1818</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">101</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>318</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2522</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Dog</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2709</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">A</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>420</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2008</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Rat</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>705</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1119</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">373</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2208</b></td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">23</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>201</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">C</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2115</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1903</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>614</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Dog</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2306</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Dog</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2605</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">A</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>515</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>116</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Dragon</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2409</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1613</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1409</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>803</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1205</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2814</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">A</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1304</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Dragon</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>1514</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">757</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Dog</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>2914</b></td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">B</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Horse</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3801</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">E</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">181</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3123</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">C</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3522</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">D</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3015</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">B</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3412</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">34</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">D</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Rat</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4120</b></td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Rat</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3918</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">F</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4223</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4020</b></td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">F</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3315</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">C</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4315</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3716</b></td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">E</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">929</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Dragon</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3605</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">E</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>3219</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">C</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5316</b></td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5120</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Dragon</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4801</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6423</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6214</b></td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Horse</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4425</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5909</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">23</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4621</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5215</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5407</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4914</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5719</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6315</b></td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5019</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4515</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6014</b></td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Dog</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5819</b></td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5605</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>4703</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6107</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">610</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>5521</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">55</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7713</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8006</b></td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">25</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Dog</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9705</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6609</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8521</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9219</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7519</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9321</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8208</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">25</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9919</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">27</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9612</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8417</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9114</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6820</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Rat</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9505</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6714</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">373</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">Tiger</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6923</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8605</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7615</b></td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7125</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Snake</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8820</b></td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">25</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8305</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">23</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">151</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7318</b></td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">Horse</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>6508</b></td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">Rat</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8120</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Dragon</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7201</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">20</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7008</b></td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">22</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Monkey</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7915</b></td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9015</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">19</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">15</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8719</b></td>
+  
+    <td align="center">13</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">Rabbit</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9819</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">16</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">Pig</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7405</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">Rooster</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>8909</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">17</td>
+  
+    <td align="center">89</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">25</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">151</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">4</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>9419</b></td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">2</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">18</td>
+  
+    <td align="center">9</td>
+  
+    <td align="center">14</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">11</td>
+  
+    <td align="center">Goat</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+<tr>
+  <td align="right"><b>7805</b></td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">None</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">21</td>
+  
+    <td align="center">1</td>
+  
+    <td align="center">3</td>
+  
+    <td align="center">0</td>
+  
+    <td align="center">7</td>
+  
+    <td align="center">Not applicable</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">12</td>
+  
+    <td align="center">24</td>
+  
+    <td align="center">5</td>
+  
+    <td align="center">6</td>
+  
+    <td align="center">Ox</td>
+  
+    <td align="center">8</td>
+  
+    <td align="center">10</td>
+  
+    <td align="center">1</td>
+  
+</tr>
+
+</tbody></table>
+
+<p>Once you have guessed the secret numbers, notice that the last two digits
+are always in the range (1, 26), and the first 1-2 digits are unique.</p>
+<p>The numbers in sorted order are:</p>
+<blockquote class="monospace">
+[116, 201, 318, 420, 515, 614, 705, 803, 912, 1015, 1119, 1205, 1304, 1409, 1514, 1613, 1701, 1818, 1903, 2008, 2115, 2208, 2306, 2409, 2522, 2605, 2709, 2814, 2914, 3015, 3123, 3219, 3315, 3412, 3522, 3605, 3716, 3801, 3918, 4020, 4120, 4223, 4315, 4425, 4515, 4621, 4703, 4801, 4914, 5019, 5120, 5215, 5316, 5407, 5521, 5605, 5719, 5819, 5909, 6014, 6107, 6214, 6315, 6423, 6508, 6609, 6714, 6820, 6923, 7008, 7125, 7201, 7318, 7405, 7519, 7615, 7713, 7805, 7915, 8006, 8120, 8208, 8305, 8417, 8521, 8605, 8719, 8820, 8909, 9015, 9114, 9219, 9321, 9419, 9505, 9612, 9705, 9819, 9919]
+</blockquote>
+<p>Using the last two digits as letters, this decodes to the part one message:</p>
+<blockquote class="monospace">
+PARTONECLOSEDINMARCHOHFIVEINNOWSOLVEPARTTWOYOUCANSTOPGUESSINGNOWHINTWHYARESOMEOFTHEQUESTIONSUSELESS
+</blockquote>
+<p>Although the numbers are shuffled, all the numbers corresponding to each
+sentence in this message are adjacent.</p>
+
+<p>For part 2, you must consider the questions, not the numbers.  When
+considering all possible 3-4 digit secret numbers, the questions have varying
+numbers of possible answers.  For example, question 2 always has the
+answer 0, whereas question 16 has 15 possible answers for all numbers between
+100 and 9999.  The number of answers to each question is as follows:
+</p>
+<ol>
+  
+    <li>16</li>
+  
+    <li>1</li>
+  
+    <li>18</li>
+  
+    <li>20</li>
+  
+    <li>20</li>
+  
+    <li>23</li>
+  
+    <li>15</li>
+  
+    <li>3</li>
+  
+    <li>9</li>
+  
+    <li>20</li>
+  
+    <li>25</li>
+  
+    <li>19</li>
+  
+    <li>21</li>
+  
+    <li>6</li>
+  
+    <li>6</li>
+  
+    <li>15</li>
+  
+    <li>12</li>
+  
+    <li>11</li>
+  
+    <li>22</li>
+  
+    <li>1</li>
+  
+</ol>
+
+<p>This decodes to the part two message: <tt>PARTTWOCITYSUFFOLKVA</tt>.</p>
+
+<p>Combine the beginning of the part one message and the complete part two
+message for a clue to the final solution, <b>KINGS HIGHWAY BRIDGE</b>.</p>
