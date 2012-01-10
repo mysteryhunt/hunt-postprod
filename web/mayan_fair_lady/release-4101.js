@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_mayan_fair_lady() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"itinerant_people_of_america/-"+
@@ -22,7 +22,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_mayan_fair_lady() {
   return ""+
 "<tr>"+
 "<td class=\"num\">1.</td>"+
@@ -86,7 +86,7 @@ function puzzlelist() {
 "</tr>"+
 '';
 }
-function onLoad() {
-document.getElementById('index-image').innerHTML = imagemap();
-document.getElementById('puzzle-list').innerHTML = puzzlelist();
+function load_mayan_fair_lady() {
+document.getElementById('index-image').innerHTML = imagemap_mayan_fair_lady();
+document.getElementById('puzzle-list').innerHTML = puzzlelist_mayan_fair_lady();
 }

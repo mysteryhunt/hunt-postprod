@@ -1,11 +1,11 @@
-function imagemap() {
+function imagemap_charles_lutwidge_dodgson() {
   return ''+
 "<img src=\"photo.png\" />"+
 "<img src=\"1-"+
 (puzzle_solved["1207_1370"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"baby_quackers/-"+
-(puzzle_solved["baby_quackers"]?"solved":"unsolved")+
+"<img src=\"b_j_blazkowicz_in_wintertime_for_hitler/-"+
+(puzzle_solved["b_j_blazkowicz_in_wintertime_for_hitler"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"2-"+
 (puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
@@ -29,7 +29,7 @@ function imagemap() {
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"75,185,112,260\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"89,261,112,263\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"113,193,143,289\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"66,151,103,184\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"72,188,74,200\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />"+
-"<area shape=\"rect\" coords=\"400,340,452,480\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"400,481,411,486\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"453,389,517,463\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"407,325,435,339\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />\n<area shape=\"rect\" coords=\"393,450,399,484\" alt=\"Baby Quackers\" title=\"Baby Quackers\" href=\"baby_quackers/\" />"+
+"<area shape=\"rect\" coords=\"400,340,452,480\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"400,481,411,486\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"453,389,517,463\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"407,325,435,339\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"393,450,399,484\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />"+
 "<area shape=\"rect\" coords=\"486,199,509,307\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"510,209,514,297\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"518,231,621,289\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"466,208,485,315\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />\n<area shape=\"rect\" coords=\"515,242,517,293\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"../okla_holmes_a/baby_sniffles/\" />"+
 "<area shape=\"rect\" coords=\"186,466,200,493\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"207,466,300,493\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"218,420,305,465\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"196,509,272,539\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"183,494,284,508\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />"+
 "<area shape=\"rect\" coords=\"318,391,352,451\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"353,393,359,441\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"360,397,425,434\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"299,400,317,450\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"338,387,351,390\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />"+
@@ -39,7 +39,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_charles_lutwidge_dodgson() {
   return ""+
 "<table class=\"materials\">"+
 "<tr>"+
@@ -56,8 +56,8 @@ function puzzlelist() {
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["baby_quackers"]?"solved":"unsolved")+
-"\"><a href=\"baby_quackers/\"><span>Baby Quackers</span></a></td>"+
+(puzzle_solved["b_j_blazkowicz_in_wintertime_for_hitler"]?"solved":"unsolved")+
+"\"><a href=\"b_j_blazkowicz_in_wintertime_for_hitler/\"><span>B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;</span></a></td>"+
 "<td></td>"+
 "</tr>"+
 "<tr>"+
@@ -85,7 +85,7 @@ function puzzlelist() {
 "</table>"+
 '';
 }
-function onLoad() {
-document.getElementById('photo').innerHTML = imagemap();
-document.getElementById('materials').innerHTML = puzzlelist();
+function load_charles_lutwidge_dodgson() {
+document.getElementById('photo').innerHTML = imagemap_charles_lutwidge_dodgson();
+document.getElementById('materials').innerHTML = puzzlelist_charles_lutwidge_dodgson();
 }

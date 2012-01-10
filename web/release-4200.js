@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+
 "<img src=\"a_circus_line/mainpage-overlay.png\" />"+
@@ -22,7 +22,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_mainpage() {
   return ""+
 "<tr><th><h2>Shows</h2></th>"+
 "<th><h2>Critics</h2>"+
@@ -41,7 +41,7 @@ function puzzlelist() {
 "</tr>"+
 '';
 }
-function onLoad() {
-document.getElementById('index-image').innerHTML = imagemap();
-document.getElementById('index-table').innerHTML = puzzlelist();
+function load_mainpage() {
+document.getElementById('index-image').innerHTML = imagemap_mainpage();
+document.getElementById('index-table').innerHTML = puzzlelist_mainpage();
 }

@@ -1,8 +1,8 @@
-function imagemap() {
+function imagemap_into_the_woodstock() {
   return ''+
 "<img src=\"key.png\" />"+
-"<img src=\"braeburn/-"+
-(puzzle_solved["braeburn"]?"solved":"unsolved")+
+"<img src=\"20_questions/-"+
+(puzzle_solved["20_questions"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"bubbles/-"+
 (puzzle_solved["bubbles"]?"solved":"unsolved")+
@@ -36,7 +36,7 @@ function imagemap() {
 ".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
-"<area shape=\"rect\" coords=\"163,245,249,296\" alt=\"Braeburn\" title=\"Braeburn\" href=\"braeburn/\" />\n<area shape=\"rect\" coords=\"250,259,253,287\" alt=\"Braeburn\" title=\"Braeburn\" href=\"braeburn/\" />\n<area shape=\"rect\" coords=\"172,297,244,316\" alt=\"Braeburn\" title=\"Braeburn\" href=\"braeburn/\" />\n<area shape=\"rect\" coords=\"185,317,229,352\" alt=\"Braeburn\" title=\"Braeburn\" href=\"braeburn/\" />\n<area shape=\"rect\" coords=\"171,242,188,244\" alt=\"Braeburn\" title=\"Braeburn\" href=\"braeburn/\" />"+
+"<area shape=\"rect\" coords=\"163,245,249,296\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"250,259,253,287\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"172,297,244,316\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"185,317,229,352\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"171,242,188,244\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />"+
 "<area shape=\"rect\" coords=\"198,381,249,459\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"195,460,249,469\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"264,372,292,477\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"250,379,263,474\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"293,376,300,425\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />"+
 "<area shape=\"rect\" coords=\"417,180,489,193\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"criss_cross/\" />\n<area shape=\"rect\" coords=\"411,194,501,244\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"criss_cross/\" />\n<area shape=\"rect\" coords=\"392,205,410,257\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"criss_cross/\" />\n<area shape=\"rect\" coords=\"428,162,477,179\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"criss_cross/\" />\n<area shape=\"rect\" coords=\"456,245,491,250\" alt=\"Criss-Cross\" title=\"Criss-Cross\" href=\"criss_cross/\" />"+
 "<area shape=\"rect\" coords=\"112,313,172,360\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"173,326,178,355\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"130,276,176,306\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"126,307,160,312\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"118,361,136,363\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />"+
@@ -50,13 +50,13 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_into_the_woodstock() {
   return ""+
 "<tr>"+
 "<td>"+
-"<a href=\"braeburn/\" class=\""+
-(puzzle_solved["braeburn"]?"solved":"unsolved")+
-"\">Braeburn</a>"+
+"<a href=\"20_questions/\" class=\""+
+(puzzle_solved["20_questions"]?"solved":"unsolved")+
+"\">20 Questions</a>"+
 "</td>"+
 "<td>"+
 "<a href=\"of_course/\" class=\""+
@@ -123,7 +123,7 @@ function puzzlelist() {
 "</tr>"+
 '';
 }
-function onLoad() {
-document.getElementById('index-image').innerHTML = imagemap();
-document.getElementById('puzzle-list').innerHTML = puzzlelist();
+function load_into_the_woodstock() {
+document.getElementById('index-image').innerHTML = imagemap_into_the_woodstock();
+document.getElementById('puzzle-list').innerHTML = puzzlelist_into_the_woodstock();
 }

@@ -163,7 +163,7 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
 
     # ok, now we've got one or two lists to lay out.
     # generate imagemap
-    add("function imagemap() {")
+    add("function imagemap_%s() {" % canon(round_name))
     add("  return ''+")
     addesc('<img src="photo.png" />')
     i=1
@@ -199,7 +199,7 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
     add("'';")
     add("}")
 
-    add('function puzzlelist() {');
+    add('function puzzlelist_%s() {' % canon(round_name));
     add('  return ""+');
     first_table=True
     addesc('<table class="materials">')
@@ -245,9 +245,12 @@ def buildCritic(round_name, rinfo, batch, split=4, unified=False, ordered=False)
     add("}")
 
     # invoke
-    add("function onLoad() {");
-    add("document.getElementById('photo').innerHTML = imagemap();")
-    add("document.getElementById('materials').innerHTML = puzzlelist();")
+    add("function load_%s() {"
+        % canon(round_name));
+    add("document.getElementById('photo').innerHTML = imagemap_%s();"
+        % canon(round_name))
+    add("document.getElementById('materials').innerHTML = puzzlelist_%s();"
+        % canon(round_name))
     add("}")
 
     # write this as release.js
@@ -271,7 +274,7 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
         puzzle_titles = unordered_titles(round_info, batch)
 
     # generate imagemap
-    add("function imagemap() {")
+    add("function imagemap_%s() {" % canon(round_name))
     add("  return ''+")
     addesc('<img src="key.png" />')
     for pt in puzzle_titles:
@@ -292,7 +295,7 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
     add("'';")
     add("}")
 
-    add('function puzzlelist() {');
+    add('function puzzlelist_%s() {' % canon(round_name));
     add('  return ""+');
     first, second = two_columns(puzzle_titles)
     for i in xrange(len(first)):
@@ -313,9 +316,12 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
     add("}")
 
     # invoke
-    add("function onLoad() {");
-    add("document.getElementById('index-image').innerHTML = imagemap();")
-    add("document.getElementById('puzzle-list').innerHTML = puzzlelist();")
+    add("function load_%s() {"
+        % canon(round_name));
+    add("document.getElementById('index-image').innerHTML = imagemap_%s();"
+        % canon(round_name))
+    add("document.getElementById('puzzle-list').innerHTML = puzzlelist_%s();"
+        % canon(round_name))
     add("}")
 
     # write this as release.js
@@ -330,7 +336,7 @@ def buildTopLevelRelease(batch, split=4):
     def add(s): lines.append(s)
     def addesc(s): add(jsEscape(s)+'+')
     # generate imagemap
-    add("function imagemap() {")
+    add("function imagemap_mainpage() {")
     add("  return ''+")
     addesc('<img src="mainpage.jpg" />')
     for round_name in ROUNDS:
@@ -350,7 +356,7 @@ def buildTopLevelRelease(batch, split=4):
     add("'';");
     add("}")
 
-    add('function puzzlelist() {');
+    add('function puzzlelist_mainpage() {');
     add('  return ""+');
     addesc("<tr><th><h2>Shows</h2></th>")
     if batch > min(ROUND_BATCH.values()):
@@ -371,9 +377,9 @@ def buildTopLevelRelease(batch, split=4):
     add("}")
     
     # invoke
-    add("function onLoad() {");
-    add("document.getElementById('index-image').innerHTML = imagemap();")
-    add("document.getElementById('index-table').innerHTML = puzzlelist();")
+    add("function load_mainpage() {");
+    add("document.getElementById('index-image').innerHTML = imagemap_mainpage();")
+    add("document.getElementById('index-table').innerHTML = puzzlelist_mainpage();")
     add("}")
 
     # write this as release.js

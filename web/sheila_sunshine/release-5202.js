@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_sheila_sunshine() {
   return ''+
 "<img src=\"photo.png\" />"+
 "<img src=\"1-"+
@@ -79,7 +79,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_sheila_sunshine() {
   return ""+
 "<table class=\"materials\">"+
 "<tr class=\"n\">"+
@@ -169,7 +169,7 @@ function puzzlelist() {
 "</table>"+
 '';
 }
-function onLoad() {
-document.getElementById('photo').innerHTML = imagemap();
-document.getElementById('materials').innerHTML = puzzlelist();
+function load_sheila_sunshine() {
+document.getElementById('photo').innerHTML = imagemap_sheila_sunshine();
+document.getElementById('materials').innerHTML = puzzlelist_sheila_sunshine();
 }

@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_phantom_of_the_operator() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"any_old_puzzle/-"+
@@ -42,7 +42,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_phantom_of_the_operator() {
   return ""+
 "<tr>"+
 "<td class=\"num\">1.</td>"+
@@ -113,7 +113,7 @@ function puzzlelist() {
 "</tr>"+
 '';
 }
-function onLoad() {
-document.getElementById('index-image').innerHTML = imagemap();
-document.getElementById('puzzle-list').innerHTML = puzzlelist();
+function load_phantom_of_the_operator() {
+document.getElementById('index-image').innerHTML = imagemap_phantom_of_the_operator();
+document.getElementById('puzzle-list').innerHTML = puzzlelist_phantom_of_the_operator();
 }

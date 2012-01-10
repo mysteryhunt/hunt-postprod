@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_watson_2_0() {
   return ''+
 "<img src=\"photo.png\" />"+
 "<img src=\"1-"+
@@ -73,8 +73,11 @@ function imagemap() {
 "<img src=\"24-"+
 (puzzle_solved["eight_digits"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"diamond_tiara/-"+
-(puzzle_solved["diamond_tiara"]?"solved":"unsolved")+
+"<img src=\"encoded/-"+
+(puzzle_solved["encoded"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"how_to_succeed_in_real_estate_without_really_buying/-"+
+(puzzle_solved["how_to_succeed_in_real_estate_without_really_buying"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"now_i_know_my_abcs/-"+
 (puzzle_solved["now_i_know_my_abcs"]?"solved":"unsolved")+
@@ -90,9 +93,6 @@ function imagemap() {
 ".png\" />"+
 "<img src=\"screen_test/-"+
 (puzzle_solved["screen_test"]?"solved":"unsolved")+
-".png\" />"+
-"<img src=\"teddy/-"+
-(puzzle_solved["teddy"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"written_down/-"+
 (puzzle_solved["written_down"]?"solved":"unsolved")+
@@ -124,18 +124,18 @@ function imagemap() {
 "<area shape=\"rect\" coords=\"208,190,253,206\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"../into_the_woodstock/tax_in_space/\" />\n<area shape=\"rect\" coords=\"231,207,267,226\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"../into_the_woodstock/tax_in_space/\" />\n<area shape=\"rect\" coords=\"172,158,222,174\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"../into_the_woodstock/tax_in_space/\" />\n<area shape=\"rect\" coords=\"182,175,236,189\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"../into_the_woodstock/tax_in_space/\" />\n<area shape=\"rect\" coords=\"180,143,207,157\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"../into_the_woodstock/tax_in_space/\" />"+
 "<area shape=\"rect\" coords=\"198,128,241,143\" alt=\"Any Old Puzzle\" title=\"Any Old Puzzle\" href=\"../phantom_of_the_operator/any_old_puzzle/\" />\n<area shape=\"rect\" coords=\"202,144,248,154\" alt=\"Any Old Puzzle\" title=\"Any Old Puzzle\" href=\"../phantom_of_the_operator/any_old_puzzle/\" />\n<area shape=\"rect\" coords=\"238,175,285,212\" alt=\"Any Old Puzzle\" title=\"Any Old Puzzle\" href=\"../phantom_of_the_operator/any_old_puzzle/\" />\n<area shape=\"rect\" coords=\"216,155,261,174\" alt=\"Any Old Puzzle\" title=\"Any Old Puzzle\" href=\"../phantom_of_the_operator/any_old_puzzle/\" />\n<area shape=\"rect\" coords=\"209,117,231,127\" alt=\"Any Old Puzzle\" title=\"Any Old Puzzle\" href=\"../phantom_of_the_operator/any_old_puzzle/\" />"+
 "<area shape=\"rect\" coords=\"252,143,288,157\" alt=\"Eight Digits\" title=\"Eight Digits\" href=\"../ogre_of_la_mancha/eight_digits/\" />\n<area shape=\"rect\" coords=\"262,158,295,177\" alt=\"Eight Digits\" title=\"Eight Digits\" href=\"../ogre_of_la_mancha/eight_digits/\" />\n<area shape=\"rect\" coords=\"228,92,274,121\" alt=\"Eight Digits\" title=\"Eight Digits\" href=\"../ogre_of_la_mancha/eight_digits/\" />\n<area shape=\"rect\" coords=\"237,122,282,142\" alt=\"Eight Digits\" title=\"Eight Digits\" href=\"../ogre_of_la_mancha/eight_digits/\" />\n<area shape=\"rect\" coords=\"274,178,301,200\" alt=\"Eight Digits\" title=\"Eight Digits\" href=\"../ogre_of_la_mancha/eight_digits/\" />"+
-"<area shape=\"rect\" coords=\"402,275,410,275\" alt=\"Diamond Tiara\" title=\"Diamond Tiara\" href=\"diamond_tiara/\" />\n<area shape=\"rect\" coords=\"402,276,410,293\" alt=\"Diamond Tiara\" title=\"Diamond Tiara\" href=\"diamond_tiara/\" />\n<area shape=\"rect\" coords=\"396,276,401,292\" alt=\"Diamond Tiara\" title=\"Diamond Tiara\" href=\"diamond_tiara/\" />\n<area shape=\"rect\" coords=\"411,276,414,285\" alt=\"Diamond Tiara\" title=\"Diamond Tiara\" href=\"diamond_tiara/\" />\n<area shape=\"rect\" coords=\"403,294,410,296\" alt=\"Diamond Tiara\" title=\"Diamond Tiara\" href=\"diamond_tiara/\" />"+
+"<area shape=\"rect\" coords=\"284,313,301,322\" alt=\"Encoded\" title=\"Encoded\" href=\"encoded/\" />\n<area shape=\"rect\" coords=\"302,314,302,320\" alt=\"Encoded\" title=\"Encoded\" href=\"encoded/\" />\n<area shape=\"rect\" coords=\"283,304,301,312\" alt=\"Encoded\" title=\"Encoded\" href=\"encoded/\" />\n<area shape=\"rect\" coords=\"285,323,300,324\" alt=\"Encoded\" title=\"Encoded\" href=\"encoded/\" />\n<area shape=\"rect\" coords=\"287,325,298,326\" alt=\"Encoded\" title=\"Encoded\" href=\"encoded/\" />"+
+"<area shape=\"rect\" coords=\"402,275,410,275\" alt=\"How to Succeed in Real Estate Without Really Buying\" title=\"How to Succeed in Real Estate Without Really Buying\" href=\"how_to_succeed_in_real_estate_without_really_buying/\" />\n<area shape=\"rect\" coords=\"402,276,410,293\" alt=\"How to Succeed in Real Estate Without Really Buying\" title=\"How to Succeed in Real Estate Without Really Buying\" href=\"how_to_succeed_in_real_estate_without_really_buying/\" />\n<area shape=\"rect\" coords=\"396,276,401,292\" alt=\"How to Succeed in Real Estate Without Really Buying\" title=\"How to Succeed in Real Estate Without Really Buying\" href=\"how_to_succeed_in_real_estate_without_really_buying/\" />\n<area shape=\"rect\" coords=\"411,276,414,285\" alt=\"How to Succeed in Real Estate Without Really Buying\" title=\"How to Succeed in Real Estate Without Really Buying\" href=\"how_to_succeed_in_real_estate_without_really_buying/\" />\n<area shape=\"rect\" coords=\"403,294,410,296\" alt=\"How to Succeed in Real Estate Without Really Buying\" title=\"How to Succeed in Real Estate Without Really Buying\" href=\"how_to_succeed_in_real_estate_without_really_buying/\" />"+
 "<area shape=\"rect\" coords=\"282,261,318,277\" alt=\"Now I Know My ABCs\" title=\"Now I Know My ABCs\" href=\"now_i_know_my_abcs/\" />\n<area shape=\"rect\" coords=\"285,278,317,283\" alt=\"Now I Know My ABCs\" title=\"Now I Know My ABCs\" href=\"now_i_know_my_abcs/\" />\n<area shape=\"rect\" coords=\"288,284,315,291\" alt=\"Now I Know My ABCs\" title=\"Now I Know My ABCs\" href=\"now_i_know_my_abcs/\" />\n<area shape=\"rect\" coords=\"284,255,314,260\" alt=\"Now I Know My ABCs\" title=\"Now I Know My ABCs\" href=\"now_i_know_my_abcs/\" />\n<area shape=\"rect\" coords=\"288,248,309,254\" alt=\"Now I Know My ABCs\" title=\"Now I Know My ABCs\" href=\"now_i_know_my_abcs/\" />"+
 "<area shape=\"rect\" coords=\"360,310,396,325\" alt=\"Piercing the Veil\" title=\"Piercing the Veil\" href=\"piercing_the_veil/\" />\n<area shape=\"rect\" coords=\"362,326,393,329\" alt=\"Piercing the Veil\" title=\"Piercing the Veil\" href=\"piercing_the_veil/\" />\n<area shape=\"rect\" coords=\"364,303,394,309\" alt=\"Piercing the Veil\" title=\"Piercing the Veil\" href=\"piercing_the_veil/\" />\n<area shape=\"rect\" coords=\"367,330,390,334\" alt=\"Piercing the Veil\" title=\"Piercing the Veil\" href=\"piercing_the_veil/\" />\n<area shape=\"rect\" coords=\"370,299,386,302\" alt=\"Piercing the Veil\" title=\"Piercing the Veil\" href=\"piercing_the_veil/\" />"+
 "<area shape=\"rect\" coords=\"334,273,340,273\" alt=\"R.E.S.P.E.C.T.\" title=\"R.E.S.P.E.C.T.\" href=\"r_e_s_p_e_c_t/\" />\n<area shape=\"rect\" coords=\"333,274,344,295\" alt=\"R.E.S.P.E.C.T.\" title=\"R.E.S.P.E.C.T.\" href=\"r_e_s_p_e_c_t/\" />\n<area shape=\"rect\" coords=\"345,276,349,293\" alt=\"R.E.S.P.E.C.T.\" title=\"R.E.S.P.E.C.T.\" href=\"r_e_s_p_e_c_t/\" />\n<area shape=\"rect\" coords=\"329,274,332,293\" alt=\"R.E.S.P.E.C.T.\" title=\"R.E.S.P.E.C.T.\" href=\"r_e_s_p_e_c_t/\" />\n<area shape=\"rect\" coords=\"337,296,340,296\" alt=\"R.E.S.P.E.C.T.\" title=\"R.E.S.P.E.C.T.\" href=\"r_e_s_p_e_c_t/\" />"+
 "<area shape=\"rect\" coords=\"336,240,356,243\" alt=\"Raw Bar\" title=\"Raw Bar\" href=\"raw_bar/\" />\n<area shape=\"rect\" coords=\"335,244,357,256\" alt=\"Raw Bar\" title=\"Raw Bar\" href=\"raw_bar/\" />\n<area shape=\"rect\" coords=\"338,257,354,262\" alt=\"Raw Bar\" title=\"Raw Bar\" href=\"raw_bar/\" />\n<area shape=\"rect\" coords=\"338,237,354,239\" alt=\"Raw Bar\" title=\"Raw Bar\" href=\"raw_bar/\" />\n<area shape=\"rect\" coords=\"342,232,352,236\" alt=\"Raw Bar\" title=\"Raw Bar\" href=\"raw_bar/\" />"+
 "<area shape=\"rect\" coords=\"373,260,390,277\" alt=\"Screen Test\" title=\"Screen Test\" href=\"screen_test/\" />\n<area shape=\"rect\" coords=\"391,264,392,276\" alt=\"Screen Test\" title=\"Screen Test\" href=\"screen_test/\" />\n<area shape=\"rect\" coords=\"376,278,389,280\" alt=\"Screen Test\" title=\"Screen Test\" href=\"screen_test/\" />\n<area shape=\"rect\" coords=\"377,257,388,259\" alt=\"Screen Test\" title=\"Screen Test\" href=\"screen_test/\" />\n<area shape=\"rect\" coords=\"370,264,372,273\" alt=\"Screen Test\" title=\"Screen Test\" href=\"screen_test/\" />"+
-"<area shape=\"rect\" coords=\"284,313,301,322\" alt=\"Teddy\" title=\"Teddy\" href=\"teddy/\" />\n<area shape=\"rect\" coords=\"302,314,302,320\" alt=\"Teddy\" title=\"Teddy\" href=\"teddy/\" />\n<area shape=\"rect\" coords=\"283,304,301,312\" alt=\"Teddy\" title=\"Teddy\" href=\"teddy/\" />\n<area shape=\"rect\" coords=\"285,323,300,324\" alt=\"Teddy\" title=\"Teddy\" href=\"teddy/\" />\n<area shape=\"rect\" coords=\"287,325,298,326\" alt=\"Teddy\" title=\"Teddy\" href=\"teddy/\" />"+
 "<area shape=\"rect\" coords=\"319,324,327,324\" alt=\"Written Down\" title=\"Written Down\" href=\"written_down/\" />\n<area shape=\"rect\" coords=\"308,325,333,350\" alt=\"Written Down\" title=\"Written Down\" href=\"written_down/\" />\n<area shape=\"rect\" coords=\"304,327,307,346\" alt=\"Written Down\" title=\"Written Down\" href=\"written_down/\" />\n<area shape=\"rect\" coords=\"334,332,337,346\" alt=\"Written Down\" title=\"Written Down\" href=\"written_down/\" />\n<area shape=\"rect\" coords=\"314,351,327,352\" alt=\"Written Down\" title=\"Written Down\" href=\"written_down/\" />"+
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_watson_2_0() {
   return ""+
 "<table class=\"materials\">"+
 "<tr class=\"n\">"+
@@ -262,8 +262,16 @@ function puzzlelist() {
 "<tr class=\"spacer\"></tr>"+
 "<tr>"+
 "<td class=\"watson_2_0 "+
-(puzzle_solved["diamond_tiara"]?"solved":"unsolved")+
-"\"><a href=\"diamond_tiara/\"><span>Diamond Tiara</span></a></td>"+
+(puzzle_solved["encoded"]?"solved":"unsolved")+
+"\"><a href=\"encoded/\"><span>Encoded</span></a></td>"+
+"<td class=\"watson_2_0 "+
+(puzzle_solved["r_e_s_p_e_c_t"]?"solved":"unsolved")+
+"\"><a href=\"r_e_s_p_e_c_t/\"><span>R.E.S.P.E.C.T.</span></a></td>"+
+"</tr>"+
+"<tr>"+
+"<td class=\"watson_2_0 "+
+(puzzle_solved["how_to_succeed_in_real_estate_without_really_buying"]?"solved":"unsolved")+
+"\"><a href=\"how_to_succeed_in_real_estate_without_really_buying/\"><span>How to Succeed in Real Estate Without Really Buying</span></a></td>"+
 "<td class=\"watson_2_0 "+
 (puzzle_solved["raw_bar"]?"solved":"unsolved")+
 "\"><a href=\"raw_bar/\"><span>Raw Bar</span></a></td>"+
@@ -281,21 +289,13 @@ function puzzlelist() {
 (puzzle_solved["piercing_the_veil"]?"solved":"unsolved")+
 "\"><a href=\"piercing_the_veil/\"><span>Piercing the Veil</span></a></td>"+
 "<td class=\"watson_2_0 "+
-(puzzle_solved["teddy"]?"solved":"unsolved")+
-"\"><a href=\"teddy/\"><span>Teddy</span></a></td>"+
-"</tr>"+
-"<tr>"+
-"<td class=\"watson_2_0 "+
-(puzzle_solved["r_e_s_p_e_c_t"]?"solved":"unsolved")+
-"\"><a href=\"r_e_s_p_e_c_t/\"><span>R.E.S.P.E.C.T.</span></a></td>"+
-"<td class=\"watson_2_0 "+
 (puzzle_solved["written_down"]?"solved":"unsolved")+
 "\"><a href=\"written_down/\"><span>Written Down</span></a></td>"+
 "</tr>"+
 "</table>"+
 '';
 }
-function onLoad() {
-document.getElementById('photo').innerHTML = imagemap();
-document.getElementById('materials').innerHTML = puzzlelist();
+function load_watson_2_0() {
+document.getElementById('photo').innerHTML = imagemap_watson_2_0();
+document.getElementById('materials').innerHTML = puzzlelist_watson_2_0();
 }

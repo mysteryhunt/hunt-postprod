@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_betsy_johnson() {
   return ''+
 "<img src=\"photo.png\" />"+
 "<img src=\"blinkenlights/-"+
@@ -35,7 +35,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_betsy_johnson() {
   return ""+
 "<table class=\"materials\">"+
 "<tr>"+
@@ -75,7 +75,7 @@ function puzzlelist() {
 "</table>"+
 '';
 }
-function onLoad() {
-document.getElementById('photo').innerHTML = imagemap();
-document.getElementById('materials').innerHTML = puzzlelist();
+function load_betsy_johnson() {
+document.getElementById('photo').innerHTML = imagemap_betsy_johnson();
+document.getElementById('materials').innerHTML = puzzlelist_betsy_johnson();
 }

@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_a_circus_line() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"1207_1370/-"+
@@ -46,7 +46,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_a_circus_line() {
   return ""+
 "<tr>"+
 "<td>"+
@@ -110,7 +110,7 @@ function puzzlelist() {
 "</tr>"+
 '';
 }
-function onLoad() {
-document.getElementById('index-image').innerHTML = imagemap();
-document.getElementById('puzzle-list').innerHTML = puzzlelist();
+function load_a_circus_line() {
+document.getElementById('index-image').innerHTML = imagemap_a_circus_line();
+document.getElementById('puzzle-list').innerHTML = puzzlelist_a_circus_line();
 }

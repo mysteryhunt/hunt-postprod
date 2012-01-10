@@ -1,4 +1,4 @@
-function imagemap() {
+function imagemap_ogre_of_la_mancha() {
   return ''+
 "<img src=\"key.png\" />"+
 "<img src=\"apple_spice/-"+
@@ -38,7 +38,7 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_ogre_of_la_mancha() {
   return ""+
 "<tr>"+
 "<td>"+
@@ -90,7 +90,7 @@ function puzzlelist() {
 "</tr>"+
 '';
 }
-function onLoad() {
-document.getElementById('index-image').innerHTML = imagemap();
-document.getElementById('puzzle-list').innerHTML = puzzlelist();
+function load_ogre_of_la_mancha() {
+document.getElementById('index-image').innerHTML = imagemap_ogre_of_la_mancha();
+document.getElementById('puzzle-list').innerHTML = puzzlelist_ogre_of_la_mancha();
 }

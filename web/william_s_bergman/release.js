@@ -1,11 +1,11 @@
-function imagemap() {
+function imagemap_william_s_bergman() {
   return ''+
 "<img src=\"photo.png\" />"+
 "<img src=\"1-"+
-(puzzle_solved["blackout"]?"solved":"unsolved")+
+(puzzle_solved["20_questions"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"2-"+
-(puzzle_solved["braeburn"]?"solved":"unsolved")+
+(puzzle_solved["blackout"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"3-"+
 (puzzle_solved["bubbles"]?"solved":"unsolved")+
@@ -52,8 +52,8 @@ function imagemap() {
 "<div class=\"paperclip\"></div>"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
-"<area shape=\"rect\" coords=\"420,250,431,268\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"432,235,511,305\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"432,326,518,372\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"438,306,530,325\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"451,373,522,400\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />"+
-"<area shape=\"rect\" coords=\"532,100,540,213\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"541,85,578,227\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"579,83,611,219\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"498,105,531,185\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />\n<area shape=\"rect\" coords=\"612,126,622,163\" alt=\"Braeburn\" title=\"Braeburn\" href=\"../into_the_woodstock/braeburn/\" />"+
+"<area shape=\"rect\" coords=\"420,250,431,268\" alt=\"20 Questions\" title=\"20 Questions\" href=\"../into_the_woodstock/20_questions/\" />\n<area shape=\"rect\" coords=\"432,235,511,305\" alt=\"20 Questions\" title=\"20 Questions\" href=\"../into_the_woodstock/20_questions/\" />\n<area shape=\"rect\" coords=\"432,326,518,372\" alt=\"20 Questions\" title=\"20 Questions\" href=\"../into_the_woodstock/20_questions/\" />\n<area shape=\"rect\" coords=\"438,306,530,325\" alt=\"20 Questions\" title=\"20 Questions\" href=\"../into_the_woodstock/20_questions/\" />\n<area shape=\"rect\" coords=\"451,373,522,400\" alt=\"20 Questions\" title=\"20 Questions\" href=\"../into_the_woodstock/20_questions/\" />"+
+"<area shape=\"rect\" coords=\"532,100,540,213\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"541,85,578,227\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"579,83,611,219\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"498,105,531,185\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />\n<area shape=\"rect\" coords=\"612,126,622,163\" alt=\"Blackout\" title=\"Blackout\" href=\"../a_circus_line/blackout/\" />"+
 "<area shape=\"rect\" coords=\"173,288,199,310\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"200,280,230,316\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"214,361,239,415\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"209,317,229,360\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />\n<area shape=\"rect\" coords=\"231,275,244,300\" alt=\"Bubbles\" title=\"Bubbles\" href=\"../into_the_woodstock/bubbles/\" />"+
 "<area shape=\"rect\" coords=\"448,122,455,123\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"447,124,477,153\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"429,124,446,160\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"405,137,428,172\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />\n<area shape=\"rect\" coords=\"478,125,485,140\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"../into_the_woodstock/critical_thinking/\" />"+
 "<area shape=\"rect\" coords=\"110,278,140,305\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"125,306,137,313\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"98,257,142,272\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"143,259,159,275\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />\n<area shape=\"rect\" coords=\"110,273,142,277\" alt=\"Of Course!\" title=\"Of Course!\" href=\"../into_the_woodstock/of_course/\" />"+
@@ -71,21 +71,21 @@ function imagemap() {
 "</map>"+
 '';
 }
-function puzzlelist() {
+function puzzlelist_william_s_bergman() {
   return ""+
 "<table class=\"materials\">"+
 "<tr>"+
-"<td class=\"a_circus_line "+
-(puzzle_solved["blackout"]?"solved":"unsolved")+
-"\"><a href=\"../a_circus_line/blackout/\"><span>Blackout</span></a></td>"+
+"<td class=\"into_the_woodstock "+
+(puzzle_solved["20_questions"]?"solved":"unsolved")+
+"\"><a href=\"../into_the_woodstock/20_questions/\"><span>20 Questions</span></a></td>"+
 "<td class=\"into_the_woodstock "+
 (puzzle_solved["of_course"]?"solved":"unsolved")+
 "\"><a href=\"../into_the_woodstock/of_course/\"><span>Of Course!</span></a></td>"+
 "</tr>"+
 "<tr>"+
-"<td class=\"into_the_woodstock "+
-(puzzle_solved["braeburn"]?"solved":"unsolved")+
-"\"><a href=\"../into_the_woodstock/braeburn/\"><span>Braeburn</span></a></td>"+
+"<td class=\"a_circus_line "+
+(puzzle_solved["blackout"]?"solved":"unsolved")+
+"\"><a href=\"../a_circus_line/blackout/\"><span>Blackout</span></a></td>"+
 "<td class=\"into_the_woodstock "+
 (puzzle_solved["sounds_good_to_me"]?"solved":"unsolved")+
 "\"><a href=\"../into_the_woodstock/sounds_good_to_me/\"><span>Sounds Good to Me</span></a></td>"+
@@ -142,7 +142,7 @@ function puzzlelist() {
 "</table>"+
 '';
 }
-function onLoad() {
-document.getElementById('photo').innerHTML = imagemap();
-document.getElementById('materials').innerHTML = puzzlelist();
+function load_william_s_bergman() {
+document.getElementById('photo').innerHTML = imagemap_william_s_bergman();
+document.getElementById('materials').innerHTML = puzzlelist_william_s_bergman();
 }
