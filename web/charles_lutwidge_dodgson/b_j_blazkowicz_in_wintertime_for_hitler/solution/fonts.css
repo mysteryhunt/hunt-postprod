@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Alice|Inconsolata&subset=latin,latin-ext);
+
+/* standardize text and monospace fonts. */
+body { font-family: 'Alice', serif;  font-weight: 400; }
+tt,code,kbd,samp,pre,.monospace { font-family: 'Inconsolata', monospace; }
+
+input,textarea,select,button { font-family: 'Alice', serif; font-weight: 400; }
+
+/*
+table#wolf th:first-child,
+table#wolf th:first-child + th,
+table#wolf td:first-child,
+table#wolf td:first-child + td { display: none; }
+*/
