@@ -13,6 +13,7 @@
     border: 1px solid;
     text-align: center;
 }
+.mejs-container { margin: 0 auto; }
 
 @media print {
   .mejs-layers, .mejs-controls, .mejs-clear { display: none; }
