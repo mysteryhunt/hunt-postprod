@@ -4,3 +4,9 @@
   position: relative;
   bottom: 4px;
 }
+
+.clues p {
+  margin-top: 0; margin-bottom: 0;
+  margin-left: 2.2em;
+  text-indent: -2.2em;
+}
