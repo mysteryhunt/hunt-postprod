@@ -1,0 +1,8 @@
+  .main { padding-bottom: 4em }
+  .final { padding-top: 6em; }
+  .screen { background: black; color: green }
+  .bold { color: lime }
+  .cursor { background: green; color: black }
+  .numbers { font-size: 80%; text-align: center }
+  .blanks { font-size: 160%; text-align: center }
+  .question { font-size: 1000%; text-align: center }

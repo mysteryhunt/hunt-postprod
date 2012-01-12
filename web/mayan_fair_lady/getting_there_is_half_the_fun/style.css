@@ -1,0 +1,11 @@
+.gettingtable {
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.gettingtd {
+	border-style: solid;
+	border-width: 1px;
+	vertical-align: top;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><meta charset="ascii" />
+<script src="sjcl.js" type="text/javascript"></script>
+<script type="text/javascript">
+var ENCRYPTED_ANSWER = '{iv:"WNIBVLKFqJhpbhSNEER2aw",salt:"rjmAZPMPzJo",ct:"6hJMUE/x8bkIEzke1kJFRhsgMjs"}';
+
+function normalize(s) {
+    s = s.toLowerCase().match(/[a-z]/g);
+    if (!s) {
+        return '';
+    }
+    return s.join('');
+}
+
+function go() {
+    var password = normalize(document.getElementById('password').value);
+    var answer_field = document.getElementById('answer');
+    try {
+        answer_field.innerHTML = "Your answer is " + sjcl.decrypt(password, ENCRYPTED_ANSWER) + ".";
+    }
+    catch (err) {
+        answer_field.innerHTML = "Sorry, that password is incorrect.";
+    }
+}
+</script>
+</head>
+
+<body>
+
+Chipley, Florida<br <br="" />
+
+Once you&rsquo;ve figured out the password, please enter it below:
+
+<p>Password: <input id="password" /> <button onclick="go();">Go</button></p>
+<p id="answer"></p>
+
+
+
+
+
+
+
+</body></html>

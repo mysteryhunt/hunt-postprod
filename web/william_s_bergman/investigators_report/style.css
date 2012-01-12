@@ -12,10 +12,11 @@ p.spacer {
   height: 135px;
 }
 .ticket.left {
-  background-color: white;
-  background: url('ticket-left.png') no-repeat;
   width: 200px;
   margin-right: -20px;
+}
+.ticket.left img {
+  position: absolute;
 }
 
 .ticket.left { z-index: 3; }
@@ -79,12 +80,12 @@ p.spacer {
   width: 440px;
   margin-left: 60px;
 }
+.ticket.right .back { display: none; }
 .ticket.right .edge {
   display: block;
   position: absolute;
   left: -60px; width: 60px;
   top: 0; bottom: 0;
-  background: url('ticket-right-l.png') no-repeat;
 }
 .ticket.right .name {
   top: 4px; bottom: 4px;
@@ -99,15 +100,26 @@ p.spacer {
   width: 44px;
   padding-right: 3px;
   padding-left: 18px; /* padding-left + width + padding-right =  65px */
-  background: url('ticket-right-r.png') no-repeat top right;
   top: 0; bottom: 0;
 }
-
-/*
-.ticket .seat {
-  background: rgba(0,0,255,0.5);
+.ticket.right .seat img {
+  position: absolute;
+  top: 0; right: 0;
 }
-.ticket .name {
-  background: rgba(255,0,0,0.5);
+.ticket.right,
+.ticket.right .seat .rh,
+.ticket.right .seat .r,
+.ticket.right .seat .sh,
+.ticket.right .seat .s {
+  /* put in z-order */
+  position: relative;
 }
-*/
+@media print {
+.ticket.right { background: none; }
+.ticket.right img.back {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0; right: 0;
+}
+}

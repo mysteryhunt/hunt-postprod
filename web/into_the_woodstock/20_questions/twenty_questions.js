@@ -50,8 +50,8 @@ function callback(data) {
   $('#answer_div').hide();
   $('#last_guess_div').hide();
   $('#error_div').hide();
-  $('#pl').hide();
-  $('#pn').hide();
+
+  var show_footer = 1;
 
   // Unhide correct UI based on puzzle state
   if (data['delay_secs']) {
@@ -67,6 +67,7 @@ function callback(data) {
       }
       $('#completely_done_numbers').html(number_html);
       $('#completely_done').show();
+      show_footer = 0;
     } else {
       $('#correct2').show();
     }
@@ -91,13 +92,16 @@ function callback(data) {
     $('#question_2').text(data['questions'][1]['description']);
   }
 
-  if (data['numbers']) {
+  if ((data['numbers'].length > 0) && show_footer) {
     $('#pl').show();
     var number_html = "";
     for (var number in data['numbers']) {
       number_html += "" + data['numbers'][number] + "<br>";
     }
     $('#pn').html(number_html);
+  } else {
+    $('#pl').hide();
+    $('#pn').hide();
   }
 }
 

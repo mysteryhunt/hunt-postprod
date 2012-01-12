@@ -1,0 +1,17 @@
+.yow td { width: 75px; height: 75px; border-style: solid; border-color: black; border-width: 2px; text-align: center; vertical-align: middle; }
+.yow { border-spacing: 4px; border-style: hidden; border-color: black; }
+.fletter {
+	color:#CFB53B;
+	font-size:larger
+}
+
+TD.tip:hover {
+POSITION: relative
+}
+TD.tip SPAN {    DISPLAY: none
+}
+TD.tip:hover SPAN {
+BORDER-RIGHT: #c00000 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #c00000 1px solid; DISPLAY: block; PADDING-LEFT: 5px; Z-INDEX: 100; BACKGROUND: url("vellum1.jpg") #f0f0f0 no-repeat 100% 5%; LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 10px; BORDER-LEFT: #c00000 1px solid; WIDTH: 250px; PADDING-TOP: 5px; BORDER-BOTTOM: #c00000 1px solid; POSITION: absolute; TOP: 10px; TEXT-DECORATION: none; FONT-FAMILY:'Fondamento';
+}
+/* Vellum image from http://1-art.eu/ */
+

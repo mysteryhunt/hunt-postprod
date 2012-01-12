@@ -1,0 +1,443 @@
+<!DOCTYPE html><html><head>
+<meta content="text/html; charset=ascii" http-equiv="content-type" />
+<link href="../style.css" rel="stylesheet" type="text/css" />
+<title>In Vivo</title>
+</head><body>
+
+<p>This is a puzzle about the <a href="https://en.wikipedia.org/wiki/vi">vi editor</a>.  It was inspired by the
+<a href="http://web.mit.edu/puzzle/www/06/endgame.html">2006 Mystery Hunt endgame puzzle</a> where teams were supposed to type the <a href="http://web.mit.edu/puzzle/www/06/metas/washington.html">text</a></p>
+
+<pre>I am diabolykal. verry h
+ appy Zilllllyun
+</pre>
+
+<p>into NetHack, where, interpreted as a series of NetHack commands, it would
+get their character out of a sticky situation.</p>
+
+<p>Here, solvers have to do roughly the reverse: given an editing problem,
+they need to find the fastest solution to that problem in vi (that is,
+the smallest number of keystrokes that will accomplish the given editing
+task).  Note that the &ldquo;task&rdquo; does not consist only in making the buffer
+contain particular text; it also requires ending with a particular cursor
+position, and ending in insert mode or command mode, as indicated.  To the
+best of our knowledge, the solutions here are the unique absolute minimum
+number of keystrokes required, and (although the screenshots are taken from
+<a href="http://www.vim.org/">vim</a>) will work in any version of vi.</p>
+
+<p>The solutions to these editing problems also happen to form English
+words, which are given in alphabetical order for confirmation.  They
+are as follows:</p>
+
+<table>
+<tbody><tr><td class="main"><pre class="screen">over,uer<span class="cursor">,</span>around
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td><td class="main"><center><table><tbody><tr class="blanks"><td>b</td><td>a</td><td>n</td><td>d</td></tr><tr class="numbers"><td>24</td><td></td><td>32</td><td>13</td></tr></tbody></table></center></td><td class="main"><pre class="screen">over,und<span class="cursor">e</span>r,around
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">--&nbsp;INSERT&nbsp;--</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<tr><td class="main"><pre class="screen">foo:abcdefghijklmnnonm
+<span class="cursor">.</span>foo_bar_baz.quux
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td><td class="main"><center><table><tbody><tr class="blanks"><td>d</td><td>e</td><td>b</td><td>t</td><td>o</td><td>r</td><td>s</td></tr><tr class="numbers"><td>1</td><td>19</td><td>7</td><td>28</td><td>16</td><td>31</td><td></td></tr></tbody></table></center></td><td class="main"><pre class="screen">foo:abcdefghijklmn<span class="cursor">s</span>onm
+.quux
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<tr><td class="main"><pre class="screen">x<span class="cursor">.</span>123456789=, t=.5 or thereabouts
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td><td class="main"><center><table><tbody><tr class="blanks"><td>d</td><td>e</td><td>p</td><td>t</td><td>h</td></tr><tr class="numbers"><td>22</td><td>4</td><td>25</td><td></td><td>12</td></tr></tbody></table></center></td><td class="main"><pre class="screen">x=.123456789, t=.5 or <span class="cursor">t</span>hereabouts
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<tr><td class="main"><pre class="screen">bi<span class="cursor">g</span>
+mammoth.giant_astronomi_huge_gigantic.large
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td><td class="main"><center><table><tbody><tr class="blanks"><td>e</td><td>t</td><td>h</td><td>i</td><td>c</td><td>a</td><td>l</td></tr><tr class="numbers"><td></td><td>10</td><td>20</td><td></td><td>27</td><td>30</td><td>17</td></tr></tbody></table></center></td><td class="main"><pre class="screen">big
+mammoth.giant_astronomical<span class="cursor">_</span>huge_gigantic.large
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">--&nbsp;INSERT&nbsp;--</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<tr><td class="main"><pre class="screen"><span class="cursor"> </span>xy.---z
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td><td class="main"><center><table><tbody><tr class="blanks"><td>e</td><td>x</td><td>p</td><td>e</td><td>r</td><td>t</td></tr><tr class="numbers"><td>14</td><td>21</td><td></td><td>23</td><td>18</td><td>2</td></tr></tbody></table></center></td><td class="main"><pre class="screen"> x.y--<span class="cursor">t</span>z
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<tr><td class="main"><pre class="screen"><span class="cursor">j</span>jjjjjjjjkukj
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td>
+<td class="main"><center><table><tbody><tr class="blanks"><td>f</td><td>u</td><td>r</td><td>l</td><td>o</td><td>n</td><td>g</td></tr><tr class="numbers"><td>15</td><td>11</td><td>5</td><td></td><td>29</td><td>9</td><td>3</td></tr></tbody></table></center></td><td class="main"><pre class="screen">jjjjjjjjjklkj
+ng<span class="cursor"> </span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">--&nbsp;INSERT&nbsp;--</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<tr><td class="main"><pre class="screen">no...maybe<span class="cursor">.</span>..nes
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td><td class="main"><center><table><tbody><tr class="blanks"><td>w</td><td>r</td><td>y</td></tr><tr class="numbers"><td>26</td><td>8</td><td>6</td></tr></tbody></table></center></td><td class="main"><pre class="screen">no...maybe...<span class="cursor">y</span>es
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+
+</tbody></table>
+
+<p>Many of the letters in the words are numbered with an acrostic-like
+ordering.  Putting these letters in the specified order gives the
+apparently meaningless string</p>
+
+<blockquote><strong>dtgerybrntuhdefolrehxdebpwctoarn</strong></blockquote>
+
+<p>This string is also a series of vi editing commands which
+must be performed from the starting point given in the final editing
+problem.  (It actually means &ldquo;delete up to next &lsquo;g&rsquo;; go to end of word; replace
+character with &lsquo;y&rsquo;; go back to beginning of word; replace character with
+&lsquo;n&rsquo;; go up to next &lsquo;u&rsquo;; go left; delete to end of word; go to next &lsquo;o&rsquo;; go
+right; replace character with &lsquo;e&rsquo;; go left; delete character; delete to end of
+word; go back to beginning of word; paste back deletion buffer after
+current character position; go to beginning of next word; change up to
+next &lsquo;o&rsquo; with text &lsquo;arn&rsquo;&rdquo;.)</p>
+
+<p>The result of performing all these operations on this <em>diabolykal</em>
+text is</p>
+
+<table><tbody>
+<tr><td><pre class="screen"><span class="cursor">f</span>lurhan'diabolykal tirwaan digorwax'setumud bictorned bleath wrin'splietnegold
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td>
+
+
+<td><center>.&nbsp;<table><tbody><tr class="blanks"><td>d</td><td>t</td><td>g</td><td>e</td><td>r</td><td>y</td><td>.</td><td>.</td><td>.</td></tr><tr class="numbers"></tr></tbody></table></center></td><td><pre class="screen">norway's benedict arn<span class="cursor">o</span>ld
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">~</span>
+<span class="bold">--&nbsp;INSERT&nbsp;--</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;</pre></td></tr>
+<!-- </td></tr> -->
+</tbody></table>
+
+<p>The Norwegian whose name, like Benedict Arnold&rsquo;s, has become a byword for
+treason is
+<a href="https://en.wikipedia.org/wiki/Vidkun_Quisling"><b><big>VI</big>DKUN QUISLING</b></a>.</p>
+
+
+</body></html>

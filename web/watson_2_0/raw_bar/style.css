@@ -1,3 +1,5 @@
 th {
     text-align: left;
+	white-space:nowrap;
+	vertical-align:top;
 }

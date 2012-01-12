@@ -5,7 +5,6 @@ style: style.css
 ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
 ---
 <i>Donald, I need your help with this programming class.  It uses a new programming language, D++, which is exactly the grade I&rsquo;m going to get if I don&rsquo;t figure this out.</i>
-
 <pre>// assign values to piles
 {
     Set.PileName(00) = A
@@ -26,8 +25,8 @@ ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
     Set.PileName(22) = P
     Set.PileName(30) = Q
 }
-</pre>
-<pre class="break">// start player 1
+
+// start player 1
 {
     |PPPMM|,(%P,%P,%P),[@O],,[&amp;]
     |PPPPM|,(%P,%P,%P,%P),[@I],[Sh],[&amp;]
@@ -38,20 +37,20 @@ ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
     |PPPOI|,(%P,%P,%P,%O),[@C],,[&amp;]
     |OOMMI|,(%I,[tM])(%O,%O),[@O],,[&amp;]
     |PPOOO|,(%O,%O,%O),[@G],[Sh],[&amp;]
-    |PPOCG|,(%G)(%C)(%O,%O,%O),[@G][@D],,[&amp;]
+    |POOCG|,(%G)(%C)(%O,%O,%O),[@G][@D],,[&amp;]
     |POOOI|,(%I,[tP])(%O,%O,%O),[@G],,[&amp;]
     |PPOOM|,(%P,%P,%O,%O),[@N],,[&amp;]
     |PPOOI|,(%I,[tP])(%P,%O,%O),[@C],[Sh],[&amp;]
     |POOGI|,(%G)(%I,[tQ])(%O,%O,%P),[@C][@D],,[&amp;]
     |POOMC|,(%C)(%P,%P,%O,%O),[@C],,[&amp;]
-    |POOOI|,(%I)(%O,%O,%O),[@L],,[&amp;]
+    |POOOI|,(%I,[tP])(%O,%O,%O),[@L],,[&amp;]
     |OOQGG|,(%G)(%G)(%D)(%C)(%O,%O,%O,%O,%P),[@K][@L],[Sh],[&amp;]
     |OOONL|,(%O,%O,%O,%N),[@K],,[&amp;]
     |OMKGI|,(%G)(%C)(%O,%O,%O),[@K],,[&amp;]
     |POCDG|,(%D,[^])(%C)(%G)(%O,%O,%O,%O,%O,%P),[@K][@L],,[&amp;]
 }
-</pre>
-<pre>// start player 2
+
+// start player 2
 {
     |PPPMM|,(%P,%P,%P),[@O],,[&amp;]
     |PPPPM|,(%P,%P,%P,%P),[@I],[Sh],[&amp;]
@@ -73,8 +72,8 @@ ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
     |POOMQ|,(%P,%O,%O),[@L],,[&amp;]
     |PMLCG|,(%C)(%C)(%G)(%D)(%N,%N,%P,%P,%P),[@K][@L],,[&amp;]
 }
-</pre>
-<pre class="break">// start player 3
+
+// start player 3
 {
     |PPPPM|,(%P,%P,%P,%P),[@E],,[&amp;]
     |PPPMM|,(%P,%P,%P),[@O],[Sh],[&amp;]
@@ -94,10 +93,10 @@ ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
     |NMEGG|,(%G)(%G)(%E,[tP])(%N),[@K][@M],,[&amp;]
     |OMQQC|,(%C)(%O,%P),[@M][@M],,[&amp;]
     |POONN|,(%N,%N,%O,%O),[@K],,[&amp;]
-    |OOQDI|,(%D)(%C)(%G)(%A,[p3*N],[p3*Q],[p3*O],[p3*E])(%I,[tE])(%O,%O),[@K][@M],,[&amp;]
+    |OOQDI|,(%D,[^])(%C)(%G,[Sh])(%A,[p3*N],[p3*Q],[p3*O],[p3*E])(%I,[tE])(%O,%O),[@K][@M],,[&amp;]
 }
-</pre>
-<pre>// start player 4
+
+// start player 4
 {
     |PPMMM|,(%P,%P),[@D],,[&amp;]
     |PPPPP|,(%P,%P,%P,%P,%P),[@J],[Sh],[&amp;]
@@ -119,8 +118,8 @@ ponyhash: 91a459367002434da9ad587d537663a6d925a6f09d5fab36ae12848b
     |MBDEI|,(%D,[^])(%D)(%I,[tB])(%O),[@M],,[&amp;]
     |PMMMK|,,,,[&amp;]
 }
-</pre>
-<pre>// remember nlen() ignores whitespace!
+
+// remember nlen() ignores whitespace!
 {
 Output=[
 	A.nlen()+F.nlen()-K.nlen()-O.nlen(),

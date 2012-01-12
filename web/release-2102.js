@@ -234,8 +234,8 @@ function imagemap_okla_holmes_a() {
 "<img src=\"zugzwaang/-"+
 (puzzle_solved["zugzwaang"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"baby_sniffles/-"+
-(puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
+"<img src=\"o_blessed_day/-"+
+(puzzle_solved["o_blessed_day"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
@@ -245,7 +245,7 @@ function imagemap_okla_holmes_a() {
 "<area shape=\"rect\" coords=\"341,347,372,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"347,427,360,430\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"342,292,376,346\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"344,260,378,291\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"338,373,340,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />"+
 "<area shape=\"rect\" coords=\"429,244,474,282\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"425,283,473,324\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,325,472,388\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,389,471,430\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"422,372,422,401\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />"+
 "<area shape=\"rect\" coords=\"520,234,583,293\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"518,294,582,317\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"515,343,578,428\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"516,318,580,342\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />\n<area shape=\"rect\" coords=\"542,429,554,430\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"zugzwaang/\" />"+
-"<area shape=\"rect\" coords=\"635,363,636,427\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"637,331,709,429\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"638,266,715,330\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"642,223,718,265\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />\n<area shape=\"rect\" coords=\"660,430,708,432\" alt=\"Baby Sniffles\" title=\"Baby Sniffles\" href=\"baby_sniffles/\" />"+
+"<area shape=\"rect\" coords=\"635,363,636,427\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"637,331,709,429\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"638,266,715,330\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"642,223,718,265\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"660,430,708,432\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />"+
 "</map>"+
 '';
 }
@@ -288,9 +288,9 @@ function puzzlelist_okla_holmes_a() {
 "</td>"+
 "<td class=\"num\">7.</td>"+
 "<td>"+
-"<a href=\"baby_sniffles/\" class=\""+
-(puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
-"\">Baby Sniffles</a>"+
+"<a href=\"o_blessed_day/\" class=\""+
+(puzzle_solved["o_blessed_day"]?"solved":"unsolved")+
+"\">O Blessed Day</a>"+
 "</td>"+
 "</tr>"+
 "<tr>"+
