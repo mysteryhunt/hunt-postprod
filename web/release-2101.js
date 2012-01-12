@@ -216,35 +216,32 @@ document.getElementById('materials').innerHTML = puzzlelist_betsy_johnson();
 function imagemap_okla_holmes_a() {
   return ''+
 "<img src=\"key.png\" />"+
-"<img src=\"playing_a_part/-"+
-(puzzle_solved["playing_a_part"]?"solved":"unsolved")+
-".png\" />"+
 "<img src=\"yo_dawg_i_herd_you_like_puzzle_hunts/-"+
 (puzzle_solved["yo_dawg_i_herd_you_like_puzzle_hunts"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"crank_it_up_to_7/-"+
-(puzzle_solved["crank_it_up_to_7"]?"solved":"unsolved")+
+"<img src=\"paper_trail/-"+
+(puzzle_solved["paper_trail"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"winning_conditions/-"+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
 ".png\" />"+
+"<img src=\"o_blessed_day/-"+
+(puzzle_solved["o_blessed_day"]?"solved":"unsolved")+
+".png\" />"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
-"<area shape=\"rect\" coords=\"188,348,209,414\" alt=\"Playing a Part\" title=\"Playing a Part\" href=\"playing_a_part/\" />\n<area shape=\"rect\" coords=\"188,415,205,430\" alt=\"Playing a Part\" title=\"Playing a Part\" href=\"playing_a_part/\" />\n<area shape=\"rect\" coords=\"193,298,211,347\" alt=\"Playing a Part\" title=\"Playing a Part\" href=\"playing_a_part/\" />\n<area shape=\"rect\" coords=\"182,395,187,423\" alt=\"Playing a Part\" title=\"Playing a Part\" href=\"playing_a_part/\" />\n<area shape=\"rect\" coords=\"210,402,211,411\" alt=\"Playing a Part\" title=\"Playing a Part\" href=\"playing_a_part/\" />"+
 "<area shape=\"rect\" coords=\"231,288,253,307\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"229,308,253,336\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"221,387,249,431\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"226,350,250,386\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"227,337,251,349\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"yo_dawg_i_herd_you_like_puzzle_hunts/\" />"+
-"<area shape=\"rect\" coords=\"274,331,299,346\" alt=\"Crank It Up To 7\" title=\"Crank It Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"272,347,299,414\" alt=\"Crank It Up To 7\" title=\"Crank It Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"276,276,303,330\" alt=\"Crank It Up To 7\" title=\"Crank It Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"272,415,296,430\" alt=\"Crank It Up To 7\" title=\"Crank It Up To 7\" href=\"crank_it_up_to_7/\" />\n<area shape=\"rect\" coords=\"269,371,271,426\" alt=\"Crank It Up To 7\" title=\"Crank It Up To 7\" href=\"crank_it_up_to_7/\" />"+
+"<area shape=\"rect\" coords=\"341,347,372,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"347,427,360,430\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"342,292,376,346\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"344,260,378,291\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />\n<area shape=\"rect\" coords=\"338,373,340,426\" alt=\"Paper Trail\" title=\"Paper Trail\" href=\"paper_trail/\" />"+
 "<area shape=\"rect\" coords=\"429,244,474,282\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"425,283,473,324\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,325,472,388\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"423,389,471,430\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />\n<area shape=\"rect\" coords=\"422,372,422,401\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"winning_conditions/\" />"+
+"<area shape=\"rect\" coords=\"635,363,636,427\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"637,331,709,429\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"638,266,715,330\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"642,223,718,265\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />\n<area shape=\"rect\" coords=\"660,430,708,432\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"o_blessed_day/\" />"+
 "</map>"+
 '';
 }
 function puzzlelist_okla_holmes_a() {
   return ""+
 "<tr>"+
-"<td class=\"num\">1.</td>"+
+"<td class=\"num\"></td>"+
 "<td>"+
-"<a href=\"playing_a_part/\" class=\""+
-(puzzle_solved["playing_a_part"]?"solved":"unsolved")+
-"\">Playing a Part</a>"+
 "</td>"+
 "<td class=\"num\">5.</td>"+
 "<td>"+
@@ -265,19 +262,22 @@ function puzzlelist_okla_holmes_a() {
 "</td>"+
 "</tr>"+
 "<tr>"+
-"<td class=\"num\">3.</td>"+
-"<td>"+
-"<a href=\"crank_it_up_to_7/\" class=\""+
-(puzzle_solved["crank_it_up_to_7"]?"solved":"unsolved")+
-"\">Crank It Up To 7</a>"+
-"</td>"+
 "<td class=\"num\"></td>"+
 "<td>"+
+"</td>"+
+"<td class=\"num\">7.</td>"+
+"<td>"+
+"<a href=\"o_blessed_day/\" class=\""+
+(puzzle_solved["o_blessed_day"]?"solved":"unsolved")+
+"\">O Blessed Day</a>"+
 "</td>"+
 "</tr>"+
 "<tr>"+
-"<td class=\"num\"></td>"+
+"<td class=\"num\">4.</td>"+
 "<td>"+
+"<a href=\"paper_trail/\" class=\""+
+(puzzle_solved["paper_trail"]?"solved":"unsolved")+
+"\">Paper Trail</a>"+
 "</td>"+
 "</tr>"+
 '';

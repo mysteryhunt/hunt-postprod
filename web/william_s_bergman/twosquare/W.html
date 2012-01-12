@@ -1,17 +1,31 @@
 <!DOCTYPE html><html><head>
 <meta content="text/html; charset=ascii" http-equiv="Content-Type" />
 <title>Twosquare</title>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="me/mediaelement-and-player.min.js"></script>
+<link href="video.css" rel="stylesheet" type="text/css" />
 </head>
 
     <body>
-    <video controls="">
-        <source src="W.webm" type='video/webm; codecs="vp8.0,
-        vorbis"' />
-
-        <source src="W.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
-            If you&rsquo;re using Internet Explorer (sorry, IE9 only), you need <a href="https://tools.google.com/dlpage/webmmf">this</a>
+<div id="video">
+    <video controls="" height="240" width="320">
+        <source src="W.webm" type="video/webm" />
+        <source src="W.mp4" type="video/mp4" />
+  <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+  <object data="me/flashmediaelement.swf" height="240" type="application/x-shockwave-flash" width="320">
+    <param name="movie" value="me/flashmediaelement.swf" />
+    <param name="flashvars" value="controls=true&amp;file=../slash_fiction.mp4" />
+  </object>
     </video>
-    
-    
-    
-    </body></html>
+</div>
+    <p><a href="W.mp4">(download .mp4 if the
+above doesn&rsquo;t play)</a></p>
+<script type="text/javascript">
+$('video').mediaelementplayer({
+  enableAutosize: true,
+  features: ['playpause','progress','current','duration','volume','fullscreen'],
+});
+</script>
+
+
+</body></html>

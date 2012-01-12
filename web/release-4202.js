@@ -147,11 +147,11 @@ function imagemap_ben_bitdiddle() {
 "<img src=\"10-"+
 (puzzle_solved["yo_dawg_i_herd_you_like_puzzle_hunts"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"blowing_down_the_house/-"+
-(puzzle_solved["blowing_down_the_house"]?"solved":"unsolved")+
+"<img src=\"bad_poetry/-"+
+(puzzle_solved["bad_poetry"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"carb_pool/-"+
-(puzzle_solved["carb_pool"]?"solved":"unsolved")+
+"<img src=\"edge_of_your_seat_fun/-"+
+(puzzle_solved["edge_of_your_seat_fun"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"movie_musicals/-"+
 (puzzle_solved["movie_musicals"]?"solved":"unsolved")+
@@ -178,8 +178,8 @@ function imagemap_ben_bitdiddle() {
 "<area shape=\"rect\" coords=\"247,493,256,512\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"257,496,273,514\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"222,485,233,522\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"234,488,246,508\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />\n<area shape=\"rect\" coords=\"213,484,221,508\" alt=\"The Wicked Switch\" title=\"The Wicked Switch\" href=\"../a_circus_line/the_wicked_switch/\" />"+
 "<area shape=\"rect\" coords=\"125,485,178,503\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"127,504,175,515\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"187,425,258,477\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"134,516,159,528\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />\n<area shape=\"rect\" coords=\"167,470,186,484\" alt=\"Towers\" title=\"Towers\" href=\"../into_the_woodstock/towers/\" />"+
 "<area shape=\"rect\" coords=\"79,438,112,471\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"../okla_holmes_a/yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"83,472,109,475\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"../okla_holmes_a/yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"113,444,124,482\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"../okla_holmes_a/yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"82,432,105,437\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"../okla_holmes_a/yo_dawg_i_herd_you_like_puzzle_hunts/\" />\n<area shape=\"rect\" coords=\"78,451,78,455\" alt=\"Yo Dawg, I Herd You Like Puzzle Hunts\" title=\"Yo Dawg, I Herd You Like Puzzle Hunts\" href=\"../okla_holmes_a/yo_dawg_i_herd_you_like_puzzle_hunts/\" />"+
-"<area shape=\"rect\" coords=\"321,154,333,193\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"334,157,338,190\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"304,156,320,195\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"339,153,366,187\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />\n<area shape=\"rect\" coords=\"289,168,303,199\" alt=\"Blowing Down the House\" title=\"Blowing Down the House\" href=\"blowing_down_the_house/\" />"+
-"<area shape=\"rect\" coords=\"512,330,536,332\" alt=\"Carb Pool\" title=\"Carb Pool\" href=\"carb_pool/\" />\n<area shape=\"rect\" coords=\"510,333,546,343\" alt=\"Carb Pool\" title=\"Carb Pool\" href=\"carb_pool/\" />\n<area shape=\"rect\" coords=\"514,301,538,329\" alt=\"Carb Pool\" title=\"Carb Pool\" href=\"carb_pool/\" />\n<area shape=\"rect\" coords=\"507,344,543,355\" alt=\"Carb Pool\" title=\"Carb Pool\" href=\"carb_pool/\" />\n<area shape=\"rect\" coords=\"507,356,517,360\" alt=\"Carb Pool\" title=\"Carb Pool\" href=\"carb_pool/\" />"+
+"<area shape=\"rect\" coords=\"346,371,421,381\" alt=\"Bad Poetry\" title=\"Bad Poetry\" href=\"bad_poetry/\" />\n<area shape=\"rect\" coords=\"351,382,421,410\" alt=\"Bad Poetry\" title=\"Bad Poetry\" href=\"bad_poetry/\" />\n<area shape=\"rect\" coords=\"362,411,419,467\" alt=\"Bad Poetry\" title=\"Bad Poetry\" href=\"bad_poetry/\" />\n<area shape=\"rect\" coords=\"422,376,434,389\" alt=\"Bad Poetry\" title=\"Bad Poetry\" href=\"bad_poetry/\" />\n<area shape=\"rect\" coords=\"397,367,410,370\" alt=\"Bad Poetry\" title=\"Bad Poetry\" href=\"bad_poetry/\" />"+
+"<area shape=\"rect\" coords=\"376,214,377,233\" alt=\"Edge of your Seat FUN!\" title=\"Edge of your Seat FUN!\" href=\"edge_of_your_seat_fun/\" />\n<area shape=\"rect\" coords=\"378,209,402,235\" alt=\"Edge of your Seat FUN!\" title=\"Edge of your Seat FUN!\" href=\"edge_of_your_seat_fun/\" />\n<area shape=\"rect\" coords=\"403,211,415,243\" alt=\"Edge of your Seat FUN!\" title=\"Edge of your Seat FUN!\" href=\"edge_of_your_seat_fun/\" />\n<area shape=\"rect\" coords=\"370,217,375,226\" alt=\"Edge of your Seat FUN!\" title=\"Edge of your Seat FUN!\" href=\"edge_of_your_seat_fun/\" />\n<area shape=\"rect\" coords=\"385,205,400,208\" alt=\"Edge of your Seat FUN!\" title=\"Edge of your Seat FUN!\" href=\"edge_of_your_seat_fun/\" />"+
 "<area shape=\"rect\" coords=\"408,328,446,345\" alt=\"Movie-Musicals\" title=\"Movie-Musicals\" href=\"movie_musicals/\" />\n<area shape=\"rect\" coords=\"413,346,443,347\" alt=\"Movie-Musicals\" title=\"Movie-Musicals\" href=\"movie_musicals/\" />\n<area shape=\"rect\" coords=\"414,309,444,327\" alt=\"Movie-Musicals\" title=\"Movie-Musicals\" href=\"movie_musicals/\" />\n<area shape=\"rect\" coords=\"428,348,441,350\" alt=\"Movie-Musicals\" title=\"Movie-Musicals\" href=\"movie_musicals/\" />\n<area shape=\"rect\" coords=\"405,339,407,345\" alt=\"Movie-Musicals\" title=\"Movie-Musicals\" href=\"movie_musicals/\" />"+
 "<area shape=\"rect\" coords=\"162,186,177,225\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"178,156,209,220\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"269,86,313,146\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"236,101,268,170\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />\n<area shape=\"rect\" coords=\"210,131,235,188\" alt=\"Pacific Overtones\" title=\"Pacific Overtones\" href=\"pacific_overtones/\" />"+
 "<area shape=\"rect\" coords=\"428,164,457,186\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"430,187,454,191\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"458,158,480,183\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"446,192,454,198\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />\n<area shape=\"rect\" coords=\"426,174,427,181\" alt=\"Panorama\" title=\"Panorama\" href=\"panorama/\" />"+
@@ -233,16 +233,16 @@ function puzzlelist_ben_bitdiddle() {
 "<tr class=\"spacer\"></tr>"+
 "<tr>"+
 "<td class=\"ben_bitdiddle "+
-(puzzle_solved["blowing_down_the_house"]?"solved":"unsolved")+
-"\"><a href=\"blowing_down_the_house/\"><span>Blowing Down the House</span></a></td>"+
+(puzzle_solved["bad_poetry"]?"solved":"unsolved")+
+"\"><a href=\"bad_poetry/\"><span>Bad Poetry</span></a></td>"+
 "<td class=\"ben_bitdiddle "+
 (puzzle_solved["pacific_overtones"]?"solved":"unsolved")+
 "\"><a href=\"pacific_overtones/\"><span>Pacific Overtones</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"ben_bitdiddle "+
-(puzzle_solved["carb_pool"]?"solved":"unsolved")+
-"\"><a href=\"carb_pool/\"><span>Carb Pool</span></a></td>"+
+(puzzle_solved["edge_of_your_seat_fun"]?"solved":"unsolved")+
+"\"><a href=\"edge_of_your_seat_fun/\"><span>Edge of your Seat FUN!</span></a></td>"+
 "<td class=\"ben_bitdiddle "+
 (puzzle_solved["panorama"]?"solved":"unsolved")+
 "\"><a href=\"panorama/\"><span>Panorama</span></a></td>"+

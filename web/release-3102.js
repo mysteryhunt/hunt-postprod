@@ -334,20 +334,20 @@ function imagemap_into_the_woodstock() {
 "<img src=\"20_questions/-"+
 (puzzle_solved["20_questions"]?"solved":"unsolved")+
 ".png\" />"+
+"<img src=\"critical_thinking/-"+
+(puzzle_solved["critical_thinking"]?"solved":"unsolved")+
+".png\" />"+
 "<img src=\"dawn_of_a_new_era/-"+
 (puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"hang_ten/-"+
-(puzzle_solved["hang_ten"]?"solved":"unsolved")+
-".png\" />"+
-"<img src=\"of_course/-"+
-(puzzle_solved["of_course"]?"solved":"unsolved")+
+"<img src=\"keeping_records/-"+
+(puzzle_solved["keeping_records"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"sounds_good_to_me/-"+
 (puzzle_solved["sounds_good_to_me"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"tax_in_space/-"+
-(puzzle_solved["tax_in_space"]?"solved":"unsolved")+
+"<img src=\"strip_mind/-"+
+(puzzle_solved["strip_mind"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"the_answers_are_somehow_connected/-"+
 (puzzle_solved["the_answers_are_somehow_connected"]?"solved":"unsolved")+
@@ -355,11 +355,11 @@ function imagemap_into_the_woodstock() {
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"163,245,249,296\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"250,259,253,287\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"172,297,244,316\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"185,317,229,352\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"171,242,188,244\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />"+
+"<area shape=\"rect\" coords=\"578,117,669,131\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"critical_thinking/\" />\n<area shape=\"rect\" coords=\"576,132,686,155\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"critical_thinking/\" />\n<area shape=\"rect\" coords=\"593,68,658,116\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"critical_thinking/\" />\n<area shape=\"rect\" coords=\"583,156,674,168\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"critical_thinking/\" />\n<area shape=\"rect\" coords=\"687,119,699,148\" alt=\"Critical Thinking\" title=\"Critical Thinking\" href=\"critical_thinking/\" />"+
 "<area shape=\"rect\" coords=\"112,313,172,360\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"173,326,178,355\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"130,276,176,306\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"126,307,160,312\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"118,361,136,363\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />"+
-"<area shape=\"rect\" coords=\"198,381,249,459\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"195,460,249,469\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"264,372,292,477\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"250,379,263,474\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"293,376,300,425\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />"+
-"<area shape=\"rect\" coords=\"16,360,86,365\" alt=\"Of Course!\" title=\"Of Course!\" href=\"of_course/\" />\n<area shape=\"rect\" coords=\"10,366,91,393\" alt=\"Of Course!\" title=\"Of Course!\" href=\"of_course/\" />\n<area shape=\"rect\" coords=\"11,394,77,409\" alt=\"Of Course!\" title=\"Of Course!\" href=\"of_course/\" />\n<area shape=\"rect\" coords=\"17,410,61,449\" alt=\"Of Course!\" title=\"Of Course!\" href=\"of_course/\" />\n<area shape=\"rect\" coords=\"19,353,43,359\" alt=\"Of Course!\" title=\"Of Course!\" href=\"of_course/\" />"+
+"<area shape=\"rect\" coords=\"299,412,381,423\" alt=\"Keeping Records\" title=\"Keeping Records\" href=\"keeping_records/\" />\n<area shape=\"rect\" coords=\"294,424,389,439\" alt=\"Keeping Records\" title=\"Keeping Records\" href=\"keeping_records/\" />\n<area shape=\"rect\" coords=\"306,456,424,476\" alt=\"Keeping Records\" title=\"Keeping Records\" href=\"keeping_records/\" />\n<area shape=\"rect\" coords=\"295,440,399,455\" alt=\"Keeping Records\" title=\"Keeping Records\" href=\"keeping_records/\" />\n<area shape=\"rect\" coords=\"316,377,376,411\" alt=\"Keeping Records\" title=\"Keeping Records\" href=\"keeping_records/\" />"+
 "<area shape=\"rect\" coords=\"292,231,309,234\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"284,235,322,329\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"332,258,366,325\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"265,242,283,352\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"323,245,331,327\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"sounds_good_to_me/\" />"+
-"<area shape=\"rect\" coords=\"18,222,78,270\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"tax_in_space/\" />\n<area shape=\"rect\" coords=\"25,271,74,276\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"tax_in_space/\" />\n<area shape=\"rect\" coords=\"20,165,56,221\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"tax_in_space/\" />\n<area shape=\"rect\" coords=\"27,277,69,296\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"tax_in_space/\" />\n<area shape=\"rect\" coords=\"79,232,86,264\" alt=\"Tax... In... Space\" title=\"Tax... In... Space\" href=\"tax_in_space/\" />"+
+"<area shape=\"rect\" coords=\"630,346,673,446\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"strip_mind/\" />\n<area shape=\"rect\" coords=\"674,350,683,439\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"strip_mind/\" />\n<area shape=\"rect\" coords=\"684,355,722,435\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"strip_mind/\" />\n<area shape=\"rect\" coords=\"613,357,629,480\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"strip_mind/\" />\n<area shape=\"rect\" coords=\"630,447,657,454\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"strip_mind/\" />"+
 "<area shape=\"rect\" coords=\"299,163,302,200\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"303,153,345,210\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"346,158,373,206\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"306,211,341,237\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"313,148,336,152\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />"+
 "</map>"+
 '';
@@ -380,21 +380,21 @@ function puzzlelist_into_the_woodstock() {
 "</tr>"+
 "<tr>"+
 "<td>"+
-"<a href=\"dawn_of_a_new_era/\" class=\""+
-(puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
-"\">Dawn of a New Era</a>"+
+"<a href=\"critical_thinking/\" class=\""+
+(puzzle_solved["critical_thinking"]?"solved":"unsolved")+
+"\">Critical Thinking</a>"+
 "</td>"+
 "<td>"+
-"<a href=\"tax_in_space/\" class=\""+
-(puzzle_solved["tax_in_space"]?"solved":"unsolved")+
-"\">Tax... In... Space</a>"+
+"<a href=\"strip_mind/\" class=\""+
+(puzzle_solved["strip_mind"]?"solved":"unsolved")+
+"\">Strip Mind</a>"+
 "</td>"+
 "</tr>"+
 "<tr>"+
 "<td>"+
-"<a href=\"hang_ten/\" class=\""+
-(puzzle_solved["hang_ten"]?"solved":"unsolved")+
-"\">Hang Ten</a>"+
+"<a href=\"dawn_of_a_new_era/\" class=\""+
+(puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
+"\">Dawn of a New Era</a>"+
 "</td>"+
 "<td>"+
 "<a href=\"the_answers_are_somehow_connected/\" class=\""+
@@ -404,9 +404,9 @@ function puzzlelist_into_the_woodstock() {
 "</tr>"+
 "<tr>"+
 "<td>"+
-"<a href=\"of_course/\" class=\""+
-(puzzle_solved["of_course"]?"solved":"unsolved")+
-"\">Of Course!</a>"+
+"<a href=\"keeping_records/\" class=\""+
+(puzzle_solved["keeping_records"]?"solved":"unsolved")+
+"\">Keeping Records</a>"+
 "</td>"+
 "</tr>"+
 '';

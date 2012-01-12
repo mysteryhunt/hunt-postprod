@@ -1,4 +1,4 @@
-.yow td {
+.twosquare td {
  width: 60px;
  height: 60px;
  border-style: solid;
@@ -7,7 +7,7 @@
  vertical-align: middle;
 } 
 
- .yow {
+ .twosquare {
  border-spacing: 0px;
  border-style: solid;
  border-color: black

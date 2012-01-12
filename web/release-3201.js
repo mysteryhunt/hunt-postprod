@@ -616,17 +616,17 @@ function imagemap_william_s_bergman() {
 "<img src=\"8-"+
 (puzzle_solved["zugzwaang"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"25th_annual_putnam_county_debate_tournament/-"+
-(puzzle_solved["25th_annual_putnam_county_debate_tournament"]?"solved":"unsolved")+
+"<img src=\"behave/-"+
+(puzzle_solved["behave"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"collect_them_all/-"+
-(puzzle_solved["collect_them_all"]?"solved":"unsolved")+
+"<img src=\"coming_to_a_location_near_you/-"+
+(puzzle_solved["coming_to_a_location_near_you"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"how_hard_can_it_be/-"+
+(puzzle_solved["how_hard_can_it_be"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"in_vivo/-"+
 (puzzle_solved["in_vivo"]?"solved":"unsolved")+
-".png\" />"+
-"<img src=\"twosquare/-"+
-(puzzle_solved["twosquare"]?"solved":"unsolved")+
 ".png\" />"+
 "<div class=\"paperclip\"></div>"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
@@ -639,10 +639,10 @@ function imagemap_william_s_bergman() {
 "<area shape=\"rect\" coords=\"432,78,450,86\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"423,87,448,100\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"402,89,422,107\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"381,93,401,111\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />\n<area shape=\"rect\" coords=\"364,99,380,115\" alt=\"Sounds Good to Me\" title=\"Sounds Good to Me\" href=\"../into_the_woodstock/sounds_good_to_me/\" />"+
 "<area shape=\"rect\" coords=\"270,435,303,470\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"304,452,311,469\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"206,449,241,481\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"242,442,269,494\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />\n<area shape=\"rect\" coords=\"204,482,228,490\" alt=\"Strip Mind\" title=\"Strip Mind\" href=\"../into_the_woodstock/strip_mind/\" />"+
 "<area shape=\"rect\" coords=\"175,194,253,234\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"../okla_holmes_a/zugzwaang/\" />\n<area shape=\"rect\" coords=\"183,235,194,248\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"../okla_holmes_a/zugzwaang/\" />\n<area shape=\"rect\" coords=\"168,161,238,193\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"../okla_holmes_a/zugzwaang/\" />\n<area shape=\"rect\" coords=\"157,131,232,160\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"../okla_holmes_a/zugzwaang/\" />\n<area shape=\"rect\" coords=\"217,115,233,130\" alt=\"Zugzwaang\" title=\"Zugzwaang\" href=\"../okla_holmes_a/zugzwaang/\" />"+
-"<area shape=\"rect\" coords=\"255,350,305,352\" alt=\"25th Annual Putnam County Debate Tournament\" title=\"25th Annual Putnam County Debate Tournament\" href=\"25th_annual_putnam_county_debate_tournament/\" />\n<area shape=\"rect\" coords=\"242,353,305,361\" alt=\"25th Annual Putnam County Debate Tournament\" title=\"25th Annual Putnam County Debate Tournament\" href=\"25th_annual_putnam_county_debate_tournament/\" />\n<area shape=\"rect\" coords=\"259,337,315,349\" alt=\"25th Annual Putnam County Debate Tournament\" title=\"25th Annual Putnam County Debate Tournament\" href=\"25th_annual_putnam_county_debate_tournament/\" />\n<area shape=\"rect\" coords=\"243,362,289,370\" alt=\"25th Annual Putnam County Debate Tournament\" title=\"25th Annual Putnam County Debate Tournament\" href=\"25th_annual_putnam_county_debate_tournament/\" />\n<area shape=\"rect\" coords=\"280,371,286,374\" alt=\"25th Annual Putnam County Debate Tournament\" title=\"25th Annual Putnam County Debate Tournament\" href=\"25th_annual_putnam_county_debate_tournament/\" />"+
-"<area shape=\"rect\" coords=\"71,353,158,377\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"135,378,142,380\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"83,332,161,352\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"48,345,70,363\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />\n<area shape=\"rect\" coords=\"156,323,168,331\" alt=\"Collect Them All\" title=\"Collect Them All\" href=\"collect_them_all/\" />"+
+"<area shape=\"rect\" coords=\"421,450,481,454\" alt=\"Behave\" title=\"Behave\" href=\"behave/\" />\n<area shape=\"rect\" coords=\"421,455,479,465\" alt=\"Behave\" title=\"Behave\" href=\"behave/\" />\n<area shape=\"rect\" coords=\"400,454,420,481\" alt=\"Behave\" title=\"Behave\" href=\"behave/\" />\n<area shape=\"rect\" coords=\"455,433,478,446\" alt=\"Behave\" title=\"Behave\" href=\"behave/\" />\n<area shape=\"rect\" coords=\"438,447,481,449\" alt=\"Behave\" title=\"Behave\" href=\"behave/\" />"+
+"<area shape=\"rect\" coords=\"526,242,542,245\" alt=\"Coming to a Location Near You\" title=\"Coming to a Location Near You\" href=\"coming_to_a_location_near_you/\" />\n<area shape=\"rect\" coords=\"527,246,543,267\" alt=\"Coming to a Location Near You\" title=\"Coming to a Location Near You\" href=\"coming_to_a_location_near_you/\" />\n<area shape=\"rect\" coords=\"566,230,604,241\" alt=\"Coming to a Location Near You\" title=\"Coming to a Location Near You\" href=\"coming_to_a_location_near_you/\" />\n<area shape=\"rect\" coords=\"552,242,601,249\" alt=\"Coming to a Location Near You\" title=\"Coming to a Location Near You\" href=\"coming_to_a_location_near_you/\" />\n<area shape=\"rect\" coords=\"544,244,551,253\" alt=\"Coming to a Location Near You\" title=\"Coming to a Location Near You\" href=\"coming_to_a_location_near_you/\" />"+
+"<area shape=\"rect\" coords=\"547,393,554,393\" alt=\"How Hard Can It Be?\" title=\"How Hard Can It Be?\" href=\"how_hard_can_it_be/\" />\n<area shape=\"rect\" coords=\"536,394,576,427\" alt=\"How Hard Can It Be?\" title=\"How Hard Can It Be?\" href=\"how_hard_can_it_be/\" />\n<area shape=\"rect\" coords=\"518,403,535,418\" alt=\"How Hard Can It Be?\" title=\"How Hard Can It Be?\" href=\"how_hard_can_it_be/\" />\n<area shape=\"rect\" coords=\"539,428,566,443\" alt=\"How Hard Can It Be?\" title=\"How Hard Can It Be?\" href=\"how_hard_can_it_be/\" />\n<area shape=\"rect\" coords=\"577,397,581,416\" alt=\"How Hard Can It Be?\" title=\"How Hard Can It Be?\" href=\"how_hard_can_it_be/\" />"+
 "<area shape=\"rect\" coords=\"433,209,462,223\" alt=\"In Vivo\" title=\"In Vivo\" href=\"in_vivo/\" />\n<area shape=\"rect\" coords=\"443,224,447,225\" alt=\"In Vivo\" title=\"In Vivo\" href=\"in_vivo/\" />\n<area shape=\"rect\" coords=\"463,201,481,217\" alt=\"In Vivo\" title=\"In Vivo\" href=\"in_vivo/\" />\n<area shape=\"rect\" coords=\"482,200,498,216\" alt=\"In Vivo\" title=\"In Vivo\" href=\"in_vivo/\" />\n<area shape=\"rect\" coords=\"427,202,462,208\" alt=\"In Vivo\" title=\"In Vivo\" href=\"in_vivo/\" />"+
-"<area shape=\"rect\" coords=\"170,406,180,427\" alt=\"Twosquare\" title=\"Twosquare\" href=\"twosquare/\" />\n<area shape=\"rect\" coords=\"181,407,190,439\" alt=\"Twosquare\" title=\"Twosquare\" href=\"twosquare/\" />\n<area shape=\"rect\" coords=\"158,408,169,444\" alt=\"Twosquare\" title=\"Twosquare\" href=\"twosquare/\" />\n<area shape=\"rect\" coords=\"144,419,157,454\" alt=\"Twosquare\" title=\"Twosquare\" href=\"twosquare/\" />\n<area shape=\"rect\" coords=\"191,404,204,423\" alt=\"Twosquare\" title=\"Twosquare\" href=\"twosquare/\" />"+
 "</map>"+
 '';
 }
@@ -684,19 +684,19 @@ function puzzlelist_william_s_bergman() {
 "<tr class=\"spacer\"></tr>"+
 "<tr>"+
 "<td class=\"william_s_bergman "+
-(puzzle_solved["25th_annual_putnam_county_debate_tournament"]?"solved":"unsolved")+
-"\"><a href=\"25th_annual_putnam_county_debate_tournament/\"><span>25th Annual Putnam County Debate Tournament</span></a></td>"+
+(puzzle_solved["behave"]?"solved":"unsolved")+
+"\"><a href=\"behave/\"><span>Behave</span></a></td>"+
 "<td class=\"william_s_bergman "+
-(puzzle_solved["in_vivo"]?"solved":"unsolved")+
-"\"><a href=\"in_vivo/\"><span>In Vivo</span></a></td>"+
+(puzzle_solved["how_hard_can_it_be"]?"solved":"unsolved")+
+"\"><a href=\"how_hard_can_it_be/\"><span>How Hard Can It Be?</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"william_s_bergman "+
-(puzzle_solved["collect_them_all"]?"solved":"unsolved")+
-"\"><a href=\"collect_them_all/\"><span>Collect Them All</span></a></td>"+
+(puzzle_solved["coming_to_a_location_near_you"]?"solved":"unsolved")+
+"\"><a href=\"coming_to_a_location_near_you/\"><span>Coming to a Location Near You</span></a></td>"+
 "<td class=\"william_s_bergman "+
-(puzzle_solved["twosquare"]?"solved":"unsolved")+
-"\"><a href=\"twosquare/\"><span>Twosquare</span></a></td>"+
+(puzzle_solved["in_vivo"]?"solved":"unsolved")+
+"\"><a href=\"in_vivo/\"><span>In Vivo</span></a></td>"+
 "</tr>"+
 "</table>"+
 '';

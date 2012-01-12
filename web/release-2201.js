@@ -219,14 +219,14 @@ function imagemap_charles_lutwidge_dodgson() {
 "<img src=\"1-"+
 (puzzle_solved["1207_1370"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"b_j_blazkowicz_in_wintertime_for_hitler/-"+
-(puzzle_solved["b_j_blazkowicz_in_wintertime_for_hitler"]?"solved":"unsolved")+
+"<img src=\"audio_games/-"+
+(puzzle_solved["audio_games"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"freshman_physics/-"+
 (puzzle_solved["freshman_physics"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"incredible_edibles/-"+
-(puzzle_solved["incredible_edibles"]?"solved":"unsolved")+
+"<img src=\"match_game/-"+
+(puzzle_solved["match_game"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"2-"+
 (puzzle_solved["middle_see"]?"solved":"unsolved")+
@@ -234,8 +234,8 @@ function imagemap_charles_lutwidge_dodgson() {
 "<img src=\"3-"+
 (puzzle_solved["o_blessed_day"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"odd_voided/-"+
-(puzzle_solved["odd_voided"]?"solved":"unsolved")+
+"<img src=\"the_undiscovered_underground/-"+
+(puzzle_solved["the_undiscovered_underground"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"4-"+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
@@ -244,12 +244,12 @@ function imagemap_charles_lutwidge_dodgson() {
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"75,185,112,260\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"89,261,112,263\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"113,193,143,289\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"66,151,103,184\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />\n<area shape=\"rect\" coords=\"72,188,74,200\" alt=\"1207 1370\" title=\"1207 1370\" href=\"../a_circus_line/1207_1370/\" />"+
-"<area shape=\"rect\" coords=\"400,340,452,480\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"400,481,411,486\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"453,389,517,463\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"407,325,435,339\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />\n<area shape=\"rect\" coords=\"393,450,399,484\" alt=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" title=\"B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;\" href=\"b_j_blazkowicz_in_wintertime_for_hitler/\" />"+
+"<area shape=\"rect\" coords=\"489,30,536,57\" alt=\"Audio Games\" title=\"Audio Games\" href=\"audio_games/\" />\n<area shape=\"rect\" coords=\"489,58,554,96\" alt=\"Audio Games\" title=\"Audio Games\" href=\"audio_games/\" />\n<area shape=\"rect\" coords=\"460,147,543,191\" alt=\"Audio Games\" title=\"Audio Games\" href=\"audio_games/\" />\n<area shape=\"rect\" coords=\"470,114,558,146\" alt=\"Audio Games\" title=\"Audio Games\" href=\"audio_games/\" />\n<area shape=\"rect\" coords=\"481,97,560,113\" alt=\"Audio Games\" title=\"Audio Games\" href=\"audio_games/\" />"+
 "<area shape=\"rect\" coords=\"186,466,200,493\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"207,466,300,493\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"218,420,305,465\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"196,509,272,539\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />\n<area shape=\"rect\" coords=\"183,494,284,508\" alt=\"Freshman Physics\" title=\"Freshman Physics\" href=\"freshman_physics/\" />"+
-"<area shape=\"rect\" coords=\"318,391,352,451\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"353,393,359,441\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"360,397,425,434\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"299,400,317,450\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"338,387,351,390\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />"+
+"<area shape=\"rect\" coords=\"341,247,356,359\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"357,239,374,344\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"301,201,326,345\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"327,215,340,352\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"375,278,399,339\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />"+
 "<area shape=\"rect\" coords=\"486,199,509,307\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"510,209,514,297\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"518,231,621,289\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"466,208,485,315\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"515,242,517,293\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />"+
 "<area shape=\"rect\" coords=\"347,98,402,141\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"../okla_holmes_a/o_blessed_day/\" />\n<area shape=\"rect\" coords=\"349,142,401,163\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"../okla_holmes_a/o_blessed_day/\" />\n<area shape=\"rect\" coords=\"361,164,396,193\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"../okla_holmes_a/o_blessed_day/\" />\n<area shape=\"rect\" coords=\"348,86,377,97\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"../okla_holmes_a/o_blessed_day/\" />\n<area shape=\"rect\" coords=\"403,117,406,140\" alt=\"O Blessed Day\" title=\"O Blessed Day\" href=\"../okla_holmes_a/o_blessed_day/\" />"+
-"<area shape=\"rect\" coords=\"193,178,265,185\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"186,186,267,254\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"172,255,259,315\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"268,186,276,230\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"239,161,255,177\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />"+
+"<area shape=\"rect\" coords=\"530,285,563,390\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"548,391,561,394\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"514,288,529,385\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"474,322,513,380\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"564,337,572,387\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />"+
 "<area shape=\"rect\" coords=\"589,343,618,380\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"588,381,629,412\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"576,413,638,443\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"570,458,614,475\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"578,444,623,457\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />"+
 "</map>"+
 '';
@@ -267,8 +267,8 @@ function puzzlelist_charles_lutwidge_dodgson() {
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["b_j_blazkowicz_in_wintertime_for_hitler"]?"solved":"unsolved")+
-"\"><a href=\"b_j_blazkowicz_in_wintertime_for_hitler/\"><span>B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;</span></a></td>"+
+(puzzle_solved["audio_games"]?"solved":"unsolved")+
+"\"><a href=\"audio_games/\"><span>Audio Games</span></a></td>"+
 "<td class=\"okla_holmes_a "+
 (puzzle_solved["o_blessed_day"]?"solved":"unsolved")+
 "\"><a href=\"../okla_holmes_a/o_blessed_day/\"><span>O Blessed Day</span></a></td>"+
@@ -278,13 +278,13 @@ function puzzlelist_charles_lutwidge_dodgson() {
 (puzzle_solved["freshman_physics"]?"solved":"unsolved")+
 "\"><a href=\"freshman_physics/\"><span>Freshman Physics</span></a></td>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["odd_voided"]?"solved":"unsolved")+
-"\"><a href=\"odd_voided/\"><span>Odd Voided</span></a></td>"+
+(puzzle_solved["the_undiscovered_underground"]?"solved":"unsolved")+
+"\"><a href=\"the_undiscovered_underground/\"><span>The Undiscovered Underground</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["incredible_edibles"]?"solved":"unsolved")+
-"\"><a href=\"incredible_edibles/\"><span>Incredible Edibles</span></a></td>"+
+(puzzle_solved["match_game"]?"solved":"unsolved")+
+"\"><a href=\"match_game/\"><span>Match Game</span></a></td>"+
 "<td class=\"okla_holmes_a "+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
 "\"><a href=\"../okla_holmes_a/winning_conditions/\"><span>Winning Conditions</span></a></td>"+

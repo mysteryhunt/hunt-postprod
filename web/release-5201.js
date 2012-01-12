@@ -1055,11 +1055,11 @@ function imagemap_sheila_sunshine() {
 "<img src=\"highlights/-"+
 (puzzle_solved["highlights"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"pirates_of_the_tyrrhenian/-"+
-(puzzle_solved["pirates_of_the_tyrrhenian"]?"solved":"unsolved")+
+"<img src=\"stand/-"+
+(puzzle_solved["stand"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"sovereignty/-"+
-(puzzle_solved["sovereignty"]?"solved":"unsolved")+
+"<img src=\"the_signs_they_are_a_changin/-"+
+(puzzle_solved["the_signs_they_are_a_changin"]?"solved":"unsolved")+
 ".png\" />"+
 "<div class=\"paperclip\"></div>"+
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
@@ -1076,8 +1076,8 @@ function imagemap_sheila_sunshine() {
 "<area shape=\"rect\" coords=\"510,383,564,391\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"514,392,595,400\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"529,351,578,382\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"534,401,605,415\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />\n<area shape=\"rect\" coords=\"533,416,556,445\" alt=\"Fulfilling Puzzle\" title=\"Fulfilling Puzzle\" href=\"../into_the_woodstock/fulfilling_puzzle/\" />"+
 "<area shape=\"rect\" coords=\"372,320,415,358\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"387,359,416,363\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"402,364,435,392\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"393,290,414,319\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />\n<area shape=\"rect\" coords=\"365,340,371,350\" alt=\"Disorder of Operations\" title=\"Disorder of Operations\" href=\"disorder_of_operations/\" />"+
 "<area shape=\"rect\" coords=\"549,315,615,322\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"540,323,621,332\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"574,333,619,359\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"562,302,626,314\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />\n<area shape=\"rect\" coords=\"598,286,641,301\" alt=\"Highlights\" title=\"Highlights\" href=\"highlights/\" />"+
-"<area shape=\"rect\" coords=\"377,224,446,239\" alt=\"Pirates of the Tyrrhenian\" title=\"Pirates of the Tyrrhenian\" href=\"pirates_of_the_tyrrhenian/\" />\n<area shape=\"rect\" coords=\"386,240,438,245\" alt=\"Pirates of the Tyrrhenian\" title=\"Pirates of the Tyrrhenian\" href=\"pirates_of_the_tyrrhenian/\" />\n<area shape=\"rect\" coords=\"372,212,442,223\" alt=\"Pirates of the Tyrrhenian\" title=\"Pirates of the Tyrrhenian\" href=\"pirates_of_the_tyrrhenian/\" />\n<area shape=\"rect\" coords=\"349,196,438,211\" alt=\"Pirates of the Tyrrhenian\" title=\"Pirates of the Tyrrhenian\" href=\"pirates_of_the_tyrrhenian/\" />\n<area shape=\"rect\" coords=\"386,246,414,282\" alt=\"Pirates of the Tyrrhenian\" title=\"Pirates of the Tyrrhenian\" href=\"pirates_of_the_tyrrhenian/\" />"+
-"<area shape=\"rect\" coords=\"341,86,363,154\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"364,90,384,150\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"385,62,434,108\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"285,80,330,114\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />\n<area shape=\"rect\" coords=\"331,96,340,138\" alt=\"Sovereignty\" title=\"Sovereignty\" href=\"sovereignty/\" />"+
+"<area shape=\"rect\" coords=\"536,167,545,207\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"546,162,568,205\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"500,176,535,239\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"569,173,584,202\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />\n<area shape=\"rect\" coords=\"585,176,621,196\" alt=\"Stand\" title=\"Stand\" href=\"stand/\" />"+
+"<area shape=\"rect\" coords=\"454,117,474,174\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"475,121,477,164\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"418,125,447,199\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"448,120,453,176\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />\n<area shape=\"rect\" coords=\"478,123,482,126\" alt=\"The Signs They Are A-Changin&rsquo;\" title=\"The Signs They Are A-Changin&rsquo;\" href=\"the_signs_they_are_a_changin/\" />"+
 "</map>"+
 '';
 }
@@ -1144,21 +1144,21 @@ function puzzlelist_sheila_sunshine() {
 "<td class=\"sheila_sunshine "+
 (puzzle_solved["disorder_of_operations"]?"solved":"unsolved")+
 "\"><a href=\"disorder_of_operations/\"><span>Disorder of Operations</span></a></td>"+
-"<td class=\"sheila_sunshine "+
-(puzzle_solved["sovereignty"]?"solved":"unsolved")+
-"\"><a href=\"sovereignty/\"><span>Sovereignty</span></a></td>"+
+"<td></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"sheila_sunshine "+
 (puzzle_solved["highlights"]?"solved":"unsolved")+
 "\"><a href=\"highlights/\"><span>Highlights</span></a></td>"+
-"<td></td>"+
+"<td class=\"sheila_sunshine "+
+(puzzle_solved["stand"]?"solved":"unsolved")+
+"\"><a href=\"stand/\"><span>Stand</span></a></td>"+
 "</tr>"+
 "<tr>"+
-"<td class=\"sheila_sunshine "+
-(puzzle_solved["pirates_of_the_tyrrhenian"]?"solved":"unsolved")+
-"\"><a href=\"pirates_of_the_tyrrhenian/\"><span>Pirates of the Tyrrhenian</span></a></td>"+
 "<td></td>"+
+"<td class=\"sheila_sunshine "+
+(puzzle_solved["the_signs_they_are_a_changin"]?"solved":"unsolved")+
+"\"><a href=\"the_signs_they_are_a_changin/\"><span>The Signs They Are A-Changin&rsquo;</span></a></td>"+
 "</tr>"+
 "</table>"+
 '';
