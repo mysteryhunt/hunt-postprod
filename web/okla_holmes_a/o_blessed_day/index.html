@@ -8,7 +8,7 @@ ponyhash: 9f6d3241ca0a6726cc628f2b82342f653cc0768363fb0573b5f33af2
 <b>si mundus hoc anno finem non habebit, tot festa celebranda erunt!</b>
 </p>
 
-<table class="yow">
+<table class="yow" id="yow_table">
 <tbody><tr>
 <td colspan="3" style="border-style:hidden">&nbsp;</td>
 <td class="tip"><u>&nbsp;&nbsp;&nbsp;</u><span>hac die celebrantur dies natales duorum ducum qui hac die non nati sunt</span></td>
@@ -90,3 +90,36 @@ ponyhash: 9f6d3241ca0a6726cc628f2b82342f653cc0768363fb0573b5f33af2
 </div>
 
 <img height="1" src="vellum1.jpg" /> <!-- Just to make this background image preload. -->
+
+<script type="text/javascript">
+var top_offset = 80;
+var left_offset = 15;
+var top_width = 85;
+var left_width = 85;
+
+if (navigator.userAgent.toLowerCase().match(/chrome/) == null)
+{
+  top_offset = 72;
+  top_width = 78;
+}
+
+var yow_table = document.getElementById("yow_table");
+var rows = yow_table.getElementsByTagName("tr");
+
+for (var idex = 0; idex &lt; rows.length; ++idex)
+{
+  var cells = rows[idex].getElementsByTagName("span");
+  var top_spacing = top_offset + idex * top_width;
+
+  for (var jdex = 0; jdex &lt; cells.length; ++jdex)
+  {
+	var left_spacing = left_offset + jdex * left_width;
+	if (idex == 0)
+	{
+	  left_spacing += 3 * left_width;
+	}
+    cells[jdex].style.top = "" + top_spacing + "px";
+	cells[jdex].style.left = "" + left_spacing + "px";
+  }
+}
+</script>
