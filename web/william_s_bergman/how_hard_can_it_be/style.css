@@ -4,3 +4,7 @@
   position: relative;
   bottom: 4px;
 }
+#grid {
+        margin-left: -52px;
+}
+@media print { #grid { margin: 0; } }
