@@ -11,3 +11,6 @@ table.crank2 tr:first-child,
 table.crank2 tr:first-child + tr + tr + tr + tr {
   border-bottom: 2px solid black;
 }
+#ciut7 h3 {
+  margin-bottom: 0;  
+}
