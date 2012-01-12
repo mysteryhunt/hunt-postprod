@@ -240,14 +240,14 @@ function imagemap_charles_lutwidge_dodgson() {
 "<img src=\"match_game/-"+
 (puzzle_solved["match_game"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"medley/-"+
-(puzzle_solved["medley"]?"solved":"unsolved")+
-".png\" />"+
 "<img src=\"3-"+
 (puzzle_solved["middle_see"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"odd_voided/-"+
 (puzzle_solved["odd_voided"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"the_undiscovered_underground/-"+
+(puzzle_solved["the_undiscovered_underground"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"4-"+
 (puzzle_solved["winning_conditions"]?"solved":"unsolved")+
@@ -263,9 +263,9 @@ function imagemap_charles_lutwidge_dodgson() {
 "<area shape=\"rect\" coords=\"105,374,160,383\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"69,384,181,420\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"76,421,209,453\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"126,454,212,471\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />\n<area shape=\"rect\" coords=\"126,336,155,373\" alt=\"Gibberish and More Gibberish\" title=\"Gibberish and More Gibberish\" href=\"gibberish_and_more_gibberish/\" />"+
 "<area shape=\"rect\" coords=\"318,391,352,451\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"353,393,359,441\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"360,397,425,434\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"299,400,317,450\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />\n<area shape=\"rect\" coords=\"338,387,351,390\" alt=\"Incredible Edibles\" title=\"Incredible Edibles\" href=\"incredible_edibles/\" />"+
 "<area shape=\"rect\" coords=\"341,247,356,359\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"357,239,374,344\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"301,201,326,345\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"327,215,340,352\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />\n<area shape=\"rect\" coords=\"375,278,399,339\" alt=\"Match Game\" title=\"Match Game\" href=\"match_game/\" />"+
-"<area shape=\"rect\" coords=\"530,285,563,390\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"548,391,561,394\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"514,288,529,385\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"474,322,513,380\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />\n<area shape=\"rect\" coords=\"564,337,572,387\" alt=\"Medley\" title=\"Medley\" href=\"medley/\" />"+
 "<area shape=\"rect\" coords=\"347,98,402,141\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"349,142,401,163\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"361,164,396,193\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"348,86,377,97\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />\n<area shape=\"rect\" coords=\"403,117,406,140\" alt=\"Middle-See\" title=\"Middle-See\" href=\"../a_circus_line/middle_see/\" />"+
 "<area shape=\"rect\" coords=\"193,178,265,185\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"186,186,267,254\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"172,255,259,315\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"268,186,276,230\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />\n<area shape=\"rect\" coords=\"239,161,255,177\" alt=\"Odd Voided\" title=\"Odd Voided\" href=\"odd_voided/\" />"+
+"<area shape=\"rect\" coords=\"530,285,563,390\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"548,391,561,394\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"514,288,529,385\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"474,322,513,380\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />\n<area shape=\"rect\" coords=\"564,337,572,387\" alt=\"The Undiscovered Underground\" title=\"The Undiscovered Underground\" href=\"the_undiscovered_underground/\" />"+
 "<area shape=\"rect\" coords=\"589,343,618,380\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"588,381,629,412\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"576,413,638,443\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"570,458,614,475\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />\n<area shape=\"rect\" coords=\"578,444,623,457\" alt=\"Winning Conditions\" title=\"Winning Conditions\" href=\"../okla_holmes_a/winning_conditions/\" />"+
 "</map>"+
 '';
@@ -293,25 +293,25 @@ function puzzlelist_charles_lutwidge_dodgson() {
 "<td class=\"charles_lutwidge_dodgson "+
 (puzzle_solved["b_j_blazkowicz_in_wintertime_for_hitler"]?"solved":"unsolved")+
 "\"><a href=\"b_j_blazkowicz_in_wintertime_for_hitler/\"><span>B.J. Blazkowicz in &lsquo;Wintertime for Hitler&rsquo;</span></a></td>"+
-"<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["medley"]?"solved":"unsolved")+
-"\"><a href=\"medley/\"><span>Medley</span></a></td>"+
+"<td class=\"a_circus_line "+
+(puzzle_solved["middle_see"]?"solved":"unsolved")+
+"\"><a href=\"../a_circus_line/middle_see/\"><span>Middle-See</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"okla_holmes_a "+
 (puzzle_solved["baby_sniffles"]?"solved":"unsolved")+
 "\"><a href=\"../okla_holmes_a/baby_sniffles/\"><span>Baby Sniffles</span></a></td>"+
-"<td class=\"a_circus_line "+
-(puzzle_solved["middle_see"]?"solved":"unsolved")+
-"\"><a href=\"../a_circus_line/middle_see/\"><span>Middle-See</span></a></td>"+
+"<td class=\"charles_lutwidge_dodgson "+
+(puzzle_solved["odd_voided"]?"solved":"unsolved")+
+"\"><a href=\"odd_voided/\"><span>Odd Voided</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
 (puzzle_solved["freshman_physics"]?"solved":"unsolved")+
 "\"><a href=\"freshman_physics/\"><span>Freshman Physics</span></a></td>"+
 "<td class=\"charles_lutwidge_dodgson "+
-(puzzle_solved["odd_voided"]?"solved":"unsolved")+
-"\"><a href=\"odd_voided/\"><span>Odd Voided</span></a></td>"+
+(puzzle_solved["the_undiscovered_underground"]?"solved":"unsolved")+
+"\"><a href=\"the_undiscovered_underground/\"><span>The Undiscovered Underground</span></a></td>"+
 "</tr>"+
 "<tr>"+
 "<td class=\"charles_lutwidge_dodgson "+
@@ -334,11 +334,11 @@ function imagemap_into_the_woodstock() {
 "<img src=\"20_questions/-"+
 (puzzle_solved["20_questions"]?"solved":"unsolved")+
 ".png\" />"+
-"<img src=\"bubbles/-"+
-(puzzle_solved["bubbles"]?"solved":"unsolved")+
-".png\" />"+
 "<img src=\"dawn_of_a_new_era/-"+
 (puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
+".png\" />"+
+"<img src=\"hang_ten/-"+
+(puzzle_solved["hang_ten"]?"solved":"unsolved")+
 ".png\" />"+
 "<img src=\"the_answers_are_somehow_connected/-"+
 (puzzle_solved["the_answers_are_somehow_connected"]?"solved":"unsolved")+
@@ -346,8 +346,8 @@ function imagemap_into_the_woodstock() {
 "<img src=\"../1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"163,245,249,296\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"250,259,253,287\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"172,297,244,316\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"185,317,229,352\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />\n<area shape=\"rect\" coords=\"171,242,188,244\" alt=\"20 Questions\" title=\"20 Questions\" href=\"20_questions/\" />"+
-"<area shape=\"rect\" coords=\"198,381,249,459\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"195,460,249,469\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"264,372,292,477\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"250,379,263,474\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />\n<area shape=\"rect\" coords=\"293,376,300,425\" alt=\"Bubbles\" title=\"Bubbles\" href=\"bubbles/\" />"+
 "<area shape=\"rect\" coords=\"112,313,172,360\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"173,326,178,355\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"130,276,176,306\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"126,307,160,312\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />\n<area shape=\"rect\" coords=\"118,361,136,363\" alt=\"Dawn of a New Era\" title=\"Dawn of a New Era\" href=\"dawn_of_a_new_era/\" />"+
+"<area shape=\"rect\" coords=\"198,381,249,459\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"195,460,249,469\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"264,372,292,477\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"250,379,263,474\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />\n<area shape=\"rect\" coords=\"293,376,300,425\" alt=\"Hang Ten\" title=\"Hang Ten\" href=\"hang_ten/\" />"+
 "<area shape=\"rect\" coords=\"299,163,302,200\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"303,153,345,210\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"346,158,373,206\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"306,211,341,237\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />\n<area shape=\"rect\" coords=\"313,148,336,152\" alt=\"The Answers Are Somehow Connected\" title=\"The Answers Are Somehow Connected\" href=\"the_answers_are_somehow_connected/\" />"+
 "</map>"+
 '';
@@ -361,16 +361,16 @@ function puzzlelist_into_the_woodstock() {
 "\">20 Questions</a>"+
 "</td>"+
 "<td>"+
-"<a href=\"dawn_of_a_new_era/\" class=\""+
-(puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
-"\">Dawn of a New Era</a>"+
+"<a href=\"hang_ten/\" class=\""+
+(puzzle_solved["hang_ten"]?"solved":"unsolved")+
+"\">Hang Ten</a>"+
 "</td>"+
 "</tr>"+
 "<tr>"+
 "<td>"+
-"<a href=\"bubbles/\" class=\""+
-(puzzle_solved["bubbles"]?"solved":"unsolved")+
-"\">Bubbles</a>"+
+"<a href=\"dawn_of_a_new_era/\" class=\""+
+(puzzle_solved["dawn_of_a_new_era"]?"solved":"unsolved")+
+"\">Dawn of a New Era</a>"+
 "</td>"+
 "<td>"+
 "<a href=\"the_answers_are_somehow_connected/\" class=\""+
