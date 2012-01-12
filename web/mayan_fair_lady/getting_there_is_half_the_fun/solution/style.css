@@ -1,0 +1,22 @@
+.fun-t {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.fun-t th,
+.fun-t td {
+  text-align: left;
+  padding: 3px 6px;
+  border-top: 1px solid black;
+}
+
+/*
+.fun-t th:first-child + th,
+.fun-t td:first-child + td {
+  text-align: left;
+}
+.fun-t th:first-child + th + th,
+.fun-t td:first-child + td + td {
+  text-align: left;
+}
+*/
