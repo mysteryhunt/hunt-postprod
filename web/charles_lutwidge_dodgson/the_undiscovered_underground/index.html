@@ -3,5 +3,87 @@ layout: charles_lutwidge_dodgson
 title: The Undiscovered Underground
 ponyhash: 43842a0944167feceddbcc4bf9e680f75c7be451c3df908c0e5b8742
 ---
+<script>
+var buf = '';
+var pos = 0;
+var disp;
+var entry;
+var loc;
+
+function init() {
+    disp.value = '';
+    move(START_NODE);
+}
+
+// This gives us a nice old-school feel
+function refresh() {
+    if (buf &amp;&amp; pos &lt; buf.length) {
+        disp.value += buf.charAt(pos);
+        pos += 1
+        disp.scrollTop = disp.scrollHeight;
+        setTimeout(refresh, 7);
+    }
+    else {
+        buf = '';
+        pos = 0;
+    }
+}
+
+function show(msg) {
+    buf += msg;
+    refresh();
+}
+
+function prompt() {
+    show('\n\n');
+    for (var d in loc) {
+        if (d != 'text') {
+            show(d + '/');
+        }
+    }
+    show('restart?');
+}
+
+function move(n) {
+    // This if prevents ugly spaces from showing up at the top, since we start by calling move()
+    if (disp.value) {
+        show('\n\n');
+    }
+    if (n in NODES) {
+        loc = NODES[n];
+        show(loc.text);
+        prompt();
+    }
+    else {
+        show('Internal error: node not found.  (Contact HQ.)');
+    }
+}
+
+function go() {
+    dir = entry.value.toLowerCase().replace(/\s/, '');
+    entry.value = '';
+    if (dir == 'restart') {
+        init();
+    }
+    else {
+        show(' ' + dir);
+        if (dir != 'text' &amp;&amp; dir in loc) {
+            move(loc[dir]);
+        }
+        else {
+            show("\n\nYou can't go that way.");
+            prompt();
+        }
+    }
+}
+
+window.onload = function () {
+    disp = document.getElementById('display');
+    entry = document.getElementById('entry');
+    entry.focus();
+    init();
+}
+</script>
+
 <p><textarea cols="80" id="display" onfocus="entry.focus();" rows="30" style="background-color: black; color: lime; overflow: hidden;"></textarea>
 <br /></p><form onsubmit="go(); return false;"> <input id="entry" /></form>
