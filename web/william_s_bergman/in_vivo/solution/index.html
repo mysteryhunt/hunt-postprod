@@ -5,6 +5,51 @@ class: puzzle solution
 style: style.css
 credits: by Michael Constant and Seth Schoen
 ---
-<p>
-<a href="solution.html">Click for solution</a> (too wide for this template).
-</p>
+<p>This is a puzzle about the <a href="https://en.wikipedia.org/wiki/vi">vi editor</a>.  It was inspired by the
+<a href="http://web.mit.edu/puzzle/www/06/endgame.html">2006 Mystery Hunt endgame puzzle</a> where teams were supposed to type the <a href="http://web.mit.edu/puzzle/www/06/metas/washington.html">text</a></p>
+
+<pre>I am diabolykal. verry h
+ appy Zilllllyun
+</pre>
+
+<p>into NetHack, where, interpreted as a series of NetHack commands, it would
+get their character out of a sticky situation.</p>
+
+<p>Here, solvers have to do roughly the reverse: given an editing problem,
+they need to find the fastest solution to that problem in vi (that is,
+the smallest number of keystrokes that will accomplish the given editing
+task).  Note that the &ldquo;task&rdquo; does not consist only in making the buffer
+contain particular text; it also requires ending with a particular cursor
+position, and ending in insert mode or command mode, as indicated.  To the
+best of our knowledge, the solutions here are the unique absolute minimum
+number of keystrokes required, and (although the screenshots are taken from
+<a href="http://www.vim.org/">vim</a>) will work in any version of vi.</p>
+
+<p>The solutions to these editing problems also happen to form English
+words, which are given in alphabetical order for confirmation.
+
+<a href="sol1.html">Click here to see the solutions</a> (which are too
+wide for this page).</p>
+
+<p>Many of the letters in the words are numbered with an acrostic-like
+ordering.  Putting these letters in the specified order gives the
+apparently meaningless string</p>
+
+<blockquote><strong>dtgerybrntuhdefolrehxdebpwctoarn</strong></blockquote>
+
+<p>This string is also a series of vi editing commands which
+must be performed from the starting point given in the final editing
+problem.  (It actually means &ldquo;delete up to next &lsquo;g&rsquo;; go to end of word; replace
+character with &lsquo;y&rsquo;; go back to beginning of word; replace character with
+&lsquo;n&rsquo;; go up to next &lsquo;u&rsquo;; go left; delete to end of word; go to next &lsquo;o&rsquo;; go
+right; replace character with &lsquo;e&rsquo;; go left; delete character; delete to end of
+word; go back to beginning of word; paste back deletion buffer after
+current character position; go to beginning of next word; change up to
+next &lsquo;o&rsquo; with text &lsquo;arn&rsquo;&rdquo;.)</p>
+
+<p><a href="sol2.html">Click here</a> to see the result of performing all these operations on this <em>diabolykal</em>
+text.</p>
+
+<p>The Norwegian whose name, like Benedict Arnold&rsquo;s, has become a byword for
+treason is
+<a href="https://en.wikipedia.org/wiki/Vidkun_Quisling"><b><big>VI</big>DKUN QUISLING</b></a>.</p>
