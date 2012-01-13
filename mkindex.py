@@ -444,8 +444,8 @@ if __name__ == '__main__':
     for round_name,round_info in rounds.iteritems():
         all_batches.update(int(puzzle['batch']) for pony,puzzle
                            in round_info.iteritems())
-    #all_batches.update(round_batch
-    #                   for round_name,round_batch in ROUND_BATCH.iteritems())
+    all_batches.update(round_batch
+                       for round_name,round_batch in ROUND_BATCH.iteritems())
     for batch in sorted(all_batches):
         with open(os.path.join(WEBDIR, 'release-%d.js' % batch), 'w') as fd:
             for name in sorted(fragments.keys()):
