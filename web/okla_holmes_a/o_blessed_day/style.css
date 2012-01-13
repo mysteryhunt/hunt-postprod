@@ -1,14 +1,53 @@
-.yow td { width: 75px; height: 75px; border-style: solid; border-color: black; border-width: 2px; text-align: center; vertical-align: middle; }
-.yow { border-spacing: 4px; border-style: hidden; border-color: black; }
+@import url(http://fonts.googleapis.com/css?family=Fondamento&subset=latin,latin-ext);
+
+.obd td {
+  width: 75px;
+  height: 75px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+.obd {
+  border-spacing: 4px;
+  border-style: hidden;
+  border-color: black;
+}
 .fletter {
-	color:#CFB53B;
-	font-size:larger
+  color:#CFB53B;
+  font-size:larger
 }
 
-TD.tip SPAN {    DISPLAY: none
+td.tip span {    display: none
 }
-TD.tip:hover SPAN {
-BORDER-RIGHT: #c00000 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #c00000 1px solid; DISPLAY: block; PADDING-LEFT: 5px; Z-INDEX: 100; BACKGROUND: url("vellum1.jpg") #f0f0f0 no-repeat 100% 5%; PADDING-BOTTOM: 5px; MARGIN: 10px; BORDER-LEFT: #c00000 1px solid; WIDTH: 250px; PADDING-TOP: 5px; BORDER-BOTTOM: #c00000 1px solid; POSITION: absolute; TEXT-DECORATION: none; FONT-FAMILY:'Fondamento';
+td.tip:hover span {
+ position: absolute;
+ display: block;
+ border: #c00000 1px solid;
+ padding-right: 20px;
+ padding-left: 5px;
+ padding-bottom: 5px;
+ padding-top: 5px;
+ z-index: 100;
+ background: #dbc9a3;
+ margin: 10px;
+ width: 250px;
+ text-decoration: none;
+ font-family:'Fondamento';
 }
-/* Vellum image from http://1-art.eu/ */
 
+@media print {
+  td.tip { vertical-align: top; }
+  td.tip span, td.tip span:hover {
+    position: relative;
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: auto;
+    font-size: 60%;
+  }
+  .fletter { color: black; }
+}
