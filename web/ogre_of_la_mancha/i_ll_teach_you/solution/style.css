@@ -15,5 +15,5 @@
 .itu-t td:first-child + td + td + td + td + td,
 .itu-t th:first-child + th + th + th + th + th + th + th,
 .itu-t td:first-child + td + td + td + td + td + td + td {
-  color: #AAAAAA;
+  color: #666;
 }
