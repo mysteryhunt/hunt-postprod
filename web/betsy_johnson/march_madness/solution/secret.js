@@ -21,7 +21,7 @@ var SOLUTION = [
 var SECRET_MESSAGE = ""+
 "<p>Congratulations on your correct prediction of all the winners through the Regional Finals!</p>"+
 "<p>To win the contest, you&rsquo;ll now have to correctly predict the final scores of all three Final Four games.</p>"+
-"<p>Submit your answer to this part of the contest through the normal &ldquo;Check Answer&rdquo; link.  Good luck!</p>"+
+"<p>Submit your answer to this part of the contest through the normal &ldquo;Call in answer&rdquo; link.  Good luck!</p>"+
 "<div id='finalbracket'>"+
 "<div id='SemiFinalTeam1' class='finalteam'><span class='l'>Longhorns</span><span class='blank r'>___</span></div>"+
 "<div id='SemiFinalTeam2' class='finalteam'><span class='l'>Mastodons</span><span class='blank r'>___</span></div>"+
