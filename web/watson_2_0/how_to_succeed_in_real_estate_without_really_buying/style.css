@@ -4,3 +4,6 @@
   position: relative;
   bottom: 4px;
 }
+body.puzzle #main h1 {
+  font-size: 28px;
+}
