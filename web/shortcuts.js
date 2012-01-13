@@ -4,7 +4,7 @@
 this.depth=this.depth || '../';
 this.points = this.points || 0;
 this.bupkis = this.bupkis || 0;
-this.when = this.next_unlock_time ? new Date(this.next_unlock_time):new Date();
+this.when = new Date(this.next_unlock_time*1000);
 var shortcuts=document.createElement('div');
 shortcuts.innerHTML=(
 '<div id="shortcuts" onclick=";"><span>Shortcuts</span>'+
