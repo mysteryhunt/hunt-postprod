@@ -349,6 +349,7 @@ var clock = document.getElementById("clock");
 
 function set_clock(seconds)
 {
+    if (seconds < 0) { seconds = 0; }
     var time_str =
         pad(2, Math.floor(seconds / 60)) +
         pad(2, Math.ceil(seconds) % 60);
