@@ -55,7 +55,10 @@ letterMap = {
 'Into the Woodstock':'DJ P0n-3',
 'Mayan Fair Lady':'Fancy Pants',
 'Phantom of the Operator':'Fizzy',
-'Ogre of La Mancha':'Galaxy'
+'Ogre of La Mancha':'Galaxy',
+'Intro':'Glory',
+"Let's Make a Hit!":'Gutsy',
+"Password Reminder":'Heartstrings'
 }
 
 def mkPonyMap(db):
@@ -99,20 +102,25 @@ def mkPonyMap(db):
         'batch': batch,
         'is_critic_meta': is_critic
         }
+ roundInvMap=dict((v,k) for k,v in roundMap.items())
  for round_name,pony in letterMap.iteritems():
      pony = pony.strip()
-     round_index = dict((v,k) for k,v in roundMap.items())[round_name]
-     critic_index = round_index.replace(' S','C')
-     critic_name = roundMap[critic_index]
-     round_order = int(round_index.replace(' S',''))
+     if round_name in roundInvMap:
+         round_index = roundInvMap[round_name]
+         critic_index = round_index.replace(' S','C')
+         critic_name = roundMap[critic_index]
+         round_order = int(round_index.replace(' S',''))
+     else:
+         critic_name = round_name
+         round_order = {'Glory':0, 'Gutsy':7, 'Heartstrings':8}[pony]
      ponyMap[pony] = {
          'title': critic_name,
          'answer': None,
          'reused': None,
-         'order': round_order,
+         'order': round_order+1,
          'round': 'Letters from Max and Leo',
          'is_meta': False,
-         'batch': 9999,
+         'batch': 9999 if pony!='Glory' else 1100,
          'is_critic_meta': False
      }
  return ponyMap
