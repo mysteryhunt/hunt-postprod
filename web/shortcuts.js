@@ -9,11 +9,11 @@ shortcuts.innerHTML=(
 '  <li><a href="'+this.depth+'">Home</a></li>'+
 (this.up_title ?
  ('  <li>&gt;&nbsp;<a href="..">'+this.up_title+'</a></li>'):'')+
-'  <li><a href="'+this.depth+'memos_from_the_management/introduction/">Introduction</a></li>'+
+'  <li><a href="'+this.depth+'memos_from_the_management/introduction.html">Introduction</a></li>'+
 '  <li><a href="'+this.depth+'contact_hq/">Contact HQ</a></li>'+
-'  <li><a href="'+this.depth+'events">Events</a></li>'+
+'  <li><a href="'+this.depth+'events/">Events</a></li>'+
 '  <li><a href="'+this.depth+'nominations/">Nominations</a></li>'+
-'  <li><a href="'+this.depth+'memos_from_the_management/">Updates</a></li>'+
+'  <li><a href="'+this.depth+'memos_from_the_management/">From the Management</a></li>'+
 '</ul>'+
 '</div>'+
 {% if site.release.solutions %}

@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Alice&subset=latin,latin-ext);
+@import "shortcuts.css";
+
+body {
+  background: black; /* was: #200; */
+  color: white; position: relative;
+  padding: 0; margin: 0;
+  font-family: 'Alice', serif; font-weight: 400;
+  font-size: 16px; line-height: 1.4;
+ }
+body, #main { height: 100%; }
+#main { background: black; width: 900px; margin: 0px auto; }
+#content { padding-left: 100px; padding-right: 100px; }
+#footer {
+  position: absolute;
+  width: 800px; height: 12px;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -400px; /* center */
+  background: url('subpage-divider.png') no-repeat;
+}
+#main { padding-bottom: 30px; }
+
+#banner { padding-top: 10px; text-align: center; }
+
+
+h1 {
+  font-family: 'Abril Fatface', 'Alice', serif; font-weight: 400;
+  font-size: 32px;
+  margin-top: 0;
+  text-align: center;
+}
+a { text-decoration:none }
+
+#check-answer { display: none !important; }
+
+@media print {
+  #main { background: white; }
+  body { color: black; }
+}
