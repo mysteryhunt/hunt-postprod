@@ -4,3 +4,11 @@
   position: relative;
   bottom: 4px;
 }
+#po td ol {
+  margin: 0;
+}
+
+#po th {
+  text-align: left;
+  padding-left: 2.5em;
+}
