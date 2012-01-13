@@ -26,7 +26,7 @@ server:
 	@cd web ; jekyll --server 4001 --auto
 
 clean:
-	$(RM) -rf web/_site web/_blind web/_stage
+	$(RM) -rf web/_site web/_blind web/_stage web/_prod
 
 turn-on-%:
 	@echo Turning on $*
@@ -84,3 +84,14 @@ stage:
 	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ ihtfp.us:/var/www/hunt-solutions/
 
 staging: stage
+
+prod: ponymap.py
+	@cp $(WCY) $(WCY).bak
+	@echo Turning all rounds on
+	@sed -ie 's/No[ ]*\(# [1-6][SC]\)/Yes \1/' $(WCY)
+	@echo Turning solutions OFF
+	@sed -ie 's/Yes[ ]*\(# solutions\)/No  \1/' $(WCY)
+	jekyll web web/_prod/puzzles
+	@cp $(WCY).bak $(WCY)
+	cp ponymap.py web/_prod/
+	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_prod/ borbonicus.ihtfp.us:/home/puzzle/hunt/
