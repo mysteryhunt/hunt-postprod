@@ -1,5 +1,13 @@
 .clue-div {
   padding-top: 15px;
+  page-break-inside: avoid;
+}
+.clue-div > div:first-child {
+  page-break-after: avoid;
+}
+.clue-div > div:first-child + div,
+.clue-div img {
+  page-break-before: avoid;
 }
 
 .num-at-end {
