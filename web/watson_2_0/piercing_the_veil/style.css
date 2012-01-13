@@ -2,7 +2,9 @@ div.bingobody {
     text-align: left;
     font-size: 13px;
     font-family: calibri, 'lucida grande', tahoma, helvetica, arial, verdana, sans-serif;
-    margin: 50px;
+    margin-left: 50px; margin-right: 50px;
+    margin-top: -15px;
+    margin-bottom: 10px;
 }
 
 div.h1class {
@@ -78,10 +80,6 @@ td.testingadmin {
 
 div.itemgroup {
     padding-top: 1.5em;
-}
-
-div.disclaimer {
-    padding-bottom: 3.0em;
 }
 
 td.item {
