@@ -190,6 +190,8 @@ function load_betsy_johnson() {
 document.getElementById('photo').innerHTML = imagemap_betsy_johnson();
 document.getElementById('materials').innerHTML = puzzlelist_betsy_johnson();
 }
+this.puzzle_link_map = {"1ade496db583d089c9d2270c163a2156d07b2090a2dcc113faedc5aa": "betsy_johnson", "1c83e5d71d1aec5262b3857af99f88a5af13e1a57859b59f73c8ffba": "betsy_johnson", "7f5a2320bb0ee68203fc121e5896c093cb5454dedcf5c73afb34b785": "betsy_johnson", "fee64bf41d0461e590bfe753323db1c4cab619232a6cc2371a84f286": "betsy_johnson"};
+
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+

@@ -6,6 +6,7 @@ import dbfetch
 from importpuzz import canon, smart_quotes
 from mkimagemap import mkimagemap
 from ponymap import ROUNDS, PONY_INFO
+import hashlib
 import json
 import os, os.path
 import shutil
@@ -399,6 +400,21 @@ def buildTopLevelRelease(batch, split=4):
     # return this javascript fragment
     return '\n'.join(lines)
 
+def buildLinks(batch):
+    critic_map = dict((info['round'], info) for pony,info
+                      in PONY_INFO.iteritems() if info['is_meta'])
+    links={}
+    for pony, info in PONY_INFO.iteritems():
+        if info['reused'] is None: continue
+        if info['batch'] > batch: continue
+        critic = info['reused']
+        critic_batch = critic_map[critic]['batch']
+        if critic_batch > batch: continue
+        ponyhash=hashlib.sha224(pony.strip()).hexdigest()
+        print info['title'],ponyhash
+        links[ponyhash] = canon(critic)
+    return 'this.puzzle_link_map = '+jsEscape(links)+';\n'
+
 if __name__ == '__main__':
     rounds = dbfetch.with_db(getRoundPuzzlesWithPostProd)
     # build some indexes
@@ -434,9 +450,12 @@ if __name__ == '__main__':
 
     # round release pages
     fragments['mainpage'] = {}
+    fragments['links'] = {}
     for round_name, round_batch in ROUND_BATCH.iteritems():
         f = buildTopLevelRelease(round_batch)
         fragments['mainpage'][round_batch] = f
+        # critic links
+        fragments['links'][round_batch] = buildLinks(round_batch)
 
     # ok, now assemble all the fragments into a coherent set of big honkin'
     # release files.

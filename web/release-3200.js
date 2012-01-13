@@ -589,6 +589,8 @@ function load_okla_holmes_a() {
 document.getElementById('index-image').innerHTML = imagemap_okla_holmes_a();
 document.getElementById('puzzle-list').innerHTML = puzzlelist_okla_holmes_a();
 }
+this.puzzle_link_map = {"1ade496db583d089c9d2270c163a2156d07b2090a2dcc113faedc5aa": "betsy_johnson", "1c83e5d71d1aec5262b3857af99f88a5af13e1a57859b59f73c8ffba": "betsy_johnson", "d72d9b08324d46f4301e2ffab4aad66b17d05714d34817019afeee7f": "charles_lutwidge_dodgson", "e02754500d8121de004dccfd11a6e2049ad03b60a755f8382a9657c7": "charles_lutwidge_dodgson", "5c68976f3f1fa475f5429f318d1b37fdcc2ce2c82a4902987f90dfb9": "william_s_bergman", "9e83dc29916b578cea7f04ea9997580c8c980800d7a26ae4c1a32086": "charles_lutwidge_dodgson", "e9219c42440c506e6713646be106d53e473981ece92e3193c9c05ce2": "william_s_bergman", "31481139a59df89392dcc960e43fd4f5233cf9ee5ba0a3a4ed118af3": "william_s_bergman", "d676979490055f4e9526e802470174cc9cfb4b5c405b3a8727627047": "william_s_bergman", "8f1757aacd259fb957b8dc90c22da9c9675d6732a107bb0942f82c7f": "william_s_bergman", "91c19693e0dadc2a74d1ec267143920705b2acb79742e8fbacc00a48": "william_s_bergman", "e470762da4fa304c64e5fb368aa992d3f0f8c901fdd3012873ea531a": "william_s_bergman", "7f5a2320bb0ee68203fc121e5896c093cb5454dedcf5c73afb34b785": "betsy_johnson", "291f53498199a6c1567acc39ca21267837864f7859c88beb65adf093": "william_s_bergman", "9f6d3241ca0a6726cc628f2b82342f653cc0768363fb0573b5f33af2": "charles_lutwidge_dodgson", "fee64bf41d0461e590bfe753323db1c4cab619232a6cc2371a84f286": "betsy_johnson"};
+
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+

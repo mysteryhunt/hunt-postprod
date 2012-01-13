@@ -1,3 +1,5 @@
+this.puzzle_link_map = {};
+
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+

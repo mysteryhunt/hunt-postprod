@@ -114,6 +114,8 @@ function load_a_circus_line() {
 document.getElementById('index-image').innerHTML = imagemap_a_circus_line();
 document.getElementById('puzzle-list').innerHTML = puzzlelist_a_circus_line();
 }
+this.puzzle_link_map = {};
+
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+

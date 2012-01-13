@@ -42,15 +42,15 @@
 </div>
 <a id="top-link" href="{{top}}../../"></a>
 <div id="bottom-border"></div>
-{% unless is_solution %}
-<script src="-link.js" type="text/javascript"></script>
-{% endunless %}
 <script type="text/javascript">
 this.depth="{{top}}../../";
 this.up_title="{% if is_solution and is_show_meta != true %}{{ page.title }}{% else %}Mayan Fair Lady{% endif %}";
 this.puzzlehash="{{ page.ponyhash }}";
 </script>
 <script src="{{top}}../../shortcuts.js" type="text/javascript"></script>
+{% unless is_solution %}
+{% include critic_link.html %}
+{% endunless %}
 </body>
 {% endif %}
 </html>

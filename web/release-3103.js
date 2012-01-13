@@ -549,6 +549,8 @@ function load_okla_holmes_a() {
 document.getElementById('index-image').innerHTML = imagemap_okla_holmes_a();
 document.getElementById('puzzle-list').innerHTML = puzzlelist_okla_holmes_a();
 }
+this.puzzle_link_map = {"1ade496db583d089c9d2270c163a2156d07b2090a2dcc113faedc5aa": "betsy_johnson", "1c83e5d71d1aec5262b3857af99f88a5af13e1a57859b59f73c8ffba": "betsy_johnson", "d72d9b08324d46f4301e2ffab4aad66b17d05714d34817019afeee7f": "charles_lutwidge_dodgson", "e02754500d8121de004dccfd11a6e2049ad03b60a755f8382a9657c7": "charles_lutwidge_dodgson", "9e83dc29916b578cea7f04ea9997580c8c980800d7a26ae4c1a32086": "charles_lutwidge_dodgson", "7f5a2320bb0ee68203fc121e5896c093cb5454dedcf5c73afb34b785": "betsy_johnson", "9f6d3241ca0a6726cc628f2b82342f653cc0768363fb0573b5f33af2": "charles_lutwidge_dodgson", "fee64bf41d0461e590bfe753323db1c4cab619232a6cc2371a84f286": "betsy_johnson"};
+
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+
