@@ -23,6 +23,10 @@ body, #main { height: 100%; }
   background: url('mainpage-divider.png') no-repeat;
 }
 #main { padding-bottom: 30px; }
+#main ul {
+  list-style: none; font-size: 24px;
+  padding-left: 0; padding-right: 0;
+}
 
 h2 {
   font-family: 'Abril Fatface', 'Alice', serif; font-weight: 400;

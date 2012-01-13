@@ -9,32 +9,32 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <title>Borbonicus &amp; Bodley</title>
 <script src="release.js" type="text/javascript"></script>
+<script src="letters_from_max_and_leo/release.js" type="text/javascript"></script>
+<script src="memos_from_the_management/release.js" type="text/javascript"></script>
+<script src="events/release.js" type="text/javascript"></script>
 </head>
 
-<body onload="load_mainpage()">
+<body onload="load_mainpage();load_subpages();">
 <div id="main">
   <div id="index-image"><img src="mainpage.jpg" /></div>
 
 <table align="center" id="index-table"></table>
 
-<h2>Letters from Max and Leo</h2>
-<!-- source this table from letters_from_max_and_leo/release.js -->
-<p>blah blah blah</p>
-
 <h2>Memos from the Management</h2>
-<!-- source this table from memos_from_the_management/release.js -->
-<p>List goes here</p>
+<ul id="memos_from_the_management">
+</ul>
+
+<h2>Letters from Max and Leo</h2>
+<ul id="letters_from_max_and_leo">
+</ul>
 
 <h2>Events</h2>
-<p>List goes here</p>
-
-{% if site.release.endgame %}
-<h2>Endgame</h2>
-<p>blah blah blah</p>
-{% endif %}
+<ul id="events">
+</ul>
 
 </div>
 <div id="footer"></div>
 <script type="text/javascript">this.depth="";</script>
 <script src="shortcuts.js" type="text/javascript"></script>
+<script src="subpages.js" type="text/javascript"></script>
 </body> </html>
