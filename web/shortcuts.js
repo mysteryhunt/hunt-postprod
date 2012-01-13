@@ -4,7 +4,7 @@
 this.depth=this.depth || '../';
 this.points = this.points || 0;
 this.bupkis = this.bupkis || 0;
-this.when = "12:32";
+this.when = this.when || new Date();
 var shortcuts=document.createElement('div');
 shortcuts.innerHTML=(
 '<div id="shortcuts" onclick=";"><span>Shortcuts</span>'+
@@ -12,14 +12,14 @@ shortcuts.innerHTML=(
 '  <li><a href="'+this.depth+'">Home</a></li>'+
 (this.up_title ?
  ('  <li>&gt;&nbsp;<a href="..">'+this.up_title+'</a></li>'):'')+
-'  <li><a href="'+this.depth+'memos_from_the_management/introduction.html">Introduction</a></li>'+
+'  <li><a href="'+this.depth+'memos_from_the_management/introduction/">Introduction</a></li>'+
 '  <li><a href="'+this.depth+'contact_hq/">Contact HQ</a></li>'+
-'  <li><a href="'+this.depth+'events/">Events</a></li>'+
+'{% if false %}  <li><a href="'+this.depth+'events/">Events</a></li>{% endif %}'+
 '{% if false %}  <li><a href="'+this.depth+'nominations/">Nominations</a></li>{% endif %}'+
 '  <li><a href="'+this.depth+'memos_from_the_management/">From the Management</a></li>'+
 '  <hr />'+
 '  <div class="chutzpah">Chutzpah: '+this.points+'</div>'+
-'  <div class="unlock">Next unlock: '+this.when+'</div>'+
+'  <div class="unlock">Next unlock: '+new Date(this.when).toLocaleTimeString()+'</div>'+
 '  <div class="bupkis">Bupkis: '+this.bupkis+'</div>'+
 '</ul>'+
 '</div>'+

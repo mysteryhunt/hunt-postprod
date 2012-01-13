@@ -1,3 +1,3 @@
 this.events = [
-    ["4pm Event", "4pm.html"]
+    ["Bringing Stars Together", "bringing_stars_together/"]
 ];
