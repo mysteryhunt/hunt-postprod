@@ -1,0 +1,408 @@
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Alice);
+@import "../../fonts.css";
+
+/* center x is 706px */
+body {
+  font-family: 'Alice', serif;
+  margin: 8px;
+}
+
+h3
+{
+    color: gray;
+    font-size: 18px;
+}
+
+body.loading,
+body.loading .team,
+body.loading .mutable .team,
+body.loading #submitter button {
+    cursor: wait;
+}
+
+.gamecontainer
+{
+    height: 40px;
+    width: 130px;
+    margin: 5px;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 13px;
+}
+
+.name_container
+{
+    height: 20px;
+    line-height: 20px;
+}
+
+.team
+{
+    width: 100%;
+    height: 50%;
+    background-color: #d4f4b3;
+    cursor: default;
+}
+
+.mutable .team {
+    cursor: pointer;
+}
+
+.mutable .team:hover
+{
+    background-color: #b8ec80;
+}
+
+.team.selected
+{
+    background-color: #00e600;
+}
+
+.mutable .team.selected:hover
+{
+    background-color: #00cc00;
+}
+
+.loc0
+{
+    position: absolute;
+    top: 0px;
+}
+
+.loc1
+{
+    position: absolute;
+    bottom: 0px;
+}
+
+.fixed, .fixed-font
+{
+    font-family: Alice, serif;
+}
+
+#bracket
+{
+    text-align: center;
+    margin-bottom: 5px;
+    height: 1120px;
+}
+
+#round0_game07
+{
+    position: absolute;
+    left: 325px; /* 706-249-132 */
+    top: 15px;
+    display: inline-block;
+}
+
+#round0_game24
+{
+    position: absolute;
+    left: 515px; /* 706-59-132 */
+    top: 15px;
+    display: inline-block;
+}
+
+#round0_game42
+{
+    position: absolute;
+    left: 955px; /* 706+249, width=130+2 */
+    top: 15px;
+    display: inline-block;
+}
+
+#round0_game54
+{
+    position: absolute;
+    left: 765px; /* 706+59; width=130+2 */
+    top: 15px;
+    display: inline-block;
+}
+
+#round0
+{
+    position: absolute;
+    width: 100px;
+    left: 656px;
+    top: 5px;
+}
+
+#logo
+{
+    position: absolute;
+    top: 130px;
+    left: 646px;
+}
+
+.roundlabel {
+    position: absolute;
+    top: 100px;
+    width: 142px;
+}
+
+#round1
+{
+    left: 10px;
+}
+
+#round1right
+{
+    left: 1260px;
+}
+
+#round2
+{
+    left: 190px;
+}
+
+#round2right
+{
+    left: 1080px;
+}
+
+#round3
+{
+    left: 370px;
+}
+
+#round3right
+{
+    left: 900px;
+}
+
+#round4
+{
+    left: 550px;
+}
+
+#round4right
+{
+    left: 720px;
+}
+
+.largeleftcomponent
+{
+    width: 70%;
+    height: 100%;
+    border-right: solid thin;
+    border-top: solid thin;
+    border-bottom: solid thin;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.smallleftcomponent
+{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-bottom: solid thin;
+}
+
+.largerightcomponent
+{
+    width: 70%;
+    height: 100%;
+    border-left: solid thin;
+    border-top: solid thin;
+    border-bottom: solid thin;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.smallrightcomponent
+{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-bottom: solid thin;
+}
+
+.connector
+{
+    width: 48px;
+    height: 30px;
+    position: absolute;
+}
+
+.round5 {
+    position: absolute;
+    width: 142px;
+}
+.round5 h4 {
+    margin: 5px;
+}
+.round5 .gamecontainer {
+   position: static;
+}
+
+#round5_game00,
+#round5_game01 {
+    left: 550px; /* 706-14-142 */
+}
+#round5_game02,
+#round5_game03 {
+    left: 720px; /* 706+14 */
+}
+#round5_game00,
+#round5_game02 {
+    top: 540px;
+}
+#round5_game01,
+#round5_game03 {
+    top: 650px;
+}
+
+#round5_game00_team
+{
+    height: 40px;
+    line-height: 40px;
+}
+
+#round5_game01_team
+{
+    height: 40px;
+    line-height: 40px;
+}
+
+#round5_game02_team
+{
+    height: 40px;
+    line-height: 40px;
+}
+
+#round5_game03_team
+{
+    height: 40px;
+    line-height: 40px;
+}
+
+#clock, #message1 { color: #d00; }
+#clock { border: 4px solid #d00; background: black; }
+#clock.zero {
+  border-color: black;
+}
+#clock img { margin: 0; padding: 0; }
+
+#clock
+{
+    position: absolute;
+    top: 10;
+    left: 10;
+    font-size: 36px;
+}
+
+#submitter
+{
+    position: absolute;
+    left: 542px;
+    top: 230px;
+    width: 328px;
+    height: 130px;
+    text-align: center;
+}
+#submitter, #submitter button {
+    font-family: 'Alice', serif;
+    font-size: 16px;
+}
+#submitter #message1 {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 26px;
+}
+#submitter button {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    height: 25px;
+}
+
+.finalteam
+{
+    height: 22px; padding-top: 18px; /* should add up to 40px */
+    width: 140px;
+    margin: 5px;
+    font-size: 16px;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Alice, serif;
+    background-color: #d4f4b3;
+}
+.finalteam > span {
+    margin: 0 4px;
+}
+
+.finalteam .r { float: right; }
+.finalteam .l { float: left; }
+.blank {
+  border-bottom: 1px solid black;
+  color: transparent;
+  position: relative;
+  bottom: 4px;
+}
+
+.ps-note {
+    font-size: 13px;
+    clear: both;
+}
+
+#SemiFinalTeam1, #SemiFinalTeam2 {
+   left: 0px;
+}
+
+#SemiFinalTeam3, #SemiFinalTeam4 {
+   left: 200px;
+}
+
+#SemiFinalTeam1, #SemiFinalTeam3 {
+   top: 0px;
+}
+
+#SemiFinalTeam2, #SemiFinalTeam4 {
+   top: 41px;
+}
+
+#FinalTeam1 { top: 100px; left: 30px; }
+#FinalTeam2 { top: 100px; left: 170px; }
+
+#finalbracket
+{
+    position: relative;
+    height: 150px;
+    width: 310px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#finalLeftConnectorVertical
+{
+    border-right: solid thin;
+    border-top: solid thin;
+    position: absolute;
+    left: 146px;
+    top: 46px;
+    width: 17px;
+    height: 59px;
+}
+
+#finalRightConnectorVertical
+{
+    border-left: solid thin;
+    border-top: solid thin;
+    position: relative;
+    left: 42px;
+    width: 17px;
+    height: 59px;
+    top: -1px;
+}
