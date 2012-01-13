@@ -3,24 +3,33 @@ p.RainbowConnection {
 p.spacer {
     padding-top: 1em;
 }
+.RCr,.RCo,.RCy,.RCg,.RCb,.RCi,.RCv {
+    width: 0px; height: 8px;
+    display: inline-block;
+    vertical-align: baseline;
+    border: 6px solid black;
+    position: relative;
+    top: 4px;
+}
 .RCr {
-    background-color: red;
+    border-color: red;
 }
 .RCo {
-    background-color: orange;
+    border-color: orange;
 }
 .RCy {
-    background-color: yellow;
+    border-color: yellow;
 }
 .RCg {
-    background-color: green;
+    border-color: green;
 }
 .RCb {
-    background-color: blue;
+    border-color: blue;
 }
 .RCi {
-    background-color: indigo;
+    border-color: indigo;
 }
 .RCv {
-    background-color: purple;
+    border-color: purple;
 }
+.RCx { white-space: nowrap; }
