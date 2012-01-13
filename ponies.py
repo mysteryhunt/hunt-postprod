@@ -56,7 +56,7 @@ letterMap = {
 'Mayan Fair Lady':'Fancy Pants',
 'Phantom of the Operator':'Fizzy',
 'Ogre of La Mancha':'Galaxy',
-'Intro':'Glory',
+'Greetings from Max':'Glory',
 "Let's Make a Hit!":'Gutsy',
 "Password Reminder":'Heartstrings'
 }

@@ -1,3 +1,3 @@
 this.letters_from_max_and_leo = [
-    ['Letter 1', 'letter1']
+    ['Greetings from Max', 'greetings_from_max']
 ];

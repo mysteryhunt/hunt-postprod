@@ -4,7 +4,7 @@
 this.depth=this.depth || '../';
 this.points = this.points || 0;
 this.bupkis = this.bupkis || 0;
-this.when = this.when || new Date();
+this.when = this.next_unlock_time ? new Date(this.next_unlock_time):new Date();
 var shortcuts=document.createElement('div');
 shortcuts.innerHTML=(
 '<div id="shortcuts" onclick=";"><span>Shortcuts</span>'+
@@ -19,7 +19,7 @@ shortcuts.innerHTML=(
 '  <li><a href="'+this.depth+'memos_from_the_management/">From the Management</a></li>'+
 '  <hr />'+
 '  <div class="chutzpah">Chutzpah: '+this.points+'</div>'+
-'  <div class="unlock">Next unlock: '+new Date(this.when).toLocaleTimeString()+'</div>'+
+'  <div class="unlock">Next unlock: '+this.when.toLocaleTimeString()+'</div>'+
 '  <div class="bupkis">Bupkis: '+this.bupkis+'</div>'+
 '</ul>'+
 '</div>'+
