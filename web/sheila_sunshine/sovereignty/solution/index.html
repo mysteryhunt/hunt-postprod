@@ -5,63 +5,76 @@ class: puzzle solution
 credits: by Alex Pearson and Arthur Wright
 ---
 <p>
-</p><pre>The first solution step is realizing that this is a Dominion puzzle (Sovereignty is a synonym, Donald X. Vaccarino created the game, and each player starts with 7 of one thing and 3 of the other). After that leap, it's a logic puzzle to determine what each card does, and how the markup works. Here's one path to take:
-----
-K Province: game-ending after 12 are taken from the pile, implying there were exactly 12. Costs 8 or more each time, never played as an action.
-L Duchy: never played, part of VP section of cards, costs 5.
-M Estate: opening hand distribution.
-N Gold: treasure by use, Gold by cost.
-O Silver: treasure by use, Silver by cost.
-P Copper: opening hand distribution.
-Q Curse: never bought or played.
-
+The first solution step is realizing that this is a Dominion puzzle (Sovereignty is a synonym, Donald X. Vaccarino created the game, and each player starts with 7 of one thing and 3 of the other). After that leap, it&rsquo;s a logic puzzle to determine what each card does, and how the markup works. Here&rsquo;s one path to take:
+</p>
+<p>
+K Province: game-ending after 12 are taken from the pile, implying there were exactly 12. Costs 8 or more each time, never played as an action.<br />
+L Duchy: never played, part of VP section of cards, costs 5.<br />
+M Estate: opening hand distribution.<br />
+N Gold: treasure by use, Gold by cost.<br />
+O Silver: treasure by use, Silver by cost.<br />
+P Copper: opening hand distribution.<br />
+Q Curse: never bought or played.<br />
+</p>
+<p>
 A Harvest: p3, each time revealing 4 cards, gaining up to 4 coins.
-
+</p>
+<p>
 E Moneylender: p3t4, trashing a copper for 3 coins.
-
+</p>
+<p>
 I Trader: Reaction per p2t6. Playing it normally causes a card to be trashed by p1t3. Only reaction that causes a trash is Trader.
-
-G Grand Market: Often bought without coppers, even though coppers were in hand. Costs 6 or more every time. That's enough for Grand Market, even without confirming the rest (1 card, 1 buy, 2 coin by p2t10, 1 action by p1t10).
-
+</p>
+<p>
+G Grand Market: Often bought without coppers, even though coppers were in hand. Costs 6 or more every time. That&rsquo;s enough for Grand Market, even without confirming the rest (1 card, 1 buy, 2 coin by p2t10, 1 action by p1t10).
+</p>
+<p>
 J Jester: By Harvest, * is discard from top of deck. Each other player discards from their deck every time. p4t8 plays an I that he never bought, so he must have gotten it from Jester reveal in p4t5.
-
+</p>
+<p>
 C City: 1 action, 1 card by p2t7. It gives no coin in p3t12 (only the 3 from the moneylender). 1 buy, 1 coin by p3t17. Counting piles of other cards, this is exactly the difference between 0 and 2 empty piles (C and D), so C is City.
-
-D Pearl Diver: Costs 2 by p4t1, +1 card by p2t11 (forces a shuffle), +1 action by p2t15. It sometimes does ^, so not Pawn or Hamlet, since everything those cards do is done by other cards already identified without notation. Not Haven, since hand size doesn't grow. +1 action even when not played for the first time by p4t6, so not Crossroads. Only other +c +a 2-cost card is Pearl Diver, so ^ must be moving the bottom card to the top of the deck.
-
-H Torturer: Attack card by p2t6, where a reaction is played on it. By p2t6, playing it draws 3 cards. Nothing is revealed in p4t9, but a copper is left unplayed, where every other player plays all their treasure even if it leads to overpayment (except when buying G, more on that under G). So the P must have been discarded in an attack from H. But I is only a response to gaining a card, so H must cause either a discard or a gain. With the 3 card draws, that's uniquely the Torturer
-
-B Witch: Attack per p4t6, where a reaction is played on it. p4t13, +2 cards. Not +1 action, or J would have been played after B in p4t13. Other players hands don't show the reduction of Ghost Ship, Rabble, Margrave or Followers. No self discard, so not Young Witch. No cards revealed cuts out attacks other than Witch. Curse acquisition lines up with this assumption.
-
+</p>
+<p>
+D Pearl Diver: Costs 2 by p4t1, +1 card by p2t11 (forces a shuffle), +1 action by p2t15. It sometimes does ^, so not Pawn or Hamlet, since everything those cards do is done by other cards already identified without notation. Not Haven, since hand size doesn&rsquo;t grow. +1 action even when not played for the first time by p4t6, so not Crossroads. Only other +c +a 2-cost card is Pearl Diver, so ^ must be moving the bottom card to the top of the deck.
+</p>
+<p>
+H Torturer: Attack card by p2t6, where a reaction is played on it. By p2t6, playing it draws 3 cards. Nothing is revealed in p4t9, but a copper is left unplayed, where every other player plays all their treasure even if it leads to overpayment (except when buying G, more on that under G). So the P must have been discarded in an attack from H. But I is only a response to gaining a card, so H must cause either a discard or a gain. With the 3 card draws, that&rsquo;s uniquely the Torturer
+</p>
+<p>
+B Witch: Attack per p4t6, where a reaction is played on it. p4t13, +2 cards. Not +1 action, or J would have been played after B in p4t13. Other players hands don&rsquo;t show the reduction of Ghost Ship, Rabble, Margrave or Followers. No self discard, so not Young Witch. No cards revealed cuts out attacks other than Witch. Curse acquisition lines up with this assumption.
+</p>
+<p>
 F Festival: Costs &lt;=5, +1 action +2 coin by p4t12. Bought with copper, so not Grand Market. Conspirator possible, if not for the +1 buy in p4t15. Not Trusty Steed, since it was bought. 
-----
-Having derived the names of each card used, we can take nlen() to mean the length of the name of the card, and doing all the indicated math at the end gives the clue phrase ATZERODT OR VOLOKH, E.G. , for the answer CONSPIRATOR.
-
+</p>
+<p>
+Having derived the names of each card used, we can take nlen() to mean the length of the name of the card, and doing all the indicated math at the end gives the clue phrase ATZERODT OR VOLOKH, E.G. , for the answer <b>CONSPIRATOR</b>.
+</p>
+<p>
 For the curious, here is the basis for the game, taken from the wonderful logs created by dominion.isotropic.org . One change had to be made to uniquely determine all the cards using our notation.
+</p>
+<p>
+Player1 wins!<br />
+All Provinces are gone.<br />
+<br />
+cards in supply: City, Festival, Grand Market, Harvest, Jester, Moneylender, Pearl Diver, Torturer, Trader, and Witch<br />
+----------------------<br />
+<br />
+#1 Player1: 32 points (4 Provinces, 3 Duchies, an Estate, and 2 Curses); 20 turns<br />
+&nbsp;&nbsp;&nbsp;[40 cards] 4 Cities, 3 Grand Markets, 2 Pearl Divers, 2 Traders, 4 Coppers, 14 Silvers, 1 Gold, 1 Estate, 3 Duchies, 4 Provinces, 2 Curses<br />
+<br />
+#2 Player2: 30 points (6 Duchies, 2 Provinces, 3 Estates, and 3 Curses); 19 turns<br />
+&nbsp;&nbsp;&nbsp;[39 cards] 3 Cities, 3 Grand Markets, 3 Pearl Divers, 1 Torturer, 1 Trader, 6 Coppers, 6 Silvers, 2 Golds, 3 Estates, 6 Duchies, 2 Provinces, 3 Curses<br />
 
-#####################
-
-Player1 wins!
-All Provinces are gone.
-
-cards in supply: City, Festival, Grand Market, Harvest, Jester, Moneylender, Pearl Diver, Torturer, Trader, and Witch
-----------------------
-
-#1 Player1: 32 points (4 Provinces, 3 Duchies, an Estate, and 2 Curses); 20 turns
-          [40 cards] 4 Cities, 3 Grand Markets, 2 Pearl Divers, 2 Traders, 4 Coppers, 14 Silvers, 1 Gold, 1 Estate, 3 Duchies, 4 Provinces, 2 Curses
-
-#2 Player2: 30 points (6 Duchies, 2 Provinces, 3 Estates, and 3 Curses); 19 turns
-       [39 cards] 3 Cities, 3 Grand Markets, 3 Pearl Divers, 1 Torturer, 1 Trader, 6 Coppers, 6 Silvers, 2 Golds, 3 Estates, 6 Duchies, 2 Provinces, 3 Curses
-
-#3 Player4: 27 points (3 Provinces, 2 Duchies, 5 Estates, and 2 Curses); 19 turns
-              [37 cards] 4 Pearl Divers, 2 Moneylenders, 1 City, 1 Festival, 1 Jester, 1 Trader, 4 Coppers, 8 Silvers, 3 Golds, 5 Estates, 2 Duchies, 3 Provinces, 2 Curses
-
-#4 Player3: 22 points (3 Provinces, 8 Estates, and 4 Curses); 19 turns
-            [38 cards] 3 Grand Markets, 2 Cities, 1 Harvest, 1 Moneylender, 1 Pearl Diver, 1 Trader, 2 Coppers, 9 Silvers, 3 Golds, 8 Estates, 3 Provinces, 4 Curses
-
-----------------------
-
-trash: 14 Coppers, 3 Estates, a Curse, a Witch, and a Moneylender
+#3 Player4: 27 points (3 Provinces, 2 Duchies, 5 Estates, and 2 Curses); 19 turns<br />
+&nbsp;&nbsp;&nbsp;[37 cards] 4 Pearl Divers, 2 Moneylenders, 1 City, 1 Festival, 1 Jester, 1 Trader, 4 Coppers, 8 Silvers, 3 Golds, 5 Estates, 2 Duchies, 3 Provinces, 2 Curses<br />
+<br />
+#4 Player3: 22 points (3 Provinces, 8 Estates, and 4 Curses); 19 turns<br />
+&nbsp;&nbsp;&nbsp;[38 cards] 3 Grand Markets, 2 Cities, 1 Harvest, 1 Moneylender, 1 Pearl Diver, 1 Trader, 2 Coppers, 9 Silvers, 3 Golds, 8 Estates, 3 Provinces, 4 Curses<br />
+<br />
+----------------------<br />
+<br />
+</p>
+<pre>trash: 14 Coppers, 3 Estates, a Curse, a Witch, and a Moneylender
 
 Game log
 
