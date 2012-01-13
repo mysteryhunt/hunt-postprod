@@ -1,6 +1,26 @@
 p.RainbowConnection {
-    font-family: monospace;
-    font-size: 16px;
-	white-space: nowrap; 
-	
+}
+p.spacer {
+    padding-top: 1em;
+}
+.RCr {
+    background-color: red;
+}
+.RCo {
+    background-color: orange;
+}
+.RCy {
+    background-color: yellow;
+}
+.RCg {
+    background-color: green;
+}
+.RCb {
+    background-color: blue;
+}
+.RCi {
+    background-color: indigo;
+}
+.RCv {
+    background-color: purple;
 }
