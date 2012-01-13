@@ -209,9 +209,11 @@ function    addGame(games, round, index)
                 top += vertical_space;
             }
 
+			var height_val = 60 << (round - 1);
+
             connector_node.style.top = "" + top + "px";
             connector_node.style.left = "" + left + "px";
-            connector_node.style.height = 60 << (round - 1);
+            connector_node.style.height = "" + height_val + "px";
         }
     }
 
