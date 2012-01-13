@@ -14,7 +14,7 @@ NODES = {
         'w': '51'
     },
     '3': {
-        'text': 'The path ends abruptly in front of two magical sliding doors, leading to a small closed room that appears to be enchanted. You do not trust magic, and leave these artefacts well alone. From here, the path leads back to the west.',
+        'text': 'The path ends abruptly in front of two magical sliding doors, leading to a small closed room that appears to be enchanted. You do not trust magic, and leave these artifacts well alone. From here, the path leads back to the west.',
         'w': '2'
     },
     '4': {
@@ -98,7 +98,7 @@ NODES = {
         's': '17'
     },
     '19': {
-        'text': 'You see another attempt to tempt you to leave the caverns to the outside world: two vertical shafts, and a flight of steps leading upwards. But your will is strong. Carrier pigeons nest here.\nYou ponder your next move. Paths lead north and east.?\n\n- Hidden in a corner you find a place to rest.\n- There is a stash of roast boar and ale here, ripe for the taking.',
+        'text': 'You see another attempt to tempt you to leave the caverns to the outside world: two vertical shafts, and a flight of steps leading upwards. But your will is strong. Carrier pigeons nest here.\nYou ponder your next move. Paths lead north and east.\n\n- Hidden in a corner you find a place to rest.\n- There is a stash of roast boar and ale here, ripe for the taking.',
         'e': '20',
         'n': '17'
     },
@@ -113,7 +113,7 @@ NODES = {
         'sw': '20'
     },
     '22': {
-        'text': 'The passage slopes gently upward to the southwest. Tired from your journey, you do not pass the portals to the northeast, northwest, and southeast. Instead, you return the way you came.\n\n- Before you leave, you pick up the roasted rat and flask of water you find in a corner, and tuck in.\n- You can rest here.\n- You also find two platinum pieces under the bag.',
+        'text': 'The passage slopes gently upward to the southwest. Tired from your journey, you do not pass through the portals to the northeast, northwest, and southeast. Instead, you return the way you came.\n\n- Before you leave, you spot a few roasted rats and a flask of water just past the northwest portal.\n- You can rest here.\n- You also find two platinum pieces under the bag.',
         'sw': '21'
     },
     '23': {
@@ -229,7 +229,7 @@ NODES = {
         's': '43'
     },
     '45': {
-        'text': 'The path stretches north and south.\n\n- You see an alcove dedicated to the goddess of justice.',
+        'text': 'The path stretches north and south.\n\n- You see here a temple for the priests of the goddess of justice.',
         'n': '9',
         's': '44'
     },
@@ -239,7 +239,7 @@ NODES = {
         's': '6'
     },
     '47': {
-        'text': 'You stand in a maze of twisty little passages, all alike. You are surrounded by cages, but there are no animals in them. You wonder what they are for. The path to the west is filled the hum and buzz of dwarven machinery, and the sound wreaks havoc with your sense of direction. You do not want to meet its owners.\nFrom here, a path slopes upwards to the south, a dark passage leads to the east, or you can make a mad dash down the long path to the west, ignoring several short paths upwards and to the south.\n\n- It feels safe to rest here.\n- Despite your weariness, you are not too distracted to notice nine pieces of platinum nearby, which you surreptiously take.',
+        'text': 'You stand in a maze of twisty little passages, all alike. You are surrounded by cages, but there are no animals in them. You wonder what they are for. The path to the west is filled the hum and buzz of dwarven machinery, and the sound wreaks havoc with your sense of direction. You do not want to meet its owners.\nFrom here, a path slopes upwards to the south, a dark passage leads to the east, or you can make a mad dash down the long path to the west, ignoring several short paths upwards and to the south.\n\n- It feels safe to rest here.\n- Despite your weariness, you are not too distracted to notice nine pieces of platinum nearby, which you surreptitiously take.',
         'e': '48',
         's': '46',
         'w': '49'
