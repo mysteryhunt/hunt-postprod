@@ -5,6 +5,9 @@
 <link rel="shortcut icon" href="{{top}}../favicon.ico" />
 <link href="{{top}}../subpage.css" rel="stylesheet" type="text/css">
 <title>{{ page.title }}</title>
+{% if page.style %}
+<link href="{{ page.style }}" rel="stylesheet" type="text/css">
+{% endif %}
 </head>
 <body>
 <div id="main">

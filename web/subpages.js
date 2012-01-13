@@ -1,4 +1,5 @@
-function load_subpages() {
+function load_subpages(prefix) {
+    prefix = prefix || "";
     var works = [[ "letters_from_max_and_leo", this.letters_from_max_and_leo ],
 		 [ "memos_from_the_management", this.memos_from_the_management ],
 		 [ "events", this.events ]];
@@ -10,7 +11,7 @@ function load_subpages() {
 	for (var j=0; j<list_of_things.length; j++) {
 	    var title = list_of_things[j][0];
 	    var url = works[i][0] + '/' + list_of_things[j][1];
-	    links += '<li><a href="'+url+'">'+title+'</a></li>\n';
+	    links += '<li><a href="'+prefix+url+'">'+title+'</a></li>\n';
 	}
 	ul.innerHTML = links;
     }
