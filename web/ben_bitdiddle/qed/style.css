@@ -1,6 +1,7 @@
 #QEDfloater
 {
   float: right;
+  margin-left: 10px;
 }
 
 #grid td
