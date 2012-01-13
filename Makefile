@@ -36,7 +36,7 @@ update-%: turn-on-%
 	@jekyll web web/_blind/$(CODENAME_$*)
 	cp team-data.js web/_blind/$(CODENAME_$*)
 
-update-zipzee:
+update-zipzee: ponymap.py
 	$(RM) -rf web/_blind/zipzee
 	@cp $(WCY) $(WCY).bak
 	@mkdir -p web/_blind/zipzee
@@ -47,6 +47,7 @@ update-zipzee:
 	$(MAKE) --no-print-directory update-6C
 	find web/_blind -print0 | xargs -0 touch -t 201101131200 -c
 	@cp $(WCY).bak $(WCY)
+	rsync ponymap.py ihtfp.us:/var/www/hunt/
 	rsync $(RSYNC_OPTS) -y --copy-dest=../../hunt-solutions/ web/_blind/zipzee/ ihtfp.us:/var/www/hunt/zipzee/
 
 turn-off-all:

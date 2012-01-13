@@ -49,6 +49,15 @@ metaPonyMap = { '1 S': ('Beachcomber', 'ELEPHANT IN A TUTU', 1100),
                 '6C':  ('Zipzee', 'ALT F FOUR', 6200),
 }
 
+letterMap = {
+'A Circus Line':'Brights Brightly',
+'Okla-Holmes-a!':'Buttons',
+'Into the Woodstock':'DJ P0n-3',
+'Mayan Fair Lady':'Fancy Pants',
+'Phantom of the Operator':'Fizzy',
+'Ogre of La Mancha':'Galaxy'
+}
+
 def mkPonyMap(db):
  ponyMap = {}
  first=True
@@ -90,6 +99,22 @@ def mkPonyMap(db):
         'batch': batch,
         'is_critic_meta': is_critic
         }
+ for round_name,pony in letterMap.iteritems():
+     pony = pony.strip()
+     round_index = dict((v,k) for k,v in roundMap.items())[round_name]
+     critic_index = round_index.replace(' S','C')
+     critic_name = roundMap[critic_index]
+     round_order = int(round_index.replace(' S',''))
+     ponyMap[pony] = {
+         'title': critic_name,
+         'answer': None,
+         'reused': None,
+         'order': round_order,
+         'round': 'Letters from Max and Leo',
+         'is_meta': False,
+         'batch': 9999,
+         'is_critic_meta': False
+     }
  return ponyMap
 
 ponyMap = with_db(mkPonyMap)
