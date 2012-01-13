@@ -15,7 +15,7 @@ shortcuts.innerHTML=(
 '  <li><a href="'+this.depth+'memos_from_the_management/introduction.html">Introduction</a></li>'+
 '  <li><a href="'+this.depth+'contact_hq/">Contact HQ</a></li>'+
 '  <li><a href="'+this.depth+'events/">Events</a></li>'+
-'  <li><a href="'+this.depth+'nominations/">Nominations</a></li>'+
+'{% if false %}  <li><a href="'+this.depth+'nominations/">Nominations</a></li>{% endif %}'+
 '  <li><a href="'+this.depth+'memos_from_the_management/">From the Management</a></li>'+
 '  <hr />'+
 '  <div class="chutzpah">Chutzpah: '+this.points+'</div>'+
