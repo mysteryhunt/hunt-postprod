@@ -427,10 +427,18 @@ this.puzzle_link_map = {"1ade496db583d089c9d2270c163a2156d07b2090a2dcc113faedc5a
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+
-"<img src=\"a_circus_line/mainpage-overlay.png\" />"+
-"<img src=\"betsy_johnson/mainpage-overlay.png\" />"+
-"<img src=\"okla_holmes_a/mainpage-overlay.png\" />"+
-"<img src=\"charles_lutwidge_dodgson/mainpage-overlay.png\" />"+
+"<img src=\"a_circus_line/mainpage-overlay"+
+(puzzle_solved["23291b2629d59f515f3e1942aba1a3c179c6e547a645e489d78083a1"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"betsy_johnson/mainpage-overlay"+
+(puzzle_solved["dccd9f81898c893d4685c1fd2b11d32c857efdb93312e6fb87e12038"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"okla_holmes_a/mainpage-overlay"+
+(puzzle_solved["628705c2958fa17d01c498b9dfd3145a5b59a2dce532dee7ffcafbc0"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"charles_lutwidge_dodgson/mainpage-overlay"+
+(puzzle_solved["ae8864d48cbe776ffa6e6f525d74bf21aaedea39c737ef9ce599bd74"]?"":"-unsolved")+
+".png\" />"+
 "<img src=\"1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"345,158,498,280\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"393,281,498,286\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"558,146,618,296\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"499,157,557,289\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"334,158,344,202\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />"+

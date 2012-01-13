@@ -1320,16 +1320,36 @@ this.puzzle_link_map = {"1ade496db583d089c9d2270c163a2156d07b2090a2dcc113faedc5a
 function imagemap_mainpage() {
   return ''+
 "<img src=\"mainpage.jpg\" />"+
-"<img src=\"a_circus_line/mainpage-overlay.png\" />"+
-"<img src=\"betsy_johnson/mainpage-overlay.png\" />"+
-"<img src=\"okla_holmes_a/mainpage-overlay.png\" />"+
-"<img src=\"charles_lutwidge_dodgson/mainpage-overlay.png\" />"+
-"<img src=\"into_the_woodstock/mainpage-overlay.png\" />"+
-"<img src=\"william_s_bergman/mainpage-overlay.png\" />"+
-"<img src=\"mayan_fair_lady/mainpage-overlay.png\" />"+
-"<img src=\"ben_bitdiddle/mainpage-overlay.png\" />"+
-"<img src=\"phantom_of_the_operator/mainpage-overlay.png\" />"+
-"<img src=\"sheila_sunshine/mainpage-overlay.png\" />"+
+"<img src=\"a_circus_line/mainpage-overlay"+
+(puzzle_solved["23291b2629d59f515f3e1942aba1a3c179c6e547a645e489d78083a1"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"betsy_johnson/mainpage-overlay"+
+(puzzle_solved["dccd9f81898c893d4685c1fd2b11d32c857efdb93312e6fb87e12038"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"okla_holmes_a/mainpage-overlay"+
+(puzzle_solved["628705c2958fa17d01c498b9dfd3145a5b59a2dce532dee7ffcafbc0"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"charles_lutwidge_dodgson/mainpage-overlay"+
+(puzzle_solved["ae8864d48cbe776ffa6e6f525d74bf21aaedea39c737ef9ce599bd74"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"into_the_woodstock/mainpage-overlay"+
+(puzzle_solved["ac8fc19d3f4b62fca2d0c539a516db04b5748813585eb5890be2c87b"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"william_s_bergman/mainpage-overlay"+
+(puzzle_solved["01b80eaf736a07ffca9f41b42147a89e7f75737af429b22b7c708b66"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"mayan_fair_lady/mainpage-overlay"+
+(puzzle_solved["a9583429542528491e2891dbaddec671ce2d5e2978a3ef58e4aed314"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"ben_bitdiddle/mainpage-overlay"+
+(puzzle_solved["0e6f562ec44477b32a0a723837bfa30254165b47d55e26240874a461"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"phantom_of_the_operator/mainpage-overlay"+
+(puzzle_solved["57fce4ce829c1c13b1986a42ea2bd189b2dcf41098655af418ba1743"]?"":"-unsolved")+
+".png\" />"+
+"<img src=\"sheila_sunshine/mainpage-overlay"+
+(puzzle_solved["0d436da7b05e9f67d72b17bdd1e7697d8803fe32496953e9b1a13955"]?"":"-unsolved")+
+".png\" />"+
 "<img src=\"1px.png\" usemap=\"#map\" style=\"z-index:99\" />"+
 "<map name=\"map\">"+
 "<area shape=\"rect\" coords=\"345,158,498,280\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"393,281,498,286\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"558,146,618,296\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"499,157,557,289\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />\n<area shape=\"rect\" coords=\"334,158,344,202\" alt=\"A Circus Line\" title=\"A Circus Line\" href=\"a_circus_line/\" />"+

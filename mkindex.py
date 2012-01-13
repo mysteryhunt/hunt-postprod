@@ -345,6 +345,8 @@ def buildShow(round_name, rinfo, batch, split=4, ordered=False):
 
 ROUND_BATCH = dict((info['round'],info['batch']) for pony,info in
                    PONY_INFO.iteritems() if info['is_meta'] is True)
+ROUND_PONIES = dict((info['round'],pony) for pony,info in
+                   PONY_INFO.iteritems() if info['is_meta'] is True)
 
 def buildTopLevelRelease(batch, split=4):
     lines = []
@@ -355,8 +357,13 @@ def buildTopLevelRelease(batch, split=4):
     add("  return ''+")
     addesc('<img src="mainpage.jpg" />')
     for round_name in ROUNDS:
-        if ROUND_BATCH[round_name] > batch: continue
-        addesc('<img src="%s/mainpage-overlay.png" />' % canon(round_name))
+        round_batch = ROUND_BATCH[round_name]
+        if round_batch > batch: continue
+        pony = ROUND_PONIES[round_name]
+        ponyhash=hashlib.sha224(pony.strip()).hexdigest()
+        addesc('<img src="%s/mainpage-overlay' % canon(round_name))
+        add('(puzzle_solved[%s]?"":"-unsolved")+' % jsEscape(ponyhash))
+        addesc('.png" />')
     addesc('<img src="1px.png" usemap="#map" style="z-index:99" />')
 
     addesc('<map name="map">')
@@ -411,7 +418,6 @@ def buildLinks(batch):
         critic_batch = critic_map[critic]['batch']
         if critic_batch > batch: continue
         ponyhash=hashlib.sha224(pony.strip()).hexdigest()
-        print info['title'],ponyhash
         links[ponyhash] = canon(critic)
     return 'this.puzzle_link_map = '+jsEscape(links)+';\n'
 
