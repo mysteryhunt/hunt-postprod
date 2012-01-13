@@ -4,6 +4,7 @@
 var DEBUG=false;
 var PROVIDE_SOLUTION=false;
 
+var ANSWERS = [{0: '110110110100110', 1: '110101100100101', 2: '101111010101000', 3: '101110110110111'}];
 var SOLUTION = [
     /* givens */
     [{"id":"round0_game07","winner":1,"fixed":true},{"id":"round0_game24","winner":0,"fixed":true},{"id":"round0_game42","winner":0,"fixed":true},{"id":"round0_game54","winner":0,"fixed":true},{"id":"round1_game00","winner":1,"fixed":true},{"id":"round1_game01","winner":1,"fixed":true},{"id":"round1_game02","winner":0,"fixed":true},{"id":"round1_game05","winner":0,"fixed":true},{"id":"round1_game08","winner":1,"fixed":true},{"id":"round1_game09","winner":1,"fixed":true},{"id":"round1_game13","winner":1,"fixed":true},{"id":"round1_game14","winner":1,"fixed":true},{"id":"round1_game17","winner":0,"fixed":true},{"id":"round1_game18","winner":1,"fixed":true},{"id":"round1_game19","winner":1,"fixed":true},{"id":"round1_game22","winner":0,"fixed":true},{"id":"round1_game24","winner":1,"fixed":true},{"id":"round1_game26","winner":1,"fixed":true},{"id":"round1_game28","winner":1,"fixed":true},{"id":"round1_game29","winner":0,"fixed":true}],
@@ -74,31 +75,15 @@ FakeServer.prototype.query = function(args, callback) {
         this.lastQuery = Date.now();
         /* check submission */
         var submitted = {};
-        for (var i=0; i<args.winners.length; i++) {
-            submitted[args.winners[i].id] = args.winners[i];
-        }
         var knowns = [];
-        for (var i=0; i<SOLUTION.length; i++) {
-            /* do we have this whole quadrant correct? */
-            var section_right = true;
-            for (var j=0; j<SOLUTION[i].length; j++) {
-                var correct = SOLUTION[i][j];
-                if (correct.id in submitted &&
-                    submitted[correct.id].winner === correct.winner)
-                    continue; /* yay */
-                section_right = false
-                break;
+        for (var i=0; i<ANSWERS.length; i++) {
+            if (args.winners[i].result = ANSWERS[i]) {
+                /* copy correct part into knowns */
+                for (var j=0; j<SOLUTION[i+1].length; j++) {
+                    knowns.push(SOLUTION[i+1][j]);
+                }
+                this.correct[i+1] = true;
             }
-
-            if (this.correct[i] || i==0) { section_right = true; }
-            if (!section_right) continue;
-
-            /* copy correct part into knowns */
-            for (var j=0; j<SOLUTION[i].length; j++) {
-                knowns.push(SOLUTION[i][j]);
-            }
-
-            this.correct[i] = true;
         }
         this.known = knowns;
     }
