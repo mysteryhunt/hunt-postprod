@@ -2,6 +2,9 @@
 # ensure that we use the templating engine for this file
 ---
 this.depth=this.depth || '../';
+this.points = this.points || 0;
+this.bupkis = this.bupkis || 0;
+this.when = "12:32";
 var shortcuts=document.createElement('div');
 shortcuts.innerHTML=(
 '<div id="shortcuts" onclick=";"><span>Shortcuts</span>'+
@@ -14,6 +17,10 @@ shortcuts.innerHTML=(
 '  <li><a href="'+this.depth+'events/">Events</a></li>'+
 '  <li><a href="'+this.depth+'nominations/">Nominations</a></li>'+
 '  <li><a href="'+this.depth+'memos_from_the_management/">From the Management</a></li>'+
+'  <hr />'+
+'  <div class="chutzpah">Chutzpah: '+this.points+'</div>'+
+'  <div class="unlock">Next unlock: '+this.when+'</div>'+
+'  <div class="bupkis">Bupkis: '+this.bupkis+'</div>'+
 '</ul>'+
 '</div>'+
 {% if site.release.solutions %}
