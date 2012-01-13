@@ -140,12 +140,6 @@ Bracket.prototype   =
 
 var clock_timer = null;
 
-/* Width calculations:
-  Games currently have width 120
-  Games currently have height 40
-  Vertical space between round 2 games is 20; subsequent rounds should be vertically aligned to match their child games
-  Horizontal space between rounds is 50
-*/
 var game_width = 130;
 var game_height = 40;
 var horizontal_space = 50;
