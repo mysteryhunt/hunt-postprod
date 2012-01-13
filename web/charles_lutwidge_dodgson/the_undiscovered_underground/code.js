@@ -34,7 +34,7 @@ NODES = {
         'w': '5'
     },
     '7': {
-        'text': 'You catch a glimpse of a strange creature running around wildly. It looks at you and mutters, "We hates it, we hates it, we hates it forever!!" It quickly scurries out of sight. You notice a short path to the north that leads to a dead end, which you explore, but find nothing.\nFrom here, the path leads east and west.',
+        'text': 'You catch a glimpse of a strange creature running around wildly. It looks at you and mutters, "We hates it, we hates it, we hates it forever!!" It quickly scurries out of sight. You notice a short path to the north that ends abruptly in two magical shafts and an alarming portal; afraid, you go no farther.\nFrom here, the path leads east and west.',
         'e': '8',
         'w': '6'
     },
@@ -67,7 +67,7 @@ NODES = {
         's': '11'
     },
     '13': {
-        'text': 'You stand in a maze of twisty little passages, all alike.\nYou are in a busy intersection. A small set of steps to the south veers west, a large passage leads east, and a smaller passage leads north.\nYou see three vertical shafts that may either lead upwards to the surface, or even deeper below. You decide that this level is best for you right now, and do not consider using them.\n\n- As you try to make sense of the options before you, your eyes fall on a small stack of four gold pieces in a wooden box. It feels like you have seen this before. Deja vu?',
+        'text': 'You stand in a maze of twisty little passages, all alike.\nYou are in a busy intersection. A small set of steps to the south veers west, a large passage leads east, and another passage leads north.\nYou see three vertical shafts that may either lead upwards to the surface, or even deeper below. You decide that this level is best for you right now, and do not consider using them.\n\n- As you try to make sense of the options before you, your eyes fall on a small stack of four gold pieces in a wooden box. It feels like you have seen this before. Deja vu?',
         'e': '14',
         'n': '23',
         's': '12'
@@ -113,7 +113,7 @@ NODES = {
         'sw': '20'
     },
     '22': {
-        'text': 'The passage slopes gently upward to the southwest.  Tired from your journey, you decide to ignore the paths to the northeast, northwest, and southeast that leed deeper into the gloom, and return whence you came.\n\n- Before you leave, you pick up the roasted rat and flask of water you find in a corner, and tuck in.\n- You can rest here.\n- You also find two platinum pieces under the bag.',
+        'text': 'The passage slopes gently upward to the southwest. Tired from your journey, you do not pass the portals to the northeast, northwest, and southeast. Instead, you return the way you came.\n\n- Before you leave, you pick up the roasted rat and flask of water you find in a corner, and tuck in.\n- You can rest here.\n- You also find two platinum pieces under the bag.',
         'sw': '21'
     },
     '23': {
@@ -139,7 +139,7 @@ NODES = {
         's': '24'
     },
     '27': {
-        'text': 'The floor of this large passage slopes gently from west to east.\nFrom here, you may go north, east, or west.\n\n- To the north, a few paces away, some dried fruit lies abandoned.\n- A small shrine to the goddess of wisdom lies forgotten in a corner.\n- A warm blue light shines to your west. \n- What really catches your eye, though, are four platinum pieces, You rejoice at your fortune.',
+        'text': 'The floor of this large passage slopes gently from west to east.\nFrom here, you may go north, east, or west.\n\n- To the north, a few paces away, some dried fruit lies abandoned.\n- A small shrine to the goddess of wisdom lies in a corner.\n- A warm blue light shines to your west. \n- What really catches your eye, though, are four platinum pieces, You rejoice at your fortune.',
         'e': '28',
         'n': '33',
         'w': '26'
@@ -185,7 +185,7 @@ NODES = {
         'w': '36'
     },
     '36': {
-        'text': 'You see a playful air elemental, but decide it is best to keep a respectful distance.\nThis room is very hot. You wonder if there is also a fire elemental nearby.\nA short path ends to the north. You have no choice but to return east.\n\n- The air elemental giggles when it notices you staring warily at it. It tosses you forty-eight copper pieces before vanishing.',
+        'text': 'You see a playful air elemental, but decide it is best to keep a respectful distance.\nThis room is very hot. You wonder if there is also a fire elemental nearby.\nA short path ends to the north. You have no choice but to return east. You see a spot to rest in a nearby pit, but it is too inaccessible for you to actually consider resting.\n\n- The air elemental giggles when it notices you staring warily at it. It tosses you forty-eight copper pieces before vanishing.',
         'e': '35'
     },
     '37': {
@@ -206,7 +206,7 @@ NODES = {
         'w': '38'
     },
     '40': {
-        'text': 'You have reached a dead end. The weight of generations of wisdom presses upon you. This is not a comfortable feeling, and you decide to hurry back west, ignoring a passage upwards.',
+        'text': 'You have reached a dead end. The weight of generations of knowledge presses upon you. This is not a comfortable feeling, and you decide to hurry back west, ignoring a passage upwards.',
         'w': '39'
     },
     '41': {
@@ -215,11 +215,11 @@ NODES = {
         'w': '42'
     },
     '42': {
-        'text': 'You have reached a dead end. The portal through which you have arrived opens onto a small area with two other portals, both closed off. \nTo the east, a sharp beam of light darts about. You hope to avoid it as you backtrack.\n\n- At least the trip here has not been wasted: you pick up nine gold pieces that were poorly concealed here.',
+        'text': 'You have reached a dead end. The portal through which you have arrived opens onto a small area with two other portals through which you dare not pass. \nTo the east, a sharp beam of light darts about. You hope to avoid it as you backtrack.\n\n- At least the trip here has not been wasted: you pick up nine gold pieces that were poorly concealed here.',
         'e': '41'
     },
     '43': {
-        'text': 'From here, you may go east, where you spot a wall of slate, or north.\n\n- It feels safe to rest here.\n- The soft glow of a mysterious blue light illuminates the spot.\n- In a corner you spot a gold piece, which you pocket.',
+        'text': 'From here, you may go east, passing a wall of slate, or north.\n\n- It feels safe to rest here.\n- The soft glow of a mysterious blue light illuminates the spot.\n- In a corner you spot a gold piece, which you pocket.',
         'e': '38',
         'n': '44'
     },
@@ -245,7 +245,7 @@ NODES = {
         'w': '49'
     },
     '48': {
-        'text': 'You see some cages. They are full of detritus; no animals can be seen.\nThe passage ends abruptly; you have no choice but to return west.',
+        'text': 'You see some cages. They are full of detritus; no animals can be seen.\nThe passage ends in a small black door that you dare not open; you have no choice but to return west.',
         'w': '47'
     },
     '49': {
