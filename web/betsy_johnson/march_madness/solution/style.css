@@ -1,0 +1,28 @@
+.mm-ul-middle {
+  margin: 0;
+}
+
+.mm-p-top {
+  margin-bottom: 0;
+}
+
+.mm-p-bottom {
+  margin-top: 0;
+}
+
+.mm-t {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.mm-t th,
+.mm-t td {
+  text-align: left;
+  padding: 3px 6px;
+  border-top: 1px solid black;
+}
+
+.mm-t-rc th:first-child + th + th + th,
+.mm-t-rc td:first-child + td + td + td {
+  text-align: center;
+}
