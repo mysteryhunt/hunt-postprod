@@ -1,11 +1,25 @@
 ---
 layout: ogre_of_la_mancha
 title: Cookin’
+style: style.css
 ponyhash: fecea5ba8e702efe5231843a9779e61b0d82a17b94f8864ab218756d
 ---
-<video controls="">
-<source src="1.webm" type='video/webm; codecs="vp8.0,vorbis"' />
-
-<source src="1.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' />
-If you&rsquo;re using Internet Explorer, you need <a href="https://tools.google.com/dlpage/webmmf">this</a>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="me/mediaelement-and-player.min.js"></script>
+<p id="cookin">
+<video controls="" height="360" width="450">
+  <source src="1.webm" type="video/webm" />
+  <source src="1.mp4" type="video/mp4" />
+  <object data="me/flashmediaelement.swf" height="360" type="application/x-shockwave-flash" width="450">
+    <param name="movie" value="me/flashmediaelement.swf" />
+    <param name="flashvars" value="controls=true&amp;file=../1.mp4" />
+  </object>
 </video>
+</p>
+<p><a href="1.mp4">(download .mp4 if the above doesn&rsquo;t play)</a></p>
+<script type="text/javascript">
+$('video').mediaelementplayer({
+  enableAutosize: true,
+  features: ['playpause','progress','current','duration','volume','fullscreen'],
+});
+</script>

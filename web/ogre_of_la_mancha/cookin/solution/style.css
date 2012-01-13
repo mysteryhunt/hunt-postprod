@@ -8,3 +8,6 @@ padding: 5px;
 .number {
 color: red;
 }
+.note {
+  font-size: 80%;
+}
