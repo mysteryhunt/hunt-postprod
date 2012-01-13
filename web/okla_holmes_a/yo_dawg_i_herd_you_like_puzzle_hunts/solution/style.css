@@ -1,1 +1,2 @@
 h1.ptitle { font-size: 23px; }
+@media screen { body.puzzle.solution { min-width: 1200px; } }
