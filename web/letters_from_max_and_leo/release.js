@@ -7,5 +7,5 @@ this.letters_from_max_and_leo = [
     ['Sheila Sunshine', 'sheila_sunshine'],
     ['Watson 2.0', 'watson_2_0'],
     ["Let's Put on a Hit!", 'lets_put_on_a_hit'],
-    ["Password Reminder", 'password_reminder']
+    ["What Ben Bitdiddle Dropped", 'what_ben_bitdiddle_dropped']
 ];
