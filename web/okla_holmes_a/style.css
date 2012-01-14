@@ -53,7 +53,7 @@ body {
 
 /* Show page formatting */
 body.index { 
-  min-width: 770px;
+  min-width: 1055px;
 }
 #index-image {
   position: absolute;

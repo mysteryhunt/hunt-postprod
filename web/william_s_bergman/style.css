@@ -28,8 +28,8 @@ body.index .materials .into_the_woodstock.unsolved {
   background-image: url("../into_the_woodstock/icon-unsolved.png");
 }
 body.index .materials .william_s_bergman {
-  background: url("icon.png") no-repeat;
-  vertical-align: top;
+  background: url("icon.png") no-repeat bottom left;
+  vertical-align: bottom;
   padding-top: 5px;
   height: 57px;
 }
