@@ -4,7 +4,7 @@
 this.depth=this.depth || '../';
 this.points = this.points || 0;
 this.bupkis = this.bupkis || 0;
-if (this.when !== null && this.when !== undefined) {
+if (this.next_unlock_time !== null && this.next_unlock_time !== undefined) {
   this.when = new Date(this.next_unlock_time*1000).toLocaleTimeString();
 } else {
   this.when = "never";
