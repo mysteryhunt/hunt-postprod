@@ -94,4 +94,4 @@ prod: ponymap.py
 	jekyll web web/_prod/puzzles
 	@cp $(WCY).bak $(WCY)
 	cp ponymap.py web/_prod/
-	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" --exclude="solution" web/_prod/ puzzle@borbonicus.ihtfp.us:/home/puzzle/hunt/
+	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" --exclude="solution" --exclude="the_coin_has_been_found" web/_prod/ puzzle@borbonicus.ihtfp.us:/home/puzzle/hunt/
