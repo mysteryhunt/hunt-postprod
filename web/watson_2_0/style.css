@@ -84,7 +84,8 @@ body.index .materials .ogre_of_la_mancha.unsolved {
   background-image: url("../ogre_of_la_mancha/icon-unsolved.png");
 }
 body.index .materials .watson_2_0 {
-  background: url("icon.png") no-repeat 0 4px;
+  background: url("icon.png") no-repeat bottom left;
+  vertical-align: bottom;
 }
 body.index .materials .watson_2_0.unsolved {
   background-image: url("icon-unsolved.png");

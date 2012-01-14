@@ -83,8 +83,7 @@ body.index #puzzle-list a.unsolved {
 }
 
 body.index {
-  /*min-width: 880px;*/
-  min-width: 940px;
+  min-width: 1070px;
 }
 body.index #main {
   padding-top: 580px;
