@@ -1,9 +1,11 @@
-this.SERVER_BASE = this.SERVER_BASE || 'https://mysteryhunt2012.appspot.com';
+this.SERVER_BASE = this.SERVER_BASE || 'https://mysteryhunt2013.appspot.com';
 this.PUZZLE_NAME = 'hear_you';
 this.PUZZLE_AUTH = "46b9e73a2622b87ec981ae5e2cc18e8e4dfd7cfc";
 
 function framework_ready(server) {
     function update(state) {
+	$('#ok').show();
+	$('#notok').hide();
 	$('input').removeAttr('disabled');
 	$('#team_name').text(state.team);
 	$('#team_score').text(state.score);
