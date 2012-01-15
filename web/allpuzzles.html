@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="subpage.css" rel="stylesheet" type="text/css">
+<title>Index of All Puzzles</title>
+<script src="../solved.js" type="text/javascript"></script>
+<script src="../release.js" type="text/javascript"></script>
+<script src="jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="main">
+<div id="banner"><a href="./"><img src="banner.png"></a></div>
+<h1>Index of All Puzzles</h1>
+
+<div id="content">
+<h2>A Circus Line</h2>
+<table id="a_circus_line"></table>
+<h2>Betsy Johnson</h2>
+<table id="betsy_johnson"></table>
+
+<h2>Okla-Holmes-a!</h2>
+<table id="okla_holmes_a"></table>
+<h2>Charles Lutwidge Dodgson</h2>
+<table id="charles_lutwidge_dodgson"></table>
+
+<h2>Into the Woodstock</h2>
+<table id="into_the_woodstock"></table>
+<h2>William S. Bergman</h2>
+<table id="william_s_bergman"></table>
+
+<h2>Mayan Fair Lady</h2>
+<table id="mayan_fair_lady"></table>
+<h2>Ben Bitdiddle</h2>
+<table id="ben_bitdiddle"></table>
+
+<h2>Phantom of the Operator</h2>
+<table id="phantom_of_the_operator"></table>
+<h2>Sheila Sunshine</h2>
+<table id="sheila_sunshine"></table>
+
+<h2>Ogre of La Mancha</h2>
+<table id="ogre_of_la_mancha"></table>
+<h2>Watson 2.0</h2>
+<table id="watson_2_0"></table>
+</div>
+</div>
+<div id="footer"></div>
+<script type="text/javascript">this.depth="./";</script>
+<script src="points.js" type="text/javascript"></script>
+<script src="shortcuts.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+document.getElementById("a_circus_line").innerHTML =
+puzzlelist_a_circus_line().replace(/href=\"/g, "href=\"a_circus_line/");
+document.getElementById("betsy_johnson").innerHTML =
+puzzlelist_betsy_johnson().replace(/href=\"/g, "href=\"betsy_johnson/");
+$('#betsy_johnson td').hide();
+$('#betsy_johnson .betsy_johnson').show();
+
+document.getElementById("okla_holmes_a").innerHTML =
+puzzlelist_okla_holmes_a().replace(/href=\"/g, "href=\"okla_holmes_a/");
+document.getElementById("charles_lutwidge_dodgson").innerHTML =
+puzzlelist_charles_lutwidge_dodgson().replace(/href=\"/g, "href=\"charles_lutwidge_dodgson/");
+$('#charles_lutwidge_dodgson td').hide();
+$('#charles_lutwidge_dodgson .charles_lutwidge_dodgson').show();
+
+document.getElementById("into_the_woodstock").innerHTML =
+puzzlelist_into_the_woodstock().replace(/href=\"/g, "href=\"into_the_woodstock/");
+document.getElementById("william_s_bergman").innerHTML =
+puzzlelist_william_s_bergman().replace(/href=\"/g, "href=\"william_s_bergman/");
+$('#william_s_bergman td').hide();
+$('#william_s_bergman .william_s_bergman').show();
+
+document.getElementById("mayan_fair_lady").innerHTML =
+puzzlelist_mayan_fair_lady().replace(/href=\"/g, "href=\"mayan_fair_lady/");
+document.getElementById("ben_bitdiddle").innerHTML =
+puzzlelist_ben_bitdiddle().replace(/href=\"/g, "href=\"ben_bitdiddle/");
+$('#ben_bitdiddle td').hide();
+$('#ben_bitdiddle .ben_bitdiddle').show();
+
+document.getElementById("phantom_of_the_operator").innerHTML =
+puzzlelist_phantom_of_the_operator().replace(/href=\"/g, "href=\"phantom_of_the_operator/");
+document.getElementById("sheila_sunshine").innerHTML =
+puzzlelist_sheila_sunshine().replace(/href=\"/g, "href=\"sheila_sunshine/");
+$('#sheila_sunshine td').hide();
+$('#sheila_sunshine .sheila_sunshine').show();
+
+document.getElementById("ogre_of_la_mancha").innerHTML =
+puzzlelist_ogre_of_la_mancha().replace(/href=\"/g, "href=\"ogre_of_la_mancha/");
+document.getElementById("watson_2_0").innerHTML =
+puzzlelist_watson_2_0().replace(/href=\"/g, "href=\"watson_2_0/");
+$('#watson_2_0 td').hide();
+$('#watson_2_0 .watson_2_0').show();
+
+$('.num').hide();
+</script>
+</body>
+</html>

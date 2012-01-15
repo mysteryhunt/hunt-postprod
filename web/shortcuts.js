@@ -21,6 +21,7 @@ shortcuts.innerHTML=(
 '{% if false %}  <li><a href="'+this.depth+'events/">Events</a></li>{% endif %}'+
 '{% if false %}  <li><a href="'+this.depth+'nominations/">Nominations</a></li>{% endif %}'+
 '  <li><a href="'+this.depth+'memos_from_the_management/">From the Management</a></li>'+
+'  <li><a href="'+this.depth+'allpuzzles.html">Puzzle Index</a></li>'+
 '  <hr />'+
 '  <div class="chutzpah">Chutzpah: '+this.points+'</div>'+
 '  <div class="unlock">Next unlock: '+this.when+'</div>'+
