@@ -85,6 +85,16 @@ stage:
 
 staging: stage
 
+puzzle:
+	@cp $(WCY) $(WCY).bak
+	@echo Turning all rounds on
+	@sed -ie 's/No[ ]*\(# [1-6][SC]\)/Yes \1/' $(WCY)
+	@sed -ie 's/No[ ]*\(# solutions\)/Yes \1/' $(WCY)
+	jekyll web web/_stage
+	@cp $(WCY).bak $(WCY)
+	cp team-data.js web/_stage
+	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ x.dialup.mit.edu:/mit/puzzle/Private/2012/
+
 prod: ponymap.py
 	@cp $(WCY) $(WCY).bak
 	@echo Turning all rounds on
