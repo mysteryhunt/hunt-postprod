@@ -95,3 +95,15 @@ prod: ponymap.py
 	@cp $(WCY).bak $(WCY)
 	cp ponymap.py web/_prod/
 	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" --exclude="solution" --exclude="the_coin_has_been_found" web/_prod/ puzzle@borbonicus.ihtfp.us:/home/puzzle/hunt/
+
+winner-release:
+	@cp $(WCY) $(WCY).bak
+	@echo Turning all rounds on
+	@sed -ie 's/No[ ]*\(# [1-6][SC]\)/Yes \1/' $(WCY)
+	@sed -ie 's/No[ ]*\(# solutions\)/Yes \1/' $(WCY)
+	jekyll web web/_stage
+	@cp $(WCY).bak $(WCY)
+	#cp ms-team-data.js web/_stage
+	#cp ms-points.js web/_stage
+	$(RM) -rf web/_stage/solved.js web/_stage/team-data.js web/_stage/release.js
+	rsync -avcz  --exclude="*~" --exclude=".git" --exclude="*.xcf" --copy-dest=/home/puzzle/hunt/puzzles/ web/_stage/ puzzle@borbonicus.ihtfp.us:/home/puzzle/django/teams/manicsages/
