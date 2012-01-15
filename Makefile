@@ -93,7 +93,7 @@ puzzle:
 	jekyll web web/_stage
 	@cp $(WCY).bak $(WCY)
 	cp team-data.js web/_stage
-	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ x.dialup.mit.edu:/mit/puzzle/Private/2012/
+	rsync -avcz  --delete --delete-excluded --exclude="*~" --exclude=".git" --exclude="*.xcf" web/_stage/ x.dialup.mit.edu:/mit/puzzle/www/12/
 
 prod: ponymap.py
 	@cp $(WCY) $(WCY).bak
