@@ -32,7 +32,7 @@ h1 {
 }
 a { text-decoration:none }
 
-#check-answer { display: none !important; }
+.noanswer #check-answer { display: none !important; }
 
 @media print {
   #main { background: white; }

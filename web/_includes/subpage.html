@@ -9,7 +9,7 @@
 <link href="{{ page.style }}" rel="stylesheet" type="text/css">
 {% endif %}
 </head>
-<body>
+<body {% if noanswer %}class="noanswer"{% endif %}>
 <div id="main">
 <div id="banner"><a href="{{top}}.."><img src="{{top}}../banner.png"></a></div>
 <h1>{{ category }}</h1>
